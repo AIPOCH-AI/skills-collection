@@ -1,0 +1,93 @@
+---
+name: lipinski-rule-filter
+description: Filter compound libraries based on Lipinski's Rule of Five for drug-likeness
+version: 1.0.0
+category: General
+tags: []
+author: The King of Skills
+license: MIT
+status: Draft
+risk_level: Medium
+skill_type: Tool/Script
+owner: The King of Skills
+reviewer: ''
+last_updated: '2026-02-06'
+---
+
+# Lipinski Rule Filter
+
+Filter small molecule compound libraries based on Lipinski's Rule of Five to identify compounds with poor absorption.
+
+## Usage
+
+```bash
+python scripts/main.py --input compounds.smi --output filtered.smi
+python scripts/main.py --smiles "CC(=O)Oc1ccccc1C(=O)O" --check
+```
+
+## Parameters
+
+- `--input`: Input SMILES/SDF file
+- `--smiles`: Single SMILES string to check
+- `--output`: Output file for passing compounds
+- `--violations`: Max allowed violations (default: 1)
+
+## Lipinski's Rules
+
+- MW < 500 Da
+- LogP < 5
+- H-bond donors < 5
+- H-bond acceptors < 10
+
+## Output
+
+- Filtered compound list
+- Rule violation report
+- Drug-likeness score
+
+## Risk Assessment
+
+| Risk Indicator | Assessment | Level |
+|----------------|------------|-------|
+| Code Execution | Python/R scripts executed locally | Medium |
+| Network Access | No external API calls | Low |
+| File System Access | Read input files, write output files | Medium |
+| Instruction Tampering | Standard prompt guidelines | Low |
+| Data Exposure | Output files saved to workspace | Low |
+
+## Security Checklist
+
+- [ ] No hardcoded credentials or API keys
+- [ ] No unauthorized file system access (../)
+- [ ] Output does not expose sensitive information
+- [ ] Prompt injection protections in place
+- [ ] Input file paths validated (no ../ traversal)
+- [ ] Output directory restricted to workspace
+- [ ] Script execution in sandboxed environment
+- [ ] Error messages sanitized (no stack traces exposed)
+- [ ] Dependencies audited
+## Prerequisites
+
+No additional Python packages required.
+
+## Evaluation Criteria
+
+### Success Metrics
+- [ ] Successfully executes main functionality
+- [ ] Output meets quality standards
+- [ ] Handles edge cases gracefully
+- [ ] Performance is acceptable
+
+### Test Cases
+1. **Basic Functionality**: Standard input → Expected output
+2. **Edge Case**: Invalid input → Graceful error handling
+3. **Performance**: Large dataset → Acceptable processing time
+
+## Lifecycle Status
+
+- **Current Stage**: Draft
+- **Next Review Date**: 2026-03-06
+- **Known Issues**: None
+- **Planned Improvements**: 
+  - Performance optimization
+  - Additional feature support

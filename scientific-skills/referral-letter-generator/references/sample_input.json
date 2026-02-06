@@ -1,0 +1,58 @@
+{
+  "referral": {
+    "referring_provider": {
+      "name": "Dr. Sarah Johnson",
+      "title": "Primary Care Physician",
+      "organization": "Riverside Family Medicine",
+      "contact": "(555) 123-4567",
+      "npi": "1234567890"
+    },
+    "receiving_provider": {
+      "name": "Dr. Michael Chen",
+      "specialty": "Cardiology",
+      "organization": "Heart Care Associates",
+      "address": "500 Medical Plaza Drive, Suite 300, Springfield, ST 12345"
+    },
+    "urgency": "Urgent",
+    "reason": "Evaluation of chest pain with abnormal stress test results. Patient reports exertional chest discomfort for the past 3 weeks."
+  },
+  "patient": {
+    "name": "Robert Williams",
+    "dob": "1965-03-15",
+    "gender": "M",
+    "mrn": "MRN12345678",
+    "contact": "(555) 987-6543",
+    "insurance": "BlueCross Health Plan"
+  },
+  "clinical_summary": {
+    "chief_complaint": "Chest pain with exertion",
+    "history_present_illness": "58-year-old male with 3-week history of exertional chest discomfort described as pressure-like, radiating to left arm. Symptoms occur with moderate activity (climbing 2 flights of stairs) and resolve with rest. No associated dyspnea, palpitations, or syncope. No pain at rest.",
+    "diagnoses": [
+      "Stable angina pectoris",
+      "Hypertension",
+      "Type 2 Diabetes Mellitus",
+      "Dyslipidemia"
+    ],
+    "relevant_history": "Hypertension diagnosed 10 years ago, well-controlled on medication. Type 2 DM for 8 years, on oral agents. Previous smoker (quit 5 years ago, 20 pack-year history). Family history of CAD in father (MI at age 62). No previous cardiac workup.",
+    "medications": [
+      {"name": "Lisinopril", "dose": "10mg", "frequency": "daily"},
+      {"name": "Metformin", "dose": "1000mg", "frequency": "twice daily"},
+      {"name": "Atorvastatin", "dose": "40mg", "frequency": "daily"},
+      {"name": "Aspirin", "dose": "81mg", "frequency": "daily"}
+    ],
+    "allergies": ["Sulfa drugs - rash", "Penicillin - unknown reaction"]
+  },
+  "investigations": {
+    "labs": [
+      {"test": "HbA1c", "result": "7.2%", "date": "2024-01-10"},
+      {"test": "Total Cholesterol", "result": "185 mg/dL", "date": "2024-01-10"},
+      {"test": "LDL", "result": "95 mg/dL", "date": "2024-01-10"},
+      {"test": "Troponin I", "result": "Negative", "date": "2024-01-15"}
+    ],
+    "imaging": [
+      {"study": "Chest X-ray", "findings": "Normal cardiac silhouette, clear lungs", "date": "2024-01-15"},
+      {"study": "Exercise Stress Test", "findings": "1.5mm ST depression in leads V4-V6 at 7 METS, symptoms reproduced", "date": "2024-01-15"}
+    ],
+    "procedures": []
+  }
+}

@@ -1,0 +1,4 @@
+# Lay Press Release Writer Dependencies
+# Python 3.8+
+
+# 无外部依赖，仅使用Python标准库

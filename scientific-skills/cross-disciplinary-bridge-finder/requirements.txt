@@ -1,0 +1,4 @@
+dataclasses
+networkx
+numpy
+sklearn

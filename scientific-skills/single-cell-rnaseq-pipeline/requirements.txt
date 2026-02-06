@@ -1,0 +1,9 @@
+bbknn
+harmonypy
+matplotlib
+numpy
+pandas
+scanorama
+scanpy
+scvi
+seaborn
