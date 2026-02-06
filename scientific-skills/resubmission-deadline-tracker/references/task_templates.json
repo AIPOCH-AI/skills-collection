@@ -1,0 +1,19 @@
+{
+  "templates": [
+    {
+      "name": "Journal Resubmission",
+      "description": "Track resubmission deadlines for journal articles",
+      "fields": ["manuscript_id", "journal_name", "revision_deadline", "editor_comments"]
+    },
+    {
+      "name": "Grant Revision", 
+      "description": "Track grant revision deadlines",
+      "fields": ["grant_id", "funding_agency", "revision_deadline", "reviewer_comments"]
+    },
+    {
+      "name": "Conference Paper",
+      "description": "Track conference paper revision deadlines",
+      "fields": ["paper_id", "conference_name", "revision_deadline", "review_feedback"]
+    }
+  ]
+}
