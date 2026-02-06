@@ -59,7 +59,6 @@ Each category represents a key area of biomedical research, professional practic
 | 🧪 **Wet Lab** | Experimental lab workflows, protocol reasoning, and bench research support | `12` |
 | 🧰 **Utility** | General-purpose biomedical utilities and cross-workflow helper skills | `7` |
 | 💰 **Grant** | Grant writing, funding strategy, and proposal development skills | `7` |
-| 🧾 **Patent** | Biomedical patent analysis, IP structuring, and innovation documentation skills | `XX` |
 | ⚙️ **Operations** | Research operations, project coordination, and lab or team management skills | `6` |
 
 ---
