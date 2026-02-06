@@ -1,0 +1,3 @@
+docx
+lxml
+pypdf2

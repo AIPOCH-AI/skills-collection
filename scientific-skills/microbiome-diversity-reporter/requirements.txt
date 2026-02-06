@@ -1,3 +1,7 @@
+matplotlib
 numpy
 pandas
+plotly
 scipy
+seaborn
+skbio

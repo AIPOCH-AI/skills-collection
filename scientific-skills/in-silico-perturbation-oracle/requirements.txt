@@ -1,42 +1,18 @@
-# In Silico Perturbation Oracle - Requirements
-# 虚拟基因敲除预测工具依赖
-
-# ============ Core Dependencies ============
-numpy>=1.21.0
-pandas>=1.3.0
-scipy>=1.7.0
-
-# ============ Deep Learning ============
-torch>=2.0.0
-transformers>=4.30.0
-
-# ============ Single-cell Analysis ============
-scanpy>=1.9.0
-anndata>=0.8.0
-scvi-tools>=0.20.0
-
-# ============ Bioinformatics ============
-gseapy>=1.0.0          # 通路富集分析
-mygene>=3.2.0          # 基因ID转换
-biopython>=1.79        # 生物信息学工具
-
-# ============ Model Specific ============
-# Geneformer (需从GitHub安装)
-# git+https://github.com/jlakkis/geneformer.git
-
-# scGPT (需从GitHub安装)
-# git+https://github.com/bowang-lab/scGPT.git
-
-# ============ Visualization ============
-matplotlib>=3.5.0
-seaborn>=0.12.0
-plotly>=5.0.0
-
-# ============ Data Handling ============
-h5py>=3.6.0
-pyyaml>=6.0
-tqdm>=4.62.0
-
-# ============ Optional ============
-# jupyterlab>=3.0.0    # 交互式分析
-# wandb>=0.13.0        # 实验追踪
+anndata
+biopython
+dataclasses
+gseapy
+h5py
+matplotlib
+mygene
+numpy
+pandas
+plotly
+pyyaml
+scanpy
+scipy
+scvi-tools
+seaborn
+torch
+tqdm
+transformers

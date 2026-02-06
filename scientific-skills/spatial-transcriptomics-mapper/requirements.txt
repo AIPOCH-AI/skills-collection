@@ -1,5 +1,10 @@
-PIL
 h5py
 matplotlib
 numpy
 pandas
+pil
+pyarrow
+scanpy
+seaborn
+squidpy
+tifffile

@@ -1,2 +1,4 @@
 dataclasses
+docx
 enum
+reportlab

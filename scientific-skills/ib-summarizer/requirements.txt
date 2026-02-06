@@ -1,3 +1,5 @@
-pdfplumber>=0.10.0
-PyPDF2>=3.0.0
-python-docx>=0.8.11
+dataclasses
+docx
+pdfplumber
+pypdf2
+python-docx
