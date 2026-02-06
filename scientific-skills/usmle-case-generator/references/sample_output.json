@@ -1,0 +1,37 @@
+{
+  "status": "success",
+  "case": {
+    "metadata": {
+      "specialty": "Cardiology",
+      "difficulty": "Step 2",
+      "topic": "Heart Failure",
+      "generated_at": "2026-02-05T10:30:00Z"
+    },
+    "vignette": {
+      "chief_complaint": "Progressive shortness of breath and bilateral leg swelling",
+      "history_present_illness": "68-year-old male with a history of hypertension and coronary artery disease presents with 3 days of worsening dyspnea on exertion. Patient reports orthopnea and paroxysmal nocturnal dyspnea. No prior similar episodes.",
+      "past_medical_history": "Hypertension, cardiology history as relevant",
+      "medications": "As clinically appropriate for case",
+      "physical_examination": "JVP elevated at 8 cm, bilateral basilar crackles, S3 gallop, 2+ pitting edema bilaterally",
+      "vitals": "BP 150/90, HR 92, RR 22, SpO2 92% on room air",
+      "diagnostic_studies": "Chest X-ray: cardiomegaly, pulmonary edema. BNP: 1250 pg/mL. Echo: EF 35%"
+    },
+    "question": {
+      "stem": "What is the most appropriate initial medication to administer?",
+      "options": [
+        "A. Lisinopril",
+        "B. Metoprolol",
+        "C. Furosemide",
+        "D. Digoxin",
+        "E. Amlodipine"
+      ],
+      "correct_answer": "C",
+      "explanation": "Furosemide is the correct initial therapy for acute decompensated heart failure with volume overload. It provides rapid diuresis, reducing preload and relieving pulmonary congestion. While ACE inhibitors and beta-blockers are important for chronic management, diuresis is the priority in acute decompensation.",
+      "learning_objectives": [
+        "Acute heart failure management",
+        "Diuretic therapy",
+        "Volume overload"
+      ]
+    }
+  }
+}
