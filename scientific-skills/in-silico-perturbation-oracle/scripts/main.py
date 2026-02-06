@@ -1191,7 +1191,7 @@ Examples:
         "--gene-pairs",
         type=str,
         action="append",
-        help="基因对，格式: "GENE1,GENE2"，可多次使用"
+        help='基因对，格式: "GENE1,GENE2"，可多次使用'
     )
     parser.add_argument(
         "--synergy-threshold",

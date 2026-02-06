@@ -93,12 +93,13 @@ class MotifLogoGenerator:
             fasta_content.append(f">seq{i+1}")
             fasta_content.append(seq)
         
+        newline = '\n'
         commands = f"""# Motif Logo Generation Commands
 # Using WebLogo (https://weblogo.berkeley.edu/)
 
 # Step 1: Save sequences to FASTA file
 cat > sequences.fa << 'EOF'
-{'\n'.join(fasta_content)}
+{newline.join(fasta_content)}
 EOF
 
 # Step 2: Convert to alignment format (if needed)

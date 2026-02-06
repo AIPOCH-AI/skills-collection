@@ -106,7 +106,7 @@ TEMPLATES_ZH = {
             "【规则遵守】{greeting}您给自己定的规则：{time}服用{medication}。{time_prompt}请遵守承诺。",
         ],
         Tone.ENCOURAGING: [
-            "【计划达成】{greeting}{time_prompt}又到了执行"如果{time}，就服药"计划的时刻！请{action}，您正在养成好习惯！",
+            '【计划达成】{greeting}{time_prompt}又到了执行"如果{time}，就服药"计划的时刻！请{action}，您正在养成好习惯！',
             "【习惯力量】{greeting}当{time}到来，服药就是自然而然的事。{time_prompt}请{action}，让好习惯成为本能！",
         ],
         Tone.URGENT: [
