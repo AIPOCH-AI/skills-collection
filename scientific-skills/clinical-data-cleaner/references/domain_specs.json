@@ -1,0 +1,115 @@
+{
+  "domains": {
+    "DM": {
+      "description": "Demographics",
+      "required_fields": [
+        "STUDYID",
+        "USUBJID",
+        "SUBJID",
+        "RFSTDTC",
+        "RFENDTC",
+        "SITEID",
+        "AGE",
+        "SEX",
+        "RACE"
+      ],
+      "field_types": {
+        "STUDYID": "text",
+        "USUBJID": "text",
+        "SUBJID": "text",
+        "RFSTDTC": "datetime",
+        "RFENDTC": "datetime",
+        "SITEID": "text",
+        "AGE": "numeric",
+        "SEX": "coded",
+        "RACE": "coded"
+      },
+      "valid_values": {
+        "SEX": ["M", "F", "U", "UNDIFFERENTIATED"],
+        "RACE": [
+          "AMERICAN INDIAN OR ALASKA NATIVE",
+          "ASIAN",
+          "BLACK OR AFRICAN AMERICAN",
+          "NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER",
+          "WHITE",
+          "MULTIPLE",
+          "NOT REPORTED",
+          "UNKNOWN"
+        ]
+      }
+    },
+    "LB": {
+      "description": "Laboratory Test Results",
+      "required_fields": [
+        "STUDYID",
+        "USUBJID",
+        "LBTESTCD",
+        "LBCAT",
+        "LBORRES",
+        "LBORRESU",
+        "LBSTRESC",
+        "LBDTC"
+      ],
+      "field_types": {
+        "STUDYID": "text",
+        "USUBJID": "text",
+        "LBTESTCD": "coded",
+        "LBCAT": "coded",
+        "LBORRES": "text",
+        "LBORRESU": "text",
+        "LBSTRESC": "text",
+        "LBDTC": "datetime"
+      },
+      "common_tests": {
+        "GLUC": "Glucose",
+        "HGB": "Hemoglobin",
+        "WBC": "White Blood Cell Count",
+        "PLAT": "Platelet Count",
+        "CREAT": "Creatinine",
+        "ALT": "Alanine Aminotransferase",
+        "AST": "Aspartate Aminotransferase",
+        "BILI": "Bilirubin",
+        "SODIUM": "Sodium",
+        "POTAS": "Potassium",
+        "CHOL": "Cholesterol"
+      }
+    },
+    "VS": {
+      "description": "Vital Signs",
+      "required_fields": [
+        "STUDYID",
+        "USUBJID",
+        "VSTESTCD",
+        "VSORRES",
+        "VSORRESU",
+        "VSSTRESC",
+        "VSDTC"
+      ],
+      "field_types": {
+        "STUDYID": "text",
+        "USUBJID": "text",
+        "VSTESTCD": "coded",
+        "VSORRES": "text",
+        "VSORRESU": "text",
+        "VSSTRESC": "text",
+        "VSDTC": "datetime"
+      },
+      "common_tests": {
+        "SYSBP": "Systolic Blood Pressure",
+        "DIABP": "Diastolic Blood Pressure",
+        "PULSE": "Pulse Rate",
+        "RESP": "Respiratory Rate",
+        "TEMP": "Temperature",
+        "WEIGHT": "Weight",
+        "HEIGHT": "Height",
+        "BMI": "Body Mass Index"
+      }
+    }
+  },
+  "global_rules": {
+    "date_format": "%Y-%m-%dT%H:%M:%S",
+    "missing_value_representations": ["NA", "N/A", "", "null", "NULL", "."],
+    "text_case": "upper",
+    "decimal_precision": 2
+  }
+}

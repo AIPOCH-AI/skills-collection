@@ -1,0 +1,142 @@
+# Systematic Review Screening Criteria Template
+# Copy and customize this file for your review
+
+# =============================================================================
+# STUDY TYPE CRITERIA
+# =============================================================================
+study_type:
+  # Study designs to INCLUDE
+  include:
+    - "randomized controlled trial"
+    - "randomised controlled trial"
+    - "RCT"
+    - "systematic review"
+    - "meta-analysis"
+    - "clinical trial"
+    - "controlled clinical trial"
+    - "cluster randomized"
+  
+  # Study designs to EXCLUDE (immediate exclusion)
+  exclude:
+    - "case report"
+    - "case series"
+    - "letter"
+    - "editorial"
+    - "commentary"
+    - "opinion"
+    - "narrative review"
+    - "scoping review"
+    - "protocol"
+    - "conference abstract"
+
+# =============================================================================
+# POPULATION CRITERIA
+# =============================================================================
+population:
+  # Keywords indicating target population (inclusion)
+  include_keywords:
+    - "adults"
+    - "adult"
+    - "elderly"
+    - "older adults"
+    - "aged"
+    - "middle-aged"
+    - "geriatric"
+  
+  # Keywords indicating excluded populations
+  exclude_keywords:
+    - "pediatric"
+    - "children"
+    - "adolescent"
+    - "infant"
+    - "neonatal"
+    - "animal"
+    - "in vitro"
+    - "cell line"
+
+# =============================================================================
+# INTERVENTION CRITERIA
+# =============================================================================
+intervention:
+  # At least one of these must be present for inclusion
+  required:
+    - "drug therapy"
+    - "medication"
+    - "pharmacotherapy"
+    - "treatment"
+    - "intervention"
+    - "therapy"
+
+# =============================================================================
+# OUTCOME CRITERIA (Optional - for information only)
+# =============================================================================
+outcome:
+  # Outcomes of interest (informational, not exclusionary)
+  interest:
+    - "efficacy"
+    - "effectiveness"
+    - "safety"
+    - "adverse events"
+    - "quality of life"
+
+# =============================================================================
+# LANGUAGE CRITERIA
+# =============================================================================
+language:
+  allowed:
+    - "English"
+  # Note: Language detection is heuristic-based
+
+# =============================================================================
+# PUBLICATION YEAR CRITERIA
+# =============================================================================
+year_range:
+  min: 2010
+  max: 2024
+
+# =============================================================================
+# SCREENING CONFIGURATION
+# =============================================================================
+# Confidence threshold (0.0 - 1.0)
+# Records below this threshold are flagged for manual review
+confidence_threshold: 0.75
+
+# Minimum abstract length for reliable screening (characters)
+min_abstract_length: 50
+
+# =============================================================================
+# EXAMPLE: SYSTEMATIC REVIEW ON DIABETES TREATMENT
+# =============================================================================
+# Uncomment and modify for your specific review:
+#
+# condition:
+#   required:
+#     - "diabetes"
+#     - "type 2 diabetes"
+#     - "T2DM"
+#   exclude:
+#     - "type 1 diabetes"
+#     - "gestational diabetes"
+#
+# intervention:
+#   required:
+#     - "metformin"
+#     - "SGLT2 inhibitor"
+#     - "GLP-1 agonist"
+#   exclude:
+#     - "insulin monotherapy"
+#
+# comparator:
+#   allowed:
+#     - "placebo"
+#     - "standard care"
+#     - "active comparator"
+#
+# outcome:
+#   primary:
+#     - "HbA1c"
+#     - "glycemic control"
+#   secondary:
+#     - "weight"
+#     - "cardiovascular"
+#     - "hypoglycemia"

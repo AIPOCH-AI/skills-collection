@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rs_20260206061351",
+    "title": "Cancer Immunotherapy Study",
+    "journal": "Nature Medicine",
+    "deadline": "2024-03-15",
+    "deadline_time": "23:59",
+    "timezone": "Asia/Shanghai",
+    "major_issues": 2,
+    "minor_issues": 8,
+    "status": "not_started",
+    "progress": 0,
+    "notes": "Reviewer 2 concerned about sample size",
+    "created_at": "2026-02-06T06:13:51.050504",
+    "updated_at": "2026-02-06T06:13:51.050504"
+  },
+  {
+    "id": "rs_20260206061400",
+    "title": "Cardiovascular Risk Analysis",
+    "journal": "JAMA Cardiology",
+    "deadline": "2026-02-20",
+    "deadline_time": "23:59",
+    "timezone": "Asia/Shanghai",
+    "major_issues": 1,
+    "minor_issues": 5,
+    "status": "not_started",
+    "progress": 0,
+    "notes": "",
+    "created_at": "2026-02-06T06:14:00.204280",
+    "updated_at": "2026-02-06T06:14:00.204280"
+  }
+]

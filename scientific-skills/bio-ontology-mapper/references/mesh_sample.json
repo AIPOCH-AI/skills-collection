@@ -1,0 +1,392 @@
+{
+  "D009203": {
+    "term": "Myocardial Infarction",
+    "entry_terms": ["Heart Attack", "Cardiac Infarction", "MI"],
+    "tree_numbers": ["C14.280.647", "C14.907.489.500"],
+    "scope_note": "Gross necrosis of the myocardium caused by interruption of the blood supply"
+  },
+  "D020521": {
+    "term": "Stroke",
+    "entry_terms": ["Cerebrovascular Accident", "CVA", "Brain Attack"],
+    "tree_numbers": ["C10.228.140.300", "C14.907.253.750"],
+    "scope_note": "A sudden loss of neurological function secondary to ischemia or hemorrhage"
+  },
+  "D003920": {
+    "term": "Diabetes Mellitus",
+    "entry_terms": ["Diabetes", "DM"],
+    "tree_numbers": ["C18.746"],
+    "scope_note": "A heterogeneous group of disorders characterized by hyperglycemia"
+  },
+  "D006973": {
+    "term": "Hypertension",
+    "entry_terms": ["High Blood Pressure", "HTN", "Hypertensive Disease"],
+    "tree_numbers": ["C14.907.489.375", "C15.378.140"],
+    "scope_note": "Persistently high systemic arterial blood pressure"
+  },
+  "D009369": {
+    "term": "Neoplasms",
+    "entry_terms": ["Cancer", "Malignancy", "Tumor", "Malignant Neoplasm"],
+    "tree_numbers": ["C04"],
+    "scope_note": "New abnormal growth of tissue"
+  },
+  "D001249": {
+    "term": "Asthma",
+    "entry_terms": ["Bronchial Asthma", "Status Asthmaticus"],
+    "tree_numbers": ["C08.127.108", "C20.543.480"],
+    "scope_note": "A form of bronchial disorder with chronic airway inflammation"
+  },
+  "D011014": {
+    "term": "Pneumonia",
+    "entry_terms": ["Lung Inflammation", "Pneumonitis"],
+    "tree_numbers": ["C08.381.677", "C20.543.480.425"],
+    "scope_note": "Inflammation of the lung parenchyma"
+  },
+  "D029424": {
+    "term": "Pulmonary Disease, Chronic Obstructive",
+    "entry_terms": ["COPD", "Chronic Obstructive Pulmonary Disease", "Chronic Obstructive Lung Disease"],
+    "tree_numbers": ["C08.381.495"],
+    "scope_note": "A chronic lung disease characterized by airflow obstruction"
+  },
+  "D000544": {
+    "term": "Alzheimer Disease",
+    "entry_terms": ["Alzheimer's Disease", "Presenile Dementia", "Senile Dementia"],
+    "tree_numbers": ["C10.574.643", "C18.654"],
+    "scope_note": "A degenerative disease of the brain characterized by dementia"
+  },
+  "D010300": {
+    "term": "Parkinson Disease",
+    "entry_terms": ["Parkinson's Disease", "Paralysis Agitans"],
+    "tree_numbers": ["C10.228.140.617.750", "C10.574.643.500"],
+    "scope_note": "A progressive neurodegenerative disease affecting movement"
+  },
+  "D003866": {
+    "term": "Depression",
+    "entry_terms": ["Depressive Disorder", "Major Depressive Disorder", "MDD", "Clinical Depression"],
+    "tree_numbers": ["F03.600.300"],
+    "scope_note": "A mood disorder characterized by persistent sadness"
+  },
+  "D050723": {
+    "term": "Fractures, Bone",
+    "entry_terms": ["Bone Fracture", "Broken Bone"],
+    "tree_numbers": ["C26.404.500"],
+    "scope_note": "Breaks in bones"
+  },
+  "D007239": {
+    "term": "Infection",
+    "entry_terms": ["Infectious Disease", "Communicable Disease"],
+    "tree_numbers": ["C01.539"],
+    "scope_note": "Invasion of the host organism by pathogenic microorganisms"
+  },
+  "D005334": {
+    "term": "Fever",
+    "entry_terms": ["Pyrexia", "Hyperthermia", "Febrile Response"],
+    "tree_numbers": ["C23.888.119.311"],
+    "scope_note": "An abnormal elevation of body temperature"
+  },
+  "D010146": {
+    "term": "Pain",
+    "entry_terms": ["Ache", "Discomfort", "Soreness"],
+    "tree_numbers": ["C10.597", "C23.888.592.612"],
+    "scope_note": "An unpleasant sensory and emotional experience"
+  },
+  "D006261": {
+    "term": "Headache",
+    "entry_terms": ["Cephalalgia", "Head Pain"],
+    "tree_numbers": ["C10.597.617", "C23.888.592.612.500"],
+    "scope_note": "Pain in the cranial region"
+  },
+  "D003371": {
+    "term": "Cough",
+    "entry_terms": ["Tussis"],
+    "tree_numbers": ["C08.618.250", "C23.888.852.250"],
+    "scope_note": "A sudden, audible expulsion of air"
+  },
+  "D009325": {
+    "term": "Nausea",
+    "entry_terms": ["Queasiness", "Sickness"],
+    "tree_numbers": ["C23.888.821.626"],
+    "scope_note": "An unpleasant sensation in the stomach"
+  },
+  "D014839": {
+    "term": "Vomiting",
+    "entry_terms": ["Emesis", "Throwing Up"],
+    "tree_numbers": ["C23.888.821.626.700"],
+    "scope_note": "The forcible expulsion of stomach contents"
+  },
+  "D003967": {
+    "term": "Diarrhea",
+    "entry_terms": ["Loose Stools", "Watery Stools"],
+    "tree_numbers": ["C06.405.469.368", "C23.888.821.475"],
+    "scope_note": "Frequent passage of loose or watery stools"
+  },
+  "D003248": {
+    "term": "Constipation",
+    "entry_terms": ["Difficulty Defecating", "Irregularity"],
+    "tree_numbers": ["C06.405.469.158", "C23.888.821.300"],
+    "scope_note": "Infrequent or difficult evacuation of feces"
+  },
+  "D005076": {
+    "term": "Exanthema",
+    "entry_terms": ["Rash", "Skin Eruption", "Dermatitis"],
+    "tree_numbers": ["C17.800.461", "C23.888.850.400"],
+    "scope_note": "Diseases in which skin eruptions are a manifestation"
+  },
+  "D004487": {
+    "term": "Edema",
+    "entry_terms": ["Swelling", "Dropsy", "Hydrops"],
+    "tree_numbers": ["C23.888.144.500"],
+    "scope_note": "Abnormal fluid accumulation in tissues"
+  },
+  "D004417": {
+    "term": "Dyspnea",
+    "entry_terms": ["Shortness of Breath", "Difficulty Breathing", "SOB"],
+    "tree_numbers": ["C08.618.250.500", "C23.888.852.250.500"],
+    "scope_note": "Difficult or labored breathing"
+  },
+  "D002637": {
+    "term": "Chest Pain",
+    "entry_terms": ["Thoracic Pain", "Precordial Pain"],
+    "tree_numbers": ["C14.907.489.375.750", "C23.888.592.075"],
+    "scope_note": "Pain in the chest region"
+  },
+  "D015746": {
+    "term": "Abdominal Pain",
+    "entry_terms": ["Stomach Pain", "Bellyache", "Gastralgia"],
+    "tree_numbers": ["C06.405.469.100", "C23.888.592.012"],
+    "scope_note": "Pain in the abdominal region"
+  },
+  "D001416": {
+    "term": "Back Pain",
+    "entry_terms": ["Dorsalgia", "Backache"],
+    "tree_numbers": ["C10.597.075", "C23.888.592.075.750"],
+    "scope_note": "Pain in the back region"
+  },
+  "D018771": {
+    "term": "Arthralgia",
+    "entry_terms": ["Joint Pain"],
+    "tree_numbers": ["C10.597.617.250", "C23.888.592.612.500.250"],
+    "scope_note": "Pain in a joint"
+  },
+  "D005221": {
+    "term": "Fatigue",
+    "entry_terms": ["Tiredness", "Exhaustion", "Lethargy", "Weariness"],
+    "tree_numbers": ["C10.597.350", "C23.888.369.250"],
+    "scope_note": "A state of tiredness or exhaustion"
+  },
+  "D008236": {
+    "term": "Obesity",
+    "entry_terms": ["Overweight", "Adiposity"],
+    "tree_numbers": ["C18.654.726", "E01.370.600.115.100.160.180"],
+    "scope_note": "A status with body weight greater than normal"
+  },
+  "D000740": {
+    "term": "Anemia",
+    "entry_terms": ["Low Blood Count", "Low Hemoglobin"],
+    "tree_numbers": ["C15.378.071"],
+    "scope_note": "A reduction in the number of circulating erythrocytes"
+  },
+  "D001145": {
+    "term": "Arrhythmias, Cardiac",
+    "entry_terms": ["Cardiac Arrhythmia", "Irregular Heartbeat", "Dysrhythmia"],
+    "tree_numbers": ["C14.280.067"],
+    "scope_note": "Any disturbances of the normal rhythmic beating of the heart"
+  },
+  "D018805": {
+    "term": "Sepsis",
+    "entry_terms": ["Blood Poisoning", "Septicemia", "Systemic Inflammatory Response Syndrome"],
+    "tree_numbers": ["C01.539.375.750"],
+    "scope_note": "Systemic inflammatory response syndrome with infection"
+  },
+  "D014376": {
+    "term": "Tuberculosis",
+    "entry_terms": ["TB", "Consumption", "Phthisis"],
+    "tree_numbers": ["C01.252.410.868"],
+    "scope_note": "Infectious disease caused by Mycobacterium tuberculosis"
+  },
+  "D015658": {
+    "term": "HIV Infections",
+    "entry_terms": ["HIV", "Human Immunodeficiency Virus", "AIDS", "Acquired Immunodeficiency Syndrome"],
+    "tree_numbers": ["C01.925"],
+    "scope_note": "Viral infection affecting the immune system"
+  },
+  "D006506": {
+    "term": "Hepatitis",
+    "entry_terms": ["Liver Inflammation", "Viral Hepatitis"],
+    "tree_numbers": ["C06.552.380"],
+    "scope_note": "Inflammation of the liver"
+  },
+  "D008103": {
+    "term": "Liver Cirrhosis",
+    "entry_terms": ["Cirrhosis", "Hepatic Cirrhosis"],
+    "tree_numbers": ["C06.552.375"],
+    "scope_note": "Liver disease characterized by fibrosis"
+  },
+  "D011030": {
+    "term": "Pneumothorax",
+    "entry_terms": ["Collapsed Lung"],
+    "tree_numbers": ["C08.381.677.750"],
+    "scope_note": "Presence of air in the pleural cavity"
+  },
+  "D001064": {
+    "term": "Appendicitis",
+    "entry_terms": ["Inflamed Appendix"],
+    "tree_numbers": ["C06.405.205"],
+    "scope_note": "Acute inflammation of the vermiform appendix"
+  },
+  "D002764": {
+    "term": "Cholecystitis",
+    "entry_terms": ["Gallbladder Inflammation"],
+    "tree_numbers": ["C06.130.564.263"],
+    "scope_note": "Inflammation of the gallbladder"
+  },
+  "D010195": {
+    "term": "Pancreatitis",
+    "entry_terms": ["Pancreas Inflammation"],
+    "tree_numbers": ["C06.689"],
+    "scope_note": "Inflammation of the pancreas"
+  },
+  "D009393": {
+    "term": "Nephritis",
+    "entry_terms": ["Kidney Inflammation"],
+    "tree_numbers": ["C12.777.419"],
+    "scope_note": "Inflammation of the kidney"
+  },
+  "D003556": {
+    "term": "Cystitis",
+    "entry_terms": ["Bladder Inflammation"],
+    "tree_numbers": ["C12.777.256.200"],
+    "scope_note": "Inflammation of the urinary bladder"
+  },
+  "D008590": {
+    "term": "Meningitis",
+    "entry_terms": ["Brain Membrane Inflammation", "Leptomeningitis"],
+    "tree_numbers": ["C10.228.228.490", "C10.574.528"],
+    "scope_note": "Inflammation of the meninges"
+  },
+  "D004679": {
+    "term": "Encephalitis",
+    "entry_terms": ["Brain Inflammation"],
+    "tree_numbers": ["C10.228.228.250", "C10.574.250"],
+    "scope_note": "Inflammation of the brain parenchyma"
+  },
+  "D009205": {
+    "term": "Myocarditis",
+    "entry_terms": ["Heart Muscle Inflammation"],
+    "tree_numbers": ["C14.280.585"],
+    "scope_note": "Inflammatory processes of the myocardium"
+  },
+  "D010493": {
+    "term": "Pericarditis",
+    "entry_terms": ["Heart Sac Inflammation"],
+    "tree_numbers": ["C14.280.720"],
+    "scope_note": "Inflammation of the pericardium"
+  },
+  "D004698": {
+    "term": "Endocarditis",
+    "entry_terms": ["Heart Lining Inflammation"],
+    "tree_numbers": ["C14.280.390"],
+    "scope_note": "Inflammation of the inner lining of the heart"
+  },
+  "D001991": {
+    "term": "Bronchitis",
+    "entry_terms": ["Bronchial Tube Inflammation"],
+    "tree_numbers": ["C08.381.495.250"],
+    "scope_note": "Inflammation of the large airways"
+  },
+  "D012220": {
+    "term": "Rhinitis",
+    "entry_terms": ["Sinusitis", "Nasal Inflammation"],
+    "tree_numbers": ["C09.400"],
+    "scope_note": "Inflammation of the nasal mucosa"
+  },
+  "D014069": {
+    "term": "Tonsillitis",
+    "entry_terms": ["Tonsil Inflammation"],
+    "tree_numbers": ["C09.400.800"],
+    "scope_note": "Inflammation of the tonsils"
+  },
+  "D010033": {
+    "term": "Otitis Media",
+    "entry_terms": ["Middle Ear Infection"],
+    "tree_numbers": ["C09.600.575"],
+    "scope_note": "Inflammation of the middle ear"
+  },
+  "D003231": {
+    "term": "Conjunctivitis",
+    "entry_terms": ["Pink Eye"],
+    "tree_numbers": ["C11.187.183"],
+    "scope_note": "Inflammation of the conjunctiva"
+  },
+  "D003872": {
+    "term": "Dermatitis",
+    "entry_terms": ["Skin Inflammation", "Eczema"],
+    "tree_numbers": ["C17.800.174"],
+    "scope_note": "Any inflammation of the skin"
+  },
+  "D011565": {
+    "term": "Psoriasis",
+    "entry_terms": ["Scaly Skin Disease"],
+    "tree_numbers": ["C17.800.859.675"],
+    "scope_note": "Common chronic inflammatory skin disease"
+  },
+  "D006073": {
+    "term": "Gout",
+    "entry_terms": ["Gouty Arthritis"],
+    "tree_numbers": ["C05.550.114", "C17.800.862.500"],
+    "scope_note": "Crystal deposition arthritis"
+  },
+  "D001172": {
+    "term": "Arthritis, Rheumatoid",
+    "entry_terms": ["Rheumatoid Arthritis", "RA"],
+    "tree_numbers": ["C05.550.114.154"],
+    "scope_note": "Autoimmune disease primarily affecting joints"
+  },
+  "D010003": {
+    "term": "Osteoarthritis",
+    "entry_terms": ["Degenerative Arthritis", "OA"],
+    "tree_numbers": ["C05.550.680"],
+    "scope_note": "Degenerative joint disease"
+  },
+  "D008881": {
+    "term": "Migraine Disorders",
+    "entry_terms": ["Migraine", "Migraine Headache"],
+    "tree_numbers": ["C10.597.617.500"],
+    "scope_note": "Recurrent headaches with aura or nausea"
+  },
+  "D004827": {
+    "term": "Epilepsy",
+    "entry_terms": ["Seizure Disorder"],
+    "tree_numbers": ["C10.228.140.490", "C10.574.250.250"],
+    "scope_note": "Chronic brain disorder with recurrent seizures"
+  },
+  "D012640": {
+    "term": "Seizures",
+    "entry_terms": ["Convulsion", "Fit"],
+    "tree_numbers": ["C10.228.140.490.500", "C10.597.742"],
+    "scope_note": "Clinical or subclinical disturbances of cortical function"
+  },
+  "D009103": {
+    "term": "Multiple Sclerosis",
+    "entry_terms": ["MS", "Disseminated Sclerosis"],
+    "tree_numbers": ["C10.114.375"],
+    "scope_note": "Autoimmune demyelinating disease"
+  },
+  "D000690": {
+    "term": "Amyotrophic Lateral Sclerosis",
+    "entry_terms": ["ALS", "Lou Gehrig Disease", "Motor Neuron Disease"],
+    "tree_numbers": ["C10.574.175.875", "C10.900.250.875"],
+    "scope_note": "Progressive neurodegenerative disease"
+  },
+  "D012559": {
+    "term": "Schizophrenia",
+    "entry_terms": ["Schizophrenic Disorder"],
+    "tree_numbers": ["F03.700.750"],
+    "scope_note": "Severe emotional disorder with disordered thinking"
+  },
+  "D001714": {
+    "term": "Bipolar Disorder",
+    "entry_terms": ["Manic Depression", "Manic-Depressive Psychosis"],
+    "tree_numbers": ["F03.700.100"],
+    "scope_note": "Major affective disorder with manic episodes"
+  }
+}

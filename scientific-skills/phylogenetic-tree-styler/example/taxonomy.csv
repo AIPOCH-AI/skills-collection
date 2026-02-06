@@ -1,0 +1,6 @@
+name,domain,phylum,class
+Species_A,Bacteria,Proteobacteria,Gammaproteobacteria
+Species_B,Bacteria,Proteobacteria,Alphaproteobacteria
+Species_C,Bacteria,Firmicutes,Bacilli
+Species_D,Archaea,Euryarchaeota,Methanobacteria
+Species_E,Archaea,Crenarchaeota,Thermoprotei

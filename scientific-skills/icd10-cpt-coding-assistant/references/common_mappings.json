@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Common clinical conditions to ICD-10-CM and CPT code mappings",
+    "last_updated": "2024-01"
+  },
+  "common_diagnosis_mappings": [
+    {
+      "clinical_term": "Type 2 Diabetes Mellitus",
+      "synonyms": ["T2DM", "diabetes type 2", "NIDDM", "adult-onset diabetes"],
+      "icd10_codes": ["E11.9"],
+      "with_manifestations": {
+        "diabetic nephropathy": "E11.21",
+        "diabetic chronic kidney disease": "E11.22",
+        "diabetic retinopathy with macular edema": "E11.311",
+        "diabetic retinopathy without macular edema": "E11.319",
+        "diabetic cataract": "E11.36",
+        "diabetic neuropathy": "E11.42",
+        "diabetic foot ulcer": "E11.621",
+        "diabetic peripheral angiopathy": "E11.51",
+        "diabetic dermatitis": "E11.620",
+        "hypoglycemia without coma": "E11.649"
+      },
+      "coding_notes": "Code first diabetes, then manifestations. Use Z79.4 for long-term insulin use."
+    },
+    {
+      "clinical_term": "Essential Hypertension",
+      "synonyms": ["HTN", "high blood pressure", "systemic hypertension"],
+      "icd10_codes": ["I10"],
+      "with_manifestations": {
+        "hypertensive heart disease": "I11.9",
+        "hypertensive heart disease with heart failure": "I11.0",
+        "hypertensive chronic kidney disease stage 1-4": "I12.9",
+        "hypertensive CKD stage 5/ESRD": "I12.0",
+        "hypertensive heart and CKD": "I13.10"
+      },
+      "coding_notes": "Use additional code to identify stage of CKD (N18.-) if applicable."
+    },
+    {
+      "clinical_term": "Chronic Obstructive Pulmonary Disease",
+      "synonyms": ["COPD", "emphysema", "chronic bronchitis"],
+      "icd10_codes": ["J44.9"],
+      "with_manifestations": {
+        "COPD with acute exacerbation": "J44.1",
+        "COPD with acute lower respiratory infection": "J44.0",
+        "asthma with COPD": "J44.9"
+      },
+      "coding_notes": "Use additional code to identify infection with J44.0."
+    },
+    {
+      "clinical_term": "Major Depressive Disorder",
+      "synonyms": ["MDD", "clinical depression", "depression", "depressive disorder"],
+      "icd10_codes": ["F32.9", "F33.9"],
+      "severity_specification": {
+        "single episode, mild": "F32.0",
+        "single episode, moderate": "F32.1",
+        "single episode, severe": "F32.2",
+        "recurrent, mild": "F33.0",
+        "recurrent, moderate": "F33.1",
+        "recurrent, severe": "F33.2"
+      },
+      "coding_notes": "Distinguish between single episode (F32) and recurrent (F33)."
+    },
+    {
+      "clinical_term": "Atrial Fibrillation",
+      "synonyms": ["AFib", "AF", "auricular fibrillation"],
+      "icd10_codes": ["I48.91", "I48.2"],
+      "specification": {
+        "paroxysmal": "I48.0",
+        "persistent": "I48.1",
+        "chronic": "I48.2",
+        "unspecified": "I48.91"
+      },
+      "coding_notes": "Document type and any associated valve disease."
+    },
+    {
+      "clinical_term": "Coronary Artery Disease",
+      "synonyms": ["CAD", "ischemic heart disease", "atherosclerotic heart disease"],
+      "icd10_codes": ["I25.10", "I25.119"],
+      "specification": {
+        "without angina": "I25.10",
+        "with unspecified angina": "I25.119",
+        "with stable angina": "I25.111",
+        "with unstable angina": "I25.110"
+      },
+      "coding_notes": "Distinguish presence and type of angina if applicable."
+    },
+    {
+      "clinical_term": "Urinary Tract Infection",
+      "synonyms": ["UTI", "cystitis", "bladder infection", "pyelonephritis"],
+      "icd10_codes": ["N39.0"],
+      "specification": {
+        "cystitis, acute": "N30.00",
+        "cystitis, chronic": "N30.20",
+        "pyelonephritis, acute": "N10",
+        "pyelonephritis, chronic": "N11.9"
+      },
+      "coding_notes": "Specify site if known (cystitis vs pyelonephritis)."
+    },
+    {
+      "clinical_term": "Cellulitis",
+      "synonyms": ["skin infection", "bacterial skin infection"],
+      "icd10_codes": ["L03.90"],
+      "anatomical_specification": {
+        "face": "L03.211",
+        "neck": "L03.221",
+        "trunk": "L03.31",
+        "buttock": "L03.317",
+        "upper arm": "L03.114",
+        "forearm": "L03.115",
+        "hand": "L03.019",
+        "thigh": "L03.115",
+        "lower leg": "L03.116",
+        "foot": "L03.039"
+      },
+      "coding_notes": "Code to specific anatomical location when documented."
+    },
+    {
+      "clinical_term": "Low Back Pain",
+      "synonyms": ["lumbago", "backache", "lumbosacral pain"],
+      "icd10_codes": ["M54.5"],
+      "specification": {
+        "with sciatica": "M54.4-",
+        "thoracolumbar": "M54.6",
+        "coccygodynia": "M53.3"
+      },
+      "coding_notes": "Do not use with M51.- (intervertebral disc disorders)."
+    },
+    {
+      "clinical_term": "Chronic Kidney Disease",
+      "synonyms": ["CKD", "chronic renal disease", "chronic renal failure"],
+      "icd10_codes": ["N18.3", "N18.6"],
+      "stage_specification": {
+        "stage 1": "N18.1",
+        "stage 2": "N18.2",
+        "stage 3a": "N18.31",
+        "stage 3b": "N18.32",
+        "stage 4": "N18.4",
+        "stage 5": "N18.5",
+        "end stage renal disease": "N18.6"
+      },
+      "coding_notes": "Stage 3 should be further specified as 3a or 3b when possible."
+    }
+  ],
+  "common_procedure_mappings": [
+    {
+      "procedure": "Office Visit - Established Patient",
+      "cpt_codes": ["99213"],
+      "alternatives": {
+        "level 2": "99212",
+        "level 3": "99213",
+        "level 4": "99214",
+        "level 5": "99215"
+      },
+      "time_range": "20-29 minutes for 99213",
+      "mdm_level": "Low complexity"
+    },
+    {
+      "procedure": "Office Visit - New Patient",
+      "cpt_codes": ["99203"],
+      "alternatives": {
+        "level 2": "99202",
+        "level 3": "99203",
+        "level 4": "99204",
+        "level 5": "99205"
+      },
+      "time_range": "30-44 minutes for 99203",
+      "mdm_level": "Low complexity"
+    },
+    {
+      "procedure": "Hospital Admission",
+      "cpt_codes": ["99222"],
+      "alternatives": {
+        "level 1": "99221",
+        "level 2": "99222",
+        "level 3": "99223"
+      },
+      "time_range": "50 minutes for 99222",
+      "mdm_level": "Moderate complexity"
+    },
+    {
+      "procedure": "Emergency Department Visit",
+      "cpt_codes": ["99283"],
+      "alternatives": {
+        "level 1": "99281",
+        "level 2": "99282",
+        "level 3": "99283",
+        "level 4": "99284",
+        "level 5": "99285"
+      },
+      "typical_use": "Level 3 for low-moderate complexity"
+    },
+    {
+      "procedure": "Laparoscopic Cholecystectomy",
+      "cpt_codes": ["47562"],
+      "alternatives": {
+        "standard": "47562",
+        "with cholangiography": "47563",
+        "with common duct exploration": "47564",
+        "open": "47600"
+      },
+      "coding_notes": "Add modifier -52 for partial cholecystectomy."
+    },
+    {
+      "procedure": "Diagnostic Colonoscopy",
+      "cpt_codes": ["45378"],
+      "alternatives": {
+        "diagnostic": "45378",
+        "with biopsy": "45380",
+        "with polypectomy": "45385",
+        "screening": "45378 (with modifier -33)"
+      },
+      "coding_notes": "Use modifier -33 for screening colonoscopy per ACA."
+    },
+    {
+      "procedure": "EGD (Upper Endoscopy)",
+      "cpt_codes": ["43235"],
+      "alternatives": {
+        "diagnostic": "43235",
+        "with biopsy": "43239",
+        "with dilation": "43245",
+        "with foreign body removal": "43247",
+        "with control of bleeding": "43255"
+      },
+      "coding_notes": "Most common is 43239 (with biopsy)."
+    },
+    {
+      "procedure": "Chest X-Ray",
+      "cpt_codes": ["71046"],
+      "alternatives": {
+        "2 views": "71046",
+        "3 views": "71047",
+        "4+ views": "71048"
+      },
+      "typical_use": "71046 for PA and lateral views"
+    },
+    {
+      "procedure": "CT Abdomen",
+      "cpt_codes": ["74150"],
+      "alternatives": {
+        "without contrast": "74150",
+        "with contrast": "74160",
+        "without then with contrast": "74170"
+      },
+      "coding_notes": "Check renal function before contrast administration."
+    },
+    {
+      "procedure": "Complete Blood Count",
+      "cpt_codes": ["85025"],
+      "alternatives": {
+        "with differential": "85025",
+        "without differential": "85027"
+      },
+      "typical_use": "85025 is most commonly ordered"
+    },
+    {
+      "procedure": "Comprehensive Metabolic Panel",
+      "cpt_codes": ["80053"],
+      "includes": ["Glucose", "BUN", "Creatinine", "Sodium", "Potassium", "Chloride", "CO2", "Calcium", "Total Protein", "Albumin", "Bilirubin", "AST", "ALT", "ALP"],
+      "coding_notes": "Do not bill individual tests separately when panel is reported"
+    },
+    {
+      "procedure": "Electrocardiogram",
+      "cpt_codes": ["93000"],
+      "alternatives": {
+        "global": "93000",
+        "tracing only": "93005",
+        "interpretation only": "93010"
+      },
+      "typical_use": "93000 when performing and interpreting"
+    },
+    {
+      "procedure": "Echocardiogram",
+      "cpt_codes": ["93306"],
+      "alternatives": {
+        "complete transthoracic": "93306",
+        "follow-up limited": "93308",
+        "with stress": "93350",
+        "transesophageal": "93312"
+      },
+      "coding_notes": "93306 includes 2D imaging, M-mode, and Doppler"
+    },
+    {
+      "procedure": "Physical Therapy - Therapeutic Exercise",
+      "cpt_codes": ["97110"],
+      "unit": "15 minutes per unit",
+      "alternatives": {
+        "therapeutic exercise": "97110",
+        "neuromuscular reeducation": "97112",
+        "manual therapy": "97140",
+        "therapeutic activities": "97530"
+      },
+      "coding_notes": "8-minute rule applies - minimum 8 minutes for 1 unit"
+    }
+  ],
+  "coding_scenarios": [
+    {
+      "scenario": "Diabetes with Multiple Complications",
+      "clinical_note": "Patient with Type 2 diabetes with diabetic nephropathy, diabetic neuropathy, and diabetic retinopathy",
+      "primary_diagnosis": "E11.9",
+      "secondary_diagnoses": ["E11.21", "E11.42", "E11.319"],
+      "sequencing": "E11.9 is principal, manifestations follow",
+      "guideline": "Code first diabetes, then each manifestation"
+    },
+    {
+      "scenario": "Hypertension with CKD",
+      "clinical_note": "Patient with hypertension and Stage 3 chronic kidney disease",
+      "primary_diagnosis": "I12.9",
+      "secondary_diagnoses": ["N18.3"],
+      "sequencing": "I12.9 first, then N18.3",
+      "guideline": "Use additional code to identify CKD stage"
+    },
+    {
+      "scenario": "Postoperative Pain",
+      "clinical_note": "Patient s/p laparoscopic cholecystectomy with postoperative pain",
+      "primary_procedure": "47562",
+      "associated_diagnosis": "G89.18 (Postprocedural pain)",
+      "sequencing": "Postoperative pain is additional diagnosis, not principal",
+      "guideline": "Do not report routine postoperative pain separately"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+# Unstructured Medical Text Miner Configuration
+
+extraction:
+  # 要提取的实体类型
+  entity_types:
+    - DISEASE
+    - SYMPTOM
+    - MEDICATION
+    - PROCEDURE
+    - ANATOMY
+    - LAB_VALUE
+  
+  # 要提取的关系类型
+  relation_types:
+    - TREATS
+    - CAUSES
+    - CONTRAINDICATED_WITH
+    - INDICATES
+  
+  # 启用否定检测
+  enable_negation_detection: true
+  
+  # 文本预处理选项
+  preprocessing:
+    lowercase: false
+    remove_deidentification_brackets: true  # 移除 [**Name**] 等标记
+    normalize_whitespace: true
+
+models:
+  # spaCy模型选择
+  # 可选: en_core_web_sm, en_core_web_md, en_core_web_lg
+  # 医疗专用: en_core_sci_lg, en_core_sci_scibert
+  ner_model: "en_core_sci_lg"
+  
+  # 关系抽取模型（自定义）
+  relation_model: null
+
+output:
+  # 输出格式: json, fhir, kg (knowledge graph)
+  format: "json"
+  
+  # 是否包含原始文本
+  include_raw_text: false
+  
+  # 是否包含位置信息
+  include_spans: true
+  
+  # 置信度阈值
+  confidence_threshold: 0.5
+
+# 特定笔记类型的处理规则
+note_type_rules:
+  DS:  # Discharge Summary
+    sections_to_extract:
+      - "Chief Complaint"
+      - "History of Present Illness"
+      - "Hospital Course"
+      - "Discharge Diagnosis"
+      - "Discharge Medications"
+  
+  RR:  # Radiology Report
+    sections_to_extract:
+      - "Clinical History"
+      - "Findings"
+      - "Impression"
+  
+  ECG:  # ECG Report
+    sections_to_extract:
+      - "Interpretation"
+      - "Conclusion"
+
+# 性能设置
+performance:
+  # 批处理大小
+  batch_size: 100
+  
+  # 并行工作线程
+  n_workers: 4
+  
+  # 内存限制（MB）
+  memory_limit: 4096

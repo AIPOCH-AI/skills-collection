@@ -1,0 +1,100 @@
+{
+  "description": "HIPAA Safe Harbor 18 Identifier Categories - Regex Pattern Reference",
+  "categories": {
+    "NAME": {
+      "description": "Names of individuals",
+      "patterns": [
+        "Title + Capitalized Word (Dr. Smith)",
+        "NLP NER (PERSON entities)"
+      ],
+      "examples": ["John Doe", "Mary Smith", "Dr. Johnson"]
+    },
+    "GEOGRAPHIC": {
+      "description": "Geographic subdivisions smaller than state",
+      "patterns": [
+        "Street addresses",
+        "City + ZIP code combinations",
+        "GPS coordinates"
+      ],
+      "exceptions": ["State", "Age over 89", "3-digit ZIP (if population > 20,000)"]
+    },
+    "DATE": {
+      "description": "Dates directly related to individual",
+      "patterns": [
+        "MM/DD/YYYY", "MM-DD-YYYY",
+        "Month DD, YYYY",
+        "DD Month YYYY"
+      ],
+      "exceptions": ["Year alone", "Age (not date of birth)"]
+    },
+    "PHONE": {
+      "description": "Phone and fax numbers",
+      "regex": "\\b(?:\\+?1[-.\\s]?)?\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})\\b",
+      "formats": ["(555) 123-4567", "555-123-4567", "555.123.4567", "5551234567"]
+    },
+    "EMAIL": {
+      "description": "Email addresses",
+      "regex": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b",
+      "examples": ["patient@email.com", "name@hospital.org"]
+    },
+    "SSN": {
+      "description": "Social Security Numbers",
+      "regex": "\\b(?!000|666|9\\d{2})\\d{3}[-\\s]?(?!00)\\d{2}[-\\s]?(?!0000)\\d{4}\\b",
+      "formats": ["123-45-6789", "123 45 6789", "123456789"],
+      "validation": "Excludes invalid SSN ranges (000, 666, 900-999 prefixes)"
+    },
+    "MRN": {
+      "description": "Medical Record Numbers",
+      "patterns": [
+        "MRN # digits",
+        "Chart # digits",
+        "Patient ID digits",
+        "Account # digits"
+      ],
+      "regex": "\\b(?:MRN|Medical Record|Chart|Patient ID)[\\s#:]*(\\d{3,10})\\b"
+    },
+    "HEALTH_PLAN": {
+      "description": "Health plan beneficiary numbers",
+      "patterns": ["Insurance policy #", "Group #", "Member ID"]
+    },
+    "ACCOUNT": {
+      "description": "Account numbers",
+      "patterns": ["Bank account", "Credit card", "Hospital account"]
+    },
+    "LICENSE": {
+      "description": "Certificate/license numbers",
+      "types": ["Medical license", "Driver license", "Professional certification"]
+    },
+    "VEHICLE": {
+      "description": "Vehicle identifiers and serial numbers",
+      "patterns": ["VIN (17 characters)", "License plate"]
+    },
+    "DEVICE": {
+      "description": "Device identifiers and serial numbers",
+      "patterns": ["UDI (Unique Device Identifier)", "Serial numbers on medical devices"]
+    },
+    "URL": {
+      "description": "Web URLs",
+      "regex": "https?://(?:[-\\w.])+(?::\\d+)?(?:/(?:[\\w/_.])*(?:\\?(?:[\\w&=%.])*)?(?:#(?:[\\w.])*)?)?",
+      "note": "May contain patient-specific query parameters"
+    },
+    "IP_ADDRESS": {
+      "description": "IP addresses",
+      "regex": "\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b",
+      "formats": ["IPv4 addresses"]
+    },
+    "BIOMETRIC": {
+      "description": "Biometric identifiers",
+      "types": ["Fingerprints", "Retina scans", "Voice prints", "DNA sequences"]
+    },
+    "PHOTO": {
+      "description": "Full-face photographs",
+      "note": "Any image showing enough facial features for identification"
+    },
+    "UNIQUE_ID": {
+      "description": "Any other unique identifying numbers",
+      "catch_all": true,
+      "note": "Any identifier that could uniquely identify an individual"
+    }
+  }
+}

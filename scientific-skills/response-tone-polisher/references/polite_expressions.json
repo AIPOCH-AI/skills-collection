@@ -1,0 +1,154 @@
+{
+  "defensive_patterns": {
+    "direct_refusal": {
+      "patterns": [
+        "I will not change this",
+        "We will not modify",
+        "We cannot do this",
+        "No, we won't",
+        "This is not possible"
+      ],
+      "replacements": [
+        "We have carefully considered this suggestion and respectfully maintain our original approach",
+        "Upon thorough evaluation, we believe our current approach is appropriate",
+        "We respectfully decline to make this change because"
+      ]
+    },
+    "confrontational": {
+      "patterns": [
+        "I disagree",
+        "We disagree",
+        "This is wrong",
+        "You are incorrect",
+        "The reviewer is mistaken"
+      ],
+      "replacements": [
+        "We respectfully offer a different interpretation",
+        "We note that an alternative view may be warranted",
+        "Upon careful reconsideration, we maintain that"
+      ]
+    },
+    "defensive": {
+      "patterns": [
+        "But we already explained",
+        "We already stated this",
+        "This was mentioned before",
+        "We previously noted"
+      ],
+      "replacements": [
+        "We have now expanded our explanation to enhance clarity",
+        "We have revised this section to provide additional detail",
+        "To improve clarity, we have added"
+      ]
+    },
+    "blame_shifting": {
+      "patterns": [
+        "The reviewer misunderstood",
+        "This was misinterpreted",
+        "You didn't understand",
+        "This is not our fault"
+      ],
+      "replacements": [
+        "We apologize for the lack of clarity; we have revised",
+        "We recognize that our explanation was insufficient; we have clarified",
+        "We acknowledge this limitation and have addressed it"
+      ]
+    },
+    "dismissive": {
+      "patterns": [
+        "This is unnecessary",
+        "This is not needed",
+        "Obviously",
+        "Clearly",
+        "It is evident that"
+      ],
+      "replacements": [
+        "While we appreciate this suggestion, we believe the current presentation is appropriate",
+        "We have considered this and maintain that",
+        "We note that"
+      ]
+    }
+  },
+  "polite_acknowledgments": {
+    "standard": [
+      "We thank the reviewer for this insightful observation.",
+      "We appreciate the reviewer's careful attention to this detail.",
+      "We are grateful for this constructive feedback.",
+      "We value this thoughtful comment.",
+      "Thank you for raising this important point."
+    ],
+    "major_comment": [
+      "We are grateful for this significant observation.",
+      "This is an excellent and important point.",
+      "We deeply appreciate this critical feedback."
+    ],
+    "minor_comment": [
+      "Thank you for this helpful suggestion.",
+      "We appreciate this refinement.",
+      "This is a valuable correction."
+    ]
+  },
+  "respectful_disagreement": {
+    "opening": [
+      "We respectfully offer an alternative interpretation.",
+      "Upon careful reconsideration, we believe that",
+      "While we appreciate this perspective, we respectfully note that",
+      "We respectfully maintain our position that",
+      "We believe an alternative approach may be warranted because"
+    ],
+    "rationale": [
+      "our data strongly support the current interpretation",
+      "the established methodology in this field supports our approach",
+      "the specific constraints of our study necessitate this approach",
+      "additional analysis (described below) confirms our original conclusion"
+    ],
+    "closing": [
+      "We hope this explanation adequately addresses the reviewer's concern.",
+      "We have added further discussion of this point to the manuscript.",
+      "We believe this approach best serves the scientific integrity of the study."
+    ]
+  },
+  "accepting_changes": {
+    "simple": [
+      "We have revised the manuscript accordingly.",
+      "This has been addressed in the revised version.",
+      "We have incorporated this suggestion."
+    ],
+    "detailed": [
+      "We have expanded the {section} section to include {detail} (Page {page}, Lines {lines}).",
+      "We have added {content} as suggested (Page {page}).",
+      "The {section} has been revised to clarify {point} (Lines {lines})."
+    ]
+  },
+  "explaining_limitations": {
+    "sample_size": [
+      "We acknowledge that our sample size is limited; however, it is consistent with similar studies in this field.",
+      "While we recognize the constraint of our sample size, our power analysis indicates adequate statistical power.",
+      "We have added a discussion of this limitation to the manuscript."
+    ],
+    "methodological": [
+      "This methodological choice reflects the trade-off between {factor1} and {factor2}.",
+      "We selected this approach because {rationale}, while acknowledging that {alternative} is also valid.",
+      "We have added appropriate caveats regarding this methodological choice."
+    ],
+    "general": [
+      "We acknowledge this limitation and have addressed it by {action}.",
+      "We recognize this constraint and have noted it in the Discussion section.",
+      "This limitation is now explicitly discussed in the revised manuscript."
+    ]
+  },
+  "clarification_phrases": [
+    "To enhance clarity, we have",
+    "We have revised this section to more clearly state that",
+    "The text now explicitly states",
+    "We have clarified this point by",
+    "For improved clarity, we have added"
+  ],
+  "location_indicators": [
+    "(Page {page}, Lines {start}-{end})",
+    "(Page {page})",
+    "(Lines {start}-{end})",
+    "(Figure {number})",
+    "(Table {number}, Page {page})"
+  ]
+}

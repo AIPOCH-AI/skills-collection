@@ -1,0 +1,23 @@
+# SMILES De-salter 示例数据
+
+## 测试用例
+
+### 简单盐
+CCO.[Na+]
+c1ccccc1.[Cl-]
+CC(=O)O.[Na+]
+
+### HCl 盐
+CN1C=NC2=C1C(=O)N(C)C(=O)N2C.Cl
+CC(C)CN1C(=O)N(C)C(=O)C2=C1N=CN2C.Cl
+
+### 有机酸盐
+CC(C)CN1C(=O)N(C)C(=O)C2=C1N=CN2C.C(C(=O)O)C(CC(=O)O)(C(=O)O)O
+CN(C)CCCN1C2=CC=CC=C2SC3=C1C=C(C=C3)Cl.O=C(O)/C=C/C(=O)O
+
+### 无盐结构
+CC(C)Cc1ccc(cc1)C(C)C(=O)O
+c1ccc2c(c1)c(cn2)CCN
+
+### 复杂盐
+CC[C@H](C)[C@H](NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](Cc1c[nH]c2ccccc12)NC(=O)[C@@H](NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CO)NC(=O)[C@@H](NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@@H](NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@@H](N)Cc1ccc(O)cc1)C(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](C)C(=O)O)C(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](C)C(=O)O.[Na+].[Na+]

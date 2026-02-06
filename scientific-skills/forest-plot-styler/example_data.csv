@@ -1,0 +1,9 @@
+study,or,ci_lower,ci_upper,weight,subgroup
+Smith et al. 2018,0.65,0.45,0.94,12.5,Treatment A
+Johnson et al. 2019,0.78,0.58,1.05,15.2,Treatment A
+Williams et al. 2020,0.82,0.62,1.08,14.8,Treatment A
+Brown et al. 2017,0.71,0.52,0.97,13.5,Treatment A
+Davis et al. 2019,0.88,0.65,1.19,11.2,Treatment B
+Miller et al. 2020,0.92,0.68,1.25,10.8,Treatment B
+Wilson et al. 2018,0.75,0.55,1.02,12.0,Treatment B
+Anderson et al. 2021,0.85,0.62,1.16,9.8,Treatment B

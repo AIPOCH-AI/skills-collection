@@ -1,0 +1,149 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-02-05",
+  "database_info": {
+    "description": "Drug interaction database for drug-interaction-checker skill",
+    "source": "Compiled from FDA, Stockley's Drug Interactions, and clinical literature",
+    "coverage": "Common prescription medications, OTC drugs, and supplements"
+  },
+  "interaction_types": {
+    "pharmacokinetic": {
+      "description": "Affects drug absorption, distribution, metabolism, or elimination",
+      "subtypes": ["absorption", "distribution", "metabolism", "excretion"]
+    },
+    "pharmacodynamic": {
+      "description": "Affects drug action at receptor or physiologic level",
+      "subtypes": ["synergistic", "antagonistic", "additive", "permutational"]
+    }
+  },
+  "severity_scale": {
+    "critical": {
+      "level": 5,
+      "description": "Life-threatening, contraindicated",
+      "color_code": "#DC2626"
+    },
+    "major": {
+      "level": 4,
+      "description": "Significant risk, therapy modification needed",
+      "color_code": "#EA580C"
+    },
+    "moderate": {
+      "level": 3,
+      "description": "Moderate risk, monitoring recommended",
+      "color_code": "#CA8A04"
+    },
+    "minor": {
+      "level": 2,
+      "description": "Mild interaction, unlikely to cause issues",
+      "color_code": "#16A34A"
+    },
+    "unknown": {
+      "level": 1,
+      "description": "Insufficient data",
+      "color_code": "#6B7280"
+    }
+  },
+  "special_populations": {
+    "elderly": {
+      "age_threshold": 65,
+      "risk_factors": ["reduced_renal_function", "polypharmacy", "altered_pharmacokinetics"],
+      "severity_adjustment": "Increase by 1 level if baseline is Moderate or lower"
+    },
+    "pediatric": {
+      "age_threshold": 18,
+      "risk_factors": ["developing_organs", "weight_based_dosing", "limited_data"]
+    },
+    "pregnancy": {
+      "risk_factors": ["placental_transfer", "teratogenicity", "altered_pharmacokinetics"]
+    },
+    "renal_impairment": {
+      "gfr_thresholds": {
+        "mild": 60,
+        "moderate": 30,
+        "severe": 15
+      },
+      "affected_drugs": "Drugs with renal clearance >30%"
+    },
+    "hepatic_impairment": {
+      "classification": ["Child-Pugh A", "Child-Pugh B", "Child-Pugh C"],
+      "affected_drugs": "Hepatically metabolized drugs, especially high extraction"
+    }
+  },
+  "drug_classes": {
+    "anticoagulants": {
+      "drugs": ["warfarin", "heparin", "rivaroxaban", "apixaban", "dabigatran", "edoxaban"],
+      "key_interactions": ["antiplatelets", "nsaids", "cyp2c9_inhibitors"]
+    },
+    "antiplatelets": {
+      "drugs": ["aspirin", "clopidogrel", "prasugrel", "ticagrelor", "dipyridamole"],
+      "key_interactions": ["anticoagulants", "nsaids", "ssris"]
+    },
+    "statins": {
+      "drugs": ["atorvastatin", "simvastatin", "rosuvastatin", "pravastatin", "fluvastatin", "lovastatin", "pitavastatin"],
+      "key_interactions": ["cyp3a4_inhibitors", "cyp3a4_inducers", "fibrates", "azole_antifungals"]
+    },
+    "ace_inhibitors": {
+      "drugs": ["lisinopril", "enalapril", "captopril", "ramipril", "benazepril", "perindopril", "fosinopril", "quinapril"],
+      "key_interactions": ["potassium_supplements", "arbs", "nsaids", "diuretics"]
+    },
+    "arbs": {
+      "drugs": ["losartan", "valsartan", "irbesartan", "candesartan", "telmisartan", "olmesartan", "azilsartan"],
+      "key_interactions": ["ace_inhibitors", "potassium_supplements", "nsaids"]
+    },
+    "nsaids": {
+      "drugs": ["ibuprofen", "naproxen", "diclofenac", "celecoxib", "meloxicam", "ketorolac", "indomethacin", "piroxicam"],
+      "key_interactions": ["anticoagulants", "antiplatelets", "ace_inhibitors", "diuretics", "lithium", "methotrexate"]
+    },
+    "ssris": {
+      "drugs": ["fluoxetine", "sertraline", "paroxetine", "citalopram", "escitalopram", "fluvoxamine"],
+      "key_interactions": ["maois", "triptans", "tramadol", "nsaids", "antiplatelets", "cyp2d6_substrates"]
+    },
+    "opioids": {
+      "drugs": ["morphine", "oxycodone", "hydrocodone", "codeine", "tramadol", "fentanyl", "methadone", "buprenorphine"],
+      "key_interactions": ["benzodiazepines", "other_cns_depressants", "cyp2d6_inhibitors", "cyp3a4_inhibitors"]
+    },
+    "benzodiazepines": {
+      "drugs": ["alprazolam", "diazepam", "lorazepam", "clonazepam", "temazepam", "midazolam", "triazolam"],
+      "key_interactions": ["opioids", "cns_depressants", "cyp3a4_inhibitors", "cyp3a4_inducers"]
+    }
+  },
+  "supplement_interactions": {
+    "st_johns_wort": {
+      "interactions": ["cyp3a4_induction", "p_gp_induction", "serotonin_syndrome_with_ssris"],
+      "severity": "Major",
+      "mechanism": "Induces CYP3A4, CYP2C9, CYP2C19, P-gp"
+    },
+    "grapefruit_juice": {
+      "interactions": ["cyp3a4_inhibition"],
+      "severity": "Major",
+      "mechanism": "Irreversible CYP3A4 inhibition in intestine"
+    },
+    "ginkgo_biloba": {
+      "interactions": ["antiplatelet_effect", "bleeding_risk"],
+      "severity": "Moderate"
+    },
+    "garlic_supplements": {
+      "interactions": ["antiplatelet_effect"],
+      "severity": "Minor to Moderate"
+    },
+    "fish_oil": {
+      "interactions": ["anticoagulant_effect"],
+      "severity": "Minor"
+    },
+    "vitamin_k": {
+      "interactions": ["warfarin_antagonism"],
+      "severity": "Major",
+      "mechanism": "Direct antagonism of warfarin effect"
+    },
+    "calcium": {
+      "interactions": ["levothyroxine_absorption", "fluoroquinolone_absorption", "tetracycline_absorption"],
+      "severity": "Moderate",
+      "recommendation": "Separate dosing by 2-4 hours"
+    },
+    "iron": {
+      "interactions": ["levothyroxine_absorption", "fluoroquinolone_absorption", "tetracycline_absorption", "bisphosphonate_absorption"],
+      "severity": "Moderate",
+      "recommendation": "Separate dosing by 2-4 hours"
+    }
+  }
+}

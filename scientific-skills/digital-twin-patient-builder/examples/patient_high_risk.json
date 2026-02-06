@@ -1,0 +1,36 @@
+{
+  "patient_id": "P002",
+  "genotype": {
+    "CYP2D6": "*4/*4",
+    "TPMT": "*1/*1",
+    "SNPs": {
+      "rs12345": "AA",
+      "rs67890": "GG"
+    }
+  },
+  "clinical": {
+    "age": 72,
+    "weight": 65.0,
+    "height": 165,
+    "lab_values": {
+      "creatinine": 1.8,
+      "alt": 65,
+      "ast": 55,
+      "bilirubin": 1.5,
+      "wbc": 4.2,
+      "platelet": 180
+    },
+    "comorbidities": ["chronic_kidney_disease", "atrial_fibrillation"]
+  },
+  "imaging": {
+    "tumor_volume": 78.5,
+    "perfusion_rate": 0.62,
+    "texture_features": {
+      "entropy": 6.8,
+      "uniformity": 0.32,
+      "contrast": 0.92
+    },
+    "tumor_location": "lung",
+    "metastasis": true
+  }
+}

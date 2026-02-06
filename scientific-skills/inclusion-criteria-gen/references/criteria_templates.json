@@ -1,0 +1,339 @@
+{
+  "diabetes": {
+    "inclusion_templates": [
+      {
+        "id": "DM_INC_001",
+        "criterion": "Age {min_age}-{max_age} years, inclusive",
+        "category": "demographics",
+        "rationale": "Adult population per regulatory guidance for diabetes trials",
+        "priority": "required",
+        "common_modifications": {
+          "typical_range": "18-75",
+          "extended_range": "18-80",
+          "geriatric_focus": "65-85"
+        }
+      },
+      {
+        "id": "DM_INC_002",
+        "criterion": "Diagnosed with Type 2 Diabetes Mellitus for at least {duration} months",
+        "category": "disease_severity",
+        "rationale": "Ensure stable disease status and minimize misclassification",
+        "priority": "required",
+        "default_duration": "6",
+        "alternatives": ["3 months", "12 months"]
+      },
+      {
+        "id": "DM_INC_003",
+        "criterion": "HbA1c >= {min}% and <= {max}% at screening",
+        "category": "disease_severity",
+        "rationale": "Optimal glycemic range for detecting treatment effect while maintaining safety",
+        "priority": "required",
+        "default_range": {"min": "7.5", "max": "10.5"},
+        "alternatives": [
+          {"min": "7.0", "max": "11.0", "scenario": "More inclusive"},
+          {"min": "8.0", "max": "10.0", "scenario": "Tighter control"}
+        ]
+      },
+      {
+        "id": "DM_INC_004",
+        "criterion": "BMI >= {min} kg/m²",
+        "category": "demographics",
+        "rationale": "Ensure appropriate body composition for dosing and metabolic assessment",
+        "priority": "required",
+        "default_min": "18.5",
+        "alternatives": ["20.0", "No minimum"]
+      },
+      {
+        "id": "DM_INC_005",
+        "criterion": "On stable dose of metformin >= {dose} mg/day for at least {weeks} weeks",
+        "category": "concomitant_meds",
+        "rationale": "Stable background therapy to isolate investigational drug effect",
+        "priority": "recommended",
+        "defaults": {"dose": "1000", "weeks": "8"},
+        "alternatives": [
+          {"dose": "1500", "weeks": "12"},
+          {"dose": "500", "weeks": "4"}
+        ]
+      }
+    ],
+    "exclusion_templates": [
+      {
+        "id": "DM_EXC_001",
+        "criterion": "History of severe hypoglycemia requiring assistance within {months} months",
+        "category": "safety",
+        "rationale": "Exclude high-risk hypoglycemia patients for safety",
+        "priority": "required",
+        "default_months": "6",
+        "alternatives": ["3", "12"]
+      },
+      {
+        "id": "DM_EXC_002",
+        "criterion": "eGFR < {value} mL/min/1.73m²",
+        "category": "laboratory",
+        "rationale": "Renal function requirement for drug safety",
+        "priority": "required",
+        "default_value": "30",
+        "alternatives": [
+          {"value": "45", "scenario": "Caution with renal clearance drugs"},
+          {"value": "60", "scenario": "Conservative safety threshold"}
+        ]
+      },
+      {
+        "id": "DM_EXC_003",
+        "criterion": "Significant cardiovascular event (MI, stroke, hospitalization for unstable angina) within {months} months",
+        "category": "safety",
+        "rationale": "Recent CV events may confound safety assessment and increase risk",
+        "priority": "required",
+        "default_months": "6",
+        "alternatives": ["3", "12"]
+      },
+      {
+        "id": "DM_EXC_004",
+        "criterion": "Use of insulin within {weeks} weeks of screening",
+        "category": "concomitant_meds",
+        "rationale": "Exclude recent insulin users to maintain study population homogeneity",
+        "priority": "recommended",
+        "default_weeks": "4",
+        "alternatives": ["2", "8"]
+      },
+      {
+        "id": "DM_EXC_005",
+        "criterion": "History of diabetic ketoacidosis or hyperosmolar hyperglycemic state",
+        "category": "safety",
+        "rationale": "Exclude patients with history of severe metabolic complications",
+        "priority": "required",
+        "flexibility": "Consider time-limited exclusion (within 12 months)"
+      },
+      {
+        "id": "DM_EXC_006",
+        "criterion": "ALT or AST > {x}× ULN or total bilirubin > {y}× ULN",
+        "category": "laboratory",
+        "rationale": "Hepatic function requirement for drug safety",
+        "priority": "required",
+        "defaults": {"x": "3", "y": "2"},
+        "alternatives": [{"x": "2", "y": "1.5"}]
+      }
+    ]
+  },
+  "oncology": {
+    "inclusion_templates": [
+      {
+        "id": "ONC_INC_001",
+        "criterion": "Age >= {min_age} years",
+        "category": "demographics",
+        "rationale": "Adult population",
+        "priority": "required",
+        "default_min": "18"
+      },
+      {
+        "id": "ONC_INC_002",
+        "criterion": "Histologically or cytologically confirmed {cancer_type}",
+        "category": "disease_severity",
+        "rationale": "Confirmed diagnosis required for study entry",
+        "priority": "required"
+      },
+      {
+        "id": "ONC_INC_003",
+        "criterion": "ECOG performance status {ps_range}",
+        "category": "disease_severity",
+        "rationale": "Adequate performance status for study participation and safety",
+        "priority": "required",
+        "default_range": "0-1",
+        "alternatives": ["0-2"]
+      },
+      {
+        "id": "ONC_INC_004",
+        "criterion": "Adequate organ function as defined by: ANC >= {anc}, platelets >= {plt}, hemoglobin >= {hgb}, creatinine <= {cr}, bilirubin <= {bili}, AST/ALT <= {ast_alt}",
+        "category": "laboratory",
+        "rationale": "Safety requirement for cytotoxic or investigational therapy",
+        "priority": "required",
+        "defaults": {
+          "anc": "1.5 × 10⁹/L",
+          "plt": "100 × 10⁹/L",
+          "hgb": "9 g/dL",
+          "cr": "1.5 × ULN",
+          "bili": "1.5 × ULN",
+          "ast_alt": "2.5 × ULN"
+        }
+      },
+      {
+        "id": "ONC_INC_005",
+        "criterion": "Measurable disease per RECIST v1.1",
+        "category": "disease_severity",
+        "rationale": "Required for objective response assessment",
+        "priority": "required"
+      }
+    ],
+    "exclusion_templates": [
+      {
+        "id": "ONC_EXC_001",
+        "criterion": "Prior treatment with {drug_class}",
+        "category": "medical_history",
+        "rationale": "Exclude prior exposure to study drug class",
+        "priority": "required"
+      },
+      {
+        "id": "ONC_EXC_002",
+        "criterion": "Active autoimmune disease requiring systemic therapy",
+        "category": "safety",
+        "rationale": "Immunotherapy safety consideration - risk of immune-related adverse events",
+        "priority": "required"
+      },
+      {
+        "id": "ONC_EXC_003",
+        "criterion": "Known active central nervous system metastases",
+        "category": "safety",
+        "rationale": "Exclude unstable CNS disease unless treated and stable",
+        "priority": "required",
+        "flexibility": "May allow if treated, stable for 4+ weeks, and not requiring steroids"
+      },
+      {
+        "id": "ONC_EXC_004",
+        "criterion": "Major surgery within {weeks} weeks of study treatment",
+        "category": "safety",
+        "rationale": "Allow adequate recovery from surgery",
+        "priority": "required",
+        "default_weeks": "4",
+        "alternatives": ["2", "6"]
+      }
+    ]
+  },
+  "cardiovascular": {
+    "inclusion_templates": [
+      {
+        "id": "CV_INC_001",
+        "criterion": "Age {min_age}-{max_age} years",
+        "category": "demographics",
+        "rationale": "Target population age range for cardiovascular studies",
+        "priority": "required",
+        "default_range": {"min": "18", "max": "85"}
+      },
+      {
+        "id": "CV_INC_002",
+        "criterion": "Established diagnosis of {condition}",
+        "category": "disease_severity",
+        "rationale": "Confirmed indication for study population",
+        "priority": "required"
+      },
+      {
+        "id": "CV_INC_003",
+        "criterion": "NYHA Class {class_range}",
+        "category": "disease_severity",
+        "rationale": "Target heart failure severity range",
+        "priority": "required",
+        "default_range": "II-III",
+        "alternatives": ["I-III", "II-IV"]
+      },
+      {
+        "id": "CV_INC_004",
+        "criterion": "LVEF <= {value}%",
+        "category": "disease_severity",
+        "rationale": "Documented reduced ejection fraction for HFrEF studies",
+        "priority": "required",
+        "default_value": "40",
+        "alternatives": ["35", "45"]
+      }
+    ],
+    "exclusion_templates": [
+      {
+        "id": "CV_EXC_001",
+        "criterion": "Systolic blood pressure < {min} or > {max} mmHg at screening",
+        "category": "laboratory",
+        "rationale": "Blood pressure safety limits for cardiovascular studies",
+        "priority": "required",
+        "defaults": {"min": "90", "max": "180"},
+        "alternatives": [{"min": "85", "max": "200"}]
+      },
+      {
+        "id": "CV_EXC_002",
+        "criterion": "Severe hepatic impairment (Child-Pugh Class C)",
+        "category": "laboratory",
+        "rationale": "Hepatic function requirement for drug metabolism",
+        "priority": "required"
+      },
+      {
+        "id": "CV_EXC_003",
+        "criterion": "Heart rate < {min} or > {max} bpm",
+        "category": "laboratory",
+        "rationale": "Heart rate safety limits",
+        "priority": "required",
+        "defaults": {"min": "50", "max": "110"},
+        "alternatives": [{"min": "45", "max": "120"}]
+      },
+      {
+        "id": "CV_EXC_004",
+        "criterion": "History of sustained ventricular tachycardia or ventricular fibrillation within {months} months",
+        "category": "safety",
+        "rationale": "Exclude high-risk arrhythmia patients",
+        "priority": "required",
+        "default_months": "6",
+        "alternatives": ["3", "12"]
+      }
+    ]
+  },
+  "general": {
+    "inclusion_templates": [
+      {
+        "id": "GEN_INC_001",
+        "criterion": "Age {min_age}-{max_age} years, inclusive",
+        "category": "demographics",
+        "rationale": "Adult population per study design",
+        "priority": "required",
+        "default_range": {"min": "18", "max": "75"}
+      },
+      {
+        "id": "GEN_INC_002",
+        "criterion": "Able to provide written informed consent",
+        "category": "compliance",
+        "rationale": "Regulatory requirement for study participation",
+        "priority": "required"
+      },
+      {
+        "id": "GEN_INC_003",
+        "criterion": "Willing and able to comply with all study procedures and visit schedule",
+        "category": "compliance",
+        "rationale": "Protocol compliance requirement",
+        "priority": "required"
+      },
+      {
+        "id": "GEN_INC_004",
+        "criterion": "Women of childbearing potential must use acceptable contraception",
+        "category": "safety",
+        "rationale": "Reproductive safety for women of childbearing potential",
+        "priority": "required"
+      }
+    ],
+    "exclusion_templates": [
+      {
+        "id": "GEN_EXC_001",
+        "criterion": "Participation in another interventional clinical trial within {weeks} weeks",
+        "category": "compliance",
+        "rationale": "Avoid confounding from other interventions and washout requirements",
+        "priority": "required",
+        "default_weeks": "4",
+        "alternatives": ["2", "8", "12"]
+      },
+      {
+        "id": "GEN_EXC_002",
+        "criterion": "Known hypersensitivity to {study_drug} or any of its components",
+        "category": "safety",
+        "rationale": "Allergy safety precaution",
+        "priority": "required"
+      },
+      {
+        "id": "GEN_EXC_003",
+        "criterion": "Pregnant or breastfeeding women",
+        "category": "safety",
+        "rationale": "Reproductive safety exclusion",
+        "priority": "required"
+      },
+      {
+        "id": "GEN_EXC_004",
+        "criterion": "Any condition that in the opinion of the investigator would compromise participation",
+        "category": "compliance",
+        "rationale": "Investigator discretion for patient safety",
+        "priority": "recommended"
+      }
+    ]
+  }
+}

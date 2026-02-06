@@ -1,0 +1,8 @@
+metabolite_id,metabolite_name,kegg_id,log2fc,pvalue,padj,control,treatment
+C00267,D-Glucose,C00267,1.2,0.003,0.012,45.2,78.5
+C00668,alpha-D-Glucose,C00668,1.15,0.004,0.015,42.1,72.3
+C05378,beta-D-Fructose,C05378,0.95,0.008,0.025,38.5,65.1
+C00236,Glyceraldehyde 3-phosphate,C00236,0.85,0.01,0.03,12.3,18.9
+C01159,3-Phospho-D-glycerate,C01159,0.75,0.015,0.04,8.5,12.8
+C00631,Pyruvate,C00631,-0.65,0.02,0.045,35.2,22.5
+C00074,Phosphoenolpyruvate,C00074,0.55,0.025,0.05,15.8,24.2

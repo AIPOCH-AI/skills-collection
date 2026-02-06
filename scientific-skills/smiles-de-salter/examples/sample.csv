@@ -1,0 +1,9 @@
+id,smiles,name
+1,CCO.[Na+],sodium_ethoxide
+2,c1ccccc1.[Cl-],benzene_hydrochloride
+3,CN1C=NC2=C1C(=O)N(C)C(=O)N2C.Cl,caffeine_hcl
+4,CC(C)Cc1ccc(cc1)C(C)C(=O)O,ibuprofen
+5,CC(C)CN1C(=O)N(C)C(=O)C2=C1N=CN2C.C(C(=O)O)C(CC(=O)O)(C(=O)O)O,theophylline_citrate
+6,c1ccc2c(c1)c(cn2)CCN,tryptamine
+7,CC(=O)O.[Na+],sodium_acetate
+8,CN(C)CCCN1C2=CC=CC=C2SC3=C1C=C(C=C3)Cl.O=C(O)/C=C/C(=O)O,promethazine_maleate

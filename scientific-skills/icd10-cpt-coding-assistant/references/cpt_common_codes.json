@@ -1,0 +1,171 @@
+{
+  "description": "Common CPT codes organized by category",
+  "version": "2024",
+  "evaluation_and_management": {
+    "new_patient": {
+      "99201": {
+        "description": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a straightforward medical decision making",
+        "typical_time": "10 minutes",
+        "requirements": "Presenting problem(s) are self limited or minor"
+      },
+      "99202": {
+        "description": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a straightforward medical decision making",
+        "typical_time": "15 minutes",
+        "requirements": "Presenting problem(s) are of low to moderate severity"
+      },
+      "99203": {
+        "description": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a low level of medical decision making",
+        "typical_time": "30 minutes",
+        "requirements": "Presenting problem(s) are of moderate severity"
+      },
+      "99204": {
+        "description": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a moderate level of medical decision making",
+        "typical_time": "45 minutes",
+        "requirements": "Presenting problem(s) are of moderate to high severity"
+      },
+      "99205": {
+        "description": "Office or other outpatient visit for the evaluation and management of a new patient, which requires a high level of medical decision making",
+        "typical_time": "60 minutes",
+        "requirements": "Presenting problem(s) are of high severity"
+      }
+    },
+    "established_patient": {
+      "99211": {
+        "description": "Office or other outpatient visit for the evaluation and management of an established patient",
+        "typical_time": "5 minutes",
+        "requirements": "May not require the presence of a physician or other qualified health care professional"
+      },
+      "99212": {
+        "description": "Office or other outpatient visit for the evaluation and management of an established patient, which requires straightforward medical decision making",
+        "typical_time": "10 minutes",
+        "requirements": "Presenting problem(s) are self-limited or minor"
+      },
+      "99213": {
+        "description": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a low level of medical decision making",
+        "typical_time": "15 minutes",
+        "requirements": "Presenting problem(s) are of low to moderate severity"
+      },
+      "99214": {
+        "description": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a moderate level of medical decision making",
+        "typical_time": "25 minutes",
+        "requirements": "Presenting problem(s) are of moderate to high severity"
+      },
+      "99215": {
+        "description": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a high level of medical decision making",
+        "typical_time": "40 minutes",
+        "requirements": "Presenting problem(s) are of high severity"
+      }
+    }
+  },
+  "preventive_medicine": {
+    "new_patient": {
+      "99381": {
+        "description": "Initial comprehensive preventive medicine evaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions",
+        "age_range": "under 1 year"
+      },
+      "99382": {
+        "description": "Initial comprehensive preventive medicine evaluation and management",
+        "age_range": "1-4 years"
+      },
+      "99383": {
+        "description": "Initial comprehensive preventive medicine evaluation and management",
+        "age_range": "5-11 years"
+      },
+      "99384": {
+        "description": "Initial comprehensive preventive medicine evaluation and management",
+        "age_range": "12-17 years"
+      },
+      "99385": {
+        "description": "Initial comprehensive preventive medicine evaluation and management",
+        "age_range": "18-39 years"
+      },
+      "99386": {
+        "description": "Initial comprehensive preventive medicine evaluation and management",
+        "age_range": "40-64 years"
+      },
+      "99387": {
+        "description": "Initial comprehensive preventive medicine evaluation and management",
+        "age_range": "65 years and older"
+      }
+    },
+    "established_patient": {
+      "99391": {
+        "description": "Periodic comprehensive preventive medicine reevaluation and management",
+        "age_range": "under 1 year"
+      },
+      "99392": {
+        "description": "Periodic comprehensive preventive medicine reevaluation and management",
+        "age_range": "1-4 years"
+      },
+      "99393": {
+        "description": "Periodic comprehensive preventive medicine reevaluation and management",
+        "age_range": "5-11 years"
+      },
+      "99394": {
+        "description": "Periodic comprehensive preventive medicine reevaluation and management",
+        "age_range": "12-17 years"
+      },
+      "99395": {
+        "description": "Periodic comprehensive preventive medicine reevaluation and management",
+        "age_range": "18-39 years"
+      },
+      "99396": {
+        "description": "Periodic comprehensive preventive medicine reevaluation and management",
+        "age_range": "40-64 years"
+      },
+      "99397": {
+        "description": "Periodic comprehensive preventive medicine reevaluation and management",
+        "age_range": "65 years and older"
+      }
+    }
+  },
+  "laboratory": {
+    "36415": "Collection of venous blood by venipuncture",
+    "36416": "Collection of capillary blood specimen",
+    "80053": "Comprehensive metabolic panel",
+    "80061": "Lipid panel",
+    "80048": "Basic metabolic panel",
+    "80050": "General health panel",
+    "81001": "Urinalysis, by dip stick or tablet reagent",
+    "83036": "Hemoglobin A1c",
+    "84443": "Thyroid stimulating hormone (TSH)"
+  },
+  "vaccines_and_immunizations": {
+    "90471": "Immunization administration for percutaneous, intradermal, subcutaneous, or intramuscular injection; 1 vaccine",
+    "90472": "Immunization administration; each additional vaccine",
+      "90630": "Influenza virus vaccine, quadrivalent",
+    "90653": "Influenza virus vaccine, trivalent",
+    "90715": "Tetanus, diphtheria toxoids and acellular pertussis vaccine",
+    "90732": "Pneumococcal polysaccharide vaccine, 23-valent",
+    "90734": "Meningococcal conjugate vaccine"
+  },
+  "radiology": {
+    "71045": "Radiologic examination, chest; single view",
+    "71046": "Radiologic examination, chest; 2 views",
+    "73060": "Radiologic examination, forearm; 2 views",
+    "73070": "Radiologic examination, elbow; 2 views",
+    "73100": "Radiologic examination, wrist; 2 views",
+    "73562": "Radiologic examination, knee; 2 views",
+    "73564": "Radiologic examination, knee; 4 or more views"
+  },
+  "medical_decision_making": {
+    "elements": {
+      "problems": ["Self-limited or minor", "Low", "Moderate", "High"],
+      "data": ["Minimal/NONE", "Limited", "Moderate", "Extensive"],
+      "risk": ["Minimal", "Low", "Moderate", "High"]
+    },
+    "complexity_levels": {
+      "straightforward": "Minimal problems + Minimal/NONE data + Minimal risk",
+      "low": "Low problems + Limited data + Low risk",
+      "moderate": "Moderate problems + Moderate data + Moderate risk",
+      "high": "High problems + Extensive data + High risk"
+    }
+  },
+  "coding_guidelines": [
+    "E/M codes are selected based on level of medical decision making OR total time",
+    "MDM includes: Number/complexity of problems, Amount/complexity of data, Risk of complications",
+    "Time includes: face-to-face and non-face-to-face time on date of encounter",
+    "Must document medical necessity for all services",
+    "Use modifier 25 for significant, separately identifiable E/M service on same day as procedure"
+  ]
+}

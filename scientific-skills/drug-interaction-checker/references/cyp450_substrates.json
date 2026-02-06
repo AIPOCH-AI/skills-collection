@@ -1,0 +1,110 @@
+{
+  "cyp450_enzymes": {
+    "CYP3A4": {
+      "description": "Most abundant CYP enzyme, metabolizes ~50% of drugs",
+      "location": "Liver, intestine",
+      "substrates": [
+        "atorvastatin", "simvastatin", "lovastatin",
+        "amlodipine", "nifedipine", "felodipine",
+        "cyclosporine", "tacrolimus", "sirolimus",
+        "midazolam", "triazolam", "alprazolam",
+        "sildenafil", "tadalafil", "vardenafil",
+        "quinidine", "fentanyl", "methadone",
+        "carbamazepine", "atorvastatin"
+      ],
+      "strong_inhibitors": ["ketoconazole", "itraconazole", "clarithromycin", "ritonavir"],
+      "moderate_inhibitors": ["fluconazole", "diltiazem", "verapamil", "grapefruit_juice"],
+      "weak_inhibitors": ["cimetidine", "ranitidine"],
+      "strong_inducers": ["rifampin", "rifabutin", "carbamazepine", "phenytoin", "phenobarbital", "st_johns_wort"],
+      "moderate_inducers": ["efavirenz", "bosentan", "modafinil"]
+    },
+    "CYP2C9": {
+      "description": "Important for warfarin and NSAID metabolism",
+      "location": "Liver",
+      "substrates": [
+        "warfarin", "phenytoin", "tolbutamide",
+        "losartan", "irbesartan", "candesartan",
+        "celecoxib", "flurbiprofen", "ibuprofen",
+        "glipizide", "glyburide", "nateglinide"
+      ],
+      "strong_inhibitors": ["fluconazole", "amiodarone"],
+      "moderate_inhibitors": ["miconazole", "voriconazole"],
+      "weak_inhibitors": ["cimetidine"],
+      "inducers": ["rifampin", "carbamazepine", "phenobarbital", "secobarbital"]
+    },
+    "CYP2C19": {
+      "description": "Polymorphic enzyme, important for PPIs and clopidogrel",
+      "location": "Liver",
+      "substrates": [
+        "omeprazole", "lansoprazole", "pantoprazole",
+        "clopidogrel", "diazepam", "phenytoin",
+        "propranolol", "citalopram", "escitalopram",
+        "voriconazole", "warfarin"
+      ],
+      "strong_inhibitors": ["omeprazole", "esomeprazole", "fluvoxamine"],
+      "moderate_inhibitors": ["fluconazole", "ticlopidine"],
+      "weak_inhibitors": ["cimetidine", "felbamate"],
+      "inducers": ["rifampin", "carbamazepine", "phenobarbital", "st_johns_wort"]
+    },
+    "CYP2D6": {
+      "description": "Highly polymorphic, metabolizes many psychotropics and cardiac drugs",
+      "location": "Liver",
+      "substrates": [
+        "metoprolol", "propranolol", "timolol",
+        "codeine", "tramadol", "oxycodone",
+        "dextromethorphan",
+        "haloperidol", "risperidone", "aripiprazole",
+        "paroxetine", "fluoxetine", "venlafaxine",
+        "tamoxifen", "atomoxetine"
+      ],
+      "strong_inhibitors": ["fluoxetine", "paroxetine", "quinidine"],
+      "moderate_inhibitors": ["duloxetine", "sertraline", "terbinafine"],
+      "weak_inhibitors": ["cimetidine", "ranitidine"],
+      "inducers": ["rifampin"]
+    },
+    "CYP1A2": {
+      "description": "Inducible enzyme, important for theophylline and clozapine",
+      "location": "Liver",
+      "substrates": [
+        "caffeine", "theophylline",
+        "tizanidine", "clozapine", "olanzapine",
+        "fluvoxamine", "melatonin",
+        "ramelteon", "tasimelteon"
+      ],
+      "strong_inhibitors": ["fluvoxamine", "ciprofloxacin"],
+      "moderate_inhibitors": ["cimetidine", "vemurafenib"],
+      "inducers": ["smoking", "chargrilled_food", "rifampin", "carbamazepine", "phenobarbital"]
+    }
+  },
+  "drug_transporters": {
+    "P-gp": {
+      "description": "P-glycoprotein (ABCB1), efflux transporter",
+      "substrates": ["digoxin", "dabigatran", "fexofenadine", "colchicine", "loperamide"],
+      "inhibitors": ["amiodarone", "itraconazole", "quinidine", "verapamil", "clarithromycin"],
+      "inducers": ["rifampin", "st_johns_wort", "carbamazepine"]
+    },
+    "OATP1B1": {
+      "description": "Organic anion transporting polypeptide, important for statin uptake",
+      "substrates": ["atorvastatin", "simvastatin", "pitavastatin", "rosuvastatin", "pravastatin"],
+      "inhibitors": ["cyclosporine", "gemfibrozil", "rifampin"]
+    },
+    "BCRP": {
+      "description": "Breast cancer resistance protein",
+      "substrates": ["rosuvastatin", "sulfasalazine", "topotecan", "methotrexate"],
+      "inhibitors": ["eltrombopag", "curcumin"]
+    }
+  },
+  "phase_ii_enzymes": {
+    "UGT1A1": {
+      "description": "UDP-glucuronosyltransferase, important for bilirubin and irinotecan",
+      "substrates": ["irinotecan", "atazanavir", "belinostat", "nilotinib"],
+      "inhibitors": ["atazanavir", "indinavir"],
+      "inducers": ["rifampin", "phenobarbital"]
+    },
+    "UGT2B7": {
+      "description": "Glucuronidates morphine, NSAIDs, and valproic acid",
+      "substrates": ["morphine", "codeine", "zidovudine", "valproic_acid", "lorazepam"],
+      "inhibitors": ["fluconazole", "ketoconazole", "probenecid"]
+    }
+  }
+}

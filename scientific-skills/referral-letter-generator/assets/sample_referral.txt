@@ -1,0 +1,73 @@
+======================================================================
+                       MEDICAL REFERRAL LETTER                        
+======================================================================
+
+Date: 2026-02-05
+URGENCY: URGENT
+
+TO:
+    Dr. Sarah Williams
+    Cardiologist
+    Department of Cardiology
+    Heart Care Center
+
+FROM:
+    Dr. Robert Johnson
+    Internal Medicine
+    City General Hospital
+    Phone: (555) 987-6543
+    Email: r.johnson@citygeneral.com
+
+----------------------------------------------------------------------
+PATIENT INFORMATION
+----------------------------------------------------------------------
+Name:           Jane Smith
+Date of Birth:  1985-07-22
+Patient ID:     MRN12345678
+Gender:         Female
+Phone:          (555) 123-4567
+
+----------------------------------------------------------------------
+REASON FOR REFERRAL
+----------------------------------------------------------------------
+Patient presents with intermittent chest pain, shortness of breath on exertion, and abnormal ECG findings suggesting possible coronary artery disease. Request cardiology evaluation and stress testing.
+
+----------------------------------------------------------------------
+PRIMARY DIAGNOSIS
+----------------------------------------------------------------------
+Suspected coronary artery disease, Class II angina
+
+----------------------------------------------------------------------
+RELEVANT MEDICAL HISTORY
+----------------------------------------------------------------------
+Hypertension (5 years), Type 2 Diabetes (3 years), Family history of CAD in father (MI at age 55). Former smoker (quit 2 years ago, 20 pack-year history).
+
+----------------------------------------------------------------------
+CURRENT MEDICATIONS
+----------------------------------------------------------------------
+  • Lisinopril 10mg daily
+  • Metformin 500mg twice daily
+  • Atorvastatin 20mg daily
+  • Aspirin 81mg daily
+
+----------------------------------------------------------------------
+ALLERGIES
+----------------------------------------------------------------------
+  • Penicillin (rash)
+
+----------------------------------------------------------------------
+ADDITIONAL NOTES
+----------------------------------------------------------------------
+Patient is anxious about cardiac symptoms. Reassurance provided. Please copy me on all reports.
+
+
+----------------------------------------------------------------------
+Thank you for your consultation and management of this patient.
+Please contact me if you require any additional information.
+
+Sincerely,
+
+Dr. Robert Johnson
+Internal Medicine
+
+======================================================================

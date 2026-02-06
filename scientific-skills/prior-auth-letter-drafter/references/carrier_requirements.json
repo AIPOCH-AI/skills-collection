@@ -1,0 +1,128 @@
+{
+  "carrier_requirements": {
+    "medicare": {
+      "required_fields": [
+        "patient_mbi",
+        "provider_npi",
+        "provider_ptan",
+        "icd10_codes",
+        "cpt_code",
+        "place_of_service"
+      ],
+      "formatting_notes": "Use Medicare-specific modifiers when applicable. Include detailed documentation of medical necessity.",
+      "submission_method": "DME MAC or FI portal"
+    },
+    "medicaid": {
+      "required_fields": [
+        "patient_medicaid_id",
+        "provider_npi",
+        "icd10_codes",
+        "cpt_code",
+        "state_specific_requirements"
+      ],
+      "formatting_notes": "State-specific forms may be required. Check individual state Medicaid requirements.",
+      "submission_method": "State Medicaid portal or paper form"
+    },
+    "blue_cross_blue_shield": {
+      "required_fields": [
+        "patient_member_id",
+        "group_number",
+        "provider_npi",
+        "icd10_codes",
+        "cpt_code",
+        "clinical_justification"
+      ],
+      "formatting_notes": "Most plans use national standard forms. Clinical justification should be detailed.",
+      "submission_method": "Provider portal or fax"
+    },
+    "united_healthcare": {
+      "required_fields": [
+        "patient_member_id",
+        "provider_npi",
+        "tax_id",
+        "icd10_codes",
+        "cpt_code",
+        "clinical_notes_reference"
+      ],
+      "formatting_notes": "Use UHC-specific prior auth forms when available. Attach relevant clinical notes.",
+      "submission_method": "UnitedHealthcare Provider Portal"
+    },
+    "aetna": {
+      "required_fields": [
+        "patient_member_id",
+        "provider_npi",
+        "icd10_codes",
+        "cpt_code",
+        "clinical_rationale"
+      ],
+      "formatting_notes": "Aetna requires specific clinical criteria to be documented for many services.",
+      "submission_method": "Aetna Provider Portal or Availity"
+    },
+    "cigna": {
+      "required_fields": [
+        "patient_member_id",
+        "provider_npi",
+        "icd10_codes",
+        "cpt_code",
+        "clinical_indicators"
+      ],
+      "formatting_notes": "Cigna uses evidence-based clinical guidelines for authorization decisions.",
+      "submission_method": "Cigna for Health Care Professionals portal"
+    },
+    "humana": {
+      "required_fields": [
+        "patient_member_id",
+        "provider_npi",
+        "icd10_codes",
+        "cpt_code",
+        "clinical_history"
+      ],
+      "formatting_notes": "Humana requires prior auth for many services; check specific plan requirements.",
+      "submission_method": "Humana Provider Portal"
+    },
+    "kaiser_permanente": {
+      "required_fields": [
+        "patient_member_id",
+        "provider_npi",
+        "referring_provider",
+        "icd10_codes",
+        "cpt_code"
+      ],
+      "formatting_notes": "Integrated system; prior auth typically managed within Kaiser network.",
+      "submission_method": "KP HealthConnect or regional portal"
+    }
+  },
+  "general_requirements": {
+    "common_fields": [
+      "Patient demographic information (name, DOB, member ID)",
+      "Provider information (name, NPI, contact details)",
+      "Service/procedure information (CPT/HCPCS codes, description)",
+      "Diagnosis information (ICD-10 codes)",
+      "Clinical justification for medical necessity",
+      "Proposed date of service",
+      "Place of service"
+    ],
+    "supporting_documentation": [
+      "Clinical notes from relevant encounters",
+      "Diagnostic test results",
+      "Consultation reports",
+      "Prior treatment history",
+      "Failed alternative therapies documentation",
+      "Relevant imaging studies"
+    ],
+    "timeline_requirements": {
+      "urgent": "Same day to 24-48 hours",
+      "standard": "5-14 business days depending on carrier",
+      "prospective": "Submit before service when possible"
+    }
+  },
+  "common_cpt_categories": {
+    "surgical_procedures": "10000-69999",
+    "radiology": "70000-79999",
+    "pathology": "80000-89999",
+    "medicine": "90000-99999",
+    "anesthesia": "00100-01999",
+    "evaluation_management": "99201-99499",
+    "category_iii": "0001T-9999T"
+  }
+}

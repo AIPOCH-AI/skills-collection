@@ -1,0 +1,3 @@
+,pathway_id,pathway_name,directional_score,correlation_score,enrichment_score,overall_score
+0,hsa01200,Carbon metabolism,0.6000000000000001,1.0,1.0,0.8666666666666667
+1,hsa00010,Glycolysis / Gluconeogenesis,0.0,1.0,1.0,0.6666666666666666

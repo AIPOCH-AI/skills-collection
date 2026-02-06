@@ -1,0 +1,13 @@
+# Example Genes to Label
+# One gene per line
+# These genes will be highlighted on the volcano plot
+
+TP53
+MYC
+BRCA1
+CDKN2A
+RB1
+CCND1
+MLH1
+STK11
+CTNNB1

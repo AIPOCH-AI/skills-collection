@@ -1,0 +1,85 @@
+{
+  "reference_ranges": {
+    "blood_routine": {
+      "白细胞计数": {"min": 4.0, "max": 10.0, "unit": "10^9/L", "critical_low": 2.0, "critical_high": 30.0},
+      "红细胞计数": {"min": 4.0, "max": 5.5, "unit": "10^12/L", "gender_diff": true, "male_min": 4.3, "male_max": 5.8, "female_min": 3.8, "female_max": 5.1},
+      "血红蛋白": {"min": 120.0, "max": 160.0, "unit": "g/L", "gender_diff": true, "male_min": 130, "male_max": 175, "female_min": 115, "female_max": 150},
+      "血小板计数": {"min": 100.0, "max": 300.0, "unit": "10^9/L", "critical_low": 50, "critical_high": 1000},
+      "红细胞压积": {"min": 0.40, "max": 0.50, "unit": "L/L", "gender_diff": true, "male_min": 0.40, "male_max": 0.50, "female_min": 0.37, "female_max": 0.48},
+      "平均红细胞体积": {"min": 80.0, "max": 100.0, "unit": "fL"},
+      "平均血红蛋白量": {"min": 27.0, "max": 34.0, "unit": "pg"},
+      "平均血红蛋白浓度": {"min": 320.0, "max": 360.0, "unit": "g/L"}
+    },
+    "lipid_panel": {
+      "总胆固醇": {"min": 0.0, "max": 5.7, "unit": "mmol/L", "optimal": 5.2, "borderline_high": 6.2},
+      "低密度脂蛋白胆固醇": {"min": 0.0, "max": 3.4, "unit": "mmol/L", "optimal": 2.6, "borderline_high": 3.4, "high": 4.1},
+      "高密度脂蛋白胆固醇": {"min": 1.0, "max": 2.0, "unit": "mmol/L", "gender_diff": true, "male_min": 1.0, "female_min": 1.3},
+      "甘油三酯": {"min": 0.0, "max": 1.7, "unit": "mmol/L", "borderline_high": 2.3, "high": 5.6}
+    },
+    "liver_function": {
+      "谷丙转氨酶": {"min": 0.0, "max": 40.0, "unit": "U/L", "mild_elevated": 80, "moderate_elevated": 200},
+      "谷草转氨酶": {"min": 0.0, "max": 40.0, "unit": "U/L"},
+      "碱性磷酸酶": {"min": 40.0, "max": 150.0, "unit": "U/L", "age_varies": true},
+      "γ-谷氨酰转肽酶": {"min": 10.0, "max": 60.0, "unit": "U/L", "gender_diff": true, "male_max": 60, "female_max": 45},
+      "总胆红素": {"min": 0.0, "max": 21.0, "unit": "μmol/L"},
+      "直接胆红素": {"min": 0.0, "max": 6.8, "unit": "μmol/L"},
+      "间接胆红素": {"min": 0.0, "max": 12.0, "unit": "μmol/L"},
+      "总蛋白": {"min": 60.0, "max": 80.0, "unit": "g/L"},
+      "白蛋白": {"min": 35.0, "max": 55.0, "unit": "g/L"},
+      "球蛋白": {"min": 20.0, "max": 35.0, "unit": "g/L"},
+      "白球比": {"min": 1.2, "max": 2.4, "unit": "ratio"}
+    },
+    "kidney_function": {
+      "肌酐": {"min": 44.0, "max": 133.0, "unit": "μmol/L", "gender_diff": true, "male_min": 57, "male_max": 97, "female_min": 41, "female_max": 73},
+      "尿素氮": {"min": 2.6, "max": 7.5, "unit": "mmol/L"},
+      "尿酸": {"min": 208.0, "max": 428.0, "unit": "μmol/L", "gender_diff": true, "male_min": 208, "male_max": 428, "female_min": 155, "female_max": 357},
+      "胱抑素C": {"min": 0.5, "max": 1.2, "unit": "mg/L"},
+      "肾小球滤过率": {"min": 90.0, "max": 120.0, "unit": "mL/min/1.73m²", "stages": {"stage1": 90, "stage2": 60, "stage3a": 45, "stage3b": 30, "stage4": 15}}
+    },
+    "blood_sugar": {
+      "空腹血糖": {"min": 3.9, "max": 6.1, "unit": "mmol/L", "impaired": 7.0, "diabetes": 7.0},
+      "餐后2小时血糖": {"min": 0.0, "max": 7.8, "unit": "mmol/L", "impaired": 11.1, "diabetes": 11.1},
+      "随机血糖": {"min": 0.0, "max": 11.1, "unit": "mmol/L"},
+      "糖化血红蛋白": {"min": 4.0, "max": 6.0, "unit": "%", "diabetes_target": 7.0}
+    },
+    "thyroid": {
+      "促甲状腺激素": {"min": 0.27, "max": 4.2, "unit": "mIU/L", "pregnancy_ranges": true},
+      "游离三碘甲状腺原氨酸": {"min": 3.1, "max": 6.8, "unit": "pmol/L"},
+      "游离甲状腺素": {"min": 12.0, "max": 22.0, "unit": "pmol/L"},
+      "三碘甲状腺原氨酸": {"min": 1.3, "max": 3.1, "unit": "nmol/L"},
+      "甲状腺素": {"min": 66.0, "max": 181.0, "unit": "nmol/L"},
+      "甲状腺球蛋白抗体": {"min": 0.0, "max": 4.0, "unit": "IU/mL"},
+      "甲状腺过氧化物酶抗体": {"min": 0.0, "max": 9.0, "unit": "IU/mL"}
+    },
+    "electrolytes": {
+      "钠": {"min": 137.0, "max": 147.0, "unit": "mmol/L", "critical_low": 125, "critical_high": 160},
+      "钾": {"min": 3.5, "max": 5.3, "unit": "mmol/L", "critical_low": 2.5, "critical_high": 6.5},
+      "氯": {"min": 99.0, "max": 110.0, "unit": "mmol/L"},
+      "钙": {"min": 2.1, "max": 2.6, "unit": "mmol/L", "corrected": true},
+      "磷": {"min": 0.8, "max": 1.45, "unit": "mmol/L"},
+      "镁": {"min": 0.75, "max": 1.25, "unit": "mmol/L"}
+    },
+    "inflammation": {
+      "C反应蛋白": {"min": 0.0, "max": 10.0, "unit": "mg/L", "high_sensitivity": true},
+      "超敏C反应蛋白": {"min": 0.0, "max": 3.0, "unit": "mg/L", "cv_risk": {"low": 1.0, "moderate": 3.0}},
+      "血沉": {"min": 0.0, "max": 15.0, "unit": "mm/h", "gender_diff": true, "male_max": 15, "female_max": 20}
+    },
+    "coagulation": {
+      "凝血酶原时间": {"min": 11.0, "max": 14.0, "unit": "秒"},
+      "国际标准化比值": {"min": 0.8, "max": 1.2, "unit": "ratio"},
+      "活化部分凝血活酶时间": {"min": 25.0, "max": 37.0, "unit": "秒"},
+      "纤维蛋白原": {"min": 2.0, "max": 4.0, "unit": "g/L"},
+      "凝血酶时间": {"min": 14.0, "max": 21.0, "unit": "秒"},
+      "D-二聚体": {"min": 0.0, "max": 0.55, "unit": "mg/L"}
+    },
+    "cardiac_markers": {
+      "肌钙蛋白I": {"min": 0.0, "max": 0.04, "unit": "ng/mL", "cutoff": 0.04},
+      "肌钙蛋白T": {"min": 0.0, "max": 0.01, "unit": "ng/mL"},
+      "肌红蛋白": {"min": 0.0, "max": 70.0, "unit": "ng/mL", "gender_diff": true},
+      "肌酸激酶": {"min": 38.0, "max": 174.0, "unit": "U/L", "gender_diff": true},
+      "肌酸激酶同工酶": {"min": 0.0, "max": 25.0, "unit": "U/L"},
+      "脑钠肽": {"min": 0.0, "max": 100.0, "unit": "pg/mL"},
+      "N端脑钠肽前体": {"min": 0.0, "max": 125.0, "unit": "pg/mL", "age_adjusted": true}
+    }
+  }
+}

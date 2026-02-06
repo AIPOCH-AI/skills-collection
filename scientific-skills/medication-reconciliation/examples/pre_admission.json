@@ -1,0 +1,47 @@
+{
+  "patient_id": "P20260206001",
+  "patient_name": "王某某",
+  "admission_date": "2026-02-06",
+  "medications": [
+    {
+      "drug_name": "阿托伐他汀钙片",
+      "generic_name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "每晚一次",
+      "route": "口服",
+      "indication": "高血脂"
+    },
+    {
+      "drug_name": "氨氯地平片",
+      "generic_name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "每日一次",
+      "route": "口服",
+      "indication": "高血压"
+    },
+    {
+      "drug_name": "阿司匹林肠溶片",
+      "generic_name": "Aspirin",
+      "dosage": "100mg",
+      "frequency": "每日一次",
+      "route": "口服",
+      "indication": "冠心病二级预防"
+    },
+    {
+      "drug_name": "二甲双胍片",
+      "generic_name": "Metformin",
+      "dosage": "500mg",
+      "frequency": "每日三次",
+      "route": "口服",
+      "indication": "2型糖尿病"
+    },
+    {
+      "drug_name": "维生素C片",
+      "generic_name": "Vitamin C",
+      "dosage": "100mg",
+      "frequency": "每日一次",
+      "route": "口服",
+      "indication": "营养补充"
+    }
+  ]
+}

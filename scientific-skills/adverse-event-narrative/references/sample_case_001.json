@@ -1,0 +1,91 @@
+{
+  "case_id": "2024-ICSR-EX-001",
+  "report_date": "2024-02-15",
+  "patient_age": "58 years",
+  "patient_sex": "Female",
+  "weight_kg": 65,
+  "height_cm": 165,
+  "medical_history": [
+    "Hypertension (diagnosed 2019)",
+    "Type 2 diabetes mellitus (diagnosed 2020)"
+  ],
+  "concomitant_drugs": [
+    {
+      "drug_name": "Lisinopril",
+      "indication": "Hypertension",
+      "dose": "10 mg",
+      "frequency": "once daily",
+      "route": "oral"
+    },
+    {
+      "drug_name": "Atorvastatin",
+      "indication": "Dyslipidemia",
+      "dose": "20 mg",
+      "frequency": "once daily",
+      "route": "oral"
+    }
+  ],
+  "suspect_drugs": [
+    {
+      "drug_name": "Metformin",
+      "indication": "Type 2 diabetes mellitus",
+      "dose": "1000 mg",
+      "frequency": "twice daily",
+      "route": "oral",
+      "start_date": "2024-01-15",
+      "stop_date": "2024-02-01",
+      "lot_number": "MF20231215-A"
+    }
+  ],
+  "adverse_events": [
+    {
+      "meddra_pt": "Lactic acidosis",
+      "onset_date": "2024-01-28",
+      "onset_latency": "13 days after first dose",
+      "severity": "Severe",
+      "seriousness": "Hospitalization",
+      "description": "Patient presented to emergency department with nausea, vomiting, abdominal pain, and hyperventilation. Altered mental status noted on arrival."
+    }
+  ],
+  "diagnostic_tests": [
+    {
+      "test": "Serum lactate",
+      "value": "8.5 mmol/L",
+      "reference_range": "0.5-2.2 mmol/L",
+      "date": "2024-01-29"
+    },
+    {
+      "test": "Arterial blood gas pH",
+      "value": "7.25",
+      "reference_range": "7.35-7.45",
+      "date": "2024-01-29"
+    },
+    {
+      "test": "Serum bicarbonate",
+      "value": "14 mmol/L",
+      "reference_range": "22-29 mmol/L",
+      "date": "2024-01-29"
+    },
+    {
+      "test": "Serum creatinine",
+      "value": "168 μmol/L",
+      "reference_range": "53-97 μmol/L",
+      "date": "2024-01-29"
+    }
+  ],
+  "treatment": [
+    "Immediate discontinuation of metformin",
+    "Intravenous sodium bicarbonate infusion",
+    "Intravenous fluid resuscitation",
+    "Hemodialysis (2 sessions)",
+    "Supportive care in ICU"
+  ],
+  "dechallenge": "Positive - lactate normalized to 1.2 mmol/L within 48 hours of discontinuation and dialysis",
+  "rechallenge": "Not performed",
+  "outcome": "Recovered with sequelae",
+  "outcome_date": "2024-02-10",
+  "sequelae": "Residual mild renal impairment (creatinine 105 μmol/L at discharge)",
+  "causality": "Probable",
+  "causality_rationale": "Reasonable temporal relationship between metformin initiation and lactic acidosis onset. Event resolved after drug discontinuation and appropriate treatment. Patient had renal risk factors (age, diabetes). No alternative etiology identified.",
+  "reporter_comments": "Patient had mild renal impairment at baseline (creatinine 95 μmol/L) which may have been a contributing factor. No other obvious causes of lactic acidosis identified (no sepsis, hypoperfusion, or other precipitating factors)."
+}

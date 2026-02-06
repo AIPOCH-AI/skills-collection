@@ -1,0 +1,241 @@
+{
+  "screen_failure_rates": {
+    "diabetes": {
+      "overall": 0.55,
+      "by_criterion": {
+        "hba1c_range": {
+          "description": "HbA1c outside specified range",
+          "screen_failure_rate": 0.25,
+          "typical_range": "7.0-11.0%",
+          "optimized_range": "7.5-10.5%",
+          "optimization_impact": "+0.05 to +0.08 improvement in screen success"
+        },
+        "egfr_threshold": {
+          "description": "eGFR below threshold",
+          "screen_failure_rate": 0.15,
+          "typical_threshold": "> 60 mL/min",
+          "optimized_threshold": "> 30 mL/min",
+          "optimization_impact": "+0.12 to +0.18 improvement in screen success"
+        },
+        "bmi_criteria": {
+          "description": "BMI outside acceptable range",
+          "screen_failure_rate": 0.08,
+          "typical_range": "18.5-45 kg/m²",
+          "notes": "Upper limit more commonly restrictive"
+        },
+        "concomitant_medications": {
+          "description": "Prohibited concomitant medications",
+          "screen_failure_rate": 0.12,
+          "notes": "Insulin washout periods common cause"
+        },
+        "cardiovascular_history": {
+          "description": "Recent cardiovascular events",
+          "screen_failure_rate": 0.10,
+          "typical_exclusion": "MI/stroke within 6 months",
+          "optimization": "Consider 3 months for stable patients"
+        }
+      }
+    },
+    "oncology": {
+      "overall": 0.60,
+      "by_criterion": {
+        "performance_status": {
+          "description": "ECOG performance status",
+          "screen_failure_rate": 0.20,
+          "ecog_0_1_eligible": 0.65,
+          "ecog_0_2_eligible": 0.85,
+          "impact_of_expanding": "+0.15 to +0.20 screen success rate"
+        },
+        "laboratory_values": {
+          "description": "Laboratory out of range",
+          "screen_failure_rate": 0.18,
+          "common_issues": ["neutropenia", "thrombocytopenia", "elevated liver enzymes"],
+          "mitigation": "Consider lower thresholds for non-myelosuppressive agents"
+        },
+        "brain_metastases": {
+          "description": "Active brain metastases",
+          "screen_failure_rate": 0.08,
+          "notes": "Allowing stable treated lesions could improve enrollment 5-10%"
+        },
+        "prior_therapy": {
+          "description": "Prior therapy washout or limits",
+          "screen_failure_rate": 0.12,
+          "notes": "Prior immunotherapy restrictions common cause"
+        },
+        "organ_dysfunction": {
+          "description": "Organ dysfunction (renal, hepatic)",
+          "screen_failure_rate": 0.15,
+          "notes": "Often most restrictive criterion in elderly"
+        }
+      }
+    },
+    "cardiovascular": {
+      "overall": 0.45,
+      "by_criterion": {
+        "age_limits": {
+          "description": "Age outside specified range",
+          "screen_failure_rate": 0.10,
+          "typical_upper_limit": "75-80 years",
+          "impact_of_removing": "+0.15 screen success in elderly populations"
+        },
+        "blood_pressure": {
+          "description": "Blood pressure out of range",
+          "screen_failure_rate": 0.12,
+          "typical_range": "90-180 mmHg systolic",
+          "notes": "White coat hypertension contributes to false exclusions"
+        },
+        "concomitant_cv_meds": {
+          "description": "Concomitant cardiovascular medications",
+          "screen_failure_rate": 0.08,
+          "notes": "Anticoagulant restrictions common"
+        },
+        "renal_function": {
+          "description": "Impaired renal function",
+          "screen_failure_rate": 0.15,
+          "common_in": "Heart failure trials with elderly patients"
+        }
+      }
+    }
+  },
+  "enrollment_rates": {
+    "by_phase": {
+      "phase_1": {
+        "healthy_volunteers": {
+          "subjects_per_site_per_month": 4.0,
+          "screen_success_rate": 0.65
+        },
+        "patient_population": {
+          "subjects_per_site_per_month": 1.5,
+          "screen_success_rate": 0.35
+        }
+      },
+      "phase_2": {
+        "subjects_per_site_per_month": 2.0,
+        "screen_success_rate": 0.40,
+        "typical_enrollment_duration_months": 12
+      },
+      "phase_3": {
+        "subjects_per_site_per_month": 1.5,
+        "screen_success_rate": 0.35,
+        "typical_enrollment_duration_months": 18
+      }
+    },
+    "by_therapeutic_area": {
+      "diabetes": {
+        "screen_success_rate": 0.45,
+        "dropout_rate": 0.15,
+        "enrollment_rate_per_site_per_month": 1.8
+      },
+      "oncology": {
+        "screen_success_rate": 0.40,
+        "dropout_rate": 0.20,
+        "enrollment_rate_per_site_per_month": 1.5
+      },
+      "cardiovascular": {
+        "screen_success_rate": 0.55,
+        "dropout_rate": 0.12,
+        "enrollment_rate_per_site_per_month": 2.2
+      },
+      "rare_disease": {
+        "screen_success_rate": 0.25,
+        "dropout_rate": 0.10,
+        "enrollment_rate_per_site_per_month": 0.5
+      }
+    }
+  },
+  "optimization_benchmarks": {
+    "successful_optimizations": [
+      {
+        "trial_type": "Type 2 Diabetes",
+        "modification": "Widened HbA1c range from 7.0-11.0% to 7.5-10.5%",
+        "screen_success_before": 0.32,
+        "screen_success_after": 0.41,
+        "impact": "+28% relative improvement"
+      },
+      {
+        "trial_type": "Type 2 Diabetes",
+        "modification": "Lowered eGFR threshold from >60 to >30 mL/min",
+        "screen_success_before": 0.35,
+        "screen_success_after": 0.48,
+        "impact": "+37% relative improvement"
+      },
+      {
+        "trial_type": "Oncology",
+        "modification": "Expanded ECOG from 0-1 to 0-2",
+        "screen_success_before": 0.28,
+        "screen_success_after": 0.38,
+        "impact": "+36% relative improvement"
+      },
+      {
+        "trial_type": "Oncology",
+        "modification": "Allowed stable treated brain metastases",
+        "screen_success_before": 0.30,
+        "screen_success_after": 0.36,
+        "impact": "+20% relative improvement"
+      },
+      {
+        "trial_type": "Heart Failure",
+        "modification": "Removed upper age limit of 80 years",
+        "screen_success_before": 0.42,
+        "screen_success_after": 0.52,
+        "impact": "+24% relative improvement"
+      }
+    ],
+    "optimization_targets": {
+      "screen_success_rate": {
+        "target": ">= 0.35",
+        "action_threshold": "< 0.25",
+        "excellent": ">= 0.50"
+      },
+      "enrollment_rate": {
+        "target": ">= 2.0 subjects/site/month",
+        "action_threshold": "< 1.0 subjects/site/month"
+      },
+      "time_to_complete": {
+        "target": "<= 120% of planned duration",
+        "action_threshold": "> 150% of planned duration"
+      }
+    }
+  },
+  "complexity_impact": {
+    "criteria_count_impact": {
+      "less_than_10": {
+        "complexity": "Low",
+        "estimated_screen_success": 0.50,
+        "risk": "May be overly broad; verify scientific rigor"
+      },
+      "10_to_20": {
+        "complexity": "Medium",
+        "estimated_screen_success": 0.40,
+        "risk": "Optimal range for most trials"
+      },
+      "20_to_30": {
+        "complexity": "High",
+        "estimated_screen_success": 0.30,
+        "risk": "May limit enrollment; review for consolidation"
+      },
+      "greater_than_30": {
+        "complexity": "Very High",
+        "estimated_screen_success": 0.20,
+        "risk": "Significant enrollment barriers; optimization recommended"
+      }
+    },
+    "category_distribution_impact": {
+      "laboratory_heavy": {
+        "definition": "> 30% of criteria are laboratory-based",
+        "impact": "May increase screen failures by 10-15%",
+        "mitigation": "Review if all laboratory parameters are essential"
+      },
+      "exclusion_heavy": {
+        "definition": "Exclusion criteria > 2x inclusion criteria count",
+        "impact": "May indicate overly restrictive design",
+        "mitigation": "Review exclusions for scientific necessity"
+      },
+      "subjective_language": {
+        "definition": "> 5 criteria contain subjective terms",
+        "impact": "Increases variability and protocol deviations",
+        "mitigation": "Provide objective definitions"
+      }
+    }
+  }
+}

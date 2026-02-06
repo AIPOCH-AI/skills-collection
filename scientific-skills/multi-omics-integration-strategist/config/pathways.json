@@ -1,0 +1,78 @@
+{
+  "databases": {
+    "KEGG": {
+      "enabled": true,
+      "organism": "hsa",
+      "min_genes": 3,
+      "url": "https://www.genome.jp/kegg/"
+    },
+    "Reactome": {
+      "enabled": true,
+      "min_genes": 5,
+      "url": "https://reactome.org/"
+    },
+    "WikiPathways": {
+      "enabled": false,
+      "min_genes": 3,
+      "url": "https://www.wikipathways.org/"
+    },
+    "GO_BP": {
+      "enabled": false,
+      "min_genes": 5,
+      "url": "http://geneontology.org/"
+    }
+  },
+  "mapping": {
+    "rna_to_protein": {
+      "method": "gene_symbol",
+      "fallback": "ensembl_id"
+    },
+    "protein_to_metabolite": {
+      "method": "enzyme_commission",
+      "fallback": "kegg_reaction"
+    },
+    "rna_to_metabolite": {
+      "method": "kegg_pathway_indirect",
+      "fallback": "correlation_based"
+    }
+  },
+  "enrichment": {
+    "pvalue_threshold": 0.05,
+    "padj_method": "BH",
+    "min_gene_set_size": 10,
+    "max_gene_set_size": 500
+  },
+  "cross_validation": {
+    "directional_consistency": {
+      "enabled": true,
+      "weight": 0.4
+    },
+    "correlation_analysis": {
+      "enabled": true,
+      "weight": 0.3,
+      "method": "spearman"
+    },
+    "enrichment_concordance": {
+      "enabled": true,
+      "weight": 0.3
+    },
+    "network_topology": {
+      "enabled": false,
+      "weight": 0.0
+    }
+  },
+  "visualization": {
+    "recommended_plots": [
+      "circos_plot",
+      "pathway_heatmap",
+      "sankey_diagram",
+      "correlation_network",
+      "bubble_plot"
+    ],
+    "color_schemes": {
+      "consistent": "#2E7D32",
+      "conflicting": "#C62828",
+      "neutral": "#757575"
+    }
+  }
+}

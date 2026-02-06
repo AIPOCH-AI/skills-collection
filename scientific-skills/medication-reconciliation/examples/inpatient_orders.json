@@ -1,0 +1,38 @@
+{
+  "patient_id": "P20260206001",
+  "order_date": "2026-02-06",
+  "medications": [
+    {
+      "drug_name": "立普妥",
+      "generic_name": "Atorvastatin",
+      "dosage": "20mg",
+      "frequency": "qn",
+      "route": "po",
+      "order_type": "长期医嘱"
+    },
+    {
+      "drug_name": "络活喜",
+      "generic_name": "Amlodipine",
+      "dosage": "5mg",
+      "frequency": "qd",
+      "route": "po",
+      "order_type": "长期医嘱"
+    },
+    {
+      "drug_name": "拜阿司匹林",
+      "generic_name": "Aspirin",
+      "dosage": "100mg",
+      "frequency": "qd",
+      "route": "po",
+      "order_type": "长期医嘱"
+    },
+    {
+      "drug_name": "氯化钠注射液",
+      "generic_name": "Sodium Chloride",
+      "dosage": "500ml",
+      "frequency": "qd",
+      "route": "ivgtt",
+      "order_type": "临时医嘱"
+    }
+  ]
+}

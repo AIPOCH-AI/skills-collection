@@ -1,0 +1,124 @@
+{
+  "therapeutic_areas": {
+    "oncology": {
+      "display_name": "Oncology",
+      "keywords": ["oncology", "cancer", "tumor", "malignant", "chemotherapy", "immunotherapy", "radiation", "solid tumor", "hematologic malignancy"],
+      "sub_areas": ["solid tumor", "hematology-oncology", "immuno-oncology"],
+      "fda_division": "Office of Oncologic Diseases"
+    },
+    "cardiology": {
+      "display_name": "Cardiology",
+      "keywords": ["cardiology", "cardiovascular", "heart", "cardiac", "hypertension", "arrhythmia", "heart failure", "myocardial", "coronary"],
+      "sub_areas": ["heart failure", "arrhythmia", "hypertension", "acute coronary syndrome"],
+      "fda_division": "Division of Cardiology and Nephrology"
+    },
+    "neurology": {
+      "display_name": "Neurology",
+      "keywords": ["neurology", "neuro", "alzheimer", "parkinson", "epilepsy", "multiple sclerosis", "migraine", "neuropathic pain"],
+      "sub_areas": ["neurodegenerative", "epilepsy", "pain", "movement disorders"],
+      "fda_division": "Division of Neurology 1/2"
+    },
+    "rare disease": {
+      "display_name": "Rare Diseases",
+      "keywords": ["rare disease", "orphan drug", "rare disorder", "orphan", "ultra-rare", "pediatric rare"],
+      "sub_areas": ["orphan indications", "pediatric rare"],
+      "fda_division": "Office of Orphan Products Development"
+    },
+    "infectious": {
+      "display_name": "Infectious Diseases",
+      "keywords": ["infectious", "antiviral", "antibiotic", "antimicrobial", "hiv", "hepatitis", "covid", "fungal", "bacterial"],
+      "sub_areas": ["hiv", "hepatitis", "respiratory infections", "antibacterial"],
+      "fda_division": "Division of Anti-Infectives"
+    },
+    "immunology": {
+      "display_name": "Immunology",
+      "keywords": ["immunology", "autoimmune", "rheumatoid", "lupus", "psoriasis", "transplant", "immunosuppression"],
+      "sub_areas": ["rheumatology", "dermatology-autoimmune", "transplant"],
+      "fda_division": "Division of Immunology and Transplantation"
+    },
+    "endocrinology": {
+      "display_name": "Endocrinology",
+      "keywords": ["endocrinology", "diabetes", "thyroid", "hormone", "metabolic", "obesity", "growth disorder"],
+      "sub_areas": ["diabetes", "thyroid", "metabolic", "bone metabolism"],
+      "fda_division": "Division of Metabolism and Endocrinology"
+    },
+    "gastroenterology": {
+      "display_name": "Gastroenterology",
+      "keywords": ["gastroenterology", "gi", "ibd", "crohn", "ulcerative colitis", "gerd", "liver", "hepatology"],
+      "sub_areas": ["ibd", "liver disease", "pancreatic"],
+      "fda_division": "Division of Gastroenterology"
+    },
+    "respiratory": {
+      "display_name": "Respiratory",
+      "keywords": ["respiratory", "pulmonary", "asthma", "copd", "cystic fibrosis", "pulmonary hypertension", "ild"],
+      "sub_areas": ["asthma", "copd", "cystic fibrosis", "ipf"],
+      "fda_division": "Division of Pulmonary, Allergy, and Rheumatology Products"
+    },
+    "dermatology": {
+      "display_name": "Dermatology",
+      "keywords": ["dermatology", "skin", "acne", "dermatitis", "melanoma", "psoriasis", "atopic dermatitis"],
+      "sub_areas": ["medical dermatology", "skin cancer"],
+      "fda_division": "Division of Dermatology and Dentistry"
+    },
+    "nephrology": {
+      "display_name": "Nephrology",
+      "keywords": ["nephrology", "kidney", "renal", "dialysis", "ckd", "transplant-kidney"],
+      "sub_areas": ["ckd", "dialysis", "glomerular"],
+      "fda_division": "Division of Cardiology and Nephrology"
+    },
+    "hematology": {
+      "display_name": "Hematology",
+      "keywords": ["hematology", "blood", "anemia", "hemophilia", "sickle cell", "thrombosis", "coagulation"],
+      "sub_areas": ["coagulation", "anemia", "bone marrow"],
+      "fda_division": "Division of Nonmalignant Hematology"
+    },
+    "ophthalmology": {
+      "display_name": "Ophthalmology",
+      "keywords": ["ophthalmology", "eye", "glaucoma", "macular degeneration", "retina", "cataract", "dry eye"],
+      "sub_areas": ["retina", "glaucoma", "cornea", "cataract"],
+      "fda_division": "Division of Ophthalmology"
+    },
+    "psychiatry": {
+      "display_name": "Psychiatry",
+      "keywords": ["psychiatry", "psychiatric", "depression", "anxiety", "bipolar", "schizophrenia", "adhd", "insomnia"],
+      "sub_areas": ["mood disorders", "psychotic disorders", "anxiety disorders"],
+      "fda_division": "Division of Psychiatry"
+    },
+    "pediatrics": {
+      "display_name": "Pediatrics",
+      "keywords": ["pediatric", "children", "neonatal", "infant", "adolescent", "childhood"],
+      "sub_areas": ["neonatal", "pediatric oncology", "rare pediatric"],
+      "fda_division": "Office of Pediatric Therapeutics"
+    },
+    "geriatrics": {
+      "display_name": "Geriatrics",
+      "keywords": ["geriatric", "elderly", "older adult", "aging", "senior"],
+      "sub_areas": ["dementia", "mobility", "frailty"],
+      "fda_division": "Office of Clinical Policy and Programs"
+    }
+  },
+  "aliases": {
+    "cancer": "oncology",
+    "tumor": "oncology",
+    "heart": "cardiology",
+    "cv": "cardiology",
+    "rare": "rare disease",
+    "orphan": "rare disease",
+    "hiv": "infectious",
+    "hepatitis": "infectious",
+    "autoimmune": "immunology",
+    "ra": "immunology",
+    "diabetes": "endocrinology",
+    "ibd": "gastroenterology",
+    "asthma": "respiratory",
+    "copd": "respiratory",
+    "cf": "respiratory",
+    "psoriasis": "dermatology",
+    "ckd": "nephrology",
+    "hemophilia": "hematology",
+    "eye": "ophthalmology",
+    "depression": "psychiatry",
+    "child": "pediatrics",
+    "elderly": "geriatrics"
+  }
+}

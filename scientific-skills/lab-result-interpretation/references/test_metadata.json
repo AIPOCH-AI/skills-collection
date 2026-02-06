@@ -1,0 +1,196 @@
+{
+  "test_metadata": {
+    "白细胞计数": {
+      "description": "血液中白细胞的数量，反映免疫系统功能",
+      "clinical_significance": "升高提示感染或炎症，降低提示免疫力下降",
+      "common_causes_high": ["细菌感染", "炎症反应", "应激状态", "白血病"],
+      "common_causes_low": ["病毒感染", "药物影响", "骨髓抑制", "自身免疫病"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "红细胞计数": {
+      "description": "血液中红细胞的数量",
+      "clinical_significance": "反映血液携氧能力",
+      "common_causes_high": ["脱水", "高原居住", "红细胞增多症"],
+      "common_causes_low": ["贫血", "出血", "骨髓抑制"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "血红蛋白": {
+      "description": "红细胞中携带氧气的蛋白质",
+      "clinical_significance": "贫血的主要诊断指标",
+      "common_causes_high": ["脱水", "高原反应"],
+      "common_causes_low": ["缺铁性贫血", "维生素B12缺乏", "慢性失血", "溶血"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "血小板计数": {
+      "description": "血液中血小板的数量，负责凝血功能",
+      "clinical_significance": "反映止血和凝血能力",
+      "common_causes_high": ["感染恢复期", "缺铁性贫血", "骨髓增生性疾病"],
+      "common_causes_low": ["免疫性血小板减少", "药物影响", "病毒感染", "脾功能亢进"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "总胆固醇": {
+      "description": "血液中所有胆固醇的总和",
+      "clinical_significance": "心血管风险评估的重要指标",
+      "common_causes_high": ["高脂饮食", "肥胖", "甲状腺功能减退", "遗传因素"],
+      "common_causes_low": ["营养不良", "甲状腺功能亢进", "肝病"],
+      "sample_type": "静脉血",
+      "fasting_required": true
+    },
+    "低密度脂蛋白胆固醇": {
+      "description": "俗称'坏胆固醇'，将胆固醇运送到外周组织",
+      "clinical_significance": "动脉粥样硬化的主要危险因素",
+      "common_causes_high": ["饱和脂肪摄入过多", "缺乏运动", "肥胖", "糖尿病"],
+      "common_causes_low": ["低脂饮食", "运动", "他汀类药物"],
+      "sample_type": "静脉血",
+      "fasting_required": true
+    },
+    "高密度脂蛋白胆固醇": {
+      "description": "俗称'好胆固醇'，将胆固醇从外周运回肝脏代谢",
+      "clinical_significance": "心血管保护因素",
+      "common_causes_high": ["运动", "适量饮酒", "雌激素"],
+      "common_causes_low": ["吸烟", "肥胖", "缺乏运动", "糖尿病"],
+      "sample_type": "静脉血",
+      "fasting_required": true
+    },
+    "甘油三酯": {
+      "description": "血液中主要的脂肪形式，储存能量",
+      "clinical_significance": "胰腺炎和心血管疾病风险因素",
+      "common_causes_high": ["高糖饮食", "饮酒", "肥胖", "糖尿病", "肾病"],
+      "common_causes_low": ["低脂饮食", "运动", "甲状腺功能亢进"],
+      "sample_type": "静脉血",
+      "fasting_required": true
+    },
+    "谷丙转氨酶": {
+      "description": "主要存在于肝细胞中的酶",
+      "clinical_significance": "肝细胞损伤的敏感指标",
+      "common_causes_high": ["脂肪肝", "病毒性肝炎", "酒精性肝病", "药物性肝损"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "谷草转氨酶": {
+      "description": "存在于肝脏、心肌、肌肉中的酶",
+      "clinical_significance": "肝脏和心肌损伤指标",
+      "common_causes_high": ["肝炎", "肝硬化", "心肌梗死", "肌肉损伤"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "总胆红素": {
+      "description": "红细胞分解产生的黄色色素",
+      "clinical_significance": "黄疸的量化指标",
+      "common_causes_high": ["溶血", "肝炎", "胆道梗阻", "Gilbert综合征"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "肌酐": {
+      "description": "肌肉代谢产生的废物，经肾脏排泄",
+      "clinical_significance": "评估肾小球滤过功能",
+      "common_causes_high": ["肾功能减退", "脱水", "肌肉量大"],
+      "common_causes_low": ["肌肉萎缩", "蛋白质摄入不足"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "尿素氮": {
+      "description": "蛋白质代谢的终产物",
+      "clinical_significance": "肾功能评估指标",
+      "common_causes_high": ["高蛋白饮食", "肾功能减退", "脱水"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "尿酸": {
+      "description": "嘌呤代谢的终产物",
+      "clinical_significance": "痛风和肾结石的风险指标",
+      "common_causes_high": ["高嘌呤饮食", "饮酒", "肾功能减退", "代谢综合征"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "空腹血糖": {
+      "description": "空腹状态下血液中的葡萄糖浓度",
+      "clinical_significance": "糖尿病诊断和监测的主要指标",
+      "common_causes_high": ["糖尿病", "胰岛素抵抗", "应激", "药物"],
+      "common_causes_low": ["降糖药物过量", "胰岛素瘤", "饥饿"],
+      "sample_type": "静脉血",
+      "fasting_required": true
+    },
+    "糖化血红蛋白": {
+      "description": "红细胞中血红蛋白与葡萄糖结合的产物",
+      "clinical_significance": "反映近2-3个月平均血糖水平",
+      "common_causes_high": ["长期血糖控制不佳"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "促甲状腺激素": {
+      "description": "垂体分泌的调节甲状腺功能的激素",
+      "clinical_significance": "甲状腺功能评估的首选指标",
+      "common_causes_high": ["甲状腺功能减退", "垂体瘤"],
+      "common_causes_low": ["甲状腺功能亢进", "垂体功能减退"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "钠": {
+      "description": "细胞外液主要的阳离子",
+      "clinical_significance": "维持体液和电解质平衡",
+      "common_causes_high": ["脱水", "高钠饮食", "尿崩症"],
+      "common_causes_low": ["呕吐腹泻", "心衰", "肾功能不全"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "钾": {
+      "description": "细胞内液主要的阳离子",
+      "clinical_significance": "维持神经肌肉功能和心律",
+      "common_causes_high": ["肾功能衰竭", "酸中毒", "药物"],
+      "common_causes_low": ["呕吐腹泻", "利尿剂", "碱中毒"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "C反应蛋白": {
+      "description": "急性炎症时肝脏产生的蛋白质",
+      "clinical_significance": "炎症和感染的非特异性指标",
+      "common_causes_high": ["细菌感染", "炎症", "组织损伤", "心血管疾病风险"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    },
+    "血沉": {
+      "description": "红细胞在一定时间内下沉的速度",
+      "clinical_significance": "非特异性炎症指标",
+      "common_causes_high": ["感染", "炎症", "贫血", "自身免疫病"],
+      "sample_type": "静脉血",
+      "fasting_required": false
+    }
+  },
+  "categories": {
+    "blood_routine": {
+      "name": "血常规",
+      "tests": ["白细胞计数", "红细胞计数", "血红蛋白", "血小板计数", "红细胞压积"],
+      "purpose": "评估血液系统基本状况"
+    },
+    "lipid_panel": {
+      "name": "血脂检查",
+      "tests": ["总胆固醇", "低密度脂蛋白胆固醇", "高密度脂蛋白胆固醇", "甘油三酯"],
+      "purpose": "评估心血管疾病风险"
+    },
+    "liver_function": {
+      "name": "肝功能检查",
+      "tests": ["谷丙转氨酶", "谷草转氨酶", "总胆红素", "白蛋白"],
+      "purpose": "评估肝脏健康状况"
+    },
+    "kidney_function": {
+      "name": "肾功能检查",
+      "tests": ["肌酐", "尿素氮", "尿酸"],
+      "purpose": "评估肾脏排泄功能"
+    },
+    "blood_sugar": {
+      "name": "血糖检查",
+      "tests": ["空腹血糖", "糖化血红蛋白"],
+      "purpose": "评估糖代谢状态"
+    },
+    "thyroid": {
+      "name": "甲状腺功能",
+      "tests": ["促甲状腺激素", "游离三碘甲状腺原氨酸", "游离甲状腺素"],
+      "purpose": "评估甲状腺功能状态"
+    }
+  }
+}

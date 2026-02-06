@@ -1,0 +1,46 @@
+{
+  "_description": "Sample medical referral letter input data",
+  "patient": {
+    "name": "Patient Full Name",
+    "date_of_birth": "YYYY-MM-DD",
+    "patient_id": "Medical Record Number",
+    "gender": "Optional: Male/Female/Other",
+    "contact_phone": "Optional: Phone number",
+    "address": "Optional: Patient address"
+  },
+  "referring_provider": {
+    "name": "Referring Doctor Name",
+    "title": "Optional: MD, DO, NP, etc.",
+    "department": "Optional: Department name",
+    "institution": "Optional: Hospital/Clinic name",
+    "phone": "Optional: Contact phone",
+    "email": "Optional: Email address",
+    "address": "Optional: Practice address"
+  },
+  "receiving_provider": {
+    "name": "Receiving Doctor/Department Name",
+    "title": "Optional: Specialty title",
+    "department": "Optional: Department",
+    "institution": "Optional: Facility name",
+    "phone": "Optional: Contact phone",
+    "email": "Optional: Email address",
+    "address": "Optional: Address"
+  },
+  "reason_for_referral": "Detailed description of why the patient is being referred",
+  "primary_diagnosis": "Primary diagnosis or working diagnosis",
+  "relevant_history": "Optional: Relevant past medical history",
+  "current_medications": [
+    "Optional: List of current medications with dosages"
+  ],
+  "allergies": [
+    "Optional: List of known allergies with reactions"
+  ],
+  "vital_signs": {
+    "Optional": "Key-value pairs of vital signs"
+  },
+  "lab_results": [
+    "Optional: List of relevant lab results"
+  ],
+  "urgency": "Routine|Urgent|Emergent",
+  "additional_notes": "Optional: Any additional information for receiving provider"
+}

@@ -1,0 +1,48 @@
+{
+  "weights": {
+    "scope_similarity": 0.35,
+    "field_match": 0.30,
+    "method_match": 0.20,
+    "impact_factor": 0.15
+  },
+  "scoring_thresholds": {
+    "excellent_match": 0.75,
+    "good_match": 0.60,
+    "fair_match": 0.40,
+    "poor_match": 0.20
+  },
+  "impact_factor_categories": {
+    "exceptional": {
+      "min": 30.0,
+      "description": "Top-tier journals with exceptional impact"
+    },
+    "high": {
+      "min": 10.0,
+      "max": 30.0,
+      "description": "High-impact journals"
+    },
+    "moderate": {
+      "min": 5.0,
+      "max": 10.0,
+      "description": "Moderate-impact journals"
+    },
+    "standard": {
+      "min": 2.0,
+      "max": 5.0,
+      "description": "Standard-impact journals"
+    },
+    "emerging": {
+      "max": 2.0,
+      "description": "Emerging or specialized journals"
+    }
+  },
+  "keyword_extraction": {
+    "max_keywords": 30,
+    "min_keyword_length": 3,
+    "phrase_bonus_multiplier": 2.0
+  },
+  "field_detection": {
+    "min_confidence": 0.5,
+    "multi_field_threshold": 0.3
+  }
+}

@@ -1,0 +1,7 @@
+chr - B_Cell B_Cell 0 100 color0
+chr - Dendritic_Cell Dendritic_Cell 0 100 color1
+chr - Fibroblast Fibroblast 0 100 color2
+chr - Macrophage Macrophage 0 100 color3
+chr - NK_Cell NK_Cell 0 100 color4
+chr - T_Cell T_Cell 0 100 color5
+chr - Tumor_Cell Tumor_Cell 0 100 color0

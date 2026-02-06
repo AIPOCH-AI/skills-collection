@@ -1,0 +1,29 @@
+{
+  "rna_to_pro": {
+    "BRCA1": "BRCA1",
+    "TP53": "TP53",
+    "HK1": "HK1",
+    "GAPDH": "GAPDH",
+    "GAPDHS": "GAPDHS",
+    "PKM": "PKM",
+    "LDHA": "LDHA"
+  },
+  "rna_kegg": {
+    "BRCA1": "hsa:BRCA1",
+    "TP53": "hsa:TP53",
+    "HK1": "hsa:HK1",
+    "GAPDH": "hsa:GAPDH",
+    "GAPDHS": "hsa:GAPDHS",
+    "PKM": "hsa:PKM",
+    "LDHA": "hsa:LDHA"
+  },
+  "pro_kegg": {
+    "BRCA1": "hsa:BRCA1",
+    "TP53": "hsa:TP53",
+    "HK1": "hsa:HK1",
+    "GAPDH": "hsa:GAPDH",
+    "GAPDHS": "hsa:GAPDHS",
+    "PKM": "hsa:PKM",
+    "LDHA": "hsa:LDHA"
+  }
+}

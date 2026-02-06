@@ -1,0 +1,114 @@
+# Cell Type Mapping Configuration
+# 标准化细胞类型命名和映射关系
+
+# Standard cell type categories
+categories:
+  epithelial:
+    description: "Epithelial cells from various tissues"
+    cell_types:
+      lung_epithelial:
+        aliases: ["lung_epithelial_cell", "alveolar_epithelial", "bronchial_epithelial"]
+        tissue: "lung"
+      intestinal_epithelial:
+        aliases: ["enterocyte", "colonocyte", "intestinal_epithelium"]
+        tissue: "intestine"
+      mammary_epithelial:
+        aliases: ["breast_epithelial", "mammary_gland_epithelial"]
+        tissue: "breast"
+      
+  immune:
+    description: "Immune system cells"
+    cell_types:
+      t_cell_cd4:
+        aliases: ["CD4_T_cell", "helper_T_cell", "Th_cell"]
+        tissue: "blood"
+      t_cell_cd8:
+        aliases: ["CD8_T_cell", "cytotoxic_T_cell", "CTL"]
+        tissue: "blood"
+      b_cell:
+        aliases: ["B_lymphocyte", "plasma_cell_precursor"]
+        tissue: "blood"
+      macrophage:
+        aliases: ["M1_macrophage", "M2_macrophage", "Kupffer_cell"]
+        tissue: "multiple"
+      dendritic_cell:
+        aliases: ["DC", "mDC", "pDC"]
+        tissue: "multiple"
+      neutrophil:
+        aliases: ["PMN", "granulocyte"]
+        tissue: "blood"
+      
+  specialized:
+    description: "Tissue-specific specialized cells"
+    cell_types:
+      cardiomyocyte:
+        aliases: ["cardiac_muscle_cell", "heart_muscle_cell", "CM"]
+        tissue: "heart"
+      hepatocyte:
+        aliases: ["liver_cell", "hepatic_cell"]
+        tissue: "liver"
+      neuron_excitatory:
+        aliases: ["glutamatergic_neuron", "pyramidal_neuron"]
+        tissue: "brain"
+      neuron_inhibitory:
+        aliases: ["GABAergic_neuron", "interneuron"]
+        tissue: "brain"
+      fibroblast:
+        aliases: ["fibroblast_cell", "FB"]
+        tissue: "connective_tissue"
+      endothelial_cell:
+        aliases: ["EC", "vascular_endothelial", "blood_vessel_cell"]
+        tissue: "vasculature"
+      adipocyte:
+        aliases: ["fat_cell", "adipose_cell"]
+        tissue: "adipose"
+      
+  cancer:
+    description: "Cancer cell lines and tumor cells"
+    cell_types:
+      lung_adenocarcinoma:
+        aliases: ["LUAD", "A549", "HCC827"]
+        tissue: "lung"
+      breast_cancer:
+        aliases: ["BRCA", "MCF7", "MDA-MB-231"]
+        tissue: "breast"
+      hepatocellular_carcinoma:
+        aliases: ["HCC", "HepG2", "Huh7"]
+        tissue: "liver"
+      colorectal_cancer:
+        aliases: ["CRC", "HCT116", "SW480"]
+        tissue: "colon"
+      melanoma:
+        aliases: ["SK-MEL-28", "A375"]
+        tissue: "skin"
+
+# Model-specific cell type mappings
+model_mappings:
+  geneformer:
+    # Geneformer internal cell type IDs
+    hepatocyte: "hepatocyte"
+    cardiomyocyte: "cardiac_muscle_cell"
+    fibroblast: "fibroblast"
+    t_cell_cd4: "CD4-positive, alpha-beta T cell"
+    macrophage: "macrophage"
+    
+  scgpt:
+    # scGPT internal cell type IDs
+    hepatocyte: "Hepatocyte"
+    cardiomyocyte: "Cardiomyocyte"
+    fibroblast: "Fibroblast"
+    t_cell_cd4: "CD4 T"
+    macrophage: "Macrophage"
+    lung_epithelial: "Epithelial"
+    neuron_excitatory: "Neuron"
+
+# Disease context mappings
+disease_contexts:
+  normal:
+    description: "Healthy/normal tissue"
+  tumor:
+    description: "Tumor/tumor cell line"
+  inflamed:
+    description: "Inflamed tissue"
+  fibrotic:
+    description: "Fibrotic tissue"

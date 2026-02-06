@@ -1,0 +1,7 @@
+Macrophage	50	Macrophage
+B_Cell	50	B_Cell
+Dendritic_Cell	50	Dendritic_Cell
+Tumor_Cell	50	Tumor_Cell
+Fibroblast	50	Fibroblast
+T_Cell	50	T_Cell
+NK_Cell	50	NK_Cell

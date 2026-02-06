@@ -1,0 +1,155 @@
+{
+  "fields": [
+    {
+      "id": "computer_science",
+      "name": "Computer Science",
+      "subfields": [
+        "artificial_intelligence",
+        "computer_vision",
+        "nlp",
+        "software_engineering",
+        "hardware",
+        "distributed_systems",
+        "cybersecurity",
+        "data_mining",
+        "human_computer_interaction"
+      ]
+    },
+    {
+      "id": "artificial_intelligence",
+      "name": "Artificial Intelligence",
+      "subfields": [
+        "machine_learning",
+        "deep_learning",
+        "neural_networks",
+        "reinforcement_learning",
+        "computer_vision",
+        "nlp",
+        "robotics",
+        "expert_systems"
+      ]
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "subfields": [
+        "molecular_biology",
+        "cell_biology",
+        "genetics",
+        "biochemistry",
+        "microbiology",
+        "ecology",
+        "evolutionary_biology",
+        "structural_biology"
+      ]
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "subfields": [
+        "clinical_medicine",
+        "oncology",
+        "cardiology",
+        "neurology",
+        "immunology",
+        "epidemiology",
+        "public_health",
+        "surgery"
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "subfields": [
+        "quantum_physics",
+        "condensed_matter",
+        "particle_physics",
+        "optics",
+        "thermodynamics",
+        "astrophysics",
+        "nuclear_physics"
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "subfields": [
+        "organic_chemistry",
+        "inorganic_chemistry",
+        "physical_chemistry",
+        "analytical_chemistry",
+        "materials_chemistry",
+        "biochemistry"
+      ]
+    },
+    {
+      "id": "materials_science",
+      "name": "Materials Science",
+      "subfields": [
+        "nanotechnology",
+        "polymers",
+        "metals",
+        "ceramics",
+        "semiconductors",
+        "composites",
+        "biomaterials"
+      ]
+    },
+    {
+      "id": "environmental_science",
+      "name": "Environmental Science",
+      "subfields": [
+        "climate_science",
+        "ecology",
+        "environmental_chemistry",
+        "conservation",
+        "sustainability",
+        "oceanography",
+        "atmospheric_science"
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "subfields": [
+        "macroeconomics",
+        "microeconomics",
+        "econometrics",
+        "finance",
+        "development_economics",
+        "behavioral_economics",
+        "international_economics"
+      ]
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology",
+      "subfields": [
+        "cognitive_psychology",
+        "clinical_psychology",
+        "social_psychology",
+        "developmental_psychology",
+        "neuropsychology",
+        "personality_psychology"
+      ]
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering",
+      "subfields": [
+        "mechanical_engineering",
+        "electrical_engineering",
+        "civil_engineering",
+        "aerospace_engineering",
+        "chemical_engineering",
+        "biomedical_engineering",
+        "industrial_engineering"
+      ]
+    },
+    {
+      "id": "multidisciplinary",
+      "name": "Multidisciplinary",
+      "subfields": []
+    }
+  ]
+}

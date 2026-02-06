@@ -1,0 +1,27 @@
+# Kraken2/Bracken 报告格式示例
+# 格式: percent\treads\tdirect_reads\trank\ttax_id\tname
+100.00	1000000	0	U	0	unclassified
+99.00	990000	0	R	1	root
+95.00	950000	0	D	2	Bacteria
+50.00	500000	0	P	1224	Proteobacteria
+30.00	300000	0	C	1236	Gammaproteobacteria
+15.00	150000	0	O	91347	Enterobacterales
+10.00	100000	0	F	543	Enterobacteriaceae
+8.00	80000	0	G	590	Salmonella
+5.00	50000	0	S	28901	Salmonella enterica
+3.00	30000	0	S	54736	Salmonella bongori
+15.00	150000	0	C	28211	Alphaproteobacteria
+10.00	100000	0	O	204455	Rhodobacterales
+8.00	80000	0	F	31989	Rhodobacteraceae
+5.00	50000	0	G	1060	Rhodobacter
+20.00	200000	0	P	1225	Firmicutes
+15.00	150000	0	C	91061	Bacilli
+12.00	120000	0	O	186826	Lactobacillales
+10.00	100000	0	F	33958	Lactobacillaceae
+8.00	80000	0	G	1578	Lactobacillus
+3.00	30000	0	P	1239	Actinobacteria
+2.00	20000	0	C	1760	Actinomycetia
+1.00	10000	0	P	976	Bacteroidetes
+4.00	40000	0	D	2759	Eukaryota
+2.00	20000	0	D	10239	Viruses
+1.00	10000	0	D	2157	Archaea

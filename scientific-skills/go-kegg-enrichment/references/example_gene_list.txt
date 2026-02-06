@@ -1,0 +1,33 @@
+# Example Gene List for Enrichment Analysis
+
+## Cancer-related genes (example input)
+TP53
+BRCA1
+BRCA2
+EGFR
+MYC
+KRAS
+PTEN
+AKT1
+BCL2
+CASP3
+CDKN2A
+ERBB2
+ESR1
+FGFR1
+FOXO3
+HRAS
+IGF1R
+JUN
+MAPK1
+MDM2
+MET
+MTOR
+NFKB1
+PIK3CA
+RB1
+SMAD4
+SRC
+STAT3
+TGFB1
+VEGFA

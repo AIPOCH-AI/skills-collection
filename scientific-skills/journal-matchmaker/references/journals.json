@@ -1,0 +1,380 @@
+{
+  "journals": [
+    {
+      "name": "Nature",
+      "abbreviation": "Nature",
+      "impact_factor": 64.8,
+      "fields": [
+        "multidisciplinary"
+      ],
+      "scope": "Publishes the finest peer-reviewed research in all fields of science and technology",
+      "publisher": "Nature Publishing Group",
+      "open_access": false
+    },
+    {
+      "name": "Nature Medicine",
+      "abbreviation": "Nat Med",
+      "impact_factor": 58.7,
+      "fields": [
+        "medicine",
+        "biology"
+      ],
+      "scope": "Research and review articles in biomedical sciences",
+      "publisher": "Nature Publishing Group",
+      "open_access": false
+    },
+    {
+      "name": "Nature Methods",
+      "abbreviation": "Nat Methods",
+      "impact_factor": 48.0,
+      "fields": [
+        "biology",
+        "methods"
+      ],
+      "scope": "New methods and significant improvements to tried-and-tested techniques in the life sciences",
+      "publisher": "Nature Publishing Group",
+      "open_access": false
+    },
+    {
+      "name": "Nature Biotechnology",
+      "abbreviation": "Nat Biotechnol",
+      "impact_factor": 46.9,
+      "fields": [
+        "biology",
+        "biotechnology"
+      ],
+      "scope": "Biological research with commercial applications",
+      "publisher": "Nature Publishing Group",
+      "open_access": false
+    },
+    {
+      "name": "Nature Machine Intelligence",
+      "abbreviation": "Nat Mach Intell",
+      "impact_factor": 25.0,
+      "fields": [
+        "artificial_intelligence",
+        "computer_science"
+      ],
+      "scope": "Machine learning, robotics and AI research",
+      "publisher": "Nature Publishing Group",
+      "open_access": false
+    },
+    {
+      "name": "Nature Communications",
+      "abbreviation": "Nat Commun",
+      "impact_factor": 16.6,
+      "fields": [
+        "multidisciplinary"
+      ],
+      "scope": "High-quality research across all natural sciences",
+      "publisher": "Nature Publishing Group",
+      "open_access": true
+    },
+    {
+      "name": "Science",
+      "abbreviation": "Science",
+      "impact_factor": 56.9,
+      "fields": [
+        "multidisciplinary"
+      ],
+      "scope": "Original scientific research and cutting-edge research news",
+      "publisher": "AAAS",
+      "open_access": false
+    },
+    {
+      "name": "Science Translational Medicine",
+      "abbreviation": "Sci Transl Med",
+      "impact_factor": 17.1,
+      "fields": [
+        "medicine",
+        "biology"
+      ],
+      "scope": "Translational medical research",
+      "publisher": "AAAS",
+      "open_access": false
+    },
+    {
+      "name": "Science Advances",
+      "abbreviation": "Sci Adv",
+      "impact_factor": 13.6,
+      "fields": [
+        "multidisciplinary"
+      ],
+      "scope": "Open access multidisciplinary research",
+      "publisher": "AAAS",
+      "open_access": true
+    },
+    {
+      "name": "Cell",
+      "abbreviation": "Cell",
+      "impact_factor": 64.5,
+      "fields": [
+        "biology",
+        "medicine"
+      ],
+      "scope": "Research articles in cell biology and molecular biology",
+      "publisher": "Cell Press",
+      "open_access": false
+    },
+    {
+      "name": "Cell Research",
+      "abbreviation": "Cell Res",
+      "impact_factor": 44.1,
+      "fields": [
+        "biology",
+        "cell_biology"
+      ],
+      "scope": "Cell biology and molecular cell biology",
+      "publisher": "Nature Publishing Group",
+      "open_access": false
+    },
+    {
+      "name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "abbreviation": "IEEE TPAMI",
+      "impact_factor": 20.8,
+      "fields": [
+        "artificial_intelligence",
+        "computer_science",
+        "computer_vision"
+      ],
+      "scope": "Pattern recognition, machine intelligence, computer vision",
+      "publisher": "IEEE",
+      "open_access": false
+    },
+    {
+      "name": "International Journal of Computer Vision",
+      "abbreviation": "IJCV",
+      "impact_factor": 19.5,
+      "fields": [
+        "computer_vision",
+        "artificial_intelligence"
+      ],
+      "scope": "Computer vision theory and applications",
+      "publisher": "Springer",
+      "open_access": false
+    },
+    {
+      "name": "IEEE Transactions on Neural Networks and Learning Systems",
+      "abbreviation": "IEEE TNNLS",
+      "impact_factor": 10.4,
+      "fields": [
+        "artificial_intelligence",
+        "neural_networks"
+      ],
+      "scope": "Neural networks and machine learning systems",
+      "publisher": "IEEE",
+      "open_access": false
+    },
+    {
+      "name": "Neural Networks",
+      "abbreviation": "Neural Netw",
+      "impact_factor": 7.8,
+      "fields": [
+        "artificial_intelligence",
+        "neural_networks"
+      ],
+      "scope": "Neural network research and applications",
+      "publisher": "Elsevier",
+      "open_access": false
+    },
+    {
+      "name": "Machine Learning",
+      "abbreviation": "Mach Learn",
+      "impact_factor": 5.0,
+      "fields": [
+        "artificial_intelligence",
+        "machine_learning"
+      ],
+      "scope": "Machine learning algorithms and theory",
+      "publisher": "Springer",
+      "open_access": false
+    },
+    {
+      "name": "Journal of Machine Learning Research",
+      "abbreviation": "JMLR",
+      "impact_factor": 4.3,
+      "fields": [
+        "artificial_intelligence",
+        "machine_learning"
+      ],
+      "scope": "Machine learning research",
+      "publisher": "JMLR",
+      "open_access": true
+    },
+    {
+      "name": "Computational Linguistics",
+      "abbreviation": "Comput Linguist",
+      "impact_factor": 8.6,
+      "fields": [
+        "nlp",
+        "computational_linguistics"
+      ],
+      "scope": "Computational approaches to linguistics and NLP",
+      "publisher": "MIT Press",
+      "open_access": false
+    },
+    {
+      "name": "Transactions of the Association for Computational Linguistics",
+      "abbreviation": "TACL",
+      "impact_factor": 6.0,
+      "fields": [
+        "nlp",
+        "computational_linguistics"
+      ],
+      "scope": "Computational linguistics research",
+      "publisher": "ACL",
+      "open_access": true
+    },
+    {
+      "name": "The Lancet",
+      "abbreviation": "Lancet",
+      "impact_factor": 168.9,
+      "fields": [
+        "medicine"
+      ],
+      "scope": "General medical research and reviews",
+      "publisher": "Elsevier",
+      "open_access": false
+    },
+    {
+      "name": "New England Journal of Medicine",
+      "abbreviation": "NEJM",
+      "impact_factor": 91.2,
+      "fields": [
+        "medicine"
+      ],
+      "scope": "Medical research and clinical practice",
+      "publisher": "NEJM Group",
+      "open_access": false
+    },
+    {
+      "name": "JAMA",
+      "abbreviation": "JAMA",
+      "impact_factor": 120.7,
+      "fields": [
+        "medicine"
+      ],
+      "scope": "Medical sciences and public health",
+      "publisher": "American Medical Association",
+      "open_access": false
+    },
+    {
+      "name": "Communications of the ACM",
+      "abbreviation": "CACM",
+      "impact_factor": 22.7,
+      "fields": [
+        "computer_science"
+      ],
+      "scope": "Computing research and practice",
+      "publisher": "ACM",
+      "open_access": false
+    },
+    {
+      "name": "IEEE Transactions on Computers",
+      "abbreviation": "IEEE TC",
+      "impact_factor": 3.7,
+      "fields": [
+        "computer_science",
+        "hardware"
+      ],
+      "scope": "Computer hardware and architecture",
+      "publisher": "IEEE",
+      "open_access": false
+    },
+    {
+      "name": "IEEE Transactions on Knowledge and Data Engineering",
+      "abbreviation": "IEEE TKDE",
+      "impact_factor": 8.9,
+      "fields": [
+        "data_mining",
+        "computer_science",
+        "artificial_intelligence"
+      ],
+      "scope": "Knowledge and data engineering",
+      "publisher": "IEEE",
+      "open_access": false
+    },
+    {
+      "name": "Data Mining and Knowledge Discovery",
+      "abbreviation": "Data Min Knowl Disc",
+      "impact_factor": 4.0,
+      "fields": [
+        "data_mining",
+        "computer_science"
+      ],
+      "scope": "Theory and practice of data mining",
+      "publisher": "Springer",
+      "open_access": false
+    },
+    {
+      "name": "Nature Climate Change",
+      "abbreviation": "Nat Clim Chang",
+      "impact_factor": 29.6,
+      "fields": [
+        "environmental_science",
+        "climate"
+      ],
+      "scope": "Climate change research",
+      "publisher": "Nature Publishing Group",
+      "open_access": false
+    },
+    {
+      "name": "Environmental Science & Technology",
+      "abbreviation": "Environ Sci Technol",
+      "impact_factor": 11.4,
+      "fields": [
+        "environmental_science",
+        "chemistry"
+      ],
+      "scope": "Environmental science and engineering",
+      "publisher": "ACS",
+      "open_access": false
+    },
+    {
+      "name": "Advanced Materials",
+      "abbreviation": "Adv Mater",
+      "impact_factor": 29.4,
+      "fields": [
+        "materials_science",
+        "nanotechnology"
+      ],
+      "scope": "Materials science and engineering",
+      "publisher": "Wiley",
+      "open_access": false
+    },
+    {
+      "name": "Nature Materials",
+      "abbreviation": "Nat Mater",
+      "impact_factor": 47.9,
+      "fields": [
+        "materials_science",
+        "physics"
+      ],
+      "scope": "Materials science research",
+      "publisher": "Nature Publishing Group",
+      "open_access": false
+    },
+    {
+      "name": "Physical Review Letters",
+      "abbreviation": "Phys Rev Lett",
+      "impact_factor": 8.0,
+      "fields": [
+        "physics"
+      ],
+      "scope": "Brief reports of significant physics research",
+      "publisher": "APS",
+      "open_access": false
+    },
+    {
+      "name": "Nature Physics",
+      "abbreviation": "Nat Phys",
+      "impact_factor": 19.6,
+      "fields": [
+        "physics"
+      ],
+      "scope": "Pure and applied physics research",
+      "publisher": "Nature Publishing Group",
+      "open_access": false
+    }
+  ]
+}

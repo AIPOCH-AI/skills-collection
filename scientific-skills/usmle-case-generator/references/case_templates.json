@@ -1,0 +1,205 @@
+{
+  "case_structures": {
+    "step1_vignette": {
+      "name": "Step 1 - Basic Science Vignette",
+      "focus": "Pathophysiology, mechanisms, pharmacology",
+      "structure": [
+        "Patient Demographics (age, gender)",
+        "Brief Presentation (1-2 sentences)",
+        "Key Clinical Finding",
+        "Question about mechanism/pathogen"
+      ],
+      "example_question_types": [
+        "What is the most likely mechanism?",
+        "Which pathogen is most likely responsible?",
+        "What is the pathophysiology?",
+        "Which enzyme is deficient?",
+        "What is the mode of inheritance?"
+      ]
+    },
+    "step2_vignette": {
+      "name": "Step 2 - Clinical Vignette",
+      "focus": "Diagnosis, management, next steps",
+      "structure": [
+        "Patient Demographics",
+        "Chief Complaint",
+        "History of Present Illness",
+        "Past Medical History",
+        "Medications",
+        "Allergies",
+        "Family History",
+        "Social History",
+        "Physical Examination",
+        "Laboratory/Diagnostic Studies",
+        "Question"
+      ],
+      "example_question_types": [
+        "What is the most likely diagnosis?",
+        "What is the most appropriate next step?",
+        "What is the best initial test?",
+        "What is the most accurate test?",
+        "What is the most appropriate treatment?"
+      ]
+    }
+  },
+  "vital_signs_template": {
+    "temperature": {
+      "normal": "98.6°F (37.0°C)",
+      "low_grade_fever": "100-101°F",
+      "moderate_fever": "101-103°F",
+      "high_fever": "103-105°F",
+      "hypothermia": "<95°F"
+    },
+    "heart_rate": {
+      "bradycardia": "<60 bpm",
+      "normal": "60-100 bpm",
+      "mild_tachycardia": "100-120 bpm",
+      "moderate_tachycardia": "120-140 bpm",
+      "severe_tachycardia": ">140 bpm"
+    },
+    "blood_pressure": {
+      "hypotension": "<90/60 mmHg",
+      "low_normal": "90-100/60-70 mmHg",
+      "normal": "120/80 mmHg",
+      "elevated": "120-139/80-89 mmHg",
+      "stage1_htn": "140-159/90-99 mmHg",
+      "stage2_htn": "≥160/≥100 mmHg",
+      "hypertensive_emergency": ">180/120 mmHg"
+    },
+    "respiratory_rate": {
+      "bradypnea": "<12/min",
+      "normal": "12-16/min",
+      "tachypnea": ">20/min",
+      "severe": ">30/min"
+    },
+    "oxygen_saturation": {
+      "normal": "95-100%",
+      "mild_hypoxemia": "90-94%",
+      "moderate_hypoxemia": "85-89%",
+      "severe_hypoxemia": "<85%"
+    }
+  },
+  "history_components": {
+    "hpi_elements": [
+      "Location",
+      "Quality",
+      "Severity",
+      "Duration",
+      "Timing",
+      "Context",
+      "Modifying factors",
+      "Associated symptoms"
+    ],
+    "ros_categories": [
+      "Constitutional",
+      "HEENT",
+      "Cardiovascular",
+      "Respiratory",
+      "Gastrointestinal",
+      "Genitourinary",
+      "Musculoskeletal",
+      "Integumentary",
+      "Neurological",
+      "Psychiatric",
+      "Endocrine",
+      "Hematologic/Lymphatic",
+      "Allergic/Immunologic"
+    ],
+    "social_history_elements": [
+      "Tobacco use",
+      "Alcohol use",
+      "Drug use",
+      "Sexual history",
+      "Occupation",
+      "Living situation",
+      "Exercise",
+      "Diet",
+      "Travel history"
+    ]
+  },
+  "physical_exam_template": {
+    "general": ["Appearance", "Level of consciousness", "Nutritional status"],
+    "vital_signs": ["Temperature", "Heart rate", "Blood pressure", "Respiratory rate", "O2 saturation"],
+    "skin": ["Color", "Turgor", "Lesions", "Rashes"],
+    "head": ["Normocephalic", "Trauma", "Tenderness"],
+    "eyes": ["Pupils", "Extraocular movements", "Fundoscopic exam"],
+    "ears": ["Canals", "Tympanic membranes"],
+    "nose": ["Septum", "Mucosa"],
+    "throat": ["Oropharynx", "Dentition"],
+    "neck": ["JVD", "Thyroid", "Lymph nodes", "Carotid bruits"],
+    "cardiovascular": ["Rate", "Rhythm", "Murmurs", "S1/S2", "Edema"],
+    "pulmonary": ["Inspection", "Palpation", "Percussion", "Auscultation"],
+    "abdominal": ["Inspection", "Auscultation", "Percussion", "Palpation"],
+    "musculoskeletal": ["Range of motion", "Strength", "Tenderness", "Deformity"],
+    "neurological": ["Mental status", "Cranial nerves", "Motor", "Sensory", "Reflexes", "Gait"]
+  },
+  "lab_reference_ranges": {
+    "cbc": {
+      "wbc": {"normal": "4,500-11,000/μL", "low": "<4,500", "high": ">11,000"},
+      "hemoglobin": {"male": "13.5-17.5 g/dL", "female": "12.0-16.0 g/dL"},
+      "hematocrit": {"male": "38.8-50.0%", "female": "34.9-44.5%"},
+      "platelets": {"normal": "150,000-400,000/μL", "low": "<150,000", "high": ">400,000"}
+    },
+    "cmp": {
+      "sodium": {"normal": "135-145 mEq/L"},
+      "potassium": {"normal": "3.5-5.0 mEq/L"},
+      "chloride": {"normal": "96-106 mEq/L"},
+      "co2": {"normal": "23-29 mEq/L"},
+      "bun": {"normal": "7-20 mg/dL"},
+      "creatinine": {"normal": "0.6-1.2 mg/dL"},
+      "glucose": {"normal": "70-100 mg/dL (fasting)"},
+      "calcium": {"normal": "8.5-10.5 mg/dL"},
+      "protein": {"normal": "6.0-8.3 g/dL"},
+      "albumin": {"normal": "3.5-5.0 g/dL"},
+      "bilirubin": {"normal": "0.1-1.2 mg/dL"},
+      "ast": {"normal": "10-40 U/L"},
+      "alt": {"normal": "7-56 U/L"},
+      "alkaline_phosphatase": {"normal": "44-147 U/L"}
+    },
+    "coagulation": {
+      "pt": {"normal": "11-13.5 seconds", "inr": "0.9-1.1"},
+      "ptt": {"normal": "25-35 seconds"}
+    },
+    "abg": {
+      "ph": {"normal": "7.35-7.45", "acidemia": "<7.35", "alkalemia": ">7.45"},
+      "pco2": {"normal": "35-45 mmHg"},
+      "po2": {"normal": "80-100 mmHg"},
+      "hco3": {"normal": "22-26 mEq/L"},
+      "base_excess": {"normal": "-2 to +2 mEq/L"}
+    },
+    "cardiac": {
+      "troponin_i": {"normal": "<0.04 ng/mL"},
+      "troponin_t": {"normal": "<0.01 ng/mL"},
+      "bnp": {"normal": "<100 pg/mL"},
+      "nt_probnp": {"normal": "<300 pg/mL"}
+    },
+    "urinalysis": {
+      "ph": {"normal": "4.6-8.0"},
+      "specific_gravity": {"normal": "1.005-1.030"},
+      "protein": {"normal": "negative"},
+      "glucose": {"normal": "negative"},
+      "ketones": {"normal": "negative"},
+      "blood": {"normal": "negative"},
+      "wbc": {"normal": "0-5 per HPF"},
+      "rbc": {"normal": "0-2 per HPF"}
+    }
+  },
+  "diagnostic_studies": {
+    "imaging": {
+      "chest_xray": ["PA and lateral views", "Specific findings by pathology"],
+      "ct_scan": ["With/without contrast", "Indications", "Findings"],
+      "mri": ["With/without contrast", "Indications", "Findings"],
+      "ultrasound": ["Type of scan", "Indications", "Findings"],
+      "echocardiogram": ["Transthoracic vs TEE", "Measurements", "Findings"],
+      "angiography": ["Type", "Indications", "Findings"]
+    },
+    "procedures": {
+      "ekg_ecg": ["Rate", "Rhythm", "Axis", "Intervals", "Morphology", "Findings"],
+      "lumbar_puncture": ["Opening pressure", "CSF analysis", "Cell count", "Glucose", "Protein", "Culture"],
+      "biopsy": ["Type", "Findings", "Pathology"],
+      "bronchoscopy": ["Indications", "Findings", "BAL results"],
+      "colonoscopy": ["Indications", "Findings", "Biopsy results"],
+      "egd": ["Indications", "Findings", "Biopsy results"]
+    }
+  }
+}

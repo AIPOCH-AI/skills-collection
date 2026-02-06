@@ -1,0 +1,72 @@
+# Geneformer Model Configuration
+model:
+  name: "geneformer"
+  version: "v1"
+  embedding_dim: 256
+  max_input_length: 2048
+  
+# Model paths (to be updated when models are downloaded)
+paths:
+  pretrained_model: "${MODEL_DIR}/geneformer-12L-30M"
+  tokenizer: "${MODEL_DIR}/geneformer/tokenizer"
+  
+# Perturbation settings
+perturbation:
+  default_type: "complete_ko"
+  available_types:
+    - complete_ko    # 完全敲除
+    - kd             # 敲低 (knockdown)
+    - crispr         # CRISPR干扰
+  
+  # In silico perturbation parameters
+  knockout_factor: 0.01  # 完全敲除后表达水平降至1%
+  knockdown_factor: 0.2  # 敲低后表达水平降至20%
+  
+# Differential expression settings
+differential_expression:
+  pval_threshold: 0.05
+  logfc_threshold: 1.0
+  method: "wilcoxon"  # wilcoxon, t-test, deseq2
+  multiple_testing: "fdr_bh"  # fdr_bh, bonferroni
+  
+# Pathway enrichment settings
+pathway_enrichment:
+  databases:
+    - KEGG
+    - GO_BP
+    - GO_MF
+    - Reactome
+    - WikiPathways
+  min_genes: 3
+  max_genes: 500
+  
+# Target scoring weights
+scoring_weights:
+  efficacy: 0.35
+  safety: 0.25
+  druggability: 0.25
+  novelty: 0.15
+  
+# Cell type specific settings
+cell_types:
+  hepatocyte:
+    reference_dataset: "liver_atlas"
+    marker_genes: ["ALB", "AFP", "CYP3A4", "HNF4A"]
+  cardiomyocyte:
+    reference_dataset: "heart_atlas"
+    marker_genes: ["MYH6", "MYH7", "TNNT2", "ACTC1"]
+  fibroblast:
+    reference_dataset: "fibroblast_atlas"
+    marker_genes: ["COL1A1", "COL1A2", "VIM", "FAP"]
+  t_cell_cd4:
+    reference_dataset: "immune_atlas"
+    marker_genes: ["CD4", "IL2", "IFNG", "FOXP3"]
+  macrophage:
+    reference_dataset: "immune_atlas"
+    marker_genes: ["CD68", "CD14", "CSF1R", "MARCO"]
+  lung_epithelial:
+    reference_dataset: "lung_atlas"
+    marker_genes: ["EPCAM", "SFTPA1", "SCGB1A1", "MUC5AC"]
+  neuron_excitatory:
+    reference_dataset: "brain_atlas"
+    marker_genes: ["SLC17A7", "CAMK2A", "NRGN", "SATB2"]

@@ -1,0 +1,8 @@
+T_Cell	0	80.0	Macrophage	0	80.0
+T_Cell	0	60.0	B_Cell	0	60.0
+Macrophage	0	70.0	T_Cell	0	70.0
+B_Cell	0	50.0	T_Cell	0	50.0
+NK_Cell	0	90.0	Tumor_Cell	0	90.0
+Tumor_Cell	0	40.0	Macrophage	0	40.0
+Dendritic_Cell	0	85.0	T_Cell	0	85.0
+Fibroblast	0	30.0	Tumor_Cell	0	30.0

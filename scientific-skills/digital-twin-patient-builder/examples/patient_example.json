@@ -1,0 +1,37 @@
+{
+  "patient_id": "P001",
+  "genotype": {
+    "CYP2D6": "*1/*4",
+    "TPMT": "*1/*3C",
+    "SNPs": {
+      "rs12345": "AG",
+      "rs67890": "CC",
+      "rs3892097": "G/A"
+    }
+  },
+  "clinical": {
+    "age": 58,
+    "weight": 70.5,
+    "height": 170,
+    "lab_values": {
+      "creatinine": 1.2,
+      "alt": 45,
+      "ast": 38,
+      "bilirubin": 1.1,
+      "wbc": 6.5,
+      "platelet": 250
+    },
+    "comorbidities": ["hypertension", "diabetes_type2"]
+  },
+  "imaging": {
+    "tumor_volume": 45.2,
+    "perfusion_rate": 0.85,
+    "texture_features": {
+      "entropy": 5.2,
+      "uniformity": 0.45,
+      "contrast": 0.78
+    },
+    "tumor_location": "liver",
+    "metastasis": false
+  }
+}

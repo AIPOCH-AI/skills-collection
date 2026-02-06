@@ -1,0 +1,41 @@
+{
+  "title": "新型降糖化合物X对2型糖尿病db/db小鼠模型的疗效及安全性研究",
+  "study_type": "efficacy",
+  "species": "Mus musculus",
+  "strain": "BKS.Cg-Dock7m +/+ Leprdb/J (db/db)",
+  "sex": "Male",
+  "age": "8-10周",
+  "weight_range": "35-45g",
+  "source": "北京维通利华实验动物技术有限公司",
+  "housing_conditions": "SPF级环境，温度22±2°C，湿度50±10%，12小时明暗交替，每笼4-5只",
+  "sample_size_per_group": 12,
+  "total_animals": 60,
+  "groups": [
+    {"name": "正常对照组 (WT)", "treatment": "0.5% CMC-Na 溶液，灌胃"},
+    {"name": "模型对照组 (db/db)", "treatment": "0.5% CMC-Na 溶液，灌胃"},
+    {"name": "阳性对照组 (Metformin)", "treatment": "二甲双胍 200 mg/kg，灌胃"},
+    {"name": "化合物X低剂量组", "treatment": "化合物X 10 mg/kg，灌胃"},
+    {"name": "化合物X高剂量组", "treatment": "化合物X 50 mg/kg，灌胃"}
+  ],
+  "effect_size": "0.9",
+  "power": "0.85",
+  "alpha": "0.05",
+  "randomization_method": "计算机随机数生成器 (Python random模块)，按体重分层随机",
+  "blinding": "Yes",
+  "blinding_details": "实验操作者和结局评估者均不知晓动物分组情况；药物由第三方人员配制并编码",
+  "primary_endpoint": "空腹血糖水平 (Fasting Blood Glucose, FBG)",
+  "secondary_endpoints": [
+    "糖化血红蛋白 (HbA1c)",
+    "口服糖耐量试验 (OGTT) 曲线下面积",
+    "血清胰岛素水平",
+    "HOMA-IR胰岛素抵抗指数",
+    "体重变化率",
+    "血脂谱 (TC, TG, LDL-C, HDL-C)"
+  ],
+  "statistical_method": "One-way ANOVA followed by Tukey's multiple comparison test (正态分布数据); Kruskal-Wallis test followed by Dunn's test (非正态分布数据)",
+  "study_duration": "28",
+  "dosing_route": "灌胃 (oral gavage)",
+  "dosing_frequency": "每日一次 (QD)",
+  "ethical_approval": "XX大学实验动物伦理与使用委员会 (IACUC)",
+  "approval_number": "IACUC-2024-XXXX"
+}

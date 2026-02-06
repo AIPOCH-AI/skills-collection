@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "name": "张教授",
+      "roles": ["C1", "C4", "C10", "C14"],
+      "affiliation": "北京大学医学部"
+    },
+    {
+      "name": "李博士",
+      "roles": ["C2", "C5", "C9", "C13"],
+      "affiliation": "清华大学医学院"
+    },
+    {
+      "name": "王同学",
+      "roles": ["C5", "C6", "C11", "C12"],
+      "affiliation": "北京大学医学部"
+    },
+    {
+      "name": "刘研究员",
+      "roles": ["C3", "C7", "C8", "C11"],
+      "affiliation": "中科院生物物理所"
+    }
+  ],
+  "equal_contribution": ["李博士", "王同学"],
+  "corresponding": ["张教授"],
+  "language": "zh"
+}

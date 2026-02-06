@@ -1,0 +1,229 @@
+{
+  "medical_specialties": {
+    "cardiology": {
+      "display_name": "Cardiology",
+      "subtopics": [
+        "Acute Coronary Syndromes",
+        "Heart Failure",
+        "Arrhythmias",
+        "Valvular Heart Disease",
+        "Hypertension",
+        "Pericardial Disease",
+        "Congenital Heart Disease",
+        "Vascular Disease"
+      ],
+      "step1_focus": ["Electrophysiology", "Hemodynamics", "Pharmacology", "Pathophysiology"],
+      "step2_focus": ["Diagnosis", "Management", "Acute Care", "Chronic Management"]
+    },
+    "pulmonology": {
+      "display_name": "Pulmonology",
+      "subtopics": [
+        "Obstructive Disease",
+        "Restrictive Disease",
+        "Infections",
+        "Vascular Disease",
+        "Sleep Disorders",
+        "Pleural Disease",
+        "Neoplasms"
+      ],
+      "step1_focus": ["Ventilation/Perfusion", "Gas Exchange", "Respiratory Physiology"],
+      "step2_focus": ["Pulmonary Function Tests", "Imaging", "Treatment"]
+    },
+    "gastroenterology": {
+      "display_name": "Gastroenterology",
+      "subtopics": [
+        "Esophageal Disorders",
+        "Gastric Disorders",
+        "Small Intestine",
+        "Colorectal Disorders",
+        "Hepatobiliary",
+        "Pancreas",
+        "GI Emergencies"
+      ],
+      "step1_focus": ["Digestive Physiology", "Enzymes", "Absorption"],
+      "step2_focus": ["Endoscopy", "Imaging", "Surgical vs Medical Management"]
+    },
+    "nephrology": {
+      "display_name": "Nephrology",
+      "subtopics": [
+        "Acute Kidney Injury",
+        "Chronic Kidney Disease",
+        "Glomerular Disease",
+        "Tubulointerstitial Disease",
+        "Electrolyte Disorders",
+        "Acid-Base Disorders",
+        "Genetic Kidney Disease"
+      ],
+      "step1_focus": ["Renal Physiology", "Fluid/Electrolyte Balance", "Acid-Base"],
+      "step2_focus": ["Dialysis", "Transplant", "Nephrotic/Nephritic Syndromes"]
+    },
+    "endocrinology": {
+      "display_name": "Endocrinology",
+      "subtopics": [
+        "Diabetes Mellitus",
+        "Thyroid Disorders",
+        "Adrenal Disorders",
+        "Pituitary Disorders",
+        "Parathyroid Disorders",
+        "Gonadal Disorders",
+        "Bone Metabolism"
+      ],
+      "step1_focus": ["Hormone Pathways", "Feedback Loops", "Receptors"],
+      "step2_focus": ["Replacement Therapy", "Suppression Therapy", "Monitoring"]
+    },
+    "hematology_oncology": {
+      "display_name": "Hematology/Oncology",
+      "subtopics": [
+        "Anemias",
+        "Coagulation Disorders",
+        "Leukemias",
+        "Lymphomas",
+        "Plasma Cell Disorders",
+        "Solid Tumors",
+        "Transfusion Medicine"
+      ],
+      "step1_focus": ["Coagulation Cascade", "Cell Biology", "Oncogenes"],
+      "step2_focus": ["Staging", "Treatment Protocols", "Complications"]
+    },
+    "infectious_disease": {
+      "display_name": "Infectious Disease",
+      "subtopics": [
+        "Bacterial Infections",
+        "Viral Infections",
+        "Fungal Infections",
+        "Parasitic Infections",
+        "HIV/AIDS",
+        "Sepsis",
+        "Fever of Unknown Origin"
+      ],
+      "step1_focus": ["Microbiology", "Antibiotic Mechanisms", "Immunology"],
+      "step2_focus": ["Empiric Therapy", "Prophylaxis", "Infection Control"]
+    },
+    "neurology": {
+      "display_name": "Neurology",
+      "subtopics": [
+        "Cerebrovascular Disease",
+        "Seizure Disorders",
+        "Neurodegenerative Disease",
+        "Demyelinating Disease",
+        "Neuromuscular Disease",
+        "Headache",
+        "Movement Disorders"
+      ],
+      "step1_focus": ["Neuroanatomy", "Neurophysiology", "Neurotransmitters"],
+      "step2_focus": ["Imaging", "Lumbar Puncture", "Emergency Management"]
+    },
+    "psychiatry": {
+      "display_name": "Psychiatry",
+      "subtopics": [
+        "Mood Disorders",
+        "Anxiety Disorders",
+        "Psychotic Disorders",
+        "Personality Disorders",
+        "Substance Use Disorders",
+        "Eating Disorders",
+        "Neurocognitive Disorders"
+      ],
+      "step1_focus": ["Neurotransmitters", "Pharmacology", "Development"],
+      "step2_focus": ["Diagnosis Criteria", "Psychotherapy", "Medication Management"]
+    },
+    "dermatology": {
+      "display_name": "Dermatology",
+      "subtopics": [
+        "Inflammatory Conditions",
+        "Infections",
+        "Neoplasms",
+        "Autoimmune Disease",
+        "Drug Reactions",
+        "Genetic Disorders"
+      ],
+      "step1_focus": ["Skin Histology", "Immunology", "Pathology"],
+      "step2_focus": ["Visual Diagnosis", "Biopsy", "Treatment"]
+    },
+    "obstetrics_gynecology": {
+      "display_name": "Obstetrics & Gynecology",
+      "subtopics": [
+        "Prenatal Care",
+        "Labor and Delivery",
+        "Postpartum",
+        "Gynecologic Oncology",
+        "Reproductive Endocrinology",
+        "Family Planning"
+      ],
+      "step1_focus": ["Embryology", "Hormonal Cycles", "Physiology"],
+      "step2_focus": ["Complications", "Screening", "Surgical Management"]
+    },
+    "pediatrics": {
+      "display_name": "Pediatrics",
+      "subtopics": [
+        "Newborn Care",
+        "Growth and Development",
+        "Genetic Disorders",
+        "Infectious Disease",
+        "Behavioral Issues",
+        "Adolescent Medicine"
+      ],
+      "step1_focus": ["Developmental Milestones", "Congenital Anomalies", "Immunology"],
+      "step2_focus": ["Vaccination", "Screening", "Age-Appropriate Care"]
+    },
+    "surgery": {
+      "display_name": "Surgery",
+      "subtopics": [
+        "General Surgery",
+        "Trauma",
+        "Surgical Complications",
+        "Preoperative Evaluation",
+        "Postoperative Care",
+        "Surgical Emergencies"
+      ],
+      "step1_focus": ["Anatomy", "Wound Healing", "Immunology"],
+      "step2_focus": ["Indications", "Contraindications", "Complications"]
+    },
+    "musculoskeletal": {
+      "display_name": "Musculoskeletal",
+      "subtopics": [
+        "Fractures",
+        "Arthritis",
+        "Muscle Disorders",
+        "Bone Disorders",
+        "Soft Tissue Injury",
+        "Rheumatologic Disease"
+      ],
+      "step1_focus": ["Anatomy", "Biomechanics", "Connective Tissue"],
+      "step2_focus": ["Imaging", "Physical Exam", "Rehabilitation"]
+    },
+    "emergency_medicine": {
+      "display_name": "Emergency Medicine",
+      "subtopics": [
+        "Cardiac Emergencies",
+        "Respiratory Emergencies",
+        "Trauma",
+        "Toxicology",
+        "Environmental",
+        "Psychiatric Emergencies"
+      ],
+      "step1_focus": ["Pathophysiology", "Pharmacology"],
+      "step2_focus": ["Triage", "Stabilization", "Procedures"]
+    }
+  },
+  "case_complexity": {
+    "easy": {
+      "description": "Classic presentation, single system involvement",
+      "vital_signs": 1-2 abnormal,
+      "diagnostics": 1-2 key findings,
+      "distractors": "Minimal"
+    },
+    "medium": {
+      "description": "Typical presentation with complicating factors",
+      "vital_signs": 2-3 abnormal,
+      "diagnostics": 2-3 key findings,
+      "distractors": "Moderate"
+    },
+    "hard": {
+      "description": "Atypical presentation, multisystem, confounders",
+      "vital_signs": "Multiple abnormalities",
+      "diagnostics": "Multiple findings requiring synthesis",
+      "distractors": "Challenging"
+    }
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "analysis": {
+    "metadata": {
+      "analysis_date": "2026-02-06T06:07:36.633112",
+      "data_period": "2025-08-10 to 2026-02-05",
+      "total_projects": 1000,
+      "sources_analyzed": [
+        "NIH",
+        "Horizon Europe",
+        "NSF"
+      ]
+    },
+    "global_trends": {
+      "top_keywords": [
+        {
+          "term": "methodologies",
+          "frequency": 672
+        },
+        {
+          "term": "quantum",
+          "frequency": 546
+        },
+        {
+          "term": "disease",
+          "frequency": 289
+        },
+        {
+          "term": "material",
+          "frequency": 258
+        },
+        {
+          "term": "science",
+          "frequency": 238
+        },
+        {
+          "term": "neural",
+          "frequency": 236
+        },
+        {
+          "term": "medicine",
+          "frequency": 203
+        },
+        {
+          "term": "learning",
+          "frequency": 198
+        },
+        {
+          "term": "infectious",
+          "frequency": 150
+        },
+        {
+          "term": "medical",
+          "frequency": 145
+        },
+        {
+          "term": "device",
+          "frequency": 145
+        },
+        {
+          "term": "sensor",
+          "frequency": 142
+        },
+        {
+          "term": "public",
+          "frequency": 142
+        },
+        {
+          "term": "health",
+          "frequency": 142
+        },
+        {
+          "term": "cancer",
+          "frequency": 141
+        },
+        {
+          "term": "cognitive",
+          "frequency": 140
+        },
+        {
+          "term": "cryptography",
+          "frequency": 139
+        },
+        {
+          "term": "neurodegenerative",
+          "frequency": 139
+        },
+        {
+          "term": "interface",
+          "frequency": 136
+        },
+        {
+          "term": "information",
+          "frequency": 133
+        },
+        {
+          "term": "computing",
+          "frequency": 132
+        },
+        {
+          "term": "advanced",
+          "frequency": 130
+        },
+        {
+          "term": "brain",
+          "frequency": 129
+        },
+        {
+          "term": "nanomaterial",
+          "frequency": 129
+        },
+        {
+          "term": "biomaterial",
+          "frequency": 129
+        },
+        {
+          "term": "smart",
+          "frequency": 128
+        },
+        {
+          "term": "machine",
+          "frequency": 105
+        },
+        {
+          "term": "personalized",
+          "frequency": 104
+        },
+        {
+          "term": "gene",
+          "frequency": 103
+        },
+        {
+          "term": "editing",
+          "frequency": 103
+        }
+      ],
+      "dominant_topics": [
+        {
+          "domain": "neuroscience",
+          "score": 644,
+          "keywords": [
+            "brain",
+            "cognitive",
+            "neural",
+            "neurodegenerative"
+          ],
+          "frequency": {
+            "brain": 129,
+            "cognitive": 140,
+            "neural": 236,
+            "neurodegenerative": 139
+          }
+        },
+        {
+          "domain": "quantum_computing",
+          "score": 546,
+          "keywords": [
+            "quantum computing",
+            "quantum information",
+            "quantum cryptography",
+            "quantum sensor"
+          ],
+          "frequency": {
+            "quantum computing": 132,
+            "quantum information": 133,
+            "quantum cryptography": 139,
+            "quantum sensor": 142
+          }
+        },
+        {
+          "domain": "biotechnology",
+          "score": 410,
+          "keywords": [
+            "gene editing",
+            "crispr",
+            "synthetic biology",
+            "personalized medicine"
+          ],
+          "frequency": {
+            "gene editing": 103,
+            "crispr": 103,
+            "synthetic biology": 100,
+            "personalized medicine": 104
+          }
+        },
+        {
+          "domain": "artificial_intelligence",
+          "score": 400,
+          "keywords": [
+            "artificial intelligence",
+            "machine learning",
+            "deep learning",
+            "neural network"
+          ],
+          "frequency": {
+            "artificial intelligence": 102,
+            "machine learning": 105,
+            "deep learning": 93,
+            "neural network": 100
+          }
+        },
+        {
+          "domain": "materials_science",
+          "score": 386,
+          "keywords": [
+            "nanomaterial",
+            "smart material",
+            "biomaterial"
+          ],
+          "frequency": {
+            "nanomaterial": 129,
+            "smart material": 128,
+            "biomaterial": 129
+          }
+        }
+      ]
+    },
+    "organization_analysis": {
+      "NIH": {
+        "project_count": 313,
+        "top_keywords": [
+          [
+            "methodologies",
+            210
+          ],
+          [
+            "material",
+            132
+          ],
+          [
+            "disease",
+            128
+          ],
+          [
+            "science",
+            96
+          ],
+          [
+            "neural",
+            93
+          ],
+          [
+            "learning",
+            77
+          ],
+          [
+            "medicine",
+            76
+          ],
+          [
+            "infectious",
+            71
+          ],
+          [
+            "medical",
+            71
+          ],
+          [
+            "device",
+            71
+          ],
+          [
+            "biomaterial",
+            71
+          ],
+          [
+            "cancer",
+            68
+          ],
+          [
+            "advanced",
+            67
+          ],
+          [
+            "public",
+            67
+          ],
+          [
+            "health",
+            67
+          ]
+        ],
+        "focus_areas": [
+          "artificial_intelligence",
+          "biotechnology",
+          "health",
+          "materials",
+          "neuroscience"
+        ],
+        "total_funding": 320341851
+      },
+      "NSF": {
+        "project_count": 243,
+        "top_keywords": [
+          [
+            "quantum",
+            292
+          ],
+          [
+            "methodologies",
+            162
+          ],
+          [
+            "material",
+            126
+          ],
+          [
+            "sensor",
+            78
+          ],
+          [
+            "cryptography",
+            73
+          ],
+          [
+            "information",
+            71
+          ],
+          [
+            "computing",
+            70
+          ],
+          [
+            "nanomaterial",
+            63
+          ],
+          [
+            "advanced",
+            63
+          ],
+          [
+            "smart",
+            63
+          ],
+          [
+            "biomaterial",
+            58
+          ],
+          [
+            "sustainability",
+            53
+          ],
+          [
+            "clean",
+            52
+          ],
+          [
+            "technology",
+            52
+          ],
+          [
+            "renewable",
+            49
+          ]
+        ],
+        "focus_areas": [
+          "quantum",
+          "artificial_intelligence",
+          "materials",
+          "climate"
+        ],
+        "total_funding": 241556239
+      },
+      "Horizon Europe": {
+        "project_count": 444,
+        "top_keywords": [
+          [
+            "methodologies",
+            300
+          ],
+          [
+            "quantum",
+            254
+          ],
+          [
+            "disease",
+            161
+          ],
+          [
+            "medicine",
+            127
+          ],
+          [
+            "science",
+            120
+          ],
+          [
+            "neural",
+            119
+          ],
+          [
+            "neurodegenerative",
+            82
+          ],
+          [
+            "cognitive",
+            81
+          ],
+          [
+            "infectious",
+            79
+          ],
+          [
+            "brain",
+            77
+          ],
+          [
+            "interface",
+            77
+          ],
+          [
+            "public",
+            75
+          ],
+          [
+            "health",
+            75
+          ],
+          [
+            "learning",
+            75
+          ],
+          [
+            "medical",
+            74
+          ]
+        ],
+        "focus_areas": [
+          "artificial_intelligence",
+          "quantum",
+          "biotechnology",
+          "health",
+          "climate",
+          "neuroscience"
+        ],
+        "total_funding": 468171130
+      }
+    },
+    "domain_growth": [
+      [
+        "climate",
+        -0.5
+      ],
+      [
+        "biotechnology",
+        -0.71
+      ],
+      [
+        "health",
+        -0.76
+      ],
+      [
+        "neuroscience",
+        -0.86
+      ],
+      [
+        "materials",
+        -0.88
+      ],
+      [
+        "quantum",
+        -0.88
+      ],
+      [
+        "artificial_intelligence",
+        -1.0
+      ]
+    ],
+    "monthly_distribution": {
+      "2025-08": {
+        "artificial_intelligence": 23,
+        "biotechnology": 17,
+        "climate": 8,
+        "health": 21,
+        "materials": 16,
+        "neuroscience": 21,
+        "quantum": 17
+      },
+      "2025-09": {
+        "artificial_intelligence": 24,
+        "biotechnology": 27,
+        "climate": 22,
+        "health": 30,
+        "materials": 19,
+        "neuroscience": 27,
+        "quantum": 26
+      },
+      "2025-10": {
+        "artificial_intelligence": 25,
+        "biotechnology": 27,
+        "climate": 29,
+        "health": 23,
+        "materials": 31,
+        "neuroscience": 23,
+        "quantum": 20
+      },
+      "2025-11": {
+        "artificial_intelligence": 20,
+        "biotechnology": 23,
+        "climate": 25,
+        "health": 20,
+        "materials": 25,
+        "neuroscience": 20,
+        "quantum": 21
+      },
+      "2025-12": {
+        "artificial_intelligence": 23,
+        "biotechnology": 18,
+        "climate": 25,
+        "health": 30,
+        "materials": 25,
+        "neuroscience": 24,
+        "quantum": 33
+      },
+      "2026-01": {
+        "artificial_intelligence": 18,
+        "biotechnology": 25,
+        "climate": 18,
+        "health": 29,
+        "materials": 24,
+        "neuroscience": 29,
+        "quantum": 28
+      },
+      "2026-02": {
+        "artificial_intelligence": 0,
+        "biotechnology": 5,
+        "climate": 4,
+        "health": 5,
+        "materials": 2,
+        "neuroscience": 3,
+        "quantum": 2
+      }
+    }
+  },
+  "forecast": {
+    "metadata": {
+      "forecast_generated": "2026-02-06T06:07:36.633679",
+      "forecast_horizon": "2027 - 2031",
+      "model": "trend_extrapolation_v1"
+    },
+    "yearly_predictions": {
+      "2027": {
+        "hot_topics": [],
+        "emerging_areas": [
+          "Multimodal AI",
+          "Gene Therapy 2.0",
+          "Green Hydrogen"
+        ],
+        "confidence": 0.85
+      },
+      "2028": {
+        "hot_topics": [],
+        "emerging_areas": [
+          "Neuromorphic Computing",
+          "Microbiome Engineering",
+          "Carbon Removal"
+        ],
+        "confidence": 0.8
+      },
+      "2029": {
+        "hot_topics": [],
+        "emerging_areas": [
+          "Molecular Nanotechnology",
+          "Anti-aging Research",
+          "Ocean Restoration"
+        ],
+        "confidence": 0.75
+      },
+      "2030": {
+        "hot_topics": [],
+        "emerging_areas": [
+          "Consciousness Studies",
+          "Planetary Defense",
+          "Bio-digital Convergence"
+        ],
+        "confidence": 0.7
+      },
+      "2031": {
+        "hot_topics": [],
+        "emerging_areas": [
+          "Technological Singularity Research",
+          "Interstellar Probes",
+          "Global Brain Projects"
+        ],
+        "confidence": 0.65
+      }
+    },
+    "long_term_outlook": {
+      "transformative_technologies": [
+        "Artificial General Intelligence (AGI)",
+        "Quantum Internet",
+        "Synthetic Life Forms",
+        "Brain-Computer Integration",
+        "Climate Engineering"
+      ],
+      "funding_shift_predictions": [
+        "Increased focus on AI safety and ethics",
+        "Major investments in climate adaptation",
+        "Convergence of biology and computing",
+        "Space resource utilization"
+      ],
+      "confidence": 0.65
+    }
+  },
+  "recommendations": [
+    {
+      "area": "climate",
+      "action": "INVEST",
+      "rationale": "High growth rate of -50% indicates strong funding interest",
+      "priority": "MEDIUM"
+    },
+    {
+      "area": "biotechnology",
+      "action": "INVEST",
+      "rationale": "High growth rate of -71% indicates strong funding interest",
+      "priority": "MEDIUM"
+    },
+    {
+      "area": "health",
+      "action": "INVEST",
+      "rationale": "High growth rate of -76% indicates strong funding interest",
+      "priority": "MEDIUM"
+    }
+  ]
+}

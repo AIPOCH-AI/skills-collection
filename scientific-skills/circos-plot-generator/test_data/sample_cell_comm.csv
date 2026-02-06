@@ -1,0 +1,9 @@
+source,target,weight,type
+T_Cell,Macrophage,0.8,Ligand-Receptor
+T_Cell,B_Cell,0.6,Secreted
+Macrophage,T_Cell,0.7,Ligand-Receptor
+B_Cell,T_Cell,0.5,Secreted
+NK_Cell,Tumor_Cell,0.9,Ligand-Receptor
+Tumor_Cell,Macrophage,0.4,Secreted
+Dendritic_Cell,T_Cell,0.85,Ligand-Receptor
+Fibroblast,Tumor_Cell,0.3,Secreted

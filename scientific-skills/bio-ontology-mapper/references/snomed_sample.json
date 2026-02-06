@@ -1,0 +1,416 @@
+{
+  "22298006": {
+    "term": "Myocardial infarction",
+    "synonyms": ["Heart attack", "Cardiac infarction", "MI"],
+    "semantic_tag": "disorder",
+    "definition": "Necrosis of the myocardium caused by an obstruction of the blood supply to the heart"
+  },
+  "230690007": {
+    "term": "Stroke",
+    "synonyms": ["Cerebrovascular accident", "CVA", "Brain attack"],
+    "semantic_tag": "disorder",
+    "definition": "A sudden loss of neurological function secondary to ischemia or hemorrhage in the brain"
+  },
+  "44054006": {
+    "term": "Diabetes mellitus",
+    "synonyms": ["Diabetes", "DM"],
+    "semantic_tag": "disorder",
+    "definition": "A metabolic disorder characterized by chronic hyperglycemia"
+  },
+  "38341003": {
+    "term": "Hypertensive disorder",
+    "synonyms": ["Hypertension", "High blood pressure", "HTN"],
+    "semantic_tag": "disorder",
+    "definition": "Persistently high arterial blood pressure"
+  },
+  "363346000": {
+    "term": "Malignant neoplastic disease",
+    "synonyms": ["Cancer", "Malignancy", "Malignant tumor"],
+    "semantic_tag": "disorder",
+    "definition": "A disease characterized by abnormal cell growth with metastatic potential"
+  },
+  "195967001": {
+    "term": "Asthma",
+    "synonyms": ["Bronchial asthma"],
+    "semantic_tag": "disorder",
+    "definition": "A chronic inflammatory disease of the airways"
+  },
+  "233604007": {
+    "term": "Pneumonia",
+    "synonyms": ["Lung inflammation", "Pulmonary inflammation"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the lung parenchyma"
+  },
+  "13645005": {
+    "term": "Chronic obstructive lung disease",
+    "synonyms": ["COPD", "Chronic obstructive pulmonary disease"],
+    "semantic_tag": "disorder",
+    "definition": "A chronic lung disease characterized by airflow obstruction"
+  },
+  "26929004": {
+    "term": "Alzheimer disease",
+    "synonyms": ["Alzheimer's disease", "Senile dementia"],
+    "semantic_tag": "disorder",
+    "definition": "A progressive neurodegenerative disease causing dementia"
+  },
+  "49049000": {
+    "term": "Parkinson disease",
+    "synonyms": ["Parkinson's disease", "Paralysis agitans"],
+    "semantic_tag": "disorder",
+    "definition": "A progressive neurodegenerative disease affecting movement"
+  },
+  "35489007": {
+    "term": "Depressive disorder",
+    "synonyms": ["Depression", "Major depressive disorder", "MDD"],
+    "semantic_tag": "disorder",
+    "definition": "A mood disorder characterized by persistent sadness and loss of interest"
+  },
+  "125605004": {
+    "term": "Fracture",
+    "synonyms": ["Broken bone", "Bone fracture"],
+    "semantic_tag": "disorder",
+    "definition": "A break in the continuity of a bone"
+  },
+  "40733004": {
+    "term": "Infectious disease",
+    "synonyms": ["Infection"],
+    "semantic_tag": "disorder",
+    "definition": "A disease caused by pathogenic microorganisms"
+  },
+  "386661006": {
+    "term": "Fever",
+    "synonyms": ["Pyrexia", "Hyperthermia", "Febrile"],
+    "semantic_tag": "finding",
+    "definition": "Elevation of body temperature above normal"
+  },
+  "22253000": {
+    "term": "Pain",
+    "synonyms": ["Ache", "Discomfort"],
+    "semantic_tag": "finding",
+    "definition": "An unpleasant sensory and emotional experience associated with actual or potential tissue damage"
+  },
+  "25064002": {
+    "term": "Headache",
+    "synonyms": ["Cephalalgia"],
+    "semantic_tag": "finding",
+    "definition": "Pain in the head or neck region"
+  },
+  "49727002": {
+    "term": "Cough",
+    "synonyms": ["Tussis"],
+    "semantic_tag": "finding",
+    "definition": "A sudden, forceful expiration of air"
+  },
+  "422587007": {
+    "term": "Nausea",
+    "synonyms": ["Sickness", "Queasiness"],
+    "semantic_tag": "finding",
+    "definition": "An unpleasant sensation in the stomach"
+  },
+  "249497008": {
+    "term": "Vomiting",
+    "synonyms": ["Emesis", "Throwing up"],
+    "semantic_tag": "finding",
+    "definition": "Forceful expulsion of stomach contents"
+  },
+  "62315008": {
+    "term": "Diarrhea",
+    "synonyms": ["Loose stools", "Watery stools"],
+    "semantic_tag": "finding",
+    "definition": "Frequent passage of loose or watery stools"
+  },
+  "14760008": {
+    "term": "Constipation",
+    "synonyms": ["Difficulty defecating"],
+    "semantic_tag": "finding",
+    "definition": "Difficult or infrequent bowel movements"
+  },
+  "271807003": {
+    "term": "Rash",
+    "synonyms": ["Skin eruption", "Exanthem"],
+    "semantic_tag": "finding",
+    "definition": "A change in skin color or texture"
+  },
+  "79654002": {
+    "term": "Edema",
+    "synonyms": ["Swelling", "Dropsy"],
+    "semantic_tag": "finding",
+    "definition": "Abnormal accumulation of fluid in tissues"
+  },
+  "267036007": {
+    "term": "Dyspnea",
+    "synonyms": ["Shortness of breath", "Difficulty breathing", "SOB"],
+    "semantic_tag": "finding",
+    "definition": "Difficult or labored breathing"
+  },
+  "29857009": {
+    "term": "Chest pain",
+    "synonyms": ["Thoracic pain", "Precordial pain"],
+    "semantic_tag": "finding",
+    "definition": "Pain in the chest region"
+  },
+  "21522001": {
+    "term": "Abdominal pain",
+    "synonyms": ["Stomach pain", "Bellyache", "Gastralgia"],
+    "semantic_tag": "finding",
+    "definition": "Pain in the abdominal region"
+  },
+  "161891005": {
+    "term": "Backache",
+    "synonyms": ["Back pain", "Dorsalgia"],
+    "semantic_tag": "finding",
+    "definition": "Pain in the back region"
+  },
+  "57676002": {
+    "term": "Arthralgia",
+    "synonyms": ["Joint pain"],
+    "semantic_tag": "finding",
+    "definition": "Pain in a joint"
+  },
+  "84229001": {
+    "term": "Fatigue",
+    "synonyms": ["Tiredness", "Exhaustion", "Lethargy"],
+    "semantic_tag": "finding",
+    "definition": "A feeling of tiredness or exhaustion"
+  },
+  "162864005": {
+    "term": "Body mass index",
+    "synonyms": ["BMI"],
+    "semantic_tag": "observable entity",
+    "definition": "A measure of body fat based on height and weight"
+  },
+  "238131007": {
+    "term": "Overweight",
+    "synonyms": ["Obesity", "Adiposity"],
+    "semantic_tag": "finding",
+    "definition": "Excess body weight"
+  },
+  "271737000": {
+    "term": "Anemia",
+    "synonyms": ["Low blood count", "Low hemoglobin"],
+    "semantic_tag": "disorder",
+    "definition": "A decrease in hemoglobin or red blood cells"
+  },
+  "698247007": {
+    "term": "Cardiac arrhythmia",
+    "synonyms": ["Arrhythmia", "Irregular heartbeat", "Dysrhythmia"],
+    "semantic_tag": "disorder",
+    "definition": "Abnormal heart rhythm"
+  },
+  "91302008": {
+    "term": "Sepsis",
+    "synonyms": ["Blood poisoning", "Septicemia"],
+    "semantic_tag": "disorder",
+    "definition": "Life-threatening organ dysfunction caused by infection"
+  },
+  "56717001": {
+    "term": "Tuberculosis",
+    "synonyms": ["TB", "Consumption"],
+    "semantic_tag": "disorder",
+    "definition": "Infectious disease caused by Mycobacterium tuberculosis"
+  },
+  "86406008": {
+    "term": "Human immunodeficiency virus infection",
+    "synonyms": ["HIV", "HIV infection"],
+    "semantic_tag": "disorder",
+    "definition": "Viral infection affecting the immune system"
+  },
+  "713097002": {
+    "term": "Acquired immune deficiency syndrome",
+    "synonyms": ["AIDS"],
+    "semantic_tag": "disorder",
+    "definition": "Advanced stage of HIV infection"
+  },
+  "128241005": {
+    "term": "Hepatitis",
+    "synonyms": ["Liver inflammation", "Inflammatory disease of liver"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the liver"
+  },
+  "19943007": {
+    "term": "Cirrhosis of liver",
+    "synonyms": ["Liver cirrhosis", "Hepatic cirrhosis"],
+    "semantic_tag": "disorder",
+    "definition": "Chronic liver damage with fibrosis"
+  },
+  "52457000": {
+    "term": "Pneumothorax",
+    "synonyms": ["Collapsed lung"],
+    "semantic_tag": "disorder",
+    "definition": "Air in the pleural space causing lung collapse"
+  },
+  "85189001": {
+    "term": "Acute appendicitis",
+    "synonyms": ["Appendicitis", "Inflamed appendix"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the appendix"
+  },
+  "76581006": {
+    "term": "Cholecystitis",
+    "synonyms": ["Gallbladder inflammation"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the gallbladder"
+  },
+  "75694006": {
+    "term": "Pancreatitis",
+    "synonyms": ["Pancreas inflammation", "Inflammation of pancreas"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the pancreas"
+  },
+  "52845002": {
+    "term": "Nephritis",
+    "synonyms": ["Kidney inflammation", "Inflammation of kidney"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the kidney"
+  },
+  "38822007": {
+    "term": "Cystitis",
+    "synonyms": ["Bladder inflammation", "Urinary bladder inflammation"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the urinary bladder"
+  },
+  "7180009": {
+    "term": "Meningitis",
+    "synonyms": ["Brain membrane inflammation", "Inflammation of meninges"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the meninges"
+  },
+  "45170000": {
+    "term": "Encephalitis",
+    "synonyms": ["Brain inflammation", "Inflammation of brain"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the brain"
+  },
+  "50920009": {
+    "term": "Myocarditis",
+    "synonyms": ["Heart muscle inflammation", "Inflammation of myocardium"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the heart muscle"
+  },
+  "3238004": {
+    "term": "Pericarditis",
+    "synonyms": ["Heart sac inflammation", "Inflammation of pericardium"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the pericardium"
+  },
+  "56819008": {
+    "term": "Endocarditis",
+    "synonyms": ["Heart lining inflammation", "Inflammation of endocardium"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the endocardium"
+  },
+  "32398004": {
+    "term": "Bronchitis",
+    "synonyms": ["Bronchial tube inflammation", "Inflammation of bronchi"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the bronchi"
+  },
+  "36971009": {
+    "term": "Sinusitis",
+    "synonyms": ["Sinus inflammation", "Inflammation of sinus"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the sinuses"
+  },
+  "90176007": {
+    "term": "Tonsillitis",
+    "synonyms": ["Tonsil inflammation", "Inflammation of tonsil"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the tonsils"
+  },
+  "3110003": {
+    "term": "Otitis media",
+    "synonyms": ["Middle ear infection", "Middle ear inflammation"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the middle ear"
+  },
+  "19444009": {
+    "term": "Conjunctivitis",
+    "synonyms": ["Pink eye", "Inflammation of conjunctiva"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the conjunctiva"
+  },
+  "247472004": {
+    "term": "Dermatitis",
+    "synonyms": ["Skin inflammation", "Inflammation of skin"],
+    "semantic_tag": "disorder",
+    "definition": "Inflammation of the skin"
+  },
+  "43116000": {
+    "term": "Eczema",
+    "synonyms": ["Atopic dermatitis", "Atopic eczema"],
+    "semantic_tag": "disorder",
+    "definition": "Chronic inflammatory skin condition"
+  },
+  "200956002": {
+    "term": "Psoriasis",
+    "synonyms": ["Scaly skin disease"],
+    "semantic_tag": "disorder",
+    "definition": "Chronic autoimmune skin condition"
+  },
+  "90688005": {
+    "term": "Gout",
+    "synonyms": ["Gouty arthritis", "Crystal arthropathy"],
+    "semantic_tag": "disorder",
+    "definition": "Crystal deposition arthritis"
+  },
+  "69896004": {
+    "term": "Rheumatoid arthritis",
+    "synonyms": ["RA"],
+    "semantic_tag": "disorder",
+    "definition": "Autoimmune inflammatory arthritis"
+  },
+  "396275006": {
+    "term": "Osteoarthritis",
+    "synonyms": ["Degenerative arthritis", "OA"],
+    "semantic_tag": "disorder",
+    "definition": "Degenerative joint disease"
+  },
+  "37796009": {
+    "term": "Migraine",
+    "synonyms": ["Migraine headache", "Migraine disorder"],
+    "semantic_tag": "disorder",
+    "definition": "Recurrent headache disorder"
+  },
+  "84757009": {
+    "term": "Epilepsy",
+    "synonyms": ["Seizure disorder"],
+    "semantic_tag": "disorder",
+    "definition": "Chronic neurological disorder with recurrent seizures"
+  },
+  "91175000": {
+    "term": "Seizure",
+    "synonyms": ["Convulsion", "Fit", "Seizure disorder"],
+    "semantic_tag": "finding",
+    "definition": "A sudden surge of electrical activity in the brain"
+  },
+  "24700007": {
+    "term": "Multiple sclerosis",
+    "synonyms": ["MS", "Disseminated sclerosis"],
+    "semantic_tag": "disorder",
+    "definition": "Autoimmune demyelinating disease of the CNS"
+  },
+  "86044005": {
+    "term": "Amyotrophic lateral sclerosis",
+    "synonyms": ["ALS", "Lou Gehrig disease", "Motor neuron disease"],
+    "semantic_tag": "disorder",
+    "definition": "Progressive neurodegenerative disease affecting motor neurons"
+  },
+  "58214004": {
+    "term": "Schizophrenia",
+    "synonyms": ["Schizophrenic disorder", "Schizoaffective disorder"],
+    "semantic_tag": "disorder",
+    "definition": "Severe mental disorder affecting thinking and behavior"
+  },
+  "13746004": {
+    "term": "Bipolar disorder",
+    "synonyms": ["Manic depression", "Manic depressive disorder"],
+    "semantic_tag": "disorder",
+    "definition": "Mood disorder with alternating episodes of mania and depression"
+  },
+  "191736004": {
+    "term": "Obesity",
+    "synonyms": ["Overweight", "Adiposity"],
+    "semantic_tag": "disorder",
+    "definition": "Excessive accumulation of body fat"
+  }
+}

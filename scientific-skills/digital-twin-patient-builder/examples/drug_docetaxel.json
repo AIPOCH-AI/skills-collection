@@ -1,0 +1,16 @@
+{
+  "drug_name": "Docetaxel",
+  "drug_class": "taxane_chemotherapy",
+  "metabolizing_enzymes": ["CYP3A4", "CYP3A5"],
+  "target_genes": ["TUBB1", "BCL2"],
+  "pk_params": {
+    "clearance": 15.5,
+    "volume_distribution": 45.0,
+    "half_life": 11.0,
+    "protein_binding": 0.94
+  },
+  "efficacy_biomarkers": ["tumor_reduction", "psa_decline", "survival_rate"],
+  "toxicity_markers": ["neutropenia", "febrile_neutropenia", "hepatotoxicity", "fluid_retention"],
+  "standard_dose_mg_m2": 75,
+  "max_dose_mg_m2": 100
+}

@@ -1,0 +1,38 @@
+{
+  "data_sources": {
+    "pubmed": {
+      "enabled": true,
+      "api_key": null,
+      "email": "your_email@example.com"
+    },
+    "google_scholar": {
+      "enabled": false,
+      "api_key": null
+    },
+    "chembl": {
+      "enabled": true,
+      "api_url": "https://www.ebi.ac.uk/chembl/api/data"
+    },
+    "pubchem": {
+      "enabled": true,
+      "api_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug"
+    }
+  },
+  "scoring": {
+    "citation_weight": 0.4,
+    "recency_weight": 0.3,
+    "similarity_weight": 0.3,
+    "min_citations": 5,
+    "recency_years": 5
+  },
+  "output": {
+    "default_format": "table",
+    "default_limit": 5,
+    "include_structures": false
+  },
+  "cache": {
+    "enabled": true,
+    "cache_dir": "~/.cache/reagent-substitute-scout",
+    "ttl_hours": 24
+  }
+}

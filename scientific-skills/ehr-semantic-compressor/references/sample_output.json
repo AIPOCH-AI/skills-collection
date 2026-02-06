@@ -1,0 +1,40 @@
+{
+  "status": "success",
+  "data": {
+    "summary": "• Patient is a 45-year-old male presenting with chest pain and shortness of breath.\n• Chest pain started 2 days ago, described as sharp and radiating to left arm.\n• Associated symptoms include sweating and nausea, with no relief from rest.\n• Past medical history includes hypertension diagnosed in 2018 and type 2 diabetes mellitus diagnosed in 2020.\n• Both conditions currently well-controlled with medications.\n• Previous appendectomy performed in 2010.\n• Currently prescribed Lisinopril 10mg daily for hypertension management.\n• Taking Metformin 500mg twice daily for diabetes control.\n• Also prescribed Atorvastatin 20mg daily for cholesterol management.\n• Allergic to penicillin with history of childhood rash reaction.\n• Father died of myocardial infarction at age 55, indicating significant family history.\n• Mother has hypertension and type 2 diabetes.\n• Former smoker with 15 pack-year history, quit 5 years ago.\n• Blood pressure elevated at 150/95 mmHg during examination.\n• Heart rate 88 beats per minute, respiratory rate 18.\n• Oxygen saturation 97% on room air.\n• Acute coronary syndrome ruled out based on negative troponins and normal ECG.\n• Stable angina suspected given symptoms and cardiovascular risk factors.\n• Significant cardiovascular risk factors present including hypertension, diabetes, and family history.\n• Plan includes continuing current medications and starting low-dose aspirin.",
+    "extracted_sections": {
+      "allergies": [
+        "Allergic to penicillin - developed rash as child.",
+        "No known food allergies.",
+        "No latex allergy."
+      ],
+      "medications": [
+        "Currently taking Lisinopril 10mg daily for hypertension.",
+        "Taking Metformin 500mg twice daily for diabetes.",
+        "Also taking Atorvastatin 20mg daily for cholesterol management."
+      ],
+      "diagnoses": [
+        "Diagnosed with hypertension in 2018.",
+        "Type 2 diabetes mellitus diagnosed in 2020.",
+        "Acute coronary syndrome has been ruled out based on negative troponins and normal ECG.",
+        "Stable angina is suspected given symptoms and risk factors."
+      ],
+      "family_history": [
+        "Father died of myocardial infarction at age 55.",
+        "Mother has hypertension and type 2 diabetes.",
+        "One sibling in good health."
+      ]
+    },
+    "metadata": {
+      "original_length": 445,
+      "summary_length": 288,
+      "compression_ratio": 0.35,
+      "sections_extracted": ["allergies", "medications", "diagnoses", "family_history"],
+      "processed_at": "2026-02-05T09:30:00Z"
+    }
+  },
+  "metadata": {
+    "timestamp": "2026-02-05T09:30:00Z",
+    "version": "1.0.0"
+  }
+}

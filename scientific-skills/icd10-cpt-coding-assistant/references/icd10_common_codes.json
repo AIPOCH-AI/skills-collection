@@ -1,0 +1,90 @@
+{
+  "description": "Common ICD-10-CM codes organized by medical specialty",
+  "version": "2024",
+  "categories": {
+    "primary_care": {
+      "Z00.00": "Encounter for general adult medical examination without abnormal findings",
+      "Z00.01": "Encounter for general adult medical examination with abnormal findings",
+      "Z51.81": "Encounter for therapeutic drug level monitoring",
+      "Z79.4": "Long term (current) use of insulin",
+      "Z79.899": "Other long term (current) drug therapy"
+    },
+    "cardiology": {
+      "I10": "Essential (primary) hypertension",
+      "I25.10": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "I48.91": "Unspecified atrial fibrillation",
+      "I50.9": "Heart failure, unspecified",
+      "I65.29": "Occlusion and stenosis of unspecified carotid artery",
+      "I82.409": "Acute embolism and thrombosis of unspecified deep veins of unspecified lower extremity"
+    },
+    "respiratory": {
+      "J06.9": "Upper respiratory infection, unspecified",
+      "J20.9": "Acute bronchitis, unspecified",
+      "J44.9": "Chronic obstructive pulmonary disease, unspecified",
+      "J45.901": "Unspecified asthma with (acute) exacerbation",
+      "J18.9": "Pneumonia, unspecified organism"
+    },
+    "endocrinology": {
+      "E11.9": "Type 2 diabetes mellitus without complications",
+      "E10.9": "Type 1 diabetes mellitus without complications",
+      "E78.5": "Hyperlipidemia, unspecified",
+      "E03.9": "Hypothyroidism, unspecified",
+      "E66.9": "Obesity, unspecified",
+      "E66.01": "Morbid (severe) obesity due to excess calories"
+    },
+    "gastroenterology": {
+      "K21.9": "Gastro-esophageal reflux disease without esophagitis",
+      "K29.70": "Gastritis, unspecified, without bleeding",
+      "K52.9": "Gastroenteritis and colitis, unspecified",
+      "K59.00": "Constipation, unspecified",
+      "K64.9": "Unspecified hemorrhoids"
+    },
+    "orthopedics": {
+      "M25.561": "Pain in right knee",
+      "M25.562": "Pain in left knee",
+      "M25.571": "Pain in right ankle and joints of right foot",
+      "M25.572": "Pain in left ankle and joints of left foot",
+      "M54.5": "Low back pain",
+      "M54.6": "Pain in thoracic spine",
+      "M75.41": "Impingement syndrome of right shoulder",
+      "M77.51": "Other enthesopathy of right foot"
+    },
+    "dermatology": {
+      "L70.9": "Acne vulgaris",
+      "L30.9": "Dermatitis, unspecified",
+      "L50.9": "Urticaria, unspecified",
+      "L60.0": "Ingrowing nail",
+      "L70.0": "Acne vulgaris"
+    },
+    "mental_health": {
+      "F32.9": "Major depressive disorder, single episode, unspecified",
+      "F33.9": "Major depressive disorder, recurrent, unspecified",
+      "F41.1": "Generalized anxiety disorder",
+      "F41.9": "Anxiety disorder, unspecified",
+      "F43.10": "Post-traumatic stress disorder, unspecified",
+      "G47.9": "Sleep disorder, unspecified"
+    },
+    "infectious_disease": {
+      "B34.9": "Viral infection, unspecified",
+      "A99": "Unspecified viral hemorrhagic fever",
+      "Z20.828": "Contact with and (suspected) exposure to other viral communicable diseases"
+    },
+    "symptoms": {
+      "R50.9": "Fever, unspecified",
+      "R05": "Cough",
+      "R06.02": "Shortness of breath",
+      "R10.9": "Unspecified abdominal pain",
+      "R51": "Headache",
+      "R53.83": "Other fatigue",
+      "R55": "Syncope and collapse",
+      "R07.9": "Chest pain, unspecified"
+    }
+  },
+  "coding_tips": [
+    "Always code to the highest level of specificity",
+    "Code all documented conditions that coexist at the time of the encounter",
+    "Do not code conditions that were previously treated and no longer exist",
+    "Use code Z codes for status codes and history codes",
+    "Sequence codes according to severity and reason for visit"
+  ]
+}

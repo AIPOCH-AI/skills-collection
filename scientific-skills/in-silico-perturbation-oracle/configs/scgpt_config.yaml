@@ -1,0 +1,57 @@
+# scGPT Model Configuration
+model:
+  name: "scgpt"
+  version: "v1"
+  embedding_dim: 512
+  num_layers: 12
+  num_heads: 8
+  max_seq_len: 1200
+  
+# Model paths
+paths:
+  pretrained_model: "${MODEL_DIR}/scgpt-human"
+  vocab_file: "${MODEL_DIR}/scgpt/vocab.json"
+  
+# scGPT specific settings
+scgpt:
+  # Gene expression binning
+  n_bins: 51
+  mask_ratio: 0.15
+  
+  # Perturbation prediction settings
+  expressivity_weight: 1.0
+  specificity_weight: 1.0
+  
+  # Cell embedding
+  use_batch_labels: true
+  use_cell_type_labels: true
+  
+# Perturbation settings
+perturbation:
+  default_type: "complete_ko"
+  
+  # scGPT supports continuous perturbation levels
+  perturbation_levels:
+    complete_ko: 0.0
+    strong_kd: 0.2
+    moderate_kd: 0.5
+    weak_kd: 0.8
+    
+# Differential expression
+differential_expression:
+  pval_threshold: 0.05
+  logfc_threshold: 1.0
+  use_pseudobulk: false
+  
+# Multi-omics support
+multi_omics:
+  supported_modalities:
+    - gene_expression
+    - chromatin_accessibility
+    - protein_expression
+  integration_method: "concatenate"
+  
+# Target scoring (scGPT-specific adjustments)
+scoring:
+  cell_type_consistency_bonus: 0.1  # 跨细胞类型一致预测加分
+  perturbation_direction_weight: 0.2  # 扰动方向准确性权重

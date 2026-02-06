@@ -1,0 +1,25 @@
+taxon_id	name	rank	parent_id	reads	percent
+1	root	root		990000	99.0
+2	Bacteria	domain	1	950000	95.0
+1224	Proteobacteria	phylum	2	500000	50.0
+1236	Gammaproteobacteria	class	1224	300000	30.0
+91347	Enterobacterales	order	1236	150000	15.0
+543	Enterobacteriaceae	family	91347	100000	10.0
+590	Salmonella	genus	543	80000	8.0
+28901	Salmonella enterica	species	590	50000	5.0
+54736	Salmonella bongori	species	590	30000	3.0
+28211	Alphaproteobacteria	class	1224	150000	15.0
+204455	Rhodobacterales	order	28211	100000	10.0
+31989	Rhodobacteraceae	family	204455	80000	8.0
+1060	Rhodobacter	genus	31989	50000	5.0
+1225	Firmicutes	phylum	2	200000	20.0
+91061	Bacilli	class	1225	150000	15.0
+186826	Lactobacillales	order	91061	120000	12.0
+33958	Lactobacillaceae	family	186826	100000	10.0
+1578	Lactobacillus	genus	33958	80000	8.0
+1239	Actinobacteria	phylum	2	30000	3.0
+1760	Actinomycetia	class	1239	20000	2.0
+976	Bacteroidetes	phylum	2	10000	1.0
+2759	Eukaryota	domain	1	40000	4.0
+10239	Viruses	domain	1	20000	2.0
+2157	Archaea	domain	1	10000	1.0
