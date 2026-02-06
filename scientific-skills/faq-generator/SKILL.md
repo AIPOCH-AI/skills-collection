@@ -7,8 +7,8 @@ tags: [faq, policy, patient-education, protocol, medical-documents]
 author: The King of Skills
 license: MIT
 status: Draft
-risk_level: Low
-skill_type: Prompt-only
+risk_level: Medium
+skill_type: Tool/Script
 owner: The King of Skills
 reviewer: 
 last_updated: 2026-02-06

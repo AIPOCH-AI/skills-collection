@@ -121,7 +121,7 @@ Auto-generated skill for bioinformatics visualization.
 
 ```bash
 # Python dependencies
-pip install pandas matplotlib seaborn numpy
+pip install -r requirements.txt
 
 # R dependencies (if using R)
 install.packages(c("ggplot2", "dplyr", "ggrepel"))

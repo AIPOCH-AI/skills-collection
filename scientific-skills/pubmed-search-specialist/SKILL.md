@@ -203,7 +203,7 @@ See `references/boolean-examples.md` for categorized query templates.
 
 ```bash
 # Python dependencies
-pip install requests xml.etree.ElementTree
+pip install -r requirements.txt
 
 # Optional: NCBI API key for higher rate limits
 # Set as environment variable: NCBI_API_KEY

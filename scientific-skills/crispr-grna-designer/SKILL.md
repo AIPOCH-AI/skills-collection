@@ -177,7 +177,7 @@ Optional:
 
 ```bash
 # Python dependencies
-pip install biopython pandas numpy pysam requests
+pip install -r requirements.txt
 
 # Optional tools
 # bowtie2 (for local off-target alignment)

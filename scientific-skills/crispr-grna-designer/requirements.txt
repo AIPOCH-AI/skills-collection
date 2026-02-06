@@ -1,4 +1,5 @@
+biopython
 pandas
-matplotlib
-seaborn
 numpy
+pysam
+requests
