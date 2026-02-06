@@ -1,0 +1,6 @@
+dataclasses
+networkx
+numpy
+pandas
+scipy
+sklearn

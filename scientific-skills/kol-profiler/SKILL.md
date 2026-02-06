@@ -1,0 +1,86 @@
+---
+name: kol-profiler
+description: Analyze physician academic influence and collaboration networks
+version: 1.0.0
+category: Pharma
+tags: []
+author: The King of Skills
+license: MIT
+status: Draft
+risk_level: Medium
+skill_type: Tool/Script
+owner: The King of Skills
+reviewer: ''
+last_updated: '2026-02-06'
+---
+
+# KOL Profiler
+
+Key Opinion Leader analysis tool.
+
+## Use Cases
+- KOL identification
+- Collaboration mapping
+- Speaker bureau selection
+- Advisory board planning
+
+## Parameters
+- `therapeutic_area`: Disease field
+- `geography`: Regional scope
+- `metrics`: H-index, citations, centrality
+
+## Returns
+- Ranked KOL list
+- Network visualization data
+- Publication timeline
+- Collaboration clusters
+
+## Example
+Oncology KOLs in East Asia with high trial participation
+
+## Risk Assessment
+
+| Risk Indicator | Assessment | Level |
+|----------------|------------|-------|
+| Code Execution | Python/R scripts executed locally | Medium |
+| Network Access | No external API calls | Low |
+| File System Access | Read input files, write output files | Medium |
+| Instruction Tampering | Standard prompt guidelines | Low |
+| Data Exposure | Output files saved to workspace | Low |
+
+## Security Checklist
+
+- [ ] No hardcoded credentials or API keys
+- [ ] No unauthorized file system access (../)
+- [ ] Output does not expose sensitive information
+- [ ] Prompt injection protections in place
+- [ ] Input file paths validated (no ../ traversal)
+- [ ] Output directory restricted to workspace
+- [ ] Script execution in sandboxed environment
+- [ ] Error messages sanitized (no stack traces exposed)
+- [ ] Dependencies audited
+## Prerequisites
+
+No additional Python packages required.
+
+## Evaluation Criteria
+
+### Success Metrics
+- [ ] Successfully executes main functionality
+- [ ] Output meets quality standards
+- [ ] Handles edge cases gracefully
+- [ ] Performance is acceptable
+
+### Test Cases
+1. **Basic Functionality**: Standard input → Expected output
+2. **Edge Case**: Invalid input → Graceful error handling
+3. **Performance**: Large dataset → Acceptable processing time
+
+## Lifecycle Status
+
+- **Current Stage**: Draft
+- **Next Review Date**: 2026-03-06
+- **Known Issues**: None
+- **Planned Improvements**: 
+  - Performance optimization
+  - Additional feature support

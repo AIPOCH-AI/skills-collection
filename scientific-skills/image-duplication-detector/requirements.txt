@@ -1,0 +1,5 @@
+PIL
+cv2
+dataclasses
+imagehash
+numpy

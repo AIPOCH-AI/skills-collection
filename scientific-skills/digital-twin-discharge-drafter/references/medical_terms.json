@@ -1,0 +1,157 @@
+{
+  "skill_info": {
+    "id": 214,
+    "name": "Digital Twin Discharge Drafter",
+    "version": "1.0.0",
+    "description": "模仿人类医生逻辑，自动生成标准出院小结"
+  },
+  "medical_terms": {
+    "departments": {
+      "内科": "Internal Medicine",
+      "外科": "Surgery",
+      "急诊科": "Emergency Department",
+      "心内科": "Cardiology",
+      "呼吸科": "Respiratory Medicine",
+      "消化科": "Gastroenterology",
+      "神经内科": "Neurology",
+      "肾内科": "Nephrology",
+      "内分泌科": "Endocrinology",
+      "肿瘤科": "Oncology",
+      "骨科": "Orthopedics",
+      "泌尿外科": "Urology",
+      "妇产科": "Obstetrics and Gynecology",
+      "儿科": "Pediatrics"
+    },
+    "common_symptoms": {
+      "发热": "fever",
+      "咳嗽": "cough",
+      "咳痰": "sputum production",
+      "胸痛": "chest pain",
+      "胸闷": "chest tightness",
+      "气促": "shortness of breath",
+      "呼吸困难": "dyspnea",
+      "腹痛": "abdominal pain",
+      "腹胀": "abdominal distension",
+      "恶心": "nausea",
+      "呕吐": "vomiting",
+      "腹泻": "diarrhea",
+      "便秘": "constipation",
+      "便血": "hematochezia",
+      "头痛": "headache",
+      "头晕": "dizziness",
+      "意识障碍": "disturbance of consciousness",
+      "肢体无力": "limb weakness",
+      "麻木": "numbness",
+      "腰痛": "lower back pain",
+      "血尿": "hematuria",
+      "尿频": "frequency of urination",
+      "尿急": "urgency of urination",
+      "尿痛": "dysuria"
+    },
+    "vital_signs": {
+      "体温": "body temperature",
+      "脉搏": "pulse",
+      "心率": "heart rate",
+      "呼吸": "respiration",
+      "血压": "blood pressure",
+      "血氧饱和度": "oxygen saturation",
+      "意识": "consciousness"
+    },
+    "exam_types": {
+      "血常规": "complete blood count (CBC)",
+      "尿常规": "urinalysis",
+      "大便常规": "stool routine",
+      "生化": "biochemistry",
+      "肝肾功能": "liver and kidney function",
+      "血脂": "blood lipids",
+      "血糖": "blood glucose",
+      "凝血功能": "coagulation function",
+      "心电图": "electrocardiogram (ECG)",
+      "胸片": "chest X-ray",
+      "CT": "computed tomography",
+      "MRI": "magnetic resonance imaging",
+      "超声": "ultrasound",
+      "胃镜": "gastroscopy",
+      "肠镜": "colonoscopy"
+    },
+    "common_diagnoses": {
+      "肺炎": "pneumonia",
+      "高血压": "hypertension",
+      "糖尿病": "diabetes mellitus",
+      "冠心病": "coronary heart disease",
+      "心绞痛": "angina pectoris",
+      "心肌梗死": "myocardial infarction",
+      "心力衰竭": "heart failure",
+      "心律失常": "arrhythmia",
+      "脑梗死": "cerebral infarction",
+      "脑出血": "cerebral hemorrhage",
+      "胃炎": "gastritis",
+      "胃溃疡": "gastric ulcer",
+      "十二指肠溃疡": "duodenal ulcer",
+      "胆囊炎": "cholecystitis",
+      "胆结石": "cholelithiasis",
+      "急性阑尾炎": "acute appendicitis"
+    },
+    "common_medications": {
+      "阿司匹林": "aspirin",
+      "氯吡格雷": "clopidogrel",
+      "阿托伐他汀": "atorvastatin",
+      "瑞舒伐他汀": "rosuvastatin",
+      "美托洛尔": "metoprolol",
+      "氨氯地平": "amlodipine",
+      "缬沙坦": "valsartan",
+      "二甲双胍": "metformin",
+      "胰岛素": "insulin",
+      "奥美拉唑": "omeprazole",
+      "雷贝拉唑": "rabeprazole",
+      "铝碳酸镁": "hydrotalcite",
+      "莫沙必利": "mosapride",
+      "氨溴索": "ambroxol",
+      "布地奈德": "budesonide"
+    },
+    "discharge_instructions": {
+      "出院带药": "discharge medications",
+      "定期复查": "regular follow-up examination",
+      "门诊随访": "outpatient follow-up",
+      "不适随诊": "visit doctor if unwell",
+      "低盐饮食": "low-salt diet",
+      "低脂饮食": "low-fat diet",
+      "糖尿病饮食": "diabetic diet",
+      "清淡饮食": "light diet",
+      "卧床休息": "bed rest",
+      "适当活动": "moderate activity",
+      "避免劳累": "avoid overexertion",
+      "戒烟限酒": "quit smoking and limit alcohol"
+    }
+  },
+  "section_templates": {
+    "admission_status": {
+      "structure": ["主诉", "现病史", "既往史", "入院查体", "辅助检查"],
+      "writing_points": [
+        "主诉应简洁明了，20字以内",
+        "现病史包括发病时间、诱因、症状特点、伴随症状、诊疗经过",
+        "既往史重点记录与本次疾病相关的病史",
+        "入院查体记录生命体征和专科阳性体征",
+        "辅助检查记录关键异常指标"
+      ]
+    },
+    "treatment_course": {
+      "structure": ["诊断过程", "治疗过程", "病情演变", "出院前情况"],
+      "writing_points": [
+        "诊断过程说明诊断依据和鉴别诊断",
+        "治疗过程记录药物名称、剂量、疗程和手术操作",
+        "病情演变描述治疗效果和并发症处理",
+        "出院前情况说明出院时患者状态"
+      ]
+    },
+    "discharge_orders": {
+      "structure": ["出院带药", "饮食与生活方式", "复查建议", "随诊指导"],
+      "writing_points": [
+        "出院带药需注明药物名称、剂量、用法、疗程",
+        "饮食指导应具体，如低盐低脂饮食",
+        "复查建议明确复查项目和时间",
+        "随诊指导说明随诊时间和科室"
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+numpy
+pandas
+pytest
+scipy
+src

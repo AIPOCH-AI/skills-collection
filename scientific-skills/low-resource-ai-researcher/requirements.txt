@@ -1,0 +1,7 @@
+accelerate
+dataclasses
+datasets
+peft
+skills
+torch
+transformers
