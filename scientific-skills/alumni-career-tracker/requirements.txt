@@ -1,1 +1,3 @@
 dataclasses
+pandas
+rich

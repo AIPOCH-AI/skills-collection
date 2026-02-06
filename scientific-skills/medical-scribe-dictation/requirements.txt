@@ -1,1 +1,4 @@
+anthropic
 dataclasses
+openai
+whisper

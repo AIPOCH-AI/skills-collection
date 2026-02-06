@@ -1,5 +1,7 @@
+bio
 biopython
-pandas
+dataclasses
 numpy
+pandas
 pysam
 requests

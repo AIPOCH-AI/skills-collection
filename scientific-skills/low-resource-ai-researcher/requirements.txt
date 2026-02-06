@@ -1,6 +1,7 @@
 accelerate
 dataclasses
 datasets
+flash_attn
 peft
 skills
 torch

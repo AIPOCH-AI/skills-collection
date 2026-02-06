@@ -1,5 +1,7 @@
-PIL
 cv2
 dataclasses
 imagehash
+matplotlib
 numpy
+pdf2image
+pil

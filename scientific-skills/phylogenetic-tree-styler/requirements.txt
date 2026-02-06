@@ -1,5 +1,4 @@
-lifelines
+ete3
 matplotlib
 numpy
 pandas
-seaborn

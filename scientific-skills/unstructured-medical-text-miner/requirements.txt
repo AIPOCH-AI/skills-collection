@@ -1,21 +1,8 @@
-# Core dependencies
-pandas>=1.3.0
-numpy>=1.21.0
-pyyaml>=5.4.0
-
-# NLP dependencies (optional but recommended)
-spacy>=3.4.0
-scispacy>=0.5.1
-
-# Negation detection
-negspacy>=1.0.0
-
-# Medical NER models (install with:)
-# pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.1/en_core_sci_lg-0.5.1.tar.gz
-# pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.1/en_core_sci_scibert-0.5.1.tar.gz
-
-# Data processing
-pyarrow>=5.0.0  # For parquet support
-
-# Utilities
-tqdm>=4.62.0  # Progress bars
+negspacy
+numpy
+pandas
+pyarrow
+pyyaml
+scispacy
+spacy
+tqdm
