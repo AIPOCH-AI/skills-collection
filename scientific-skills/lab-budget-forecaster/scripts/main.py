@@ -102,7 +102,7 @@ def main():
     parser = argparse.ArgumentParser(description="Lab Budget Forecaster")
     parser.add_argument("--budget", "-b", type=float, required=True, help="Total budget")
     parser.add_argument("--start", "-s", required=True, help="Grant start date (YYYY-MM-DD)")
-    parser.add_argument("--end", "-e", required=True, help="Grant end date (YYYY-MM-DD)
+    parser.add_argument("--end", "-e", required=True, help="Grant end date (YYYY-MM-DD)")
     parser.add_argument("--expenses", help="Expenses CSV file")
     
     args = parser.parse_args()
