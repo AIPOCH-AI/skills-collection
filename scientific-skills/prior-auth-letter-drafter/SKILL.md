@@ -4,7 +4,7 @@ description: Draft prior authorization request letters for insurance companies w
   clinical justification. Trigger when user needs insurance pre-authorization for
   medical procedures, medications, or treatments requiring clinical documentation.
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

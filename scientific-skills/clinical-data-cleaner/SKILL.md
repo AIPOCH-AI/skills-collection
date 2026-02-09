@@ -5,7 +5,7 @@ description: Clean and standardize raw clinical trial data for SDTM compliance. 
   clinical datasets (DM, LB, VS domains), detect anomalies, or prepare data for regulatory
   submission.
 version: 1.0.0
-category: General
+category: Data
 tags: []
 author: AIPOCH
 license: MIT

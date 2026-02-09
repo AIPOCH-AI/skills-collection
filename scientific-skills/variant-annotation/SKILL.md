@@ -10,7 +10,7 @@ description: "Query and annotate gene variants from ClinVar and dbSNP databases.
   - Output: clinical significance, ACMG classification, allele frequency, disease\
   \ associations"
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

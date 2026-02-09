@@ -3,7 +3,7 @@ name: mouse-colony-planner
 description: Calculate breeding timelines and cage requirements for transgenic mouse
   colonies
 version: 1.0.0
-category: General
+category: Wet Lab
 tags: []
 author: AIPOCH
 license: MIT

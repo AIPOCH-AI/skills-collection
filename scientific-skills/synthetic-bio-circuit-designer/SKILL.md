@@ -2,7 +2,7 @@
 name: synthetic-bio-circuit-designer
 description: Design gene circuits for synthetic biology applications
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

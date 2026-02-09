@@ -16,7 +16,7 @@ description: 'Determine whether an incident in a clinical trial is a "major devi
 
   '
 version: 1.0.0
-category: Clinical
+category: Pharma
 tags:
 - clinical-trials
 - gcp

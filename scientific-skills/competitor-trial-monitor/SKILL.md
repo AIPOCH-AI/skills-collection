@@ -2,7 +2,7 @@
 name: competitor-trial-monitor
 description: Monitor competitor clinical trial progress and alert on market risks
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

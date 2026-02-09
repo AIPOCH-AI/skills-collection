@@ -3,7 +3,7 @@ name: data-management-plan-creator
 description: Automatically generate NIH 2023-compliant Data Management and Sharing
   Plan (DMSP) drafts following FAIR principles
 version: 1.0.0
-category: General
+category: Grant
 tags:
 - NIH
 - DMP

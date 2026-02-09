@@ -3,7 +3,7 @@ name: blockbuster-therapy-predictor
 description: Predict which early-stage technologies (PROTAC, mRNA, gene editing) will
   become the next blockbuster therapy
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

@@ -3,7 +3,7 @@ name: forest-plot-styler
 description: Beautify meta-analysis forest plots with customizable odds ratio points
   and confidence intervals
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

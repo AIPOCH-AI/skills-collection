@@ -3,7 +3,7 @@ name: medical-device-mdr-auditor
 description: Audit medical device technical files against EU MDR 2017/745 regulations
   for compliance
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

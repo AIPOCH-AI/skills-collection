@@ -4,7 +4,7 @@ description: Design impeccable animal experiment protocols based on ARRIVE 2.0 g
   Ensures compliance with international animal research reporting standards for transparency,
   reproducibility, and scientific rigor.
 version: 1.0.0
-category: General
+category: Wet Lab
 tags: []
 author: AIPOCH
 license: MIT

@@ -3,7 +3,7 @@ name: voice-to-protocol-transcriber
 description: Record experimental procedures and observations via voice commands during
   lab work. Real-time transcription for structured experiment documentation.
 version: 1.0.0
-category: General
+category: Wet Lab
 tags: []
 author: AIPOCH
 license: MIT

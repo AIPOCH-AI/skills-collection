@@ -4,7 +4,7 @@ description: Prepare input files for molecular docking software, automatically d
   Grid Box center and size. Supports AutoDock Vina, AutoDock4, and other mainstream
   docking tools.
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

@@ -3,7 +3,7 @@ name: keyword-velocity-tracker
 description: Calculate literature growth velocity and acceleration to assess research
   field development stages
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

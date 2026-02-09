@@ -3,7 +3,7 @@ name: digital-twin-patient-builder
 description: Build digital twin patient models to test drug efficacy and toxicity
   in virtual environments
 version: 1.0.0
-category: General
+category: AI/Tech
 tags: []
 author: AIPOCH
 license: MIT

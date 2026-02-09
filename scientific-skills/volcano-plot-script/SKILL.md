@@ -2,7 +2,7 @@
 name: volcano-plot-script
 description: Generate R/Python code for volcano plots from DEG (Differentially Expressed Genes) analysis results. Triggered when user needs visualization of gene expression data, p-value vs fold-change scatter plots, publication-ready figures for bioinformatics analysis.
 version: 1.0.0
-category: Data Visualization
+category: Bioinfo
 tags: [volcano-plot, bioinformatics, deg-analysis, r, python, visualization]
 author: AIPOCH
 license: MIT

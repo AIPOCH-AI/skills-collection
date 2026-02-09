@@ -2,7 +2,7 @@
 name: abstract-summarizer
 description: Summarize long academic papers into structured abstracts within 250 words. Trigger when user provides a paper (PDF, text, or URL) and requests a summary, abstract, or TL;DR. Optimized for research papers, theses, and technical reports.
 version: 1.0.0
-category: Info
+category: Research
 tags: [abstract, summarization, academic-papers, research, nlp]
 author: AIPOCH
 license: MIT

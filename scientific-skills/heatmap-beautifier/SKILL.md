@@ -3,7 +3,7 @@ name: heatmap-beautifier
 description: Professional heatmap beautification tool with automatic clustering and
   annotation tracks
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

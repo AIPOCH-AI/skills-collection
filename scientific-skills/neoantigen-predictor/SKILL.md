@@ -15,7 +15,7 @@ description: 'Predict neoantigens that may be recognized by the immune system ba
 
   - Output: Predicted neoantigen list, HLA binding affinity, immunogenicity scores'
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

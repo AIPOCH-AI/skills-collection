@@ -3,7 +3,7 @@ name: funding-trend-forecaster
 description: Predict funding trend shifts using NLP analysis of grant abstracts from
   NIH, NSF, and Horizon Europe
 version: 1.0.0
-category: General
+category: Grant
 tags: []
 author: AIPOCH
 license: MIT

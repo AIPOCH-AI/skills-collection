@@ -3,7 +3,7 @@ name: ib-summarizer
 description: Summarize core safety information from Investigator's Brochures for clinical
   researchers
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

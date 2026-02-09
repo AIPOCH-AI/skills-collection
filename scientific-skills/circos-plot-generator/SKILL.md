@@ -3,7 +3,7 @@ name: circos-plot-generator
 description: Generate Circos plots for genomics data visualization, including genomic
   variations and cell-cell communication networks
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

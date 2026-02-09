@@ -5,7 +5,7 @@ description: Generate photorealistic rendering scripts for PyMOL and UCSF Chimer
   ambient occlusion, and cinematic lighting effects suitable for journal covers and
   high-impact figures.
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

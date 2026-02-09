@@ -5,7 +5,7 @@ description: Generate single-cell RNA-seq analysis code templates for Seurat and
   users need scRNA-seq analysis pipelines, preprocessing workflows, or batch correction
   code.
 version: 1.0.0
-category: Bioinformatics
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

@@ -5,7 +5,7 @@ description: Generate IRB-compliant patient recruitment advertisements for clini
   trial ads, or ethical review board compliant recruitment content for pharmaceutical/medical
   research.
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

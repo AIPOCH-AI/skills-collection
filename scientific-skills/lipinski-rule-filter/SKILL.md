@@ -2,7 +2,7 @@
 name: lipinski-rule-filter
 description: Filter compound libraries based on Lipinski's Rule of Five for drug-likeness
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

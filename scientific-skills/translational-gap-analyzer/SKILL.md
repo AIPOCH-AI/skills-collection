@@ -3,7 +3,7 @@ name: translational-gap-analyzer
 description: Assess translational gaps between preclinical models and human diseases
   to predict clinical failure risks
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

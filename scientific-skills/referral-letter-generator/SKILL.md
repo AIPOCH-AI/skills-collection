@@ -4,7 +4,7 @@ description: Generate medical referral letters with patient summary, reason for 
   and relevant history. Trigger when user needs to create a professional medical referral
   document for transferring patient care to another healthcare provider.
 version: 1.0.0
-category: General
+category: Clinical
 tags:
 - medical
 - healthcare

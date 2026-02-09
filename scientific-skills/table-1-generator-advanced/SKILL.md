@@ -2,7 +2,7 @@
 name: table-1-generator
 description: Automated baseline characteristics table generation for clinical papers
 version: 1.0.0
-category: General
+category: Data
 tags: []
 author: AIPOCH
 license: MIT

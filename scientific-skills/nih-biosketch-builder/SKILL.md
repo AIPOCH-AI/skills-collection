@@ -3,7 +3,7 @@ name: nih-biosketch-builder
 description: Generate NIH Biosketch documents compliant with the 2022 OMB-approved
   format
 version: 1.0.0
-category: General
+category: Grant
 tags: []
 author: AIPOCH
 license: MIT

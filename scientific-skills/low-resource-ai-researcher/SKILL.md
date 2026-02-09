@@ -3,7 +3,7 @@ name: low-resource-ai-researcher
 description: Train high-performance medical LLMs on consumer GPUs using parameter-efficient
   fine-tuning
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

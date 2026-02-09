@@ -3,7 +3,7 @@ name: patent-claim-mapper
 description: Analyze patent claim texts to identify potential infringement risks,
   support competitive analysis and Freedom to Operate (FTO) studies for IP professionals.
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

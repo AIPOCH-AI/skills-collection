@@ -3,7 +3,7 @@ name: multi-panel-figure-assembler
 description: Automatically assemble 6 sub-figures (A-F) into a high-resolution composite
   figure with aligned edges, unified fonts, and labels.
 version: 1.0.0
-category: General
+category: Visual
 tags:
 - image-processing
 - figure

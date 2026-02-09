@@ -5,7 +5,7 @@ description: Generate CIOMS-compliant adverse event narratives for Individual Ca
   suspect drug details, or requests pharmacovigilance narrative writing. Outputs structured
   ICSR-ready narrative following CIOMS I and E2B standards.
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

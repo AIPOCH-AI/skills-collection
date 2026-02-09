@@ -2,7 +2,7 @@
 name: equipment-maintenance-log
 description: Track lab equipment calibration dates and send maintenance reminders
 version: 1.0.0
-category: General
+category: Operations
 tags: []
 author: AIPOCH
 license: MIT

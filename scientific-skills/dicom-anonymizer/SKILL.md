@@ -5,7 +5,7 @@ description: Batch anonymize DICOM medical images by removing patient sensitive 
   users need to de-identify medical imaging data, prepare DICOM files for research
   sharing, or remove PHI from radiology/scanned images.
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

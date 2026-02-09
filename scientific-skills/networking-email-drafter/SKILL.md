@@ -2,7 +2,7 @@
 name: networking-email-drafter
 description: Draft professional follow-up emails to contacts made at conferences
 version: 1.0.0
-category: General
+category: Career
 tags: []
 author: AIPOCH
 license: MIT

@@ -3,7 +3,7 @@ name: smiles-de-salter
 description: Batch process chemical SMILES strings to remove salt ions and retain
   only active pharmaceutical ingredients
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

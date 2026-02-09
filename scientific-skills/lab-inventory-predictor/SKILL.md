@@ -4,7 +4,7 @@ description: Predict depletion time of critical lab reagents based on experiment
   usage frequency and automatically generate purchase alerts for laboratory inventory
   management.
 version: 1.0.0
-category: General
+category: Data
 tags: []
 author: AIPOCH
 license: MIT

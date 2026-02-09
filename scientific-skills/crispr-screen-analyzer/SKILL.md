@@ -2,7 +2,7 @@
 name: crispr-screen-analyzer
 description: Process CRISPR screening data to identify essential genes
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

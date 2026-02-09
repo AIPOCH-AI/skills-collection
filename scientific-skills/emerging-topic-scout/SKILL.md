@@ -3,7 +3,7 @@ name: emerging-topic-scout
 description: Monitor bioRxiv/medRxiv preprints and academic discussions to identify
   emerging research hotspots before they appear in mainstream journals
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

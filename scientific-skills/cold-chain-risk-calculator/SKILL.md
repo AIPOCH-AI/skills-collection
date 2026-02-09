@@ -2,7 +2,7 @@
 name: cold-chain-risk-calculator
 description: Calculate cold chain transport risks
 version: 1.0.0
-category: General
+category: Operations
 tags: []
 author: AIPOCH
 license: MIT

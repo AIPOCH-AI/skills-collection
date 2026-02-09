@@ -3,7 +3,7 @@ name: cnv-caller-plotter
 description: Call copy number variations from WGS data and generate genome-wide CNV
   plots
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

@@ -5,7 +5,7 @@ description: Generate standardized figure legends for scientific charts and grap
   or data visualizations. Supports bar charts, line graphs, scatter plots, box plots,
   heatmaps, and microscopy images.
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

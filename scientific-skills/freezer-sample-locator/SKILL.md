@@ -40,7 +40,7 @@ description: 'Track and retrieve sample locations in -80°C freezers with hierar
 
   Last updated: 2026-02-06'
 version: 1.0.0
-category: General
+category: Operations
 tags: []
 author: AIPOCH
 license: MIT

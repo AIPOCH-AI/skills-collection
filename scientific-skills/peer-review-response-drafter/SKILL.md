@@ -5,7 +5,7 @@ description: Assist in drafting professional peer review response letters. Trigg
   and resubmit", "R&R", "reviewer feedback", or needs help responding to academic
   journal reviewers.
 version: 1.0.0
-category: research
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

@@ -4,7 +4,7 @@ description: Fix garbled text in PDF/SVG vector graphics for final editing in AI
   Detect, replace and repair garbled text in vector graphic files while maintaining
   original formatting and layout.
 version: 1.0.0
-category: Document Processing
+category: Visual
 tags:
 - pdf
 - svg

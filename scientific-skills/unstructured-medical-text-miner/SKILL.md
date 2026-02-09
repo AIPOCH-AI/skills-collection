@@ -3,7 +3,7 @@ name: unstructured-medical-text-miner
 description: Mine unstructured clinical text from MIMIC-IV to extract diagnostic logic
   and treatment details
 version: 1.0.0
-category: General
+category: Data
 tags: []
 author: AIPOCH
 license: MIT

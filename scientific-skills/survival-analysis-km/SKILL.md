@@ -6,7 +6,7 @@ description: Generates Kaplan-Meier survival curves, calculates survival statist
   Kaplan-Meier plots, time-to-event analysis, or asks about survival statistics in
   biomedical contexts.
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

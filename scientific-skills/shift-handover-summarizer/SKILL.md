@@ -3,7 +3,7 @@ name: shift-handover-summarizer
 description: Automatically generate shift handover summaries based on EHR updates,
   highlighting critical events that occurred during the shift for healthcare settings.
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

@@ -4,7 +4,7 @@ description: Visualize single-cell developmental trajectories (pseudotime) to sh
   how cells differentiate from stem cells to mature cells. Includes trajectory inference,
   pseudotime calculation, and publication-ready visualizations.
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

@@ -2,7 +2,7 @@
 name: patient-consent-simplifier
 description: Rewrite legal-jargon consent forms to 5th-grade reading level
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

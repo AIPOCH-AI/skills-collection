@@ -5,7 +5,7 @@ description: 'Interprets complex biochemical laboratory test results and convert
   (blood work, urine analysis, lipid panel, liver/kidney function tests, etc.) and
   needs plain-language interpretation of values, reference ranges, and clinical significance.'
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

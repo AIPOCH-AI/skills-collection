@@ -3,7 +3,7 @@ name: image-duplication-detector
 description: Detect image duplication and tampering in manuscript figures using computer
   vision algorithms
 version: 1.0.0
-category: General
+category: Integrity
 tags: []
 author: AIPOCH
 license: MIT

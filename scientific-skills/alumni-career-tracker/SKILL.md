@@ -3,7 +3,7 @@ name: alumni-career-tracker
 description: Analyze lab alumni career destinations to help new students with career
   planning
 version: 1.0.0
-category: General
+category: Career
 tags: []
 author: AIPOCH
 license: MIT

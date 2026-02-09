@@ -4,7 +4,7 @@ description: Check for drug-drug interactions between multiple medications. Trig
   when user asks about medication compatibility, "can I take X with Y", drug interactions,
   contraindications, or safety of combining pharmaceuticals.
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

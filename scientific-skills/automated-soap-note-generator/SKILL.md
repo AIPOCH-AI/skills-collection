@@ -5,7 +5,7 @@ description: Transform unstructured clinical notes, dictation, or audio transcri
   Trigger when medical text needs structuring, clinical encounters require documentation,
   or healthcare providers need administrative burden reduction.
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

@@ -5,7 +5,7 @@ description: Convert physician verbal dictation into structured SOAP notes. Trig
   or unstructured clinical narratives requiring structured documentation. Supports
   real-time and batch processing of medical speech-to-text.
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

@@ -3,7 +3,7 @@ name: phylogenetic-tree-styler
 description: Beautify phylogenetic trees with taxonomy color blocks, bootstrap values,
   and timeline annotations. Supports Newick format with customizable styling options.
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

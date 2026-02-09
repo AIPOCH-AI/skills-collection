@@ -2,7 +2,7 @@
 name: crispr-grna-designer
 description: Design CRISPR gRNA sequences for specific gene exons with off-target prediction and efficiency scoring. Trigger when user needs gRNA design, CRISPR guide RNA selection, or genome editing target analysis.
 version: 1.0.0
-category: Bioinformatics
+category: Bioinfo
 tags: [crispr, grna, genome-editing, bioinformatics, off-target, cas9]
 author: AIPOCH
 license: MIT

@@ -3,7 +3,7 @@ name: authorship-credit-gen
 description: Generate standardized author contribution statements following the CRediT
   taxonomy
 version: 1.0.0
-category: General
+category: Writing
 tags: []
 author: AIPOCH
 license: MIT

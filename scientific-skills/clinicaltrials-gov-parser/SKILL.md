@@ -13,7 +13,7 @@ description: 'Monitor and summarize competitor clinical trial status changes fro
 
   '
 version: 1.0.0
-category: General
+category: Pharma
 tags:
 - pharma
 - clinical-trials

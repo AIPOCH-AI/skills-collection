@@ -3,7 +3,7 @@ name: eln-template-creator
 description: Generate standardized experiment templates for Electronic Laboratory
   Notebooks
 version: 1.0.0
-category: General
+category: Data
 tags: []
 author: AIPOCH
 license: MIT

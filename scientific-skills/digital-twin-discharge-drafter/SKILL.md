@@ -4,7 +4,7 @@ description: Automatically generates standard discharge summaries mimicking huma
   doctor logic, including admission status, treatment course, and discharge orders
   for physician audit.
 version: 1.0.0
-category: General
+category: Clinical
 tags:
 - medical
 - discharge-summary

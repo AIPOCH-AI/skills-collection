@@ -3,7 +3,7 @@ name: toxicity-structure-alert
 description: Identify potential toxic structural alerts in drug molecules by scanning
   SMILES/SMARTS structures for known toxicophores and assessing toxicity risk levels.
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

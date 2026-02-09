@@ -2,7 +2,7 @@
 name: graphical-abstract-wizard
 description: Generate graphical abstract layout recommendations based on paper abstracts
 version: 1.0.0
-category: General
+category: Visual
 tags:
 - academic
 - visualization

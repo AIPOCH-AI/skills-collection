@@ -3,7 +3,7 @@ name: code-refactor-for-reproducibility
 description: Refactor messy R/Python scripts into modular, documented, and reproducible
   code for top-tier journals
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

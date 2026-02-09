@@ -9,7 +9,7 @@ description: "Performs GO (Gene Ontology) and KEGG pathway enrichment analysis o
   \ set (optional)\n- Output: enriched terms, statistics, visualizations (barplot,\
   \ dotplot, enrichment map)"
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

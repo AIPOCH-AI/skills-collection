@@ -3,7 +3,7 @@ name: cross-disciplinary-bridge-finder
 description: Discover potential connections between seemingly unrelated disciplines
   and predict cross-disciplinary innovation opportunities
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

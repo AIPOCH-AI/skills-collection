@@ -6,7 +6,7 @@ description: Simulates NIH study section peer review for grant proposals. Trigge
   scale), identifies weaknesses, provides actionable revision recommendations, and
   produces a comprehensive review summary similar to actual NIH Summary Statement.
 version: 1.0.0
-category: General
+category: Grant
 tags: []
 author: AIPOCH
 license: MIT

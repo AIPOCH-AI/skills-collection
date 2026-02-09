@@ -2,7 +2,7 @@
 name: pubmed-search-specialist
 description: Build complex Boolean query strings for precise PubMed/MEDLINE literature retrieval. Trigger when user needs MeSH term mapping, Boolean query construction, advanced PubMed filters, citation searching, systematic review search strategy, or clinical query optimization.
 version: 1.0.0
-category: Literature Search
+category: Research
 tags: [pubmed, mesh, boolean-query, literature-search, systematic-review, medline]
 author: AIPOCH
 license: MIT

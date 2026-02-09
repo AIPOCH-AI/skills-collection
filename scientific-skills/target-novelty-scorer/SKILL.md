@@ -3,7 +3,7 @@ name: target-novelty-scorer
 description: Score the novelty of biological targets through literature mining and
   trend analysis
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

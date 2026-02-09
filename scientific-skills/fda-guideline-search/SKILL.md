@@ -12,7 +12,7 @@ description: 'Search FDA industry guidelines by therapeutic area or topic.
 
   or regulatory compliance requirements.'
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

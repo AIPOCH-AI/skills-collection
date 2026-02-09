@@ -5,7 +5,7 @@ description: Automatically scan document reference lists and check against Retra
   text, and bibliography files. Triggers when user asks to check references, verify
   citations, or scan for retracted papers.
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

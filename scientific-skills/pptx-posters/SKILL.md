@@ -2,7 +2,7 @@
 name: pptx-posters
 description: Generate PowerPoint presentations and academic posters from paper content
 version: 1.0.0
-category: General
+category: Present
 tags: []
 author: AIPOCH
 license: MIT

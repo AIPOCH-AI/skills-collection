@@ -5,7 +5,7 @@ description: Generate hospital discharge summaries from admission data, hospital
   summary, compile inpatient medical records, or generate post-hospitalization documentation
   for patients.
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

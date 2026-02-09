@@ -3,7 +3,7 @@ name: symptom-checker-triage
 description: Suggest triage levels based on red flag symptoms for emergency vs outpatient
   care
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

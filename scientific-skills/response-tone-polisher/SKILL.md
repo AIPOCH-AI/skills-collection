@@ -5,7 +5,7 @@ description: Polishes response letters by transforming defensive or harsh langua
   this" into "We respectfully believe the original data sufficiently supports..."
   to avoid reviewer conflict.
 version: 1.0.0
-category: research
+category: Writing
 tags:
 - peer-review
 - response-letter

@@ -3,7 +3,7 @@ name: blind-review-sanitizer
 description: One-click removal of author names, affiliations, acknowledgments, and
   excessive self-citations from manuscripts to meet double-blind peer review requirements.
 version: 1.0.0
-category: General
+category: Writing
 tags: []
 author: AIPOCH
 license: MIT

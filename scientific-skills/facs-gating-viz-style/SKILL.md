@@ -2,7 +2,7 @@
 name: facs-gating-viz-style
 description: Beautify FACS gating plots for publication
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

@@ -3,7 +3,7 @@ name: spatial-transcriptomics-mapper
 description: Map spatial transcriptomics data from 10x Genomics Visium/Xenium onto
   tissue images
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

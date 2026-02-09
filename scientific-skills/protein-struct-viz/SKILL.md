@@ -5,7 +5,7 @@ description: Generate PyMOL scripts to highlight specific protein residues in PD
   residues, create publication-quality protein images, or highlight functional sites
   in protein structures.
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

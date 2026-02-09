@@ -5,7 +5,7 @@ description: Generate USMLE Step 1/2 style clinical cases with patient history, 
   studies, USMLE practice questions, clinical vignettes, or medical board exam preparation
   materials.
 version: 1.0.0
-category: General
+category: Education
 tags: []
 author: AIPOCH
 license: MIT

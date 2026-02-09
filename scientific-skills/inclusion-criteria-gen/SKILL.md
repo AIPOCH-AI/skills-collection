@@ -15,7 +15,7 @@ description: 'Generate and optimize clinical trial subject inclusion/exclusion c
 
   '
 version: 1.0.0
-category: General
+category: Pharma
 tags:
 - pharma
 - clinical-trials

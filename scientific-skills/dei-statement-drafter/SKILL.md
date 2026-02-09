@@ -2,7 +2,7 @@
 name: dei-statement-drafter
 description: Draft Diversity, Equity, and Inclusion statements for academic applications
 version: 1.0.0
-category: General
+category: Career
 tags: []
 author: AIPOCH
 license: MIT

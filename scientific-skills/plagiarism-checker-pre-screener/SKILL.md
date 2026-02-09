@@ -7,7 +7,7 @@ description: "Use when: User provides text/document and asks to check originalit
   \ docx support via text extraction)\nOutput: Originality score, highlighted duplicate/similar\
   \ paragraphs, paraphrasing suggestions"
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

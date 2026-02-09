@@ -3,7 +3,7 @@ name: co2-tank-monitor
 description: IoT monitoring simulation to predict CO2 tank depletion and prevent weekend
   cell death
 version: 1.0.0
-category: General
+category: Operations
 tags: []
 author: AIPOCH
 license: MIT

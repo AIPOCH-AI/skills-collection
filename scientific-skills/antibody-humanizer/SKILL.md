@@ -3,7 +3,7 @@ name: antibody-humanizer
 description: Humanize antibody sequences by predicting optimal human framework regions
   for CDR grafting
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

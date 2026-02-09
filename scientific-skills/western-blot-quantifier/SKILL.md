@@ -4,7 +4,7 @@ description: Automatically identify Western Blot gel bands, perform densitometri
   analysis, and calculate normalized values relative to loading controls (GAPDH, β-actin,
   Tubulin).
 version: 1.0.0
-category: General
+category: Wet Lab
 tags: []
 author: AIPOCH
 license: MIT

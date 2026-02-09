@@ -3,7 +3,7 @@ name: motif-logo-generator
 description: Generate publication-quality sequence logos for DNA or protein motifs
   to visualize conserved positions and sequence patterns.
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

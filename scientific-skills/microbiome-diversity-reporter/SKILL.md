@@ -3,7 +3,7 @@ name: microbiome-diversity-reporter
 description: Interpret Alpha and Beta diversity metrics from 16S rRNA sequencing results
   and generate visualization reports for microbiome analysis.
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

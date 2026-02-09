@@ -5,7 +5,7 @@ description: Map unstructured biomedical data (symptoms, diseases, procedures) t
   medical terms, convert clinical notes to ontology codes, or standardize biomedical
   terminology.
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

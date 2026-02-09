@@ -4,7 +4,7 @@ description: Generate interactive Krona charts (sunburst plots) for metagenomic 
   to visualize taxonomic abundance hierarchies. Supports Kraken2, Bracken, Centrifuge
   output formats.
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

@@ -3,7 +3,7 @@ name: adaptive-trial-simulator
 description: Design and simulate adaptive clinical trial designs in silico with interim
   analysis and sample size re-estimation
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

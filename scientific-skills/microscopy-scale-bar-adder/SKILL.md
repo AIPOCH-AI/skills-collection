@@ -2,7 +2,7 @@
 name: microscopy-scale-bar-adder
 description: Add scale bars to microscopy images
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

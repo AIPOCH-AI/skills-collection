@@ -5,7 +5,7 @@ description: Monitor resubmission deadlines for academic papers and automaticall
   deadline", "revision due", "paper deadline", "revise and resubmit deadline", "R&R
   deadline", or needs to track manuscript revision timelines.
 version: 1.0.0
-category: research
+category: Writing
 tags: []
 author: AIPOCH
 license: MIT

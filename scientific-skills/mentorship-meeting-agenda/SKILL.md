@@ -2,7 +2,7 @@
 name: mentorship-meeting-agenda
 description: Generate structured agendas for mentor-student one-on-one meetings
 version: 1.0.0
-category: General
+category: Career
 tags: []
 author: AIPOCH
 license: MIT

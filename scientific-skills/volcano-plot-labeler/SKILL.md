@@ -3,7 +3,7 @@ name: volcano-plot-labeler
 description: Automatically label top significant genes in volcano plots with repulsion
   algorithm
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

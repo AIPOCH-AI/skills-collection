@@ -5,7 +5,7 @@ description: Recommends appropriate statistical methods (T-test vs ANOVA, etc.) 
   guidance. Trigger when user asks about choosing statistical tests, checking statistical
   assumptions, or needs guidance on experimental design and sample size calculations.
 version: 1.0.0
-category: General
+category: Data
 tags: []
 author: AIPOCH
 license: MIT

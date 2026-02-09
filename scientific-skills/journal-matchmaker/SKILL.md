@@ -5,7 +5,7 @@ description: Recommend suitable high-impact factor or domain-specific journals f
   abstract and asks for journal recommendations, impact factor matching, or scope
   alignment suggestions.
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

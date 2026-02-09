@@ -2,7 +2,7 @@
 name: reagent-expiry-alert
 description: Scan reagent barcodes, log expiry dates, and alert before expiration
 version: 1.0.0
-category: General
+category: Operations
 tags: []
 author: AIPOCH
 license: MIT

@@ -5,7 +5,7 @@ description: Automatically formats citations to AMA (American Medical Associatio
   academic/medical writing. Handles various input formats including APA, MLA, Vancouver,
   and free-text citations.
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

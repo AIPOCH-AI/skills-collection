@@ -3,7 +3,7 @@ name: dashboard-design-for-trials
 description: Design dashboard layout sketches for clinical trials showing enrollment
   progress and adverse event rates
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

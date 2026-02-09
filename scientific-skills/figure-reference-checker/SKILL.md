@@ -2,7 +2,7 @@
 name: figure-reference-checker
 description: Check figure references in manuscripts
 version: 1.0.0
-category: General
+category: Writing
 tags: []
 author: AIPOCH
 license: MIT

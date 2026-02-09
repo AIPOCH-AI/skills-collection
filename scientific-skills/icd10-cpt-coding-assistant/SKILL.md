@@ -5,7 +5,7 @@ description: 'Automatically recommend ICD-10 diagnosis codes and CPT procedure c
   summaries, discharge summaries, or asks for medical coding assistance. Use for healthcare
   providers, medical coders, and billing professionals who need accurate code recommendations.'
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

@@ -6,7 +6,7 @@ description: 'Automates abstract screening for systematic reviews and meta-analy
   with decision rationale. Supports batch  processing of PubMed/EndNote/CSV formatted
   references with confidence  scoring and conflict detection.'
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

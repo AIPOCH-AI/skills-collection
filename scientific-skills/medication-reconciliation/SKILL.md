@@ -3,7 +3,7 @@ name: medication-reconciliation
 description: Compare pre-admission medication lists with inpatient orders to identify
   omissions and duplicates
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

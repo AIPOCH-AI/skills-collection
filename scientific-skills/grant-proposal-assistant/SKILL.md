@@ -5,7 +5,7 @@ description: Grant proposal writing assistant for NIH (R01/R21), NSF and other m
   strategy, budget justification, or other grant sections. Provides templates, section
   generators, and best practice guidance for competitive grant proposals.
 version: 1.0.0
-category: General
+category: Grant
 tags: []
 author: AIPOCH
 license: MIT

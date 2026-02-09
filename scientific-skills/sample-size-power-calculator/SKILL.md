@@ -2,7 +2,7 @@
 name: sample-size-power-calculator
 description: Advanced sample size and power calculations for complex study designs
 version: 1.0.0
-category: General
+category: Data
 tags: []
 author: AIPOCH
 license: MIT

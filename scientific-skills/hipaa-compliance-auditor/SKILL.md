@@ -6,7 +6,7 @@ description: Automatically detect and de-identify PII (Personal Identifiable Inf
   insurance information, or any healthcare-related text containing potential patient
   identifiers.
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

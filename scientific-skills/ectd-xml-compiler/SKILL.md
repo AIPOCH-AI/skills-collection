@@ -3,7 +3,7 @@ name: ectd-xml-compiler
 description: Convert drug application documents (Word/PDF) into FDA/EMA compliant
   eCTD XML structure
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

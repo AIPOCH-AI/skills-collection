@@ -3,7 +3,7 @@ name: postdoc-fellowship-matcher
 description: Match postdoc applicants to eligible fellowships based on nationality
   and research area
 version: 1.0.0
-category: General
+category: Career
 tags: []
 author: AIPOCH
 license: MIT

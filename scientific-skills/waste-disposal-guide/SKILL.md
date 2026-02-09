@@ -2,7 +2,7 @@
 name: waste-disposal-guide
 description: Guide for proper chemical waste disposal by waste container color
 version: 1.0.0
-category: General
+category: Operations
 tags: []
 author: AIPOCH
 license: MIT

@@ -2,7 +2,7 @@
 name: iacuc-protocol-drafter
 description: Draft IACUC protocol applications with focus on the 3Rs principles justification
 version: 1.0.0
-category: General
+category: Pharma
 tags: []
 author: AIPOCH
 license: MIT

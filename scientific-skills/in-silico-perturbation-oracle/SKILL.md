@@ -3,7 +3,7 @@ name: in-silico-perturbation-oracle
 description: Virtual gene knockout simulation using foundation models to predict transcriptional
   changes
 version: 1.0.0
-category: General
+category: AI/Tech
 tags: []
 author: AIPOCH
 license: MIT

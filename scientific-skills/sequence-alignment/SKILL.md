@@ -4,7 +4,7 @@ description: Trigger when user needs to align DNA/protein sequences, compare bio
   sequences, search for similar sequences in databases, or perform BLAST-based similarity
   analysis. Use for bioinformatics sequence comparison tasks.
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

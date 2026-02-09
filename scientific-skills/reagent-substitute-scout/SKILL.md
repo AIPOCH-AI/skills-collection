@@ -3,7 +3,7 @@ name: reagent-substitute-scout
 description: Find validated alternative reagents based on literature citation data
   when original reagents are discontinued
 version: 1.0.0
-category: General
+category: Wet Lab
 tags: []
 author: AIPOCH
 license: MIT

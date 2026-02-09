@@ -3,7 +3,7 @@ name: flow-cytometry-gating-strategist
 description: Recommend optimal flow cytometry gating strategies for specific cell
   types and fluorophores
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

@@ -2,7 +2,7 @@
 name: medication-adherence-message-gen
 description: Generate medication reminder messages using behavioral psychology principles
 version: 1.0.0
-category: General
+category: Clinical
 tags: []
 author: AIPOCH
 license: MIT

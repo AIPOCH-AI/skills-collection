@@ -5,7 +5,7 @@ description: Automatically align and add "Number at risk" table below Kaplan-Mei
   risk tables for survival curves that meet top-tier journal standards such as NEJM/Lancet/JCO,
   automatically calculating the number at risk at each time point.
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT

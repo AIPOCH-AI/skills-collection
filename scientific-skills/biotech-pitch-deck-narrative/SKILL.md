@@ -3,7 +3,7 @@ name: biotech-pitch-deck-narrative
 description: Transform complex scientific data into investor-friendly narratives for
   biotech fundraising pitches
 version: 1.0.0
-category: General
+category: Business
 tags: []
 author: AIPOCH
 license: MIT

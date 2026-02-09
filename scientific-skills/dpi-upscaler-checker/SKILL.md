@@ -3,7 +3,7 @@ name: dpi-upscaler-checker
 description: Check image DPI and intelligently upscale low-resolution images using
   super-resolution
 version: 1.0.0
-category: Image Processing
+category: Visual
 tags:
 - dpi
 - upscaling

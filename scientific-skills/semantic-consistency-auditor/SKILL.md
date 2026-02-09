@@ -3,7 +3,7 @@ name: semantic-consistency-auditor
 description: Evaluate semantic consistency between AI-generated clinical notes and
   expert gold standards using BERTScore and COMET
 version: 1.0.0
-category: General
+category: Research
 tags: []
 author: AIPOCH
 license: MIT

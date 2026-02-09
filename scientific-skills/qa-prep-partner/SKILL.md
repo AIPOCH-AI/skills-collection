@@ -2,7 +2,7 @@
 name: q-and-a-prep-partner
 description: Predict challenging questions for presentations and prepare responses
 version: 1.0.0
-category: General
+category: Present
 tags: []
 author: AIPOCH
 license: MIT

@@ -3,7 +3,7 @@ name: multi-omics-integration-strategist
 description: Design multi-omics integration strategies for transcriptomics, proteomics,
   and metabolomics data analysis
 version: 1.0.0
-category: General
+category: Bioinfo
 tags: []
 author: AIPOCH
 license: MIT

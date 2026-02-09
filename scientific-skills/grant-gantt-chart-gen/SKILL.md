@@ -2,7 +2,7 @@
 name: grant-gantt-chart-gen
 description: Create project timeline visualizations for grant proposals
 version: 1.0.0
-category: General
+category: Grant
 tags: []
 author: AIPOCH
 license: MIT

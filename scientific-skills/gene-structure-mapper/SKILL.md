@@ -2,7 +2,7 @@
 name: gene-structure-mapper
 description: Visualize gene exon-intron structure
 version: 1.0.0
-category: General
+category: Visual
 tags: []
 author: AIPOCH
 license: MIT
