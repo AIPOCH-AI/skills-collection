@@ -14,7 +14,7 @@ description: 'Search FDA industry guidelines by therapeutic area or topic.
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: High

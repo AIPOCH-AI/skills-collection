@@ -4,7 +4,7 @@ description: Extract hazard codes and safety info from chemical safety datasheet
 version: 1.0.0
 category: Safety
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

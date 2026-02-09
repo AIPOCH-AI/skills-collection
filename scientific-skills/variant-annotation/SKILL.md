@@ -12,7 +12,7 @@ description: "Query and annotate gene variants from ClinVar and dbSNP databases.
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: High

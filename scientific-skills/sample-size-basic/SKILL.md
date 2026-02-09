@@ -5,7 +5,7 @@ description: Basic sample size calculator for clinical research planning with co
 version: 1.0.0
 category: Utility
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

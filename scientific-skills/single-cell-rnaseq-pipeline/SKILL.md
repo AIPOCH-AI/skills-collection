@@ -7,7 +7,7 @@ description: Generate single-cell RNA-seq analysis code templates for Seurat and
 version: 1.0.0
 category: Bioinformatics
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

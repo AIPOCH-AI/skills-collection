@@ -4,7 +4,7 @@ description: Medical acronym disambiguation tool with context-aware full form lo
 version: 1.0.0
 category: Utility
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

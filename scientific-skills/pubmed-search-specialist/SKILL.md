@@ -4,7 +4,7 @@ description: Build complex Boolean query strings for precise PubMed/MEDLINE lite
 version: 1.0.0
 category: Literature Search
 tags: [pubmed, mesh, boolean-query, literature-search, systematic-review, medline]
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: High

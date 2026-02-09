@@ -4,7 +4,7 @@ description: Generate narrative budget justifications for NIH/NSF applications
 version: 1.0.0
 category: Grant
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

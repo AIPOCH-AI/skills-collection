@@ -4,7 +4,7 @@ description: Optimize conference schedule to avoid conflicts and maximize attend
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

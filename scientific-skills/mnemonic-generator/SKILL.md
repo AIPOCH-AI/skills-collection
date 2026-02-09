@@ -4,7 +4,7 @@ description: Create memory aids for anatomy and pharmacology
 version: 1.0.0
 category: Education
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

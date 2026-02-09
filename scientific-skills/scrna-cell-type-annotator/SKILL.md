@@ -4,7 +4,7 @@ description: Auto-annotate cell clusters from single-cell RNA data using marker 
 version: 1.0.0
 category: Bioinfo
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

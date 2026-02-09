@@ -4,7 +4,7 @@ description: Convert between IUPAC names, SMILES, and 2D/3D structures
 version: 1.0.0
 category: Chemistry
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

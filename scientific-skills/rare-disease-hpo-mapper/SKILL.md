@@ -4,7 +4,7 @@ description: Map patient symptoms to Human Phenotype Ontology terms for gene dia
 version: 1.0.0
 category: Clinical
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

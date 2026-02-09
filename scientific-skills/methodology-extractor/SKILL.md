@@ -5,7 +5,7 @@ description: Batch extraction of experimental methods from multiple papers for p
 version: 1.0.0
 category: Research
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

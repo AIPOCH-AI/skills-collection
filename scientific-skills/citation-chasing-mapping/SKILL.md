@@ -4,7 +4,7 @@ description: Trace citation networks to discover related research and field evol
 version: 1.0.0
 category: Research
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

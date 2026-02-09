@@ -10,7 +10,7 @@ tags:
 - clinical-training
 - standardized-patient
 - communication-skills
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

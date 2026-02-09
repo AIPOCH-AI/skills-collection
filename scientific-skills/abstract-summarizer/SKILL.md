@@ -4,7 +4,7 @@ description: Summarize long academic papers into structured abstracts within 250
 version: 1.0.0
 category: Info
 tags: [abstract, summarization, academic-papers, research, nlp]
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

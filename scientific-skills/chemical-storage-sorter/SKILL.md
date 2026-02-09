@@ -4,7 +4,7 @@ description: Sort chemicals by compatibility for safe lab storage
 version: 1.0.0
 category: Safety
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

@@ -4,7 +4,7 @@ description: Generate forest plots for meta-analysis with R/Python code
 version: 1.0.0
 category: Data
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

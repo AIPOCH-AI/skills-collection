@@ -7,7 +7,7 @@ description: Assist in drafting professional peer review response letters. Trigg
 version: 1.0.0
 category: research
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

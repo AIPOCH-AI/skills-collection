@@ -4,7 +4,7 @@ description: Integrate REVEL, CADD, PolyPhen scores to predict variant pathogeni
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

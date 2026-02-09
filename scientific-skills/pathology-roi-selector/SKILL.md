@@ -4,7 +4,7 @@ description: Auto-identify regions of interest in whole slide images
 version: 1.0.0
 category: Clinical
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

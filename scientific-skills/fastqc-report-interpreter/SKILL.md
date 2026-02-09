@@ -4,7 +4,7 @@ description: Interpret NGS quality control reports in plain language
 version: 1.0.0
 category: Bioinfo
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

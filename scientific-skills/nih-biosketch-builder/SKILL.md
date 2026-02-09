@@ -5,7 +5,7 @@ description: Generate NIH Biosketch documents compliant with the 2022 OMB-approv
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: High

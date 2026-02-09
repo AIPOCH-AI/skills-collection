@@ -4,7 +4,7 @@ description: Generate image-based diagnostic quizzes from text descriptions
 version: 1.0.0
 category: Education
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

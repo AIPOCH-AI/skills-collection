@@ -4,7 +4,7 @@ description: Guided framework for structuring academic Discussion sections
 version: 1.0.0
 category: Writing
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

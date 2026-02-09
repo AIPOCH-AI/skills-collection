@@ -4,7 +4,7 @@ description: Generate block randomization lists for RCTs
 version: 1.0.0
 category: Pharma
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

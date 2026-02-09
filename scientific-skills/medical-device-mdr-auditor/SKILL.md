@@ -5,7 +5,7 @@ description: Audit medical device technical files against EU MDR 2017/745 regula
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

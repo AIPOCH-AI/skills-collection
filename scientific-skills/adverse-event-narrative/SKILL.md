@@ -7,7 +7,7 @@ description: Generate CIOMS-compliant adverse event narratives for Individual Ca
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

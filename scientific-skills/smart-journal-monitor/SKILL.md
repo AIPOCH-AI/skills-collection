@@ -5,7 +5,7 @@ description: AI-powered journal monitoring with breakthrough article detection a
 version: 1.0.0
 category: Research
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

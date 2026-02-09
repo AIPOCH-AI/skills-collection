@@ -4,7 +4,7 @@ description: Check primers for dimers, hairpins, and off-target amplification
 version: 1.0.0
 category: Wet Lab
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

@@ -4,7 +4,7 @@ description: Draft IRB applications with focus on risk/benefit and privacy prote
 version: 1.0.0
 category: Pharma
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

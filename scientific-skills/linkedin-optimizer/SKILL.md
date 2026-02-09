@@ -8,7 +8,7 @@ tags:
 - profile
 - career
 - networking
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

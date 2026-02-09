@@ -6,7 +6,7 @@ description: Design impeccable animal experiment protocols based on ARRIVE 2.0 g
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

@@ -5,7 +5,7 @@ description: Transform academic papers into university press releases for genera
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

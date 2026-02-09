@@ -4,7 +4,7 @@ description: Design CRISPR gRNA sequences for specific gene exons with off-targe
 version: 1.0.0
 category: Bioinformatics
 tags: [crispr, grna, genome-editing, bioinformatics, off-target, cas9]
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: High

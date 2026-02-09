@@ -4,7 +4,7 @@ description: Predict grant fund depletion based on burn rate
 version: 1.0.0
 category: Management
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

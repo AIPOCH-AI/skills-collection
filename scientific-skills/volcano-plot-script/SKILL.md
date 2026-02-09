@@ -4,7 +4,7 @@ description: Generate R/Python code for volcano plots from DEG (Differentially E
 version: 1.0.0
 category: Data Visualization
 tags: [volcano-plot, bioinformatics, deg-analysis, r, python, visualization]
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

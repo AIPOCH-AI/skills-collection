@@ -4,7 +4,7 @@ description: Generates FAQ lists from complex medical policies or protocols. Tri
 version: 1.0.0
 category: Info
 tags: [faq, policy, patient-education, protocol, medical-documents]
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: Medium

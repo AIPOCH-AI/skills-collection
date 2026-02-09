@@ -7,7 +7,7 @@ description: Automatically scan document reference lists and check against Retra
 version: 1.0.0
 category: General
 tags: []
-author: The King of Skills
+author: AIPOCH
 license: MIT
 status: Draft
 risk_level: High
