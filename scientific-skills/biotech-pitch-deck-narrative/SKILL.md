@@ -1,244 +1,394 @@
 ---
 name: biotech-pitch-deck-narrative
-description: Transform complex scientific data into investor-friendly narratives for
-  biotech fundraising pitches
-version: 1.0.0
-category: Business
-tags: []
-author: AIPOCH
+description: Transform complex scientific and clinical data into compelling investor 
+  narratives for biotech fundraising. Converts technical terminology into business value 
+  propositions, optimizes pitch deck structure, and prepares Q&A for different funding 
+  stages and investor types.
+allowed-tools: [Read, Write, Bash, Edit]
 license: MIT
-status: Draft
-risk_level: Medium
-skill_type: Tool/Script
-owner: AIPOCH
-reviewer: ''
-last_updated: '2026-02-06'
+metadata:
+    skill-author: AIPOCH
 ---
 
-# Skill: Biotech Pitch Deck Narrative
+# Biotech Pitch Deck Narrative
 
-## Identity
-ID: 132
-Name: biotech-pitch-deck-narrative
-Purpose: Transform complex scientific data into business stories that investors can understand, optimizing the narrative logic of fundraising pitch decks.
+## Overview
 
-## Description
+Strategic communication tool that translates complex biotechnology innovations into compelling business narratives optimized for venture capital, pharmaceutical partnerships, and public market investors.
 
-This Skill is designed for biotechnology startups, helping founding teams transform obscure scientific data, preclinical/clinical data, and technical mechanisms into business narratives that investors can easily understand. Through structured analysis and story reconstruction, improve the success rate of fundraising pitches.
+**Key Capabilities:**
+- **Science Translation**: Convert technical data into business value language
+- **Narrative Architecture**: Structure Problem→Solution→Market→Traction→Vision flow
+- **Stage Optimization**: Tailor messaging for seed through IPO fundraising
+- **Investor Calibration**: Adapt for generalist vs. specialist audiences
+- **Risk Mitigation**: Frame scientific and regulatory risks as manageable challenges
+- **Q&A Preparation**: Anticipate investor questions and prepare responses
 
-## Capabilities
+## When to Use
 
-- **Science Translation**: Transform technical terminology, mechanism pathways, and experimental data into business value language
-- **Narrative Reconstruction**: Optimize the story line of the pitch deck (Problem → Solution → Market → Traction → Vision)
-- **Investor Perspective**: Adjust narrative focus based on different funding rounds (Angel/VC/PE)
-- **Data Visualization Suggestions**: Provide best ways to display complex scientific data
-- **Risk Balance**: Narrative balance between scientific rigor and business appeal
+**✅ Use this skill when:**
+- Preparing Series A/B pitch decks for VC presentations
+- Creating management presentations for IPO roadshows
+- Developing BD materials for pharma partnership discussions
+- Crafting executive summaries for grant applications
+- Rehearsing investor Q&A for earnings calls
+- Translating clinical data into commercial narratives
+- Adapting academic presentations for business audiences
 
-## Usage
+**❌ Do NOT use when:**
+- Scientific conference presentations → Use technical language
+- Regulatory submission documents → Use formal FDA/EMA formats
+- Internal R&D team communications → Use full scientific detail
+- Patent applications → Use precise legal/scientific terminology
+- Patient-facing materials → Use `lay-summary-gen`
 
-### CLI
+**Integration:**
+- **Upstream**: `market-access-value` (commercial assessment), `competitor-trial-monitor` (competitive landscape)
+- **Downstream**: `business-model-canvas` (strategy development), `investor-relations-prep` (ongoing communications)
 
-```bash
-# Analyze existing pitch deck and provide optimization suggestions
-python skills/biotech-pitch-deck-narrative/scripts/main.py analyze \
-  --input path/to/pitch.pptx \
-  --stage seed \
-  --output optimization_report.json
+## Core Capabilities
 
-# Generate business narrative based on scientific data
-python skills/biotech-pitch-deck-narrative/scripts/main.py generate \
-  --science "mRNA vaccine technology, targeting KRAS G12C mutation" \
-  --stage series-a \
-  --focus market \
-  --output narrative.json
+### 1. Science-to-Business Translation
 
-# Optimize specific sections
-python skills/biotech-pitch-deck-narrative/scripts/main.py rewrite \
-  --section "technology" \
-  --content "Current content..." \
-  --audience "generalist-vc" \
-  --output improved_section.md
-```
-
-### Python API
+Convert technical concepts into investor-friendly language:
 
 ```python
-from skills.biotech_pitch_deck_narrative.scripts.main import (
-    BiotechNarrativeEngine,
-    PitchStage,
-    AudienceType
-)
+from scripts.narrative_engine import BiotechNarrativeEngine
 
 engine = BiotechNarrativeEngine()
 
-# Generate complete narrative
-narrative = engine.generate_narrative(
-    science_data={
-        "technology": "CRISPR-based gene editing for sickle cell",
-        "stage": "Phase II clinical",
-        "differentiation": "Higher efficiency, lower off-target"
-    },
-    target_stage=PitchStage.SERIES_B,
-    audience=AudienceType.HEALTHCARE_VC
+# Translate technical description
+translation = engine.translate_science(
+    technical_description="""
+    Our proprietary AAV9-based gene therapy utilizes a codon-optimized 
+    transgene under control of a liver-specific promoter to restore 
+    functional enzyme in patients with MPS I deficiency.
+    """,
+    audience="generalist_vc",
+    preserve_accuracy=True
+)
+
+print(translation.business_narrative)
+# "One-time gene therapy delivering a functional copy of the missing enzyme, 
+#  potentially curing MPS I rather than managing symptoms"
+```
+
+**Translation Strategies:**
+| Technical Concept | Business Translation | Why It Works |
+|-------------------|---------------------|--------------|
+| "CRISPR-Cas9 gene editing" | "Precision genetic medicine platform" | Platform implies scalability |
+| "Phase II clinical data" | "De-risked asset with human proof-of-concept" | Reduces perceived risk |
+| "Off-target effects" | "Industry-leading specificity profile" | Competitive framing |
+| "MOA via JAK-STAT pathway" | "Novel mechanism addressing root cause" | Value proposition |
+
+### 2. Narrative Architecture
+
+Structure pitch deck flow for maximum impact:
+
+```python
+# Generate complete narrative arc
+narrative = engine.build_narrative(
+    company_stage="series_b",
+    science_type="gene_therapy",
+    clinical_stage="phase_2",
+    target_market="rare_disease",
+    key_differentiation="one_time_cure"
+)
+
+# Access each component
+print(narrative.hook)           # Opening grab
+print(narrative.problem)        # Market pain point
+print(narrative.solution)       # Your approach
+print(narrative.traction)       # Validation to date
+print(narrative.ask)            # Funding request
+```
+
+**Narrative Structure:**
+1. **Hook** (30 seconds): Why this, why now, why you
+2. **Problem** ($B+ market): Unmet medical need, current standard limitations
+3. **Solution**: Your technology/platform, mechanism of action
+4. **Traction**: Clinical data, partnerships, validation
+5. **Market**: Size, competition, your advantage
+6. **Team**: Track record, why you'll succeed
+7. **Ask**: Funding amount, use of proceeds, milestones
+
+### 3. Stage-Specific Optimization
+
+Calibrate message depth for funding round:
+
+```python
+# Optimize for different stages
+seed_narrative = engine.optimize_for_stage(
+    base_narrative=narrative,
+    stage="seed",
+    focus="team_and_vision"  # Seed cares about team and big idea
+)
+
+series_a_narrative = engine.optimize_for_stage(
+    base_narrative=narrative,
+    stage="series_a",
+    focus="proof_of_concept"  # Series A needs validation
+)
+
+ipo_narrative = engine.optimize_for_stage(
+    base_narrative=narrative,
+    stage="ipo",
+    focus="commercial_readiness"  # IPO requires near-term revenue
 )
 ```
 
-## Input Parameters
+**Stage Requirements:**
+| Stage | Key Questions | Focus Areas |
+|-------|---------------|-------------|
+| **Seed** ($500K-$2M) | Can you execute? | Team, vision, early validation |
+| **Series A** ($10-30M) | Does it work? | POC data, IP position, market entry |
+| **Series B** ($30-75M) | Will it scale? | Phase 2/3 data, BD traction, team expansion |
+| **Series C/IPO** ($100M+) | Commercial execution | Registration trials, launch prep, revenue path |
 
-| Parameter | Type | Description |
-|------|------|------|
-| `input` | string | Input file path (PPT/PDF/Text) |
-| `science` | string | Scientific/technical description |
-| `stage` | enum | Funding stage: `pre-seed`, `seed`, `series-a`, `series-b`, `series-c`, `ipo` |
-| `focus` | enum | Optimization focus: `market`, `technology`, `traction`, `team`, `financials` |
-| `audience` | enum | Target audience: `generalist-vc`, `healthcare-vc`, `pharma-corp`, `angel` |
-| `section` | enum | Pitch deck section: `problem`, `solution`, `technology`, `market`, `traction`, `team`, `financials`, `vision` |
-| `content` | string | Current section content |
+### 4. Investor Audience Calibration
 
-## Output Format
+Adapt tone and depth for different investor types:
 
-### narrative.json
-
-```json
-{
-  "narrative_arc": {
-    "hook": "Opening hook",
-    "problem": "Problem statement (business perspective)",
-    "solution": "Solution (concise and powerful)",
-    "why_now": "Timing argument",
-    "market": "Market size and opportunity",
-    "traction": "Key milestones",
-    "team": "Team credentials",
-    "ask": "Funding needs and use of funds"
-  },
-  "slide_recommendations": [
-    {
-      "slide_number": 1,
-      "title": "Suggested title",
-      "key_message": "Key message",
-      "content_guidance": "Content guidance",
-      "visual_suggestion": "Visual suggestion",
-      "investor_question": "Questions investors may ask"
-    }
-  ],
-  "terminology_mapping": {
-    "Original term": "Business expression"
-  },
-  "risk_mitigation": {
-    "scientific_risks": ["Risk description and response"],
-    "market_risks": ["Risk description and response"],
-    "regulatory_risks": ["Risk description and response"]
-  },
-  "q_a_preparation": [
-    {
-      "question": "Anticipated question",
-      "suggested_answer": "Suggested answer",
-      "key_points": ["Key point 1", "Key point 2"]
-    }
-  ]
-}
+```python
+# Calibrate for specific investor
+calibrated = engine.calibrate_for_audience(
+    narrative=narrative,
+    investor_type="healthcare_vc",  # vs "generalist_vc" or "pharma_corp"
+    technical_depth="moderate",      # Depth of scientific detail
+    risk_tolerance="high"            # Early vs late stage framing
+)
 ```
 
-## Examples
+**Investor Types:**
+- **Generalist VC**: Focus on market size, business model, team pedigree
+- **Healthcare VC**: Balance science rigor with commercial potential
+- **Pharma BD**: Emphasize strategic fit, validation data, partnership potential
+- **Public Market**: Highlight near-term catalysts, revenue projections, risk mitigation
 
-### Example 1: mRNA Cancer Vaccine Company Series A
+## Common Patterns
 
-**Input**:
-```json
-{
-  "science": "Personalized neoantigen mRNA vaccine, based on tumor sequencing and AI prediction, targeting solid tumors",
-  "stage": "series-a",
-  "clinical_data": "Phase I/IIa data, 12/20 patients showed immune response, 3 PR"
-}
-```
+### Pattern 1: Clinical-Stage Therapeutics
 
-**Output**:
-- Technology translation: "AI-driven personalized cancer vaccine platform" → instead of "Neoantigen prediction algorithm"
-- Market narrative: Emphasize personalized medicine mega-trend, Moderna-validated mRNA platform
-- Data presentation: Waterfall plot showing individual response differences, highlighting depth of response in responders
-
-### Example 2: Gene Editing Tool Company Seed
-
-**Input**:
-```json
-{
-  "science": "Novel base editor enabling C-to-G editing, 100x reduced off-target rate",
-  "stage": "seed",
-  "differentiation": "Current CGB editing efficiency <10%, we achieve 60%"
-}
-```
-
-**Output**:
-- Problem framing: "Existing gene editing cannot treat 40% of genetic diseases"
-- Solution: "Next-generation base editing platform, tackling the hardest-to-treat mutation types"
-- Market angle: Addressing indication gaps not covered by CRISPR Therapeutics, Beam
-
-## Best Practices
-
-1. **Avoid oversimplification**: Maintain scientific credibility, use analogies rather than incorrect statements
-2. **Data storytelling**: Every data point should serve the business narrative
-3. **Investor thinking**: Answer "Why you", "Why now", "What is the exit path"
-4. **Layered information**: Core information (everyone understands) + Deep information (professional investors)
-5. **FDA pathway visualization**: Clearly display roadmap from current status to approval
-
-## Dependencies
-
-- python-pptx (PPT parsing)
-- PyPDF2 (PDF parsing)
-- pandas (data processing)
-- pydantic (data validation)
-
-## Author
-
-- Created: 2024
-- Version: 1.0.0
-
-## Risk Assessment
-
-| Risk Indicator | Assessment | Level |
-|----------------|------------|-------|
-| Code Execution | Python/R scripts executed locally | Medium |
-| Network Access | No external API calls | Low |
-| File System Access | Read input files, write output files | Medium |
-| Instruction Tampering | Standard prompt guidelines | Low |
-| Data Exposure | Output files saved to workspace | Low |
-
-## Security Checklist
-
-- [ ] No hardcoded credentials or API keys
-- [ ] No unauthorized file system access (../)
-- [ ] Output does not expose sensitive information
-- [ ] Prompt injection protections in place
-- [ ] Input file paths validated (no ../ traversal)
-- [ ] Output directory restricted to workspace
-- [ ] Script execution in sandboxed environment
-- [ ] Error messages sanitized (no stack traces exposed)
-- [ ] Dependencies audited
-## Prerequisites
+**Scenario**: Phase 2 biotech raising Series B.
 
 ```bash
-# Python dependencies
-pip install -r requirements.txt
+# Generate complete pitch narrative
+python scripts/main.py \
+  --science "Small molecule inhibitor targeting mutant KRAS G12C" \
+  --stage "phase_2" \
+  --indication "lung_cancer" \
+  --data "ORR 45%, median PFS 6.5 months" \
+  --competition "Mirati, J&J" \
+  --output series_b_narrative.json
 ```
 
-## Evaluation Criteria
+**Narrative Elements:**
+- **Problem**: KRAS mutations in 30% of cancers; previously "undruggable"
+- **Solution**: First-in-class covalent inhibitor with superior selectivity
+- **Traction**: Phase 2 data showing 45% response rate, durable responses
+- **Market**: $15B+ opportunity across multiple tumor types
+- **Differentiation**: Best-in-class potency, favorable safety profile
+- **Ask**: $75M to complete Phase 3 and prepare NDA
 
-### Success Metrics
-- [ ] Successfully executes main functionality
-- [ ] Output meets quality standards
-- [ ] Handles edge cases gracefully
-- [ ] Performance is acceptable
+### Pattern 2: Platform Company
 
-### Test Cases
-1. **Basic Functionality**: Standard input → Expected output
-2. **Edge Case**: Invalid input → Graceful error handling
-3. **Performance**: Large dataset → Acceptable processing time
+**Scenario**: Novel delivery platform company raising seed.
 
-## Lifecycle Status
+```python
+platform_narrative = engine.generate_platform_narrative(
+    platform_technology="Lipid nanoparticle for CNS delivery",
+    differentiator="Crosses BBB with 50x improvement over existing LNPs",
+    applications=["Alzheimer's", "Parkinson's", "brain_cancer"],
+    stage="seed",
+    target="platform_value_creation"
+)
+```
 
-- **Current Stage**: Draft
-- **Next Review Date**: 2026-03-06
-- **Known Issues**: None
-- **Planned Improvements**: 
-  - Performance optimization
-  - Additional feature support
+**Platform Story Arc:**
+- **Platform Thesis**: Solving delivery problem unlocks multiple indications
+- **Validation**: Proof-of-mechanism in 2+ disease models
+- **Breadth**: Pipeline across CNS, oncology, rare disease
+- **Partnership Appeal": Pharma interest in accessing CNS targets
+- **Scalability**: Manufacturing platform supports multiple assets
+
+### Pattern 3: MedTech Device
+
+**Scenario**: Surgical robotics company Series A.
+
+```python
+device_narrative = engine.generate_device_narrative(
+    device_type="surgical_robot",
+    clinical_benefit="50% reduction in complications, 30% faster recovery",
+    regulatory_path="510k_de_novo",
+    reimbursement="CPT_code_established",
+    stage="series_a"
+)
+```
+
+**Device-Specific Elements:**
+- **Clinical Evidence**: Superior outcomes vs. standard of care
+- **Economic Value**: Cost savings to healthcare system
+- **Regulatory Clarity**: Clear FDA pathway, reimbursement strategy
+- **Adoption Strategy**: Training, support, key opinion leader engagement
+
+### Pattern 4: Pharma Partnership Pitch
+
+**Scenario**: Out-licensing asset to big pharma.
+
+```bash
+# Generate BD materials
+python scripts/main.py \
+  --mode partnership \
+  --asset "Phase 2 ready asset" \
+  --indication "NASH" \
+  --data_package "Phase 1b complete, biomarker validated" \
+  --partner_profile "novo_nordisk" \
+  --output bd_presentation.json
+```
+
+**Partnership Framing:**
+- **Strategic Fit**: Complements partner's metabolism franchise
+- **Validation**: De-risked with human proof-of-mechanism
+- **Value Creation**: $500M+ peak sales potential
+- **Deal Structure**: Flexible partnership terms proposed
+
+## Complete Workflow Example
+
+**Building comprehensive fundraising materials:**
+
+```python
+from scripts.narrative_engine import BiotechNarrativeEngine
+from scripts.slide_generator import SlideGenerator
+from scripts.qa_prep import QAPreparation
+
+# Initialize
+engine = BiotechNarrativeEngine()
+slides = SlideGenerator()
+qa = QAPreparation()
+
+# Step 1: Generate core narrative
+narrative = engine.build_narrative(
+    company_stage="series_a",
+    therapeutic_area="oncology",
+    modality="cell_therapy",
+    clinical_stage="phase_1",
+    key_differentiation="allogeneic_off_the_shelf"
+)
+
+# Step 2: Create slide-by-slide guidance
+slide_guide = slides.generate_guide(
+    narrative=narrative,
+    n_slides=12,
+    include_visual_suggestions=True
+)
+
+# Step 3: Prepare Q&A
+qa_prep = qa.generate_qa(
+    narrative=narrative,
+    investor_type="healthcare_vc",
+    depth="comprehensive"
+)
+
+# Step 4: Export complete package
+engine.export_package(
+    narrative=narrative,
+    slides=slide_guide,
+    qa=qa_prep,
+    output_dir="series_a_pitch_package/"
+)
+```
+
+## Quality Checklist
+
+**Narrative Quality:**
+- [ ] Opening hook grabs attention in 30 seconds
+- [ ] Problem is a $B+ market with clear unmet need
+- [ ] Solution is differentiated vs. competition
+- [ ] Traction validates technical and commercial hypotheses
+- [ ] Team has relevant track record
+- [ ] Ask is specific with clear milestones
+
+**Translation Accuracy:**
+- [ ] Scientific claims remain accurate after simplification
+- [ ] No misleading statements or exaggerated claims
+- [ ] Risk factors disclosed appropriately
+- [ ] Regulatory pathway is realistic
+- [ ] Market size assumptions are defensible
+
+**Investor Alignment:**
+- [ ] Appropriate for stage and investor type
+- [ ] Addresses likely investor concerns proactively
+- [ ] Financial projections are reasonable
+- [ ] Exit strategy is credible
+
+**Before Presentation:**
+- [ ] **CRITICAL**: Legal review of all claims
+- [ ] **CRITICAL**: Scientific accuracy check by domain expert
+- [ ] Rehearsed with feedback from experienced biotech investors
+- [ ] Backup slides prepared for detailed questions
+
+## Common Pitfalls
+
+**Translation Errors:**
+- ❌ **Oversimplification** → "Our drug cures cancer" (misleading)
+  - ✅ "Our drug showed tumor shrinkage in 40% of patients"
+
+- ❌ **Jargon overload** → Technical terms without explanation
+  - ✅ Use analogies: "Like a molecular GPS guiding drugs to tumors"
+
+- ❌ **Hiding risks** → No mention of side effects or competition
+  - ✅ Acknowledge risks with mitigation strategies
+
+**Narrative Mistakes:**
+- ❌ **Technology in search of problem** → Cool science, no market
+  - ✅ Start with problem, solution follows naturally
+
+- ❌ **Ignoring competition** → "We have no competitors"
+  - ✅ Acknowledge competition, explain differentiation
+
+- ❌ **Unrealistic projections** → $10B revenue in Year 3
+  - ✅ Conservative estimates with clear assumptions
+
+**Stage Mismatch:**
+- ❌ **Seed deck with Phase 3 projections** → Too far ahead
+  - ✅ Match milestones to stage-appropriate timelines
+
+- ❌ **IPO presentation to seed investors** → Wrong focus
+  - ✅ Tailor depth and emphasis to investor sophistication
+
+## References
+
+Available in `references/` directory:
+
+- `vc_presentation_best_practices.md` - Venture capital pitch guidelines
+- `biotech_valuation_models.md` - Valuation methodologies by stage
+- `regulatory_pathway_guides.md` - FDA/EMA approval timelines
+- `market_sizing_methodologies.md` - TAM/SAM/SOM calculations
+- `investor_question_bank.md` - Common Q&A by investor type
+- `competitive_landscape_templates.md` - Positioning frameworks
+
+## Scripts
+
+Located in `scripts/` directory:
+
+- `main.py` - CLI interface for narrative generation
+- `narrative_engine.py` - Core story architecture
+- `science_translator.py` - Technical to business translation
+- `slide_generator.py` - Deck structure and visual guidance
+- `qa_preparation.py` - Investor Q&A preparation
+- `competitive_analyzer.py` - Market positioning analysis
+- `risk_framer.py` - Risk mitigation messaging
+- `stage_optimizer.py` - Funding round calibration
+
+## Limitations
+
+- **Not Financial Advice**: Cannot provide investment recommendations
+- **Regulatory Compliance**: Does not ensure SEC or other regulatory compliance
+- **Market Specificity**: May not capture niche investor preferences
+- **Real-Time Adaptation**: Cannot adjust to live investor reactions
+- **Confidentiality**: Does not handle material non-public information protection
+- **Legal Review**: All materials require legal counsel review before use
+
+---
+
+**💼 Business Note: Successful biotech fundraising requires balancing scientific credibility with business appeal. This tool helps structure narratives, but the underlying science and team execution ultimately determine success. Always maintain integrity—overpromising destroys credibility with sophisticated investors.**
