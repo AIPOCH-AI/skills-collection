@@ -9,7 +9,7 @@ license: MIT
 status: Draft
 risk_level: High
 skill_type: Hybrid (Tool/Script + Network/API)
-owner: The King of Skills
+owner: AIPOCH
 reviewer: ''
 last_updated: '2026-02-06'
 ---

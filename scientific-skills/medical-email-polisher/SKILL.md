@@ -16,7 +16,7 @@ license: MIT
 status: Draft
 risk_level: Medium
 skill_type: Tool/Script
-owner: The King of Skills
+owner: AIPOCH
 reviewer: ''
 last_updated: '2026-02-06'
 ---
