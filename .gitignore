@@ -44,3 +44,15 @@ build/
 
 # Logs
 *.log
+
+# Temporary zip files
+*.zip
+
+# Development/Internal files
+validate_skills.py
+validation_report.json
+REVISION_LOG.md
+TASK_HANDOVER.md
+
+# OS files
+.DS_Store
