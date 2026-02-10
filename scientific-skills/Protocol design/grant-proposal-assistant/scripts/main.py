@@ -73,7 +73,11 @@ class GrantProposalAssistant:
         if section not in generators:
             raise ValueError(f"Unknown section: {section}. Available: {list(generators.keys())}")
         
-        return generators[section](**kwargs)
+        # Only pass num_aims to functions that accept it
+        if section in ["aims", "specific_aims", "full"]:
+            return generators[section](**kwargs)
+        else:
+            return generators[section]()
     
     def _generate_specific_aims(self, title: str = "[Project Title]", 
                                  hypothesis: str = "[Working Hypothesis]",
