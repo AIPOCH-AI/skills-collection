@@ -6,7 +6,7 @@ Total: 215 skills
 |---|---|---|---|---|---|---|---|
 | blockbuster-therapy-predictor | Predict which early-stage technologies (PROTAC, mRNA, gene editing) will become ... | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/blockbuster-therapy-predictor |
 | 3d-molecule-ray-tracer | Generate photorealistic rendering scripts for PyMOL and UCSF ChimeraX. Creates p... | Visual | Data analysis | Hybrid (Tool/Script + Network/API) | High | Draft | Data analysis/3d-molecule-ray-tracer |
-| adme-property-predictor | Predict ADME properties (Absorption, Distribution, Metabolism, Excretion) for dr... | Pharma | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/adme-property-predictor |
+| adme-property-predictor | Predict ADME properties (Absorption, Distribution, Metabolism, Excretion) for dr... | Pharma | Data analysis | Tool/Script | Medium | First Batch | Evidence insights/adme-property-predictor |
 | arrive-guideline-architect | Design impeccable animal experiment protocols based on ARRIVE 2.0 guidelines. En... | Wet Lab | Protocol design | Tool/Script | Medium | First Batch | Protocol design/arrive-guideline-architect |
 | abstract-summarizer | Summarize long academic papers into structured abstracts within 250 words. Trigg... | Research | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/abstract-summarizer |
 | abstract-trimmer | Compresses abstracts to meet strict word limits while preserving key information... | General | Others | Tool/Script | Medium | Draft | Others/abstract-trimmer |
@@ -33,7 +33,7 @@ Total: 215 skills
 | chemical-structure-converter | Convert between IUPAC names, SMILES, and 2D/3D structures | Chemistry | Others | Tool/Script | Medium | Draft | chemical-structure-converter |
 | circos-plot-generator | Generate Circos plots for genomics data visualization, including genomic variati... | Visual | Data analysis | Tool/Script | Medium | Draft | Data analysis/circos-plot-generator |
 | citation-chasing-mapping | Trace citation networks to discover related research and field evolution | Research | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/citation-chasing-mapping |
-| citation-formatter | Automatically formats citations to AMA (American Medical Association) style. Tri... | Research | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/citation-formatter |
+| citation-formatter | Automatically formats citations to AMA (American Medical Association) style. Tri... | Research | Academic writing | Tool/Script | Medium | First Batch | Evidence insights/citation-formatter |
 | clinical-data-cleaner | Clean and standardize raw clinical trial data for SDTM compliance. Handles missi... | Data | Data analysis | Tool/Script | Medium | First Batch | Data analysis/clinical-data-cleaner |
 | clinicaltrials-gov-parser | Monitor and summarize competitor clinical trial status changes from ClinicalTria... | Pharma | Evidence insights | Hybrid (Tool/Script + Network/API) | High | Draft | Evidence insights/clinicaltrials-gov-parser |
 | code-refactor-for-reproducibility | Refactor messy R/Python scripts into modular, documented, and reproducible code ... | Bioinfo | Data analysis | Tool/Script | Medium | Draft | Data analysis/code-refactor-for-reproducibility |
@@ -68,7 +68,7 @@ Total: 215 skills
 | faq-generator | Generates FAQ lists from complex medical policies or protocols. Trigger when use... | Info | Others | Tool/Script | Medium | Draft | Others/faq-generator |
 | fda-guideline-search | Search FDA industry guidelines by therapeutic area or topic. Trigger when user r... | Pharma | Evidence insights | Hybrid (Tool/Script + Network/API) | High | Draft | Evidence insights/fda-guideline-search |
 | fastqc-report-interpreter | Interpret NGS quality control reports in plain language | Bioinfo | Data analysis | Tool/Script | Medium | First Batch | Data analysis/fastqc-report-interpreter |
-| figure-legend-gen | Generate standardized figure legends for scientific charts and graphs. Trigger w... | Research | Evidence insights | Hybrid (Tool/Script + Network/API) | High | First Batch | Evidence insights/figure-legend-gen |
+| figure-legend-gen | Generate standardized figure legends for scientific charts and graphs. Trigger w... | Research | Academic writing | Hybrid (Tool/Script + Network/API) | High | First Batch | Evidence insights/figure-legend-gen |
 | figure-reference-checker | Check figure references in manuscripts | Writing | Academic writing | Tool/Script | Medium | Draft | Academic writing/figure-reference-checker |
 | flow-cytometry-gating-strategist | Recommend optimal flow cytometry gating strategies for specific cell types and f... | Bioinfo | Data analysis | Hybrid (Tool/Script + Network/API) | High | Draft | Data analysis/flow-cytometry-gating-strategist |
 | flow-panel-designer | Design multicolor flow cytometry panels minimizing spectral overlap | Wet Lab | Protocol design | Tool/Script | Medium | Draft | Protocol design/flow-panel-designer |
@@ -82,9 +82,9 @@ Total: 215 skills
 | grant-budget-justification | Generate narrative budget justifications for NIH/NSF applications | Grant | Academic writing | Tool/Script | Medium | Draft | Academic writing/grant-budget-justification |
 | grant-funding-scout | NIH funding trend analysis to identify high-priority research areas | Research | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/grant-funding-scout |
 | grant-gantt-chart-gen | Create project timeline visualizations for grant proposals | Grant | Academic writing | Tool/Script | Medium | Draft | Academic writing/grant-gantt-chart-gen |
-| grant-proposal-assistant | Grant proposal writing assistant for NIH (R01/R21), NSF and other mainstream fun... | Grant | Academic writing | Tool/Script | Medium | First Batch | Academic writing/grant-proposal-assistant |
+| grant-proposal-assistant | Grant proposal writing assistant for NIH (R01/R21), NSF and other mainstream fun... | Grant | Protocol design | Tool/Script | Medium | First Batch | Academic writing/grant-proposal-assistant |
 | graph-interpretation | Describes statistical graphs in academic language for manuscripts. | Present | Academic writing | Tool/Script | Medium | Draft | Academic writing/graph-interpretation |
-| graphical-abstract-wizard | Generate graphical abstract layout recommendations based on paper abstracts | Visual | Data analysis | Tool/Script | Medium | First Batch | Data analysis/graphical-abstract-wizard |
+| graphical-abstract-wizard | Generate graphical abstract layout recommendations based on paper abstracts | Visual | Academic writing | Tool/Script | Medium | First Batch | Data analysis/graphical-abstract-wizard |
 | hipaa-compliance-auditor | Automatically detect and de-identify PII (Personal Identifiable Information) and... | Clinical | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/hipaa-compliance-auditor |
 | heatmap-beautifier | Professional heatmap beautification tool with automatic clustering and annotatio... | Visual | Data analysis | Tool/Script | Medium | Draft | Data analysis/heatmap-beautifier |
 | iacuc-protocol-drafter | Draft IACUC protocol applications with focus on the 3Rs principles justification | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/iacuc-protocol-drafter |
@@ -93,15 +93,15 @@ Total: 215 skills
 | ihc-if-optimizer | Optimize IHC/IF protocols for specific tissues and antigens | Wet Lab | Protocol design | Tool/Script | Medium | Draft | Protocol design/ihc-if-optimizer |
 | irb-application-assistant | Draft IRB applications with focus on risk/benefit and privacy protection | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/irb-application-assistant |
 | image-duplication-detector | Detect image duplication and tampering in manuscript figures using computer visi... | Integrity | Others | Tool/Script | Medium | Draft | Others/image-duplication-detector |
-| in-silico-perturbation-oracle | Virtual gene knockout simulation using foundation models to predict transcriptio... | AI/Tech | Others | Hybrid (Tool/Script + Network/API) | High | First Batch | Others/in-silico-perturbation-oracle |
-| inclusion-criteria-gen | Generate and optimize clinical trial subject inclusion/exclusion criteria to bal... | Pharma | Evidence insights | Hybrid (Tool/Script + Network/API) | High | First Batch | Evidence insights/inclusion-criteria-gen |
+| in-silico-perturbation-oracle | Virtual gene knockout simulation using foundation models to predict transcriptio... | AI/Tech | Data analysis | Hybrid (Tool/Script + Network/API) | High | First Batch | Others/in-silico-perturbation-oracle |
+| inclusion-criteria-gen | Generate and optimize clinical trial subject inclusion/exclusion criteria to bal... | Pharma | Protocol design | Hybrid (Tool/Script + Network/API) | High | First Batch | Evidence insights/inclusion-criteria-gen |
 | interview-mock-partner | Simulates behavioral interview questions for medical professionals. | Career | Academic writing | Tool/Script | Medium | Draft | Academic writing/interview-mock-partner |
 | journal-club-presenter | Generate journal club slides with background, critique, and discussion | Education | Others | Tool/Script | Medium | Draft | Others/journal-club-presenter |
 | journal-cover-prompter | Generate AI art prompts for scientific journal cover designs | Visual | Data analysis | Tool/Script | Medium | Draft | Data analysis/journal-cover-prompter |
 | journal-impact-factor-trend | Show journal impact factor and quartile trends over 5 years | General | Others | Tool/Script | Medium | Draft | Others/journal-impact-factor-trend |
-| journal-matchmaker | Recommend suitable high-impact factor or domain-specific journals for manuscript... | Research | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/journal-matchmaker |
+| journal-matchmaker | Recommend suitable high-impact factor or domain-specific journals for manuscript... | Research | Academic writing | Tool/Script | Medium | First Batch | Evidence insights/journal-matchmaker |
 | kol-profiler | Analyze physician academic influence and collaboration networks | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/kol-profiler |
-| key-takeaways | Extracts 3-5 core conclusions from lengthy medical documents or PDFs. | Info | Others | Tool/Script | Medium | First Batch | Others/key-takeaways |
+| key-takeaways | Extracts 3-5 core conclusions from lengthy medical documents or PDFs. | Info | Evidence insights | Tool/Script | Medium | First Batch | Others/key-takeaways |
 | keyword-velocity-tracker | Calculate literature growth velocity and acceleration to assess research field d... | Research | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/keyword-velocity-tracker |
 | lab-budget-forecaster | Predict grant fund depletion based on burn rate | Management | Others | Tool/Script | Medium | Draft | Others/lab-budget-forecaster |
 | lab-inventory-predictor | Predict depletion time of critical lab reagents based on experimental usage freq... | Data | Data analysis | Tool/Script | Medium | Draft | Data analysis/lab-inventory-predictor |
@@ -109,7 +109,7 @@ Total: 215 skills
 | lay-press-release-writer | Transform academic papers into university press releases for general audiences a... | General | Others | Tool/Script | Medium | Draft | Others/lay-press-release-writer |
 | lay-summary-gen | Converts complex medical abstracts into plain language summaries for patients, c... | General | Others | Tool/Script | Medium | Draft | Others/lay-summary-gen |
 | linkedin-optimizer | Optimizes LinkedIn profiles for medical professionals. | Career | Academic writing | Tool/Script | Medium | Draft | Academic writing/linkedin-optimizer |
-| lipinski-rule-filter | Filter compound libraries based on Lipinski's Rule of Five for drug-likeness | Pharma | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/lipinski-rule-filter |
+| lipinski-rule-filter | Filter compound libraries based on Lipinski's Rule of Five for drug-likeness | Pharma | Protocol design | Tool/Script | Medium | First Batch | Evidence insights/lipinski-rule-filter |
 | low-resource-ai-researcher | Train high-performance medical LLMs on consumer GPUs using parameter-efficient f... | Research | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/low-resource-ai-researcher |
 | market-access-value | Write payer-facing pharmacoeconomic value propositions | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/market-access-value |
 | mechanism-flowchart | Generates Mermaid flowchart code and visual diagrams for pathophysiological mech... | Education | Others | Tool/Script | Medium | Draft | Others/mechanism-flowchart |
@@ -132,7 +132,7 @@ Total: 215 skills
 | moa-explainer | Generate 3D animation scripts and lay explanations for drug mechanisms | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/moa-explainer |
 | motif-logo-generator | Generate publication-quality sequence logos for DNA or protein motifs to visuali... | Bioinfo | Data analysis | Tool/Script | Medium | Draft | Data analysis/motif-logo-generator |
 | mouse-colony-planner | Calculate breeding timelines and cage requirements for transgenic mouse colonies | Wet Lab | Protocol design | Tool/Script | Medium | First Batch | Protocol design/mouse-colony-planner |
-| multi-omics-integration-strategist | Design multi-omics integration strategies for transcriptomics, proteomics, and m... | Bioinfo | Data analysis | Tool/Script | Medium | First Batch | Data analysis/multi-omics-integration-strategist |
+| multi-omics-integration-strategist | Design multi-omics integration strategies for transcriptomics, proteomics, and m... | Bioinfo | Protocol design | Tool/Script | Medium | First Batch | Data analysis/multi-omics-integration-strategist |
 | multi-panel-figure-assembler | Automatically assemble 6 sub-figures (A-F) into a high-resolution composite figu... | Visual | Data analysis | Tool/Script | Medium | First Batch | Data analysis/multi-panel-figure-assembler |
 | nih-biosketch-builder | Generate NIH Biosketch documents compliant with the 2022 OMB-approved format | Grant | Academic writing | Hybrid (Tool/Script + Network/API) | High | Draft | Academic writing/nih-biosketch-builder |
 | neoantigen-predictor | Predict neoantigens that may be recognized by the immune system based on patient... | Bioinfo | Data analysis | Hybrid (Tool/Script + Network/API) | High | Draft | Data analysis/neoantigen-predictor |
@@ -145,7 +145,7 @@ Total: 215 skills
 | pathology-roi-selector | Auto-identify regions of interest in whole slide images | Clinical | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/pathology-roi-selector |
 | patient-consent-simplifier | Rewrite legal-jargon consent forms to 5th-grade reading level | Clinical | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/patient-consent-simplifier |
 | patient-recruitment-ad-gen | Generate IRB-compliant patient recruitment advertisements for clinical trials. T... | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/patient-recruitment-ad-gen |
-| peer-review-response-drafter | Assist in drafting professional peer review response letters. Trigger when user ... | Research | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/peer-review-response-drafter |
+| peer-review-response-drafter | Assist in drafting professional peer review response letters. Trigger when user ... | Research | Academic writing | Tool/Script | Medium | First Batch | Evidence insights/peer-review-response-drafter |
 | personal-statement | Helps craft compelling personal statements for applications and promotions. | Utility | Others | Tool/Script | Medium | Draft | Others/personal-statement |
 | phylogenetic-tree-styler | Beautify phylogenetic trees with taxonomy color blocks, bootstrap values, and ti... | Visual | Data analysis | Tool/Script | Medium | Draft | Data analysis/phylogenetic-tree-styler |
 | plagiarism-checker-pre-screener | Use when: User provides text/document and asks to check originality,  detect pla... | Research | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/plagiarism-checker-pre-screener |
@@ -162,7 +162,7 @@ Total: 215 skills
 | pubmed-search-specialist | Build complex Boolean query strings for precise PubMed/MEDLINE literature retrie... | Research | Evidence insights | Hybrid (Tool/Script + Network/API) | High | First Batch | Evidence insights/pubmed-search-specialist |
 | qa-prep-partner | Predict challenging questions for presentations and prepare responses | Present | Academic writing | Tool/Script | Medium | Draft | Academic writing/qa-prep-partner |
 | radiology-image-quiz | Generate image-based diagnostic quizzes from text descriptions | Education | Others | Tool/Script | Medium | Draft | Others/radiology-image-quiz |
-| randomization-gen | Generate block randomization lists for RCTs | Pharma | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/randomization-gen |
+| randomization-gen | Generate block randomization lists for RCTs | Pharma | Protocol design | Tool/Script | Medium | First Batch | Evidence insights/randomization-gen |
 | rare-disease-hpo-mapper | Map patient symptoms to Human Phenotype Ontology terms for gene diagnosis | Clinical | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/rare-disease-hpo-mapper |
 | reagent-expiry-alert | Scan reagent barcodes, log expiry dates, and alert before expiration | Operations | Protocol design | Tool/Script | Medium | Draft | Protocol design/reagent-expiry-alert |
 | reagent-substitute-scout | Find validated alternative reagents based on literature citation data when origi... | Wet Lab | Protocol design | Hybrid (Tool/Script + Network/API) | High | Draft | Protocol design/reagent-substitute-scout |
@@ -177,7 +177,7 @@ Total: 215 skills
 | sds-msds-risk-scanner | Extract hazard codes and safety info from chemical safety datasheets | Safety | Protocol design | Tool/Script | Medium | Draft | Protocol design/sds-msds-risk-scanner |
 | smiles-de-salter | Batch process chemical SMILES strings to remove salt ions and retain only active... | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/smiles-de-salter |
 | sop-writer | Write GCP-compliant Standard Operating Procedures for labs and clinical sites | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/sop-writer |
-| sample-size-power-calculator | Advanced sample size and power calculations for complex study designs | Data | Data analysis | Hybrid (Tool/Script + Network/API) | High | First Batch | Data analysis/sample-size-power-calculator |
+| sample-size-power-calculator | Advanced sample size and power calculations for complex study designs | Data | Protocol design | Hybrid (Tool/Script + Network/API) | High | First Batch | Data analysis/sample-size-power-calculator |
 | sample-size-basic | Basic sample size calculator for clinical research planning with common statisti... | Utility | Others | Tool/Script | Medium | Draft | Others/sample-size-basic |
 | sanger-chromatogram-qa | Quality check Sanger sequencing traces for mutations | Wet Lab | Protocol design | Tool/Script | Medium | Draft | Protocol design/sanger-chromatogram-qa |
 | scrna-cell-type-annotator | Auto-annotate cell clusters from single-cell RNA data using marker genes | Bioinfo | Data analysis | Tool/Script | Medium | Draft | Data analysis/scrna-cell-type-annotator |
@@ -190,7 +190,7 @@ Total: 215 skills
 | pptx-posters | Generate PowerPoint presentations and academic posters from paper content | Present | Academic writing | Tool/Script | Medium | Draft | Academic writing/pptx-posters |
 | smart-journal-monitor | AI-powered journal monitoring with breakthrough article detection and key impact... | Research | Evidence insights | Tool/Script | Medium | First Batch | Evidence insights/smart-journal-monitor |
 | spatial-transcriptomics-mapper | Map spatial transcriptomics data from 10x Genomics Visium/Xenium onto tissue ima... | Bioinfo | Data analysis | Tool/Script | Medium | Draft | Data analysis/spatial-transcriptomics-mapper |
-| statistical-analysis-advisor | Recommends appropriate statistical methods (T-test vs ANOVA, etc.) based on data... | Data | Data analysis | Tool/Script | Medium | First Batch | Data analysis/statistical-analysis-advisor |
+| statistical-analysis-advisor | Recommends appropriate statistical methods (T-test vs ANOVA, etc.) based on data... | Data | Protocol design | Tool/Script | Medium | First Batch | Data analysis/statistical-analysis-advisor |
 | study-limitations-drafter | Transform study design flaws into professional limitation statements | Writing | Academic writing | Tool/Script | Medium | First Batch | Academic writing/study-limitations-drafter |
 | survival-analysis-km | Generates Kaplan-Meier survival curves, calculates survival statistics (log-rank... | Bioinfo | Data analysis | Tool/Script | Medium | First Batch | Data analysis/survival-analysis-km |
 | survival-curve-risk-table | Automatically align and add "Number at risk" table below Kaplan-Meier survival c... | Visual | Data analysis | Tool/Script | Medium | Draft | Data analysis/survival-curve-risk-table |
@@ -198,7 +198,7 @@ Total: 215 skills
 | synthetic-bio-circuit-designer | Design gene circuits for synthetic biology applications | Bioinfo | Data analysis | Tool/Script | Medium | Draft | Data analysis/synthetic-bio-circuit-designer |
 | systematic-review-screener | Automates abstract screening for systematic reviews and meta-analyses. Triggers ... | Research | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/systematic-review-screener |
 | table-1-generator-advanced | Automated baseline characteristics table generation for clinical papers | Data | Data analysis | Tool/Script | Medium | First Batch | Data analysis/table-1-generator-advanced |
-| target-novelty-scorer | Score the novelty of biological targets through literature mining and trend anal... | Pharma | Evidence insights | Hybrid (Tool/Script + Network/API) | High | First Batch | Evidence insights/target-novelty-scorer |
+| target-novelty-scorer | Score the novelty of biological targets through literature mining and trend anal... | Pharma | Protocol design | Hybrid (Tool/Script + Network/API) | High | First Batch | Evidence insights/target-novelty-scorer |
 | time-zone-planner | Helps schedule multinational clinical trial meetings across time zones. | Utility | Others | Tool/Script | Medium | Draft | Others/time-zone-planner |
 | tone-adjuster | Converts medical text between academic rigor and patient-friendly tones. Support... | General | Others | Tool/Script | Medium | Draft | Others/tone-adjuster |
 | toxicity-structure-alert | Identify potential toxic structural alerts in drug molecules by scanning SMILES/... | Pharma | Evidence insights | Tool/Script | Medium | Draft | Evidence insights/toxicity-structure-alert |
