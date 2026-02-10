@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
 In Silico Perturbation Oracle - Main Script
-虚拟基因敲除预测主入口
+Virtual Gene Knockout Prediction Main Entry Point
 
-功能: 利用生物基础大模型进行in silico基因敲除预测
-作者: OpenClaw Bioinformatics Team
-版本: 1.0.0
+Function: Utilize biological foundation models for in silico gene knockout prediction
+Author: OpenClaw Bioinformatics Team
+Version: 1.0.0
 """
 
 import os
@@ -22,7 +22,7 @@ import numpy as np
 import pandas as pd
 from collections import defaultdict
 
-# 设置日志
+# Set up logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
@@ -36,7 +36,7 @@ logger = logging.getLogger("PerturbationOracle")
 
 @dataclass
 class PerturbationConfig:
-    """扰动预测配置"""
+    """Perturbation prediction configuration"""
     model_name: str = "geneformer"
     cell_type: str = "fibroblast"
     perturbation_type: str = "complete_ko"  # complete_ko, kd, crispr
@@ -54,7 +54,7 @@ class PerturbationConfig:
 
 @dataclass
 class DifferentialExpressionResult:
-    """差异表达结果"""
+    """Differential expression result"""
     gene_symbol: str
     log2_fold_change: float
     p_value: float
@@ -68,7 +68,7 @@ class DifferentialExpressionResult:
 
 @dataclass
 class PathwayResult:
-    """通路富集结果"""
+    """Pathway enrichment result"""
     pathway_name: str
     p_value: float
     enrichment_ratio: float
@@ -78,7 +78,7 @@ class PathwayResult:
 
 @dataclass
 class TargetScore:
-    """靶点评分结果"""
+    """Target scoring result"""
     target_gene: str
     efficacy_score: float
     safety_score: float
@@ -93,7 +93,7 @@ class TargetScore:
 # ============================================================================
 
 class BaseModelAdapter:
-    """基础模型适配器抽象类"""
+    """Base model adapter abstract class"""
     
     def __init__(self, model_name: str, config: Dict):
         self.model_name = model_name
@@ -102,7 +102,7 @@ class BaseModelAdapter:
         self.tokenizer = None
         
     def load_model(self):
-        """加载预训练模型"""
+        """Load pre-trained model"""
         raise NotImplementedError
         
     def predict_perturbation(
@@ -112,39 +112,39 @@ class BaseModelAdapter:
         perturbation_type: str = "complete_ko"
     ) -> np.ndarray:
         """
-        预测基因扰动后的表达谱
+        Predict expression profile after gene perturbation
         
         Args:
-            genes: 待敲除的基因列表
-            cell_type: 细胞类型
-            perturbation_type: 扰动类型
+            genes: List of genes to knockout
+            cell_type: Cell type
+            perturbation_type: Type of perturbation
             
         Returns:
-            预测表达谱矩阵
+            Predicted expression profile matrix
         """
         raise NotImplementedError
         
     def get_reference_expression(self, cell_type: str) -> np.ndarray:
-        """获取参考表达谱"""
+        """Get reference expression profile"""
         raise NotImplementedError
         
     def is_gene_in_vocabulary(self, gene: str) -> bool:
-        """检查基因是否在模型词汇表中"""
+        """Check if gene is in model vocabulary"""
         raise NotImplementedError
 
 
 class GeneformerAdapter(BaseModelAdapter):
-    """Geneformer模型适配器"""
+    """Geneformer model adapter"""
     
     def __init__(self, config: Dict):
         super().__init__("geneformer", config)
         self.embedding_dim = 256
         
     def load_model(self):
-        """加载Geneformer模型"""
+        """Load Geneformer model"""
         logger.info("Loading Geneformer model...")
         try:
-            # 实际使用时需要安装: pip install geneformer
+            # For actual use, install: pip install geneformer
             # from geneformer import TranscriptomeTokenizer, EmbExtractor
             # self.model = EmbExtractor(...)
             logger.info("Geneformer model loaded successfully (simulated)")
@@ -158,13 +158,13 @@ class GeneformerAdapter(BaseModelAdapter):
         cell_type: str,
         perturbation_type: str = "complete_ko"
     ) -> np.ndarray:
-        """模拟Geneformer扰动预测"""
+        """Simulate Geneformer perturbation prediction"""
         logger.info(f"Predicting {perturbation_type} for genes {genes} in {cell_type}")
         
-        # 获取参考表达谱
+        # Get reference expression
         ref_expr = self.get_reference_expression(cell_type)
         
-        # 模拟扰动效果 (实际实现中调用Geneformer API)
+        # Simulate perturbation effect (in actual implementation, call Geneformer API)
         perturbed_expr = self._simulate_perturbation(
             ref_expr, genes, perturbation_type
         )
@@ -177,43 +177,43 @@ class GeneformerAdapter(BaseModelAdapter):
         genes: List[str],
         perturbation_type: str
     ) -> np.ndarray:
-        """模拟扰动效果 (占位实现)"""
-        # 在实际实现中，这里会调用Geneformer的in silico perturbation功能
-        # 当前为演示目的使用随机扰动模拟
+        """Simulate perturbation effect (placeholder implementation)"""
+        # In actual implementation, this would call Geneformer's in silico perturbation feature
+        # Currently using random perturbation for demonstration purposes
         np.random.seed(42)
         noise = np.random.normal(0, 0.5, expression.shape)
         
-        # 根据扰动类型调整
+        # Adjust based on perturbation type
         if perturbation_type == "complete_ko":
-            # 完全敲除: 下调表达
+            # Complete knockout: downregulate expression
             perturbed = expression * 0.1 + noise
         elif perturbation_type == "kd":
-            # 敲低: 部分下调
+            # Knockdown: partial downregulation
             perturbed = expression * 0.5 + noise
         else:
             perturbed = expression + noise
             
-        return np.maximum(perturbed, 0)  # 确保非负
+        return np.maximum(perturbed, 0)  # Ensure non-negative
         
     def get_reference_expression(self, cell_type: str) -> np.ndarray:
-        """获取参考表达谱 (模拟)"""
-        # 模拟基因表达谱 (约20,000个基因)
+        """Get reference expression profile (simulated)"""
+        # Simulate gene expression profile (~20,000 genes)
         np.random.seed(hash(cell_type) % 2**32)
         n_genes = 20000
         
-        # 使用对数正态分布模拟基因表达
+        # Use log-normal distribution to simulate gene expression
         expression = np.random.lognormal(0, 1, n_genes)
         
-        # 根据细胞类型调整特征表达
+        # Adjust characteristic expression based on cell type
         cell_type_markers = self._get_cell_type_markers(cell_type)
         for marker in cell_type_markers:
             marker_idx = hash(marker) % n_genes
-            expression[marker_idx] *= 10  # 高表达标记基因
+            expression[marker_idx] *= 10  # High expression marker genes
             
         return expression
         
     def _get_cell_type_markers(self, cell_type: str) -> List[str]:
-        """获取细胞类型标记基因"""
+        """Get cell type marker genes"""
         markers = {
             "hepatocyte": ["ALB", "AFP", "CYP3A4", "HNF4A"],
             "cardiomyocyte": ["MYH6", "MYH7", "TNNT2", "ACTC1"],
@@ -226,9 +226,9 @@ class GeneformerAdapter(BaseModelAdapter):
         return markers.get(cell_type, ["GAPDH", "ACTB"])
         
     def is_gene_in_vocabulary(self, gene: str) -> bool:
-        """检查基因是否在词汇表中"""
-        # Geneformer通常包含约30,000个基因
-        # 实际实现中应检查模型的tokenizer词汇表
+        """Check if gene is in vocabulary"""
+        # Geneformer typically contains ~30,000 genes
+        # In actual implementation, should check model's tokenizer vocabulary
         common_genes = set([
             "TP53", "BRCA1", "EGFR", "MYC", "KRAS", "BCL2", "MCL1",
             "PIK3CA", "PTEN", "MTOR", "AKT1", "CDKN1A", "MDM2",
@@ -239,17 +239,17 @@ class GeneformerAdapter(BaseModelAdapter):
 
 
 class scGPTAdapter(BaseModelAdapter):
-    """scGPT模型适配器"""
+    """scGPT model adapter"""
     
     def __init__(self, config: Dict):
         super().__init__("scgpt", config)
         self.embedding_dim = 512
         
     def load_model(self):
-        """加载scGPT模型"""
+        """Load scGPT model"""
         logger.info("Loading scGPT model...")
         try:
-            # 实际使用时需要安装: pip install scgpt
+            # For actual use, install: pip install scgpt
             # from scgpt.model import TransformerModel
             # self.model = TransformerModel.load_from_checkpoint(...)
             logger.info("scGPT model loaded successfully (simulated)")
@@ -263,7 +263,7 @@ class scGPTAdapter(BaseModelAdapter):
         cell_type: str,
         perturbation_type: str = "complete_ko"
     ) -> np.ndarray:
-        """模拟scGPT扰动预测"""
+        """Simulate scGPT perturbation prediction"""
         logger.info(f"Predicting {perturbation_type} for genes {genes} in {cell_type}")
         
         ref_expr = self.get_reference_expression(cell_type)
@@ -277,7 +277,7 @@ class scGPTAdapter(BaseModelAdapter):
         genes: List[str],
         perturbation_type: str
     ) -> np.ndarray:
-        """模拟扰动效果 (占位实现)"""
+        """Simulate perturbation effect (placeholder implementation)"""
         np.random.seed(42)
         
         if perturbation_type == "complete_ko":
@@ -291,19 +291,19 @@ class scGPTAdapter(BaseModelAdapter):
         return np.maximum(perturbed, 0)
         
     def get_reference_expression(self, cell_type: str) -> np.ndarray:
-        """获取参考表达谱 (模拟)"""
+        """Get reference expression profile (simulated)"""
         np.random.seed(hash(cell_type) % 2**32)
         n_genes = 20000
         expression = np.random.lognormal(0, 1.2, n_genes)
         return expression
         
     def is_gene_in_vocabulary(self, gene: str) -> bool:
-        """检查基因是否在词汇表中"""
-        return True  # scGPT通常有较大的词汇表
+        """Check if gene is in vocabulary"""
+        return True  # scGPT typically has a large vocabulary
 
 
 class MockModel:
-    """模拟模型用于演示"""
+    """Mock model for demonstration"""
     def __init__(self, model_name: str):
         self.model_name = model_name
         
@@ -316,7 +316,7 @@ class MockModel:
 # ============================================================================
 
 class DifferentialExpressionAnalyzer:
-    """差异表达分析器"""
+    """Differential expression analyzer"""
     
     def __init__(self, gene_names: List[str]):
         self.gene_names = gene_names
@@ -331,16 +331,16 @@ class DifferentialExpressionAnalyzer:
         logfc_threshold: float = 1.0
     ) -> List[DifferentialExpressionResult]:
         """
-        执行差异表达分析
+        Perform differential expression analysis
         
         Args:
-            control_expr: 对照组表达谱
-            perturbed_expr: 扰动组表达谱
-            perturbation_gene: 被扰动的基因
-            cell_type: 细胞类型
+            control_expr: Control expression profile
+            perturbed_expr: Perturbed expression profile
+            perturbation_gene: Perturbed gene
+            cell_type: Cell type
             
         Returns:
-            差异表达结果列表
+            List of differential expression results
         """
         logger.info("Running differential expression analysis...")
         
@@ -350,12 +350,12 @@ class DifferentialExpressionAnalyzer:
             control_val = control_expr[i]
             perturbed_val = perturbed_expr[i]
             
-            # 计算log2 fold change
+            # Calculate log2 fold change
             logfc = self._calculate_logfc(control_val, perturbed_val)
             
-            # 模拟p值计算 (实际应使用统计检验)
+            # Simulate p-value calculation (actual should use statistical tests)
             pval = self._simulate_pvalue(logfc)
-            adj_pval = min(pval * len(control_expr), 1.0)  # Bonferroni校正
+            adj_pval = min(pval * len(control_expr), 1.0)  # Bonferroni correction
             
             if abs(logfc) >= logfc_threshold or adj_pval < pval_threshold:
                 result = DifferentialExpressionResult(
@@ -368,22 +368,22 @@ class DifferentialExpressionAnalyzer:
                 )
                 results.append(result)
                 
-        # 按p值排序
+        # Sort by p-value
         results.sort(key=lambda x: x.p_value)
         
         logger.info(f"Found {len(results)} differentially expressed genes")
         return results
         
     def _calculate_logfc(self, control: float, perturbed: float) -> float:
-        """计算log2 fold change"""
-        # 添加小值避免log(0)
+        """Calculate log2 fold change"""
+        # Add small value to avoid log(0)
         control = max(control, 1e-6)
         perturbed = max(perturbed, 1e-6)
         return np.log2(perturbed / control)
         
     def _simulate_pvalue(self, logfc: float) -> float:
-        """模拟p值 (基于fold change大小)"""
-        # 更大的fold change = 更小的p值
+        """Simulate p-value (based on fold change magnitude)"""
+        # Larger fold change = smaller p-value
         import random
         base_pval = np.exp(-abs(logfc) * 2)
         noise = random.uniform(0.8, 1.2)
@@ -391,14 +391,14 @@ class DifferentialExpressionAnalyzer:
 
 
 class PathwayEnricher:
-    """通路富集分析器"""
+    """Pathway enrichment analyzer"""
     
     def __init__(self):
-        # 预定义的通路数据库 (实际应用中使用gseapy等库)
+        # Predefined pathway database (in actual application, use libraries like gseapy)
         self.pathway_db = self._load_pathway_databases()
         
     def _load_pathway_databases(self) -> Dict:
-        """加载通路数据库"""
+        """Load pathway database"""
         return {
             "KEGG": {
                 "p53_signaling_pathway": ["TP53", "MDM2", "CDKN1A", "GADD45A", "BAX", "BCL2"],
@@ -424,14 +424,14 @@ class PathwayEnricher:
         databases: List[str] = None
     ) -> Dict[str, List[PathwayResult]]:
         """
-        执行通路富集分析
+        Perform pathway enrichment analysis
         
         Args:
-            gene_list: 差异表达基因列表
-            databases: 数据库列表
+            gene_list: List of differentially expressed genes
+            databases: List of databases
             
         Returns:
-            各数据库的富集结果
+            Enrichment results for each database
         """
         if databases is None:
             databases = ["KEGG"]
@@ -448,11 +448,11 @@ class PathwayEnricher:
             pathways = self.pathway_db[db_name]
             
             for pathway_name, pathway_genes in pathways.items():
-                # 计算重叠
+                # Calculate overlap
                 overlap = set(gene_list) & set(pathway_genes)
                 
                 if len(overlap) > 0:
-                    # 计算富集比率和p值 (简化版Fisher精确检验模拟)
+                    # Calculate enrichment ratio and p-value (simplified Fisher's exact test simulation)
                     enrichment_ratio = len(overlap) / len(pathway_genes)
                     pval = self._calculate_pathway_pvalue(
                         len(overlap), len(gene_list), len(pathway_genes), 20000
@@ -467,7 +467,7 @@ class PathwayEnricher:
                     )
                     db_results.append(result)
                     
-            # 按p值排序
+            # Sort by p-value
             db_results.sort(key=lambda x: x.p_value)
             results[db_name] = db_results
             
@@ -481,17 +481,17 @@ class PathwayEnricher:
         pathway_size: int, 
         total_genes: int
     ) -> float:
-        """计算通路富集的p值 (超几何分布近似)"""
+        """Calculate pathway enrichment p-value (hypergeometric distribution approximation)"""
         from math import comb
         
-        # 使用超几何分布计算p值
+        # Calculate p-value using hypergeometric distribution
         try:
             pval = sum(
                 comb(pathway_size, k) * comb(total_genes - pathway_size, gene_set_size - k)
                 for k in range(overlap, min(gene_set_size, pathway_size) + 1)
             ) / comb(total_genes, gene_set_size)
         except:
-            # 简化计算
+            # Simplified calculation
             expected = (gene_set_size * pathway_size) / total_genes
             if overlap > expected:
                 pval = np.exp(-(overlap - expected) ** 2 / (2 * expected))
@@ -502,10 +502,10 @@ class PathwayEnricher:
 
 
 class TargetScorer:
-    """靶点评分器"""
+    """Target scorer"""
     
     def __init__(self):
-        # 权重配置
+        # Weight configuration
         self.weights = {
             "efficacy": 0.35,
             "safety": 0.25,
@@ -513,14 +513,14 @@ class TargetScorer:
             "novelty": 0.15
         }
         
-        # 必需基因数据库 (敲除致死或严重毒性)
+        # Essential gene database (knockout lethal or severe toxicity)
         self.essential_genes = set([
-            "RPLP0", "RPL13A", "GAPDH", "ACTB", "TUBB",  # 管家基因
-            "POLR2A", "POLR2B",  # RNA聚合酶
-            "RPS6", "RPS18",  # 核糖体蛋白
+            "RPLP0", "RPL13A", "GAPDH", "ACTB", "TUBB",  # Housekeeping genes
+            "POLR2A", "POLR2B",  # RNA polymerase
+            "RPS6", "RPS18",  # Ribosomal proteins
         ])
         
-        # 已知可成药靶点
+        # Known druggable targets
         self.druggable_targets = set([
             "EGFR", "ERBB2", "BRAF", "MEK1", "MEK2",
             "PIK3CA", "MTOR", "AKT1", "AKT2",
@@ -536,29 +536,29 @@ class TargetScorer:
         pathway_results: Dict[str, List[PathwayResult]]
     ) -> TargetScore:
         """
-        计算靶点综合评分
+        Calculate target comprehensive score
         
         Args:
-            target_gene: 靶点基因
-            deg_results: 差异表达结果
-            pathway_results: 通路富集结果
+            target_gene: Target gene
+            deg_results: Differential expression results
+            pathway_results: Pathway enrichment results
             
         Returns:
-            靶点评分结果
+            Target scoring result
         """
-        # 1. 效果评分 (基于DEG数量和通路变化)
+        # 1. Efficacy score (based on DEG count and pathway changes)
         efficacy = self._calculate_efficacy(deg_results, pathway_results)
         
-        # 2. 安全性评分 (避免必需基因)
+        # 2. Safety score (avoid essential genes)
         safety = self._calculate_safety(target_gene, deg_results)
         
-        # 3. 可成药性评分
+        # 3. Druggability score
         druggability = self._calculate_druggability(target_gene)
         
-        # 4. 新颖性评分
+        # 4. Novelty score
         novelty = self._calculate_novelty(target_gene)
         
-        # 综合评分
+        # Comprehensive score
         overall = (
             efficacy * self.weights["efficacy"] +
             safety * self.weights["safety"] +
@@ -566,7 +566,7 @@ class TargetScorer:
             novelty * self.weights["novelty"]
         )
         
-        # 生成建议
+        # Generate recommendation
         recommendation = self._generate_recommendation(
             target_gene, overall, efficacy, safety, druggability
         )
@@ -586,12 +586,12 @@ class TargetScorer:
         deg_results: List[DifferentialExpressionResult],
         pathway_results: Dict[str, List[PathwayResult]]
     ) -> float:
-        """计算效果评分"""
-        # 基于DEG数量
+        """Calculate efficacy score"""
+        # Based on DEG count
         n_degs = len(deg_results)
-        deg_score = min(n_degs / 500, 1.0)  # 上限500个DEG
+        deg_score = min(n_degs / 500, 1.0)  # Cap at 500 DEGs
         
-        # 基于通路富集
+        # Based on pathway enrichment
         pathway_score = 0
         for db_results in pathway_results.values():
             significant_pathways = sum(1 for r in db_results if r.p_value < 0.05)
@@ -606,12 +606,12 @@ class TargetScorer:
         target_gene: str,
         deg_results: List[DifferentialExpressionResult]
     ) -> float:
-        """计算安全性评分"""
-        # 检查是否为必需基因
+        """Calculate safety score"""
+        # Check if essential gene
         if target_gene.upper() in self.essential_genes:
             return 0.1
             
-        # 检查DEG中是否有严重毒性标志
+        # Check for severe toxicity markers in DEGs
         toxicity_markers = ["CASP3", "BAX", "FAS", "TNF", "IL1B"]
         toxic_changes = sum(
             1 for deg in deg_results 
@@ -626,26 +626,26 @@ class TargetScorer:
             return 0.9
             
     def _calculate_druggability(self, target_gene: str) -> float:
-        """计算可成药性评分"""
+        """Calculate druggability score"""
         base_score = 0.5
         
-        # 已知可成药靶点加分
+        # Bonus for known druggable targets
         if target_gene.upper() in self.druggable_targets:
             base_score += 0.3
             
-        # 激酶类靶点通常可成药
+        # Kinase targets are typically druggable
         if any(kinase in target_gene.upper() for kinase in ["KRAS", "EGFR", "BRAF", "CDK", "JAK"]):
             base_score += 0.1
             
         return min(base_score, 1.0)
         
     def _calculate_novelty(self, target_gene: str) -> float:
-        """计算新颖性评分"""
-        # 已知靶点得分低，新靶点得分高
+        """Calculate novelty score"""
+        # Known targets get low scores, new targets get high scores
         if target_gene.upper() in self.druggable_targets:
             return 0.3
         elif target_gene.upper().startswith(("ORF", "LOC")):
-            return 0.9  # 未表征基因
+            return 0.9  # Uncharacterized genes
         else:
             return 0.7
             
@@ -657,15 +657,15 @@ class TargetScorer:
         safety: float,
         druggability: float
     ) -> str:
-        """生成验证建议"""
+        """Generate validation recommendation"""
         if overall >= 0.8 and safety >= 0.7:
-            return "HIGH_PRIORITY: 优先进行湿实验验证"
+            return "HIGH_PRIORITY: Prioritize wet lab validation"
         elif overall >= 0.6 and efficacy >= 0.7:
-            return "MEDIUM_PRIORITY: 建议验证，需关注安全性"
+            return "MEDIUM_PRIORITY: Recommended for validation, monitor safety"
         elif druggability >= 0.7:
-            return "LOW_PRIORITY: 可成药性好但效果待验证"
+            return "LOW_PRIORITY: Good druggability but efficacy needs validation"
         else:
-            return "NOT_RECOMMENDED: 不建议优先验证"
+            return "NOT_RECOMMENDED: Not recommended for priority validation"
 
 
 # ============================================================================
@@ -673,7 +673,7 @@ class TargetScorer:
 # ============================================================================
 
 class ResultVisualizer:
-    """结果可视化器"""
+    """Result visualizer"""
     
     def __init__(self, output_dir: str):
         self.output_dir = Path(output_dir)
@@ -684,7 +684,7 @@ class ResultVisualizer:
         deg_results: List[DifferentialExpressionResult],
         filename: str = "volcano_plot.png"
     ) -> str:
-        """创建火山图"""
+        """Create volcano plot"""
         try:
             import matplotlib.pyplot as plt
             
@@ -694,12 +694,12 @@ class ResultVisualizer:
             logfc = [r.log2_fold_change for r in deg_results]
             pvals = [-np.log10(r.p_value) for r in deg_results]
             
-            # 颜色区分上调/下调
+            # Color by up/down regulation
             colors = ['red' if fc > 0 else 'blue' for fc in logfc]
             
             ax.scatter(logfc, pvals, c=colors, alpha=0.6, s=20)
             
-            # 标记Top基因
+            # Label top genes
             top_genes = sorted(deg_results, key=lambda x: x.p_value)[:10]
             for gene in top_genes:
                 ax.annotate(
@@ -730,7 +730,7 @@ class ResultVisualizer:
         target_scores: List[TargetScore],
         filename: str = "target_ranking.png"
     ) -> str:
-        """创建靶点排序图"""
+        """Create target ranking plot"""
         try:
             import matplotlib.pyplot as plt
             
@@ -766,9 +766,9 @@ class ResultVisualizer:
 
 class PerturbationOracle:
     """
-    In Silico Perturbation Oracle 主类
+    In Silico Perturbation Oracle Main Class
     
-    虚拟基因敲除预测的核心接口
+    Core interface for virtual gene knockout prediction
     """
     
     def __init__(
@@ -779,25 +779,25 @@ class PerturbationOracle:
         config: Optional[Dict] = None
     ):
         """
-        初始化Oracle
+        Initialize Oracle
         
         Args:
-            model_name: 模型名称 (geneformer/scgpt)
-            cell_type: 细胞类型
-            output_dir: 输出目录
-            config: 额外配置
+            model_name: Model name (geneformer/scgpt)
+            cell_type: Cell type
+            output_dir: Output directory
+            config: Additional configuration
         """
         self.model_name = model_name
         self.cell_type = cell_type
         self.output_dir = Path(output_dir)
         self.config = config or {}
         
-        # 初始化模型
+        # Initialize model
         self.model_adapter = self._create_model_adapter()
         self.model_adapter.load_model()
         
-        # 初始化分析模块
-        self.gene_names = [f"GENE_{i}" for i in range(20000)]  # 模拟基因名
+        # Initialize analysis modules
+        self.gene_names = [f"GENE_{i}" for i in range(20000)]  # Simulated gene names
         self.de_analyzer = DifferentialExpressionAnalyzer(self.gene_names)
         self.pathway_enricher = PathwayEnricher()
         self.target_scorer = TargetScorer()
@@ -806,7 +806,7 @@ class PerturbationOracle:
         logger.info(f"PerturbationOracle initialized: {model_name} + {cell_type}")
         
     def _create_model_adapter(self) -> BaseModelAdapter:
-        """创建模型适配器"""
+        """Create model adapter"""
         if self.model_name.lower() == "geneformer":
             return GeneformerAdapter(self.config)
         elif self.model_name.lower() == "scgpt":
@@ -822,41 +822,41 @@ class PerturbationOracle:
         **kwargs
     ) -> 'PerturbationResult':
         """
-        预测基因敲除效果
+        Predict gene knockout effect
         
         Args:
-            genes: 待敲除的基因列表
-            perturbation_type: 扰动类型
-            n_permutations: 置换次数
+            genes: List of genes to knockout
+            perturbation_type: Type of perturbation
+            n_permutations: Number of permutations
             
         Returns:
-            PerturbationResult对象
+            PerturbationResult object
         """
         all_results = []
         
         for gene in genes:
             logger.info(f"Analyzing knockout of {gene}...")
             
-            # 获取参考表达
+            # Get reference expression
             control_expr = self.model_adapter.get_reference_expression(self.cell_type)
             
-            # 预测扰动后表达
+            # Predict perturbed expression
             perturbed_expr = self.model_adapter.predict_perturbation(
                 [gene], self.cell_type, perturbation_type
             )
             
-            # 差异表达分析
+            # Differential expression analysis
             deg_results = self.de_analyzer.analyze(
                 control_expr, perturbed_expr, gene, self.cell_type
             )
             
-            # 通路富集
+            # Pathway enrichment
             deg_genes = [r.gene_symbol for r in deg_results]
             pathway_results = self.pathway_enricher.enrich(
                 deg_genes, databases=["KEGG", "GO_BP"]
             )
             
-            # 靶点评分
+            # Target scoring
             target_score = self.target_scorer.score(gene, deg_results, pathway_results)
             
             all_results.append({
@@ -875,27 +875,27 @@ class PerturbationOracle:
         **kwargs
     ) -> 'CombinatorialResult':
         """
-        预测组合基因敲除
+        Predict combinatorial gene knockout
         
         Args:
-            gene_pairs: 基因对列表
-            synergy_threshold: 协同效应阈值
+            gene_pairs: List of gene pairs
+            synergy_threshold: Synergy effect threshold
             
         Returns:
-            CombinatorialResult对象
+            CombinatorialResult object
         """
         logger.info(f"Analyzing {len(gene_pairs)} gene combinations...")
         
         results = []
         for g1, g2 in gene_pairs:
-            # 单独敲除
+            # Single knockout
             single1 = self.predict_knockout([g1])
             single2 = self.predict_knockout([g2])
             
-            # 组合敲除
+            # Double knockout
             double = self.predict_knockout([g1, g2])
             
-            # 计算协同效应 (简化版Bliss模型)
+            # Calculate synergy effect (simplified Bliss model)
             synergy = self._calculate_synergy(single1, single2, double)
             
             results.append({
@@ -912,8 +912,8 @@ class PerturbationOracle:
         single2: 'PerturbationResult',
         double: 'PerturbationResult'
     ) -> float:
-        """计算协同效应分数"""
-        # 简化计算: 基于DEG数量的协同
+        """Calculate synergy score"""
+        # Simplified calculation: based on DEG count synergy
         n_single1 = len(single1.results[0]["deg_results"])
         n_single2 = len(single2.results[0]["deg_results"])
         n_double = len(double.results[0]["deg_results"])
@@ -932,50 +932,50 @@ class PerturbationOracle:
         format: str = "lab_protocol"
     ) -> str:
         """
-        导出湿实验验证指南
+        Export wet lab validation guide
         
         Args:
-            top_targets: Top靶点数量
-            include_controls: 是否包含对照
-            format: 输出格式
+            top_targets: Number of top targets
+            include_controls: Whether to include controls
+            format: Output format
             
         Returns:
-            指南文件路径
+            Guide file path
         """
         guide_path = self.output_dir / "validation_guide.txt"
         
         with open(guide_path, 'w') as f:
             f.write("=" * 60 + "\n")
-            f.write("湿实验验证指南 - In Silico Perturbation Oracle\n")
+            f.write("Wet Lab Validation Guide - In Silico Perturbation Oracle\n")
             f.write("=" * 60 + "\n\n")
             
-            f.write(f"生成时间: {datetime.now().isoformat()}\n")
-            f.write(f"模型: {self.model_name}\n")
-            f.write(f"细胞类型: {self.cell_type}\n\n")
+            f.write(f"Generated: {datetime.now().isoformat()}\n")
+            f.write(f"Model: {self.model_name}\n")
+            f.write(f"Cell type: {self.cell_type}\n\n")
             
-            f.write("实验设计建议:\n")
+            f.write("Experimental design recommendations:\n")
             f.write("-" * 40 + "\n")
-            f.write("1. CRISPR-Cas9敲除实验\n")
-            f.write("   - 设计至少2个独立sgRNA per target\n")
-            f.write("   - 包含非靶向对照(NTC)\n")
-            f.write("   - 使用qPCR验证敲除效率(>80%)\n\n")
+            f.write("1. CRISPR-Cas9 knockout experiment\n")
+            f.write("   - Design at least 2 independent sgRNAs per target\n")
+            f.write("   - Include non-targeting control (NTC)\n")
+            f.write("   - Validate knockout efficiency by qPCR (>80%)\n\n")
             
-            f.write("2. 表型检测建议\n")
-            f.write("   - 细胞增殖: CCK-8或EdU\n")
-            f.write("   - 凋亡检测: Annexin V/PI\n")
-            f.write("   - 转录组验证: RNA-seq (n=3 per group)\n\n")
+            f.write("2. Phenotype detection recommendations\n")
+            f.write("   - Cell proliferation: CCK-8 or EdU\n")
+            f.write("   - Apoptosis detection: Annexin V/PI\n")
+            f.write("   - Transcriptome validation: RNA-seq (n=3 per group)\n\n")
             
-            f.write("3. 数据分析要点\n")
-            f.write("   - 与in silico预测的一致性评估\n")
-            f.write("   - 差异表达基因重叠分析\n")
-            f.write("   - 通路富集一致性验证\n\n")
+            f.write("3. Data analysis key points\n")
+            f.write("   - Consistency assessment with in silico predictions\n")
+            f.write("   - Differential expression gene overlap analysis\n")
+            f.write("   - Pathway enrichment consistency validation\n\n")
             
         logger.info(f"Validation guide exported to {guide_path}")
         return str(guide_path)
 
 
 class PerturbationResult:
-    """扰动预测结果容器"""
+    """Perturbation prediction result container"""
     
     def __init__(self, results: List[Dict], output_dir: Path):
         self.results = results
@@ -986,7 +986,7 @@ class PerturbationResult:
         pval_threshold: float = 0.05,
         logfc_threshold: float = 1.0
     ) -> pd.DataFrame:
-        """获取差异表达基因DataFrame"""
+        """Get differential expression gene DataFrame"""
         all_degs = []
         
         for result in self.results:
@@ -1002,7 +1002,7 @@ class PerturbationResult:
         database: List[str] = None,
         top_n: int = 10
     ) -> Dict:
-        """获取通路富集结果"""
+        """Get pathway enrichment results"""
         if database is None:
             database = ["KEGG"]
             
@@ -1016,7 +1016,7 @@ class PerturbationResult:
         return dict(all_pathways)
         
     def score_targets(self) -> pd.DataFrame:
-        """获取靶点评分DataFrame"""
+        """Get target scoring DataFrame"""
         scores = [r["target_score"] for r in self.results]
         data = [{
             "target_gene": s.target_gene,
@@ -1032,24 +1032,24 @@ class PerturbationResult:
         return df.sort_values("overall_score", ascending=False)
         
     def save(self, prefix: str = ""):
-        """保存所有结果"""
-        # 保存DEG结果
+        """Save all results"""
+        # Save DEG results
         deg_df = self.get_differential_expression()
         deg_path = self.output_dir / f"{prefix}deg_results.csv"
         deg_df.to_csv(deg_path, index=False)
         logger.info(f"DEG results saved to {deg_path}")
         
-        # 保存靶点评分
+        # Save target scores
         score_df = self.score_targets()
         score_path = self.output_dir / f"{prefix}target_scores.csv"
         score_df.to_csv(score_path, index=False)
         logger.info(f"Target scores saved to {score_path}")
         
-        # 保存通路富集结果
+        # Save pathway enrichment results
         pathways = self.enrich_pathways()
         pathway_path = self.output_dir / f"{prefix}pathway_enrichment.json"
         
-        # 转换为可序列化格式
+        # Convert to serializable format
         pathways_serializable = {}
         for db, results in pathways.items():
             pathways_serializable[db] = [
@@ -1075,20 +1075,20 @@ class PerturbationResult:
 
 
 class CombinatorialResult:
-    """组合敲除结果容器"""
+    """Combinatorial knockout result container"""
     
     def __init__(self, results: List[Dict]):
         self.results = results
         
     def get_synergistic_pairs(self, threshold: float = 0.3) -> List[Tuple[str, str]]:
-        """获取协同作用基因对"""
+        """Get synergistic gene pairs"""
         return [
             r["genes"] for r in self.results 
             if r["synergy_score"] > threshold
         ]
         
     def to_dataframe(self) -> pd.DataFrame:
-        """转换为DataFrame"""
+        """Convert to DataFrame"""
         data = [
             {
                 "gene1": r["genes"][0],
@@ -1106,123 +1106,123 @@ class CombinatorialResult:
 # ============================================================================
 
 def parse_args():
-    """解析命令行参数"""
+    """Parse command line arguments"""
     parser = argparse.ArgumentParser(
         description="In Silico Perturbation Oracle - Virtual Gene Knockout Prediction",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # 单基因敲除预测
+  # Single gene knockout prediction
   python main.py --model geneformer --genes TP53,BRCA1 --cell-type hepatocyte
   
-  # 批量靶点筛选
+  # Batch target screening
   python main.py --model scgpt --genes-file targets.txt --cell-type fibroblast --top-k 20
   
-  # 组合敲除预测
+  # Combinatorial knockout prediction
   python main.py --combinatorial --gene-pairs "BCL2,MCL1" --gene-pairs "PIK3CA,PTEN"
         """
     )
     
-    # 必需参数
+    # Required arguments
     parser.add_argument(
         "--model", "-m",
         type=str,
         default="geneformer",
         choices=["geneformer", "scgpt"],
-        help="基础模型选择 (default: geneformer)"
+        help="Base model selection (default: geneformer)"
     )
     parser.add_argument(
         "--genes", "-g",
         type=str,
-        help="逗号分隔的基因列表，如 TP53,BRCA1,EGFR"
+        help="Comma-separated gene list, e.g., TP53,BRCA1,EGFR"
     )
     parser.add_argument(
         "--genes-file",
         type=str,
-        help="包含基因列表的文件路径"
+        help="File path containing gene list"
     )
     parser.add_argument(
         "--cell-type", "-c",
         type=str,
         required=True,
-        help="细胞类型，如 hepatocyte, cardiomyocyte, fibroblast"
+        help="Cell type, e.g., hepatocyte, cardiomyocyte, fibroblast"
     )
     
-    # 可选参数
+    # Optional arguments
     parser.add_argument(
         "--perturbation-type", "-p",
         type=str,
         default="complete_ko",
         choices=["complete_ko", "kd", "crispr"],
-        help="扰动类型 (default: complete_ko)"
+        help="Perturbation type (default: complete_ko)"
     )
     parser.add_argument(
         "--n-permutations",
         type=int,
         default=100,
-        help="置换检验次数 (default: 100)"
+        help="Number of permutation tests (default: 100)"
     )
     parser.add_argument(
         "--top-k",
         type=int,
         default=50,
-        help="输出Top K靶点 (default: 50)"
+        help="Output Top K targets (default: 50)"
     )
     parser.add_argument(
         "--pathways",
         type=str,
         default="KEGG,GO_BP",
-        help="逗号分隔的通路数据库"
+        help="Comma-separated pathway databases"
     )
     parser.add_argument(
         "--output", "-o",
         type=str,
         default="./results",
-        help="输出目录 (default: ./results)"
+        help="Output directory (default: ./results)"
     )
     
-    # 组合敲除
+    # Combinatorial knockout
     parser.add_argument(
         "--combinatorial",
         action="store_true",
-        help="启用组合敲除模式"
+        help="Enable combinatorial knockout mode"
     )
     parser.add_argument(
         "--gene-pairs",
         type=str,
         action="append",
-        help='基因对，格式: "GENE1,GENE2"，可多次使用'
+        help='Gene pairs, format: "GENE1,GENE2", can be used multiple times'
     )
     parser.add_argument(
         "--synergy-threshold",
         type=float,
         default=0.3,
-        help="协同效应阈值 (default: 0.3)"
+        help="Synergy effect threshold (default: 0.3)"
     )
     
-    # 其他
+    # Others
     parser.add_argument(
         "--export-guide",
         action="store_true",
-        help="导出湿实验验证指南"
+        help="Export wet lab validation guide"
     )
     parser.add_argument(
         "--verbose", "-v",
         action="store_true",
-        help="详细输出"
+        help="Verbose output"
     )
     
     return parser.parse_args()
 
 
 def main():
-    """主入口函数"""
+    """Main entry function"""
     args = parse_args()
     
     if args.verbose:
         logging.getLogger().setLevel(logging.DEBUG)
         
-    # 解析基因列表
+    # Parse gene list
     genes = []
     if args.genes:
         genes = [g.strip().upper() for g in args.genes.split(",")]
@@ -1230,13 +1230,13 @@ def main():
         with open(args.genes_file, 'r') as f:
             genes = [line.strip().upper() for line in f if line.strip()]
     elif not args.combinatorial:
-        logger.error("必须提供 --genes 或 --genes-file 参数")
+        logger.error("Must provide --genes or --genes-file argument")
         sys.exit(1)
         
-    # 解析通路数据库
+    # Parse pathway databases
     pathways = [p.strip() for p in args.pathways.split(",")]
     
-    # 初始化Oracle
+    # Initialize Oracle
     oracle = PerturbationOracle(
         model_name=args.model,
         cell_type=args.cell_type,
@@ -1251,9 +1251,9 @@ def main():
     logger.info(f"Output: {args.output}")
     logger.info("=" * 60)
     
-    # 执行预测
+    # Execute prediction
     if args.combinatorial and args.gene_pairs:
-        # 组合敲除模式
+        # Combinatorial knockout mode
         gene_pairs = []
         for pair_str in args.gene_pairs:
             g1, g2 = pair_str.split(",")
@@ -1265,20 +1265,20 @@ def main():
             synergy_threshold=args.synergy_threshold
         )
         
-        # 输出协同作用结果
+        # Output synergy results
         synergistic = results.get_synergistic_pairs()
         logger.info(f"Found {len(synergistic)} synergistic pairs")
         for pair in synergistic[:5]:
             logger.info(f"  - {pair[0]} + {pair[1]}")
             
-        # 保存结果
+        # Save results
         df = results.to_dataframe()
         output_path = Path(args.output) / "combinatorial_results.csv"
         df.to_csv(output_path, index=False)
         logger.info(f"Results saved to {output_path}")
         
     else:
-        # 单基因敲除模式
+        # Single gene knockout mode
         logger.info(f"Analyzing {len(genes)} genes: {', '.join(genes[:5])}{'...' if len(genes) > 5 else ''}")
         
         results = oracle.predict_knockout(
@@ -1287,10 +1287,10 @@ def main():
             n_permutations=args.n_permutations
         )
         
-        # 保存结果
+        # Save results
         saved_paths = results.save()
         
-        # 靶点评分
+        # Target scoring
         target_scores = results.score_targets()
         logger.info("\n" + "=" * 60)
         logger.info("Top Target Recommendations:")
@@ -1300,7 +1300,7 @@ def main():
             
         logger.info("=" * 60)
         
-    # 导出验证指南
+    # Export validation guide
     if args.export_guide:
         guide_path = oracle.export_validation_guide()
         logger.info(f"Validation guide: {guide_path}")

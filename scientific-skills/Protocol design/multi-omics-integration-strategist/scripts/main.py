@@ -3,7 +3,7 @@
 """
 Multi-Omics Integration Strategist
 ===================================
-多组学（RNA/Pro/Met）整合分析与通路互证
+Multi-omics (RNA/Pro/Met) integration analysis and pathway cross-validation
 
 Author: OpenClaw Bioinformatics Team
 Version: 1.0.0
@@ -31,7 +31,7 @@ import networkx as nx
 
 @dataclass
 class OmicsData:
-    """组学数据结构"""
+    """Omics data structure"""
     data_type: str  # 'rna', 'pro', 'met'
     df: pd.DataFrame
     id_column: str
@@ -40,7 +40,7 @@ class OmicsData:
     
     @property
     def significant_features(self) -> pd.DataFrame:
-        """获取显著差异的特征"""
+        """Get significantly differential features"""
         if 'padj' in self.df.columns:
             return self.df[self.df['padj'] < 0.05]
         return self.df[self.df[self.pvalue_column] < 0.05]
@@ -48,17 +48,17 @@ class OmicsData:
 
 @dataclass
 class PathwayScore:
-    """通路互证评分结构"""
+    """Pathway cross-validation scoring structure"""
     pathway_id: str
     pathway_name: str
     database: str
     rna_genes: List[str]
     pro_genes: List[str]
     met_ids: List[str]
-    directional_score: float  # 方向一致性评分
-    correlation_score: float  # 相关性评分
-    enrichment_score: float   # 富集一致性评分
-    overall_score: float      # 综合评分
+    directional_score: float  # Directional consistency score
+    correlation_score: float  # Correlation score
+    enrichment_score: float   # Enrichment consistency score
+    overall_score: float      # Overall composite score
     
     def to_dict(self) -> Dict:
         return asdict(self)
@@ -67,7 +67,7 @@ class PathwayScore:
 # ==================== ID Mapping Module ====================
 
 class IDMapper:
-    """跨组学ID映射器"""
+    """Cross-omics ID mapper"""
     
     def __init__(self):
         self.rna_to_pro_map = {}
@@ -75,44 +75,44 @@ class IDMapper:
         self.kegg_map = {}
     
     def load_mapping_databases(self, config_path: Optional[str] = None):
-        """加载ID映射数据库"""
-        # 内置简化映射表（实际使用时需接入真实数据库）
+        """Load ID mapping databases"""
+        # Built-in simplified mapping table (actual use requires connection to real databases)
         self.rna_to_pro_map = self._build_rna_pro_mapping()
         self.pro_to_met_map = self._build_pro_met_mapping()
         
     def _build_rna_pro_mapping(self) -> Dict[str, str]:
-        """构建RNA到Protein的映射（基于Gene Symbol）"""
-        # 简化示例映射
+        """Build RNA to Protein mapping (based on Gene Symbol)"""
+        # Simplified example mapping
         return {}
     
     def _build_pro_met_mapping(self) -> Dict[str, List[str]]:
-        """构建Protein到Metabolite的映射（基于KEGG酶-代谢物关系）"""
-        # 简化示例映射
+        """Build Protein to Metabolite mapping (based on KEGG enzyme-metabolite relationships)"""
+        # Simplified example mapping
         return {}
     
     def map_rna_to_protein(self, gene_symbols: List[str]) -> Dict[str, str]:
-        """将Gene Symbol映射到Protein ID"""
-        # 简化实现：假设Gene Symbol相同
+        """Map Gene Symbol to Protein ID"""
+        # Simplified implementation: assume Gene Symbol is the same
         return {g: g for g in gene_symbols}
     
     def map_to_kegg(self, gene_symbols: List[str], organism: str = 'hsa') -> Dict[str, str]:
-        """映射到KEGG ID"""
-        # 简化实现
+        """Map to KEGG ID"""
+        # Simplified implementation
         return {g: f"{organism}:{g}" for g in gene_symbols}
 
 
 # ==================== Pathway Analysis Module ====================
 
 class PathwayAnalyzer:
-    """通路分析器"""
+    """Pathway analyzer"""
     
     def __init__(self, databases: List[str] = ['KEGG']):
         self.databases = databases
         self.pathway_db = self._load_pathway_database()
     
     def _load_pathway_database(self) -> Dict[str, Dict]:
-        """加载通路数据库"""
-        # 简化的KEGG通路示例
+        """Load pathway database"""
+        # Simplified KEGG pathway examples
         pathways = {
             'hsa00010': {
                 'name': 'Glycolysis / Gluconeogenesis',
@@ -144,9 +144,9 @@ class PathwayAnalyzer:
         return pathways
     
     def enrich_pathways(self, gene_list: List[str], threshold: float = 0.05) -> pd.DataFrame:
-        """通路富集分析（简化版超几何检验）"""
+        """Pathway enrichment analysis (simplified hypergeometric test)"""
         results = []
-        total_genes = 20000  # 假设背景基因数
+        total_genes = 20000  # Assumed background gene count
         
         for pathway_id, pathway_info in self.pathway_db.items():
             pathway_genes = set(pathway_info['genes'])
@@ -156,11 +156,11 @@ class PathwayAnalyzer:
             if len(overlap) < 2:
                 continue
             
-            # 超几何检验
-            k = len(overlap)  # 通路中差异基因数
-            M = len(pathway_genes)  # 通路基因数
-            n = len(gene_set)  # 差异基因总数
-            N = total_genes  # 背景基因数
+            # Hypergeometric test
+            k = len(overlap)  # Number of differential genes in pathway
+            M = len(pathway_genes)  # Number of genes in pathway
+            n = len(gene_set)  # Total number of differential genes
+            N = total_genes  # Background gene count
             
             pvalue = stats.hypergeom.sf(k-1, N, M, n)
             
@@ -178,7 +178,7 @@ class PathwayAnalyzer:
             return pd.DataFrame()
         
         df = pd.DataFrame(results)
-        # BH校正 (Benjamini-Hochberg)
+        # BH correction (Benjamini-Hochberg)
         pvalues = df['pvalue'].values
         n = len(pvalues)
         if n > 0:
@@ -186,7 +186,7 @@ class PathwayAnalyzer:
             sorted_pvalues = pvalues[sorted_indices]
             padj = np.zeros(n)
             padj[sorted_indices] = np.minimum.accumulate(sorted_pvalues * n / np.arange(1, n + 1))
-            padj = np.minimum(padj, 1.0)  # 确保不超过1
+            padj = np.minimum(padj, 1.0)  # Ensure value does not exceed 1
             df['padj'] = padj
         else:
             df['padj'] = df['pvalue']
@@ -198,7 +198,7 @@ class PathwayAnalyzer:
 # ==================== Cross-Validation Module ====================
 
 class CrossValidator:
-    """跨组学互证验证器"""
+    """Cross-omics cross-validation validator"""
     
     def __init__(self, id_mapper: IDMapper, pathway_analyzer: PathwayAnalyzer):
         self.id_mapper = id_mapper
@@ -212,10 +212,10 @@ class CrossValidator:
         pathway_id: str
     ) -> float:
         """
-        验证同一通路中各组学变化方向的一致性
+        Validate directional consistency of changes across omics in the same pathway
         
         Returns:
-            一致性评分 (-1 到 1，1表示完全一致)
+            Consistency score (-1 to 1, 1 means completely consistent)
         """
         pathway_info = self.pathway_analyzer.pathway_db.get(pathway_id, {})
         if not pathway_info:
@@ -224,46 +224,46 @@ class CrossValidator:
         pathway_genes = set(pathway_info.get('genes', []))
         pathway_mets = set(pathway_info.get('metabolites', []))
         
-        # 获取各组学在该通路中的变化
+        # Get changes for each omics in this pathway
         rna_changes = []
         pro_changes = []
         met_changes = []
         
-        # RNA变化
+        # RNA changes
         rna_sig = rna_data.significant_features
         for gene in pathway_genes:
             matches = rna_sig[rna_sig['gene_name'] == gene] if 'gene_name' in rna_sig.columns else pd.DataFrame()
             if len(matches) > 0:
                 rna_changes.append(np.sign(matches[rna_data.fc_column].iloc[0]))
         
-        # Protein变化
+        # Protein changes
         pro_sig = pro_data.significant_features
         for gene in pathway_genes:
             matches = pro_sig[pro_sig['gene_name'] == gene] if 'gene_name' in pro_sig.columns else pd.DataFrame()
             if len(matches) > 0:
                 pro_changes.append(np.sign(matches[pro_data.fc_column].iloc[0]))
         
-        # Metabolite变化
+        # Metabolite changes
         met_sig = met_data.significant_features
         for met in pathway_mets:
             matches = met_sig[met_sig['kegg_id'] == met] if 'kegg_id' in met_sig.columns else pd.DataFrame()
             if len(matches) == 0:
-                # 尝试通过名称匹配
+                # Try matching by name
                 matches = met_sig[met_sig['metabolite_id'] == met] if 'metabolite_id' in met_sig.columns else pd.DataFrame()
             if len(matches) > 0:
-                # 代谢物变化方向与基因通常相反（底物消耗vs产物生成）
+                # Metabolite change direction is usually opposite to genes (substrate consumption vs product generation)
                 met_changes.append(-np.sign(matches[met_data.fc_column].iloc[0]))
         
-        # 计算一致性
+        # Calculate consistency
         all_changes = rna_changes + pro_changes + met_changes
         if len(all_changes) < 2:
             return 0.0
         
-        # 多数方向
+        # Majority direction
         positive_ratio = sum(1 for c in all_changes if c > 0) / len(all_changes)
         consistency = 2 * abs(positive_ratio - 0.5)
         
-        # 根据多数方向确定符号
+        # Determine sign based on majority direction
         if positive_ratio < 0.5:
             consistency = -consistency
             
@@ -276,16 +276,16 @@ class CrossValidator:
         matched_samples: Optional[List[str]] = None
     ) -> Tuple[float, pd.DataFrame]:
         """
-        验证RNA和Protein表达的相关性
+        Validate correlation between RNA and Protein expression
         
         Returns:
-            (平均相关系数, 详细相关矩阵)
+            (Average correlation coefficient, detailed correlation matrix)
         """
-        # 简化实现：基于Fold Change的相关性
+        # Simplified implementation: correlation based on Fold Change
         rna_sig = rna_data.significant_features
         pro_sig = pro_data.significant_features
         
-        # 匹配基因
+        # Match genes
         if 'gene_name' not in rna_sig.columns or 'gene_name' not in pro_sig.columns:
             return 0.0, pd.DataFrame()
         
@@ -301,7 +301,7 @@ class CrossValidator:
         
         correlation, pvalue = stats.spearmanr(
             merged[rna_data.fc_column + '_rna'],
-            merged[pro_data.fc_column + '_pro']
+            merged[rna_data.fc_column + '_pro']
         )
         
         return correlation, merged
@@ -313,14 +313,14 @@ class CrossValidator:
         met_enrichment: Optional[pd.DataFrame] = None
     ) -> Dict[str, float]:
         """
-        验证各组学通路富集结果的一致性
+        Validate consistency of pathway enrichment results across omics
         
         Returns:
-            各通路的一致性评分字典
+            Dictionary of consistency scores for each pathway
         """
         concordance = {}
         
-        # 合并RNA和Protein的富集结果
+        # Merge RNA and Protein enrichment results
         if len(rna_enrichment) > 0 and len(pro_enrichment) > 0:
             merged = pd.merge(
                 rna_enrichment[['pathway_id', 'pvalue']].rename(columns={'pvalue': 'pvalue_rna'}),
@@ -334,13 +334,13 @@ class CrossValidator:
                 p_rna = row.get('pvalue_rna', 1.0)
                 p_pro = row.get('pvalue_pro', 1.0)
                 
-                # 两者都显著则一致度高
+                # High consistency if both are significant
                 if p_rna < 0.05 and p_pro < 0.05:
                     concordance[pid] = 1.0
                 elif (p_rna < 0.05) != (p_pro < 0.05):
-                    concordance[pid] = 0.0  # 不一致
+                    concordance[pid] = 0.0  # Inconsistent
                 else:
-                    concordance[pid] = 0.5  # 都不显著，中性
+                    concordance[pid] = 0.5  # Neither significant, neutral
         
         return concordance
 
@@ -348,7 +348,7 @@ class CrossValidator:
 # ==================== Report Generator ====================
 
 class ReportGenerator:
-    """分析报告生成器"""
+    """Analysis report generator"""
     
     def __init__(self, output_dir: str):
         self.output_dir = Path(output_dir)
@@ -362,7 +362,7 @@ class ReportGenerator:
         met_data: OmicsData,
         consistency_matrix: pd.DataFrame
     ) -> str:
-        """生成整合分析报告"""
+        """Generate integration analysis report"""
         
         report_lines = [
             "# Multi-Omics Integration Analysis Report",
@@ -381,7 +381,7 @@ class ReportGenerator:
             "",
         ]
         
-        # 高分通路
+        # High scoring pathways
         high_score = [p for p in pathway_scores if p.overall_score > 0.7]
         report_lines.append("### High Consistency Pathways (Score > 0.7)")
         report_lines.append("")
@@ -395,7 +395,7 @@ class ReportGenerator:
             report_lines.append("_No pathways with high consistency found._")
         report_lines.append("")
         
-        # 冲突通路
+        # Conflicting pathways
         conflict = [p for p in pathway_scores if p.directional_score < -0.3]
         report_lines.append("### Conflicting Pathways (Directional Score < -0.3)")
         report_lines.append("")
@@ -406,33 +406,33 @@ class ReportGenerator:
             report_lines.append("_No conflicting pathways found._")
         report_lines.append("")
         
-        # 可视化建议
+        # Visualization recommendations
         report_lines.extend([
             "## Visualization Recommendations",
             "",
             "Based on the cross-validation results, the following visualizations are recommended:",
             "",
-            "### 1. Circos Plot (跨组学关系全景)",
+            "### 1. Circos Plot (Cross-omics Relationship Overview)",
             "- **Purpose**: Show relationships between RNA, Protein, and Metabolite",
             "- **Data**: Use `mapped_ids.json` for link data",
             "- **Tool**: matplotlib + circlize (R) or circos (Perl)",
             "",
-            "### 2. Pathway Heatmap (通路层面变化)",
+            "### 2. Pathway Heatmap (Pathway-level Changes)",
             "- **Purpose**: Display fold changes across omics for top pathways",
             "- **Data**: Top 20 pathways by overall score",
             "- **Tool**: seaborn.clustermap or ComplexHeatmap (R)",
             "",
-            "### 3. Sankey Diagram (数据流向)",
+            "### 3. Sankey Diagram (Data Flow)",
             "- **Purpose**: Show flow from genes → proteins → metabolites",
             "- **Data**: Significant features mapped to pathways",
             "- **Tool**: plotly.graph_objects.Sankey",
             "",
-            "### 4. Correlation Network (相关性网络)",
+            "### 4. Correlation Network (Correlation Network)",
             "- **Purpose**: Cross-omics correlation network",
             "- **Data**: Features with significant correlation",
             "- **Tool**: networkx + matplotlib or Cytoscape",
             "",
-            "### 5. Bubble Plot (富集分析整合)",
+            "### 5. Bubble Plot (Enrichment Analysis Integration)",
             "- **Purpose**: Compare enrichment results across omics",
             "- **Data**: Pathway enrichment p-values",
             "- **Tool**: ggplot2 (R) or plotly",
@@ -453,7 +453,7 @@ class ReportGenerator:
         
         report_text = "\n".join(report_lines)
         
-        # 保存报告
+        # Save report
         report_path = self.output_dir / "integration_report.md"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(report_text)
@@ -466,19 +466,19 @@ class ReportGenerator:
         mapped_ids: Dict,
         consistency_matrix: pd.DataFrame
     ) -> Dict[str, str]:
-        """保存分析结果文件"""
+        """Save analysis result files"""
         
-        # 保存通路评分
+        # Save pathway scores
         scores_df = pd.DataFrame([p.to_dict() for p in pathway_scores])
         scores_path = self.output_dir / "pathway_scores.csv"
         scores_df.to_csv(scores_path, index=False)
         
-        # 保存ID映射
+        # Save ID mappings
         mapped_path = self.output_dir / "mapped_ids.json"
         with open(mapped_path, 'w') as f:
             json.dump(mapped_ids, f, indent=2)
         
-        # 保存一致性矩阵
+        # Save consistency matrix
         matrix_path = self.output_dir / "consistency_matrix.csv"
         consistency_matrix.to_csv(matrix_path)
         
@@ -492,7 +492,7 @@ class ReportGenerator:
 # ==================== Main Analysis Pipeline ====================
 
 class MultiOmicsIntegrator:
-    """多组学整合分析主类"""
+    """Main class for multi-omics integration analysis"""
     
     def __init__(self, config: Optional[Dict] = None):
         self.config = config or {}
@@ -509,9 +509,9 @@ class MultiOmicsIntegrator:
         pro_path: str,
         met_path: str
     ) -> Tuple[OmicsData, OmicsData, OmicsData]:
-        """加载多组学数据"""
+        """Load multi-omics data"""
         
-        # 加载RNA数据
+        # Load RNA data
         rna_df = pd.read_csv(rna_path)
         rna_data = OmicsData(
             data_type='rna',
@@ -521,7 +521,7 @@ class MultiOmicsIntegrator:
             pvalue_column='pvalue'
         )
         
-        # 加载Protein数据
+        # Load Protein data
         pro_df = pd.read_csv(pro_path)
         pro_data = OmicsData(
             data_type='pro',
@@ -531,7 +531,7 @@ class MultiOmicsIntegrator:
             pvalue_column='pvalue'
         )
         
-        # 加载Metabolite数据
+        # Load Metabolite data
         met_df = pd.read_csv(met_path)
         met_data = OmicsData(
             data_type='met',
@@ -549,13 +549,13 @@ class MultiOmicsIntegrator:
         pro_data: OmicsData,
         met_data: OmicsData
     ) -> Tuple[List[PathwayScore], Dict, pd.DataFrame]:
-        """执行整合分析"""
+        """Execute integration analysis"""
         
         print("=" * 60)
         print("Multi-Omics Integration Analysis")
         print("=" * 60)
         
-        # Step 1: ID映射
+        # Step 1: ID mapping
         print("\n[Step 1] ID Mapping...")
         rna_genes = rna_data.df['gene_name'].tolist() if 'gene_name' in rna_data.df.columns else []
         pro_genes = pro_data.df['gene_name'].tolist() if 'gene_name' in pro_data.df.columns else []
@@ -568,7 +568,7 @@ class MultiOmicsIntegrator:
         print(f"  - RNA genes: {len(rna_genes)}")
         print(f"  - Protein genes: {len(pro_genes)}")
         
-        # Step 2: 通路富集分析
+        # Step 2: Pathway enrichment analysis
         print("\n[Step 2] Pathway Enrichment Analysis...")
         rna_sig_genes = rna_data.significant_features['gene_name'].tolist() if 'gene_name' in rna_data.significant_features.columns else []
         pro_sig_genes = pro_data.significant_features['gene_name'].tolist() if 'gene_name' in pro_data.significant_features.columns else []
@@ -579,15 +579,15 @@ class MultiOmicsIntegrator:
         print(f"  - RNA enriched pathways: {len(rna_enrich)}")
         print(f"  - Protein enriched pathways: {len(pro_enrich)}")
         
-        # Step 3: 跨组学互证
+        # Step 3: Cross-omics cross-validation
         print("\n[Step 3] Cross-Validation...")
         
-        # 富集一致性
+        # Enrichment consistency
         enrichment_concordance = self.cross_validator.validate_enrichment_concordance(
             rna_enrich, pro_enrich
         )
         
-        # 各通路评分
+        # Score each pathway
         pathway_scores = []
         all_pathways = set(rna_enrich['pathway_id'].tolist() if len(rna_enrich) > 0 else []) | \
                       set(pro_enrich['pathway_id'].tolist() if len(pro_enrich) > 0 else [])
@@ -597,18 +597,18 @@ class MultiOmicsIntegrator:
             if not pathway_info:
                 continue
             
-            # 方向一致性
+            # Directional consistency
             dir_score = self.cross_validator.validate_directional_consistency(
                 rna_data, pro_data, met_data, pathway_id
             )
             
-            # 相关性评分（简化：基于富集一致性）
+            # Correlation score (simplified: based on enrichment consistency)
             corr_score = enrichment_concordance.get(pathway_id, 0.5)
             
-            # 富集评分
+            # Enrichment score
             enrich_score = 1.0 if pathway_id in enrichment_concordance and enrichment_concordance[pathway_id] > 0.5 else 0.0
             
-            # 综合评分
+            # Overall composite score
             overall = (abs(dir_score) + corr_score + enrich_score) / 3
             if dir_score < 0:
                 overall = -overall
@@ -628,7 +628,7 @@ class MultiOmicsIntegrator:
         
         print(f"  - Pathways scored: {len(pathway_scores)}")
         
-        # 构建一致性矩阵
+        # Build consistency matrix
         consistency_matrix = self._build_consistency_matrix(
             pathway_scores, rna_enrich, pro_enrich
         )
@@ -641,7 +641,7 @@ class MultiOmicsIntegrator:
         rna_enrich: pd.DataFrame,
         pro_enrich: pd.DataFrame
     ) -> pd.DataFrame:
-        """构建跨组学一致性矩阵"""
+        """Build cross-omics consistency matrix"""
         
         data = {
             'pathway_id': [p.pathway_id for p in pathway_scores],
@@ -656,11 +656,11 @@ class MultiOmicsIntegrator:
 
 
 def create_sample_data(output_dir: str):
-    """创建示例数据用于测试"""
+    """Create sample data for testing"""
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
     
-    # RNA数据
+    # RNA data
     rna_data = pd.DataFrame({
         'gene_id': ['ENSG00000139618', 'ENSG00000141510', 'ENSG00000171862', 'ENSG00000111640', 
                    'ENSG00000111641', 'ENSG00000149925', 'ENSG00000167996'],
@@ -673,7 +673,7 @@ def create_sample_data(output_dir: str):
     })
     rna_data.to_csv(output_path / 'rna_data.csv', index=False)
     
-    # Protein数据
+    # Protein data
     pro_data = pd.DataFrame({
         'protein_id': ['P38398', 'P04637', 'P19367', 'P04406', 'P61812', 'P14618', 'P00338'],
         'gene_name': ['BRCA1', 'TP53', 'HK1', 'GAPDH', 'GAPDHS', 'PKM', 'LDHA'],
@@ -685,7 +685,7 @@ def create_sample_data(output_dir: str):
     })
     pro_data.to_csv(output_path / 'pro_data.csv', index=False)
     
-    # Metabolite数据
+    # Metabolite data
     met_data = pd.DataFrame({
         'metabolite_id': ['C00267', 'C00668', 'C05378', 'C00236', 'C01159', 'C00631', 'C00074'],
         'metabolite_name': ['D-Glucose', 'alpha-D-Glucose', 'beta-D-Fructose', 'Glyceraldehyde 3-phosphate',
@@ -705,83 +705,83 @@ def create_sample_data(output_dir: str):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Multi-Omics Integration Strategist - 多组学整合分析',
+        description='Multi-Omics Integration Strategist - Multi-omics Integration Analysis',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # 基本用法
+  # Basic usage
   python main.py --rna rna_data.csv --pro pro_data.csv --met met_data.csv --output ./results
   
-  # 创建示例数据
+  # Create sample data
   python main.py --create-sample --output ./sample_data
   
-  # 指定数据库
+  # Specify database
   python main.py --rna rna.csv --pro pro.csv --met met.csv --databases KEGG,Reactome --output ./results
         """
     )
     
-    parser.add_argument('--rna', type=str, help='转录组数据文件路径 (CSV)')
-    parser.add_argument('--pro', type=str, help='蛋白质组数据文件路径 (CSV)')
-    parser.add_argument('--met', type=str, help='代谢组数据文件路径 (CSV)')
+    parser.add_argument('--rna', type=str, help='Transcriptomics data file path (CSV)')
+    parser.add_argument('--pro', type=str, help='Proteomics data file path (CSV)')
+    parser.add_argument('--met', type=str, help='Metabolomics data file path (CSV)')
     parser.add_argument('--output', '-o', type=str, default='./results', 
-                       help='输出目录 (默认: ./results)')
+                       help='Output directory (default: ./results)')
     parser.add_argument('--databases', type=str, default='KEGG',
-                       help='通路数据库，逗号分隔 (默认: KEGG)')
+                       help='Pathway databases, comma-separated (default: KEGG)')
     parser.add_argument('--create-sample', action='store_true',
-                       help='创建示例数据用于测试')
+                       help='Create sample data for testing')
     parser.add_argument('--format', type=str, default='md,csv,json',
-                       help='输出格式，逗号分隔 (默认: md,csv,json)')
+                       help='Output formats, comma-separated (default: md,csv,json)')
     
     args = parser.parse_args()
     
-    # 创建示例数据
+    # Create sample data
     if args.create_sample:
         create_sample_data(args.output)
         return
     
-    # 验证必需参数
+    # Validate required arguments
     if not all([args.rna, args.pro, args.met]):
         parser.print_help()
         print("\nError: --rna, --pro, and --met are required for analysis.")
         sys.exit(1)
     
-    # 检查文件存在
+    # Check file existence
     for f in [args.rna, args.pro, args.met]:
         if not Path(f).exists():
             print(f"Error: File not found: {f}")
             sys.exit(1)
     
-    # 配置
+    # Configuration
     config = {
         'databases': args.databases.split(','),
         'output_formats': args.format.split(',')
     }
     
-    # 运行分析
+    # Run analysis
     try:
         integrator = MultiOmicsIntegrator(config)
         
-        # 加载数据
+        # Load data
         print("Loading data...")
         rna_data, pro_data, met_data = integrator.load_data(
             args.rna, args.pro, args.met
         )
         
-        # 执行整合分析
+        # Execute integration analysis
         pathway_scores, mapped_ids, consistency_matrix = integrator.run_integration(
             rna_data, pro_data, met_data
         )
         
-        # 生成报告
+        # Generate report
         print("\n[Step 4] Generating Reports...")
         report_gen = ReportGenerator(args.output)
         
-        # 保存结果文件
+        # Save result files
         result_files = report_gen.save_results(
             pathway_scores, mapped_ids, consistency_matrix
         )
         
-        # 生成Markdown报告
+        # Generate Markdown report
         report_path = report_gen.generate_report(
             pathway_scores, rna_data, pro_data, met_data, consistency_matrix
         )

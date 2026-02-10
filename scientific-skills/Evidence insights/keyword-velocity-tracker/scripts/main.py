@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Keyword Velocity Tracker
-计算关键词的文献增长速率和加速度，判断领域发展阶段。
+Calculate keyword publication growth rate and acceleration to determine field development stage.
 """
 
 import json
@@ -13,15 +13,15 @@ from enum import Enum
 
 
 class DevelopmentStage(Enum):
-    """领域发展阶段"""
-    EMBRYONIC = "萌芽期"
-    GROWTH = "成长期"
-    MATURE = "成熟期"
-    DECLINE = "衰退期"
+    """Field development stage"""
+    EMBRYONIC = "embryonic"
+    GROWTH = "growth"
+    MATURE = "mature"
+    DECLINE = "decline"
 
 
 class TrendDirection(Enum):
-    """趋势方向"""
+    """Trend direction"""
     GROWTH = "growth"
     STABLE = "stable"
     DECLINE = "decline"
@@ -29,7 +29,7 @@ class TrendDirection(Enum):
 
 @dataclass
 class VelocityPoint:
-    """单点速度和加速度数据"""
+    """Single point velocity and acceleration data"""
     year: int
     count: int
     velocity: Optional[float] = None
@@ -39,7 +39,7 @@ class VelocityPoint:
 
 @dataclass
 class Prediction:
-    """预测结果"""
+    """Prediction result"""
     year: int
     estimated_count: int
     confidence: float
@@ -47,7 +47,7 @@ class Prediction:
 
 class KeywordVelocityTracker:
     """
-    关键词文献增长速率和加速度分析器
+    Keyword publication growth rate and acceleration analyzer
     """
     
     def __init__(
@@ -58,13 +58,13 @@ class KeywordVelocityTracker:
         min_confidence: float = 0.7
     ):
         """
-        初始化分析器
+        Initialize analyzer
         
         Args:
-            time_window: 计算增长率的时间窗口（年）
-            smoothing: 是否平滑数据
-            smoothing_factor: 平滑系数
-            min_confidence: 最小置信度阈值
+            time_window: Time window for calculating growth rate (years)
+            smoothing: Whether to smooth data
+            smoothing_factor: Smoothing coefficient
+            min_confidence: Minimum confidence threshold
         """
         self.time_window = time_window
         self.smoothing = smoothing
@@ -72,19 +72,19 @@ class KeywordVelocityTracker:
         self.min_confidence = min_confidence
     
     def _validate_data(self, data: List[Dict]) -> List[Dict]:
-        """验证并排序输入数据"""
+        """Validate and sort input data"""
         if not data or len(data) < 2:
-            raise ValueError("至少需要2个年份的数据")
+            raise ValueError("At least 2 years of data required")
         
-        # 确保数据按年份排序
+        # Ensure data is sorted by year
         sorted_data = sorted(data, key=lambda x: x['year'])
         
-        # 验证数据完整性
+        # Validate data integrity
         for item in sorted_data:
             if 'year' not in item or 'count' not in item:
-                raise ValueError("数据项必须包含 'year' 和 'count' 字段")
+                raise ValueError("Data items must contain 'year' and 'count' fields")
             if not isinstance(item['count'], (int, float)) or item['count'] < 0:
-                raise ValueError("count 必须是非负数")
+                raise ValueError("count must be non-negative")
         
         return sorted_data
     
@@ -94,14 +94,14 @@ class KeywordVelocityTracker:
         previous_count: float
     ) -> Optional[float]:
         """
-        计算增长率
+        Calculate growth rate
         
         Args:
-            current_count: 当前年份文献数
-            previous_count: 前一年文献数
+            current_count: Current year publication count
+            previous_count: Previous year publication count
             
         Returns:
-            增长率（可为负值）
+            Growth rate (can be negative)
         """
         if previous_count == 0:
             return None if current_count == 0 else float('inf')
@@ -112,13 +112,13 @@ class KeywordVelocityTracker:
         series: List[Optional[float]]
     ) -> List[Optional[float]]:
         """
-        使用指数平滑处理序列
+        Smooth series using exponential smoothing
         
         Args:
-            series: 原始序列（可能包含None）
+            series: Raw series (may contain None)
             
         Returns:
-            平滑后的序列
+            Smoothed series
         """
         if not self.smoothing:
             return series
@@ -147,18 +147,18 @@ class KeywordVelocityTracker:
         data: List[Dict]
     ) -> List[VelocityPoint]:
         """
-        计算完整的时间序列数据
+        Calculate complete time series data
         
         Args:
-            data: 原始文献数据
+            data: Raw publication data
             
         Returns:
-            包含速度和加速度的时间序列
+            Time series with velocity and acceleration
         """
         velocity_points = []
         velocities = []
         
-        # 第一年的数据点
+        # First year data point
         velocity_points.append(VelocityPoint(
             year=data[0]['year'],
             count=data[0]['count'],
@@ -167,7 +167,7 @@ class KeywordVelocityTracker:
         ))
         velocities.append(None)
         
-        # 计算每年的增长率
+        # Calculate growth rate for each year
         for i in range(1, len(data)):
             current = data[i]
             previous = data[i - 1]
@@ -184,13 +184,13 @@ class KeywordVelocityTracker:
                 velocity=velocity
             ))
         
-        # 平滑处理速度
+        # Smooth velocity
         if self.smoothing:
             smoothed_velocities = self._smooth_series(velocities)
             for i, vp in enumerate(velocity_points):
                 vp.smoothed_velocity = smoothed_velocities[i]
         
-        # 计算加速度（速度的变化率）
+        # Calculate acceleration (rate of change of velocity)
         for i in range(2, len(velocity_points)):
             current_vp = velocity_points[i]
             prev_vp = velocity_points[i - 1]
@@ -208,15 +208,15 @@ class KeywordVelocityTracker:
         velocity_points: List[VelocityPoint]
     ) -> Tuple[DevelopmentStage, float, TrendDirection]:
         """
-        判断领域发展阶段
+        Determine field development stage
         
         Args:
-            velocity_points: 时间序列数据
+            velocity_points: Time series data
             
         Returns:
-            (阶段, 置信度, 趋势方向)
+            (stage, confidence, trend direction)
         """
-        # 获取最近的数据点
+        # Get recent data points
         recent_points = velocity_points[-self.time_window:]
         
         valid_velocities = [
@@ -240,13 +240,13 @@ class KeywordVelocityTracker:
             np.mean(valid_accelerations) if valid_accelerations else 0
         )
         
-        # 判断阶段
+        # Determine stage
         if avg_velocity < -0.05:
             stage = DevelopmentStage.DECLINE
             confidence = min(1.0, abs(avg_velocity) * 2)
             trend = TrendDirection.DECLINE
         elif avg_velocity < 0.1:
-            # 低增长可能是萌芽期或衰退期
+            # Low growth could be embryonic or decline
             if avg_acceleration > 0:
                 stage = DevelopmentStage.EMBRYONIC
                 confidence = min(1.0, avg_acceleration * 3 + 0.5)
@@ -256,17 +256,17 @@ class KeywordVelocityTracker:
                 confidence = min(1.0, abs(avg_acceleration) * 3 + 0.5)
                 trend = TrendDirection.DECLINE
         elif velocity_std < 0.1 and abs(avg_acceleration) < 0.05:
-            # 增长稳定 → 成熟期
+            # Stable growth → mature stage
             stage = DevelopmentStage.MATURE
             confidence = min(1.0, 1 - velocity_std * 5)
             trend = TrendDirection.STABLE
         elif avg_acceleration > 0:
-            # 增长加速 → 成长期
+            # Accelerating growth → growth stage
             stage = DevelopmentStage.GROWTH
             confidence = min(1.0, avg_acceleration * 2 + 0.5)
             trend = TrendDirection.GROWTH
         else:
-            # 增长但减速 → 可能从成长期进入成熟期
+            # Growing but decelerating → may be transitioning from growth to mature
             stage = DevelopmentStage.MATURE
             confidence = min(1.0, 0.6 + abs(avg_acceleration))
             trend = TrendDirection.STABLE
@@ -281,36 +281,36 @@ class KeywordVelocityTracker:
         current_velocity: float,
         current_acceleration: float
     ) -> List[str]:
-        """生成分析洞察"""
+        """Generate analysis insights"""
         insights = []
         
-        # 阶段相关洞察
+        # Stage-related insights
         if stage == DevelopmentStage.GROWTH:
-            insights.append("领域处于成长期，文献数量快速增长")
+            insights.append("Field is in growth stage with rapidly increasing publications")
             if current_acceleration > 0.1:
-                insights.append("增长速度正在加快，领域热度上升")
+                insights.append("Growth rate is accelerating, field popularity is rising")
         elif stage == DevelopmentStage.MATURE:
-            insights.append("领域已进入成熟期，增长趋于稳定")
+            insights.append("Field has entered mature stage with stable growth")
             if current_acceleration < -0.05:
-                insights.append("近期出现轻微减速，可能进入平台期")
+                insights.append("Recent slight deceleration detected, may be entering plateau")
         elif stage == DevelopmentStage.EMBRYONIC:
-            insights.append("领域尚处于萌芽期，文献基数较小")
+            insights.append("Field is still in embryonic stage with small publication base")
             if current_acceleration > 0:
-                insights.append("显示出增长潜力，值得关注")
+                insights.append("Showing growth potential, worth monitoring")
         elif stage == DevelopmentStage.DECLINE:
-            insights.append("领域可能进入衰退期，文献增长放缓或下降")
+            insights.append("Field may be entering decline stage, publication growth slowing or decreasing")
         
-        # 速度相关洞察
+        # Velocity-related insights
         if current_velocity > 0.5:
-            insights.append("年增长率超过50%，是非常热门的领域")
+            insights.append("Annual growth rate exceeds 50%, very hot field")
         elif current_velocity < 0.05:
-            insights.append("年增长率低于5%，增长动力不足")
+            insights.append("Annual growth rate below 5%, insufficient growth momentum")
         
-        # 加速度相关洞察
+        # Acceleration-related insights
         if current_acceleration > 0.2:
-            insights.append("增长加速明显，可能是突破性进展带来的")
+            insights.append("Significant growth acceleration detected, possibly due to breakthrough advances")
         elif current_acceleration < -0.2:
-            insights.append("增长减速明显，可能需要新的研究突破")
+            insights.append("Significant growth deceleration detected, may need new research breakthroughs")
         
         return insights
     
@@ -320,14 +320,14 @@ class KeywordVelocityTracker:
         predict_years: int
     ) -> Dict[int, Prediction]:
         """
-        预测未来文献数量
+        Predict future publication counts
         
         Args:
-            velocity_points: 历史数据
-            predict_years: 预测年数
+            velocity_points: Historical data
+            predict_years: Years to predict
             
         Returns:
-            预测结果字典
+            Prediction results dictionary
         """
         if len(velocity_points) < 2:
             return {}
@@ -335,7 +335,7 @@ class KeywordVelocityTracker:
         predictions = {}
         last_point = velocity_points[-1]
         
-        # 使用最近的增长率趋势
+        # Use recent growth rate trend
         recent_velocities = [
             (vp.smoothed_velocity or vp.velocity)
             for vp in velocity_points[-self.time_window:]
@@ -348,7 +348,7 @@ class KeywordVelocityTracker:
         avg_velocity = np.mean(recent_velocities)
         velocity_trend = 0
         
-        # 计算速度趋势（加速度）
+        # Calculate velocity trend (acceleration)
         if len(recent_velocities) >= 2:
             velocity_trend = (
                 recent_velocities[-1] - recent_velocities[0]
@@ -359,16 +359,16 @@ class KeywordVelocityTracker:
         for i in range(1, predict_years + 1):
             year = last_point.year + i
             
-            # 随时间递减的增长率（考虑增长放缓）
+            # Growth rate that decreases over time (considering growth slowdown)
             projected_velocity = avg_velocity + velocity_trend * i
-            # 确保增长率不会变得过于极端
+            # Ensure growth rate doesn't become too extreme
             projected_velocity = max(-0.3, min(1.0, projected_velocity))
             
-            # 计算预测数量
+            # Calculate predicted count
             projected_count = int(current_count * (1 + projected_velocity) ** i)
             projected_count = max(0, projected_count)
             
-            # 置信度随预测时间递减
+            # Confidence decreases with prediction time
             confidence = max(0.3, 0.9 - i * 0.15)
             
             predictions[year] = Prediction(
@@ -386,33 +386,33 @@ class KeywordVelocityTracker:
         predict_years: int = 3
     ) -> Dict:
         """
-        执行完整的关键词速度分析
+        Perform complete keyword velocity analysis
         
         Args:
-            keyword: 分析的关键词
-            data: 时间序列文献数据
-            predict_years: 预测未来年份数
+            keyword: Keyword to analyze
+            data: Time series publication data
+            predict_years: Years to predict into future
             
         Returns:
-            完整的分析结果
+            Complete analysis results
         """
-        # 验证数据
+        # Validate data
         validated_data = self._validate_data(data)
         
-        # 计算速度序列
+        # Calculate velocity series
         velocity_points = self._calculate_velocity_series(validated_data)
         
-        # 获取最新数据
+        # Get latest data
         latest_point = velocity_points[-1]
         current_velocity = (
             latest_point.smoothed_velocity or latest_point.velocity or 0
         )
         current_acceleration = latest_point.acceleration or 0
         
-        # 判断阶段
+        # Determine stage
         stage, confidence, trend = self._determine_stage(velocity_points)
         
-        # 生成洞察
+        # Generate insights
         insights = self._generate_insights(
             velocity_points,
             stage,
@@ -421,10 +421,10 @@ class KeywordVelocityTracker:
             current_acceleration
         )
         
-        # 预测未来
+        # Predict future
         predictions = self._predict_future(velocity_points, predict_years)
         
-        # 构建返回结果
+        # Build return result
         result = {
             "keyword": keyword,
             "analysis_period": {
@@ -463,68 +463,68 @@ class KeywordVelocityTracker:
 
 
 def main():
-    """命令行入口"""
+    """Command line entry"""
     parser = argparse.ArgumentParser(
-        description='关键词文献增长速率和加速度分析工具'
+        description='Keyword publication growth rate and acceleration analysis tool'
     )
     parser.add_argument(
         '--keyword', '-k',
         required=True,
-        help='要分析的关键词'
+        help='Keyword to analyze'
     )
     parser.add_argument(
         '--data-file', '-f',
         required=True,
-        help='JSON数据文件路径，格式: [{"year": 2020, "count": 100}, ...]'
+        help='JSON data file path, format: [{"year": 2020, "count": 100}, ...]'
     )
     parser.add_argument(
         '--predict-years', '-p',
         type=int,
         default=3,
-        help='预测未来年份数 (默认: 3)'
+        help='Years to predict into future (default: 3)'
     )
     parser.add_argument(
         '--time-window', '-w',
         type=int,
         default=3,
-        help='时间窗口大小 (默认: 3)'
+        help='Time window size (default: 3)'
     )
     parser.add_argument(
         '--no-smoothing',
         action='store_true',
-        help='禁用数据平滑处理'
+        help='Disable data smoothing'
     )
     parser.add_argument(
         '--output', '-o',
-        help='输出文件路径 (默认输出到控制台)'
+        help='Output file path (default: console output)'
     )
     
     args = parser.parse_args()
     
-    # 读取数据
+    # Read data
     with open(args.data_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
-    # 创建分析器
+    # Create analyzer
     tracker = KeywordVelocityTracker(
         time_window=args.time_window,
         smoothing=not args.no_smoothing
     )
     
-    # 执行分析
+    # Perform analysis
     result = tracker.analyze(
         keyword=args.keyword,
         data=data,
         predict_years=args.predict_years
     )
     
-    # 输出结果
+    # Output results
     output_json = json.dumps(result, ensure_ascii=False, indent=2)
     
     if args.output:
         with open(args.output, 'w', encoding='utf-8') as f:
             f.write(output_json)
-        print(f"结果已保存到: {args.output}")
+        print(f"Results saved to: {args.output}")
     else:
         print(output_json)
 

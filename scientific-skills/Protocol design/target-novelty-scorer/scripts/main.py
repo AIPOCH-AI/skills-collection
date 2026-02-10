@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Target Novelty Scorer
-基于文献挖掘的靶点新颖度评分工具
+Target novelty scoring tool based on literature mining
 
 Usage:
     python main.py --target "PD-L1"
@@ -21,7 +21,7 @@ import numpy as np
 
 @dataclass
 class NoveltyScore:
-    """新颖度评分数据结构"""
+    """Novelty score data structure"""
     target: str
     novelty_score: float
     confidence: float
@@ -31,7 +31,7 @@ class NoveltyScore:
 
 
 class PubMedSearcher:
-    """PubMed文献检索器 (模拟实现)"""
+    """PubMed literature searcher (simulated implementation)"""
     
     def __init__(self, api_key: Optional[str] = None):
         self.api_key = api_key
@@ -39,22 +39,22 @@ class PubMedSearcher:
     
     def search(self, query: str, years: int = 5) -> Dict:
         """
-        搜索PubMed文献
+        Search PubMed literature
         
-        实际实现应该调用NCBI E-utilities API
-        这里使用模拟数据用于演示
+        Actual implementation should call NCBI E-utilities API
+        Here using simulated data for demonstration
         """
-        # 模拟搜索结果
+        # Simulated search results
         current_year = datetime.now().year
         
-        # 基于靶点名称生成模拟数据 (实际实现中应该调用真实API)
+        # Generate simulated data based on target name (actual implementation should call real API)
         np.random.seed(hash(query) % 2**32)
         
         total_papers = np.random.randint(100, 50000)
         recent_papers = int(total_papers * np.random.uniform(0.1, 0.5))
         clinical_trials = np.random.randint(0, min(200, total_papers // 100))
         
-        # 生成年份分布
+        # Generate year distribution
         year_distribution = {
             str(year): np.random.randint(recent_papers // years // 2, recent_papers // years * 2)
             for year in range(current_year - years, current_year + 1)
@@ -72,31 +72,31 @@ class PubMedSearcher:
 
 
 class NoveltyScorer:
-    """靶点新颖度评分器"""
+    """Target novelty scorer"""
     
     def __init__(self):
         self.searcher = PubMedSearcher()
         
-        # 评分权重配置
+        # Scoring weight configuration
         self.weights = {
-            "research_heat": 0.25,      # 研究热度 25%
-            "uniqueness": 0.25,         # 独特性 25%
-            "research_depth": 0.20,     # 研究深度 20%
-            "collaboration": 0.15,      # 合作网络 15%
-            "trend": 0.15               # 时间趋势 15%
+            "research_heat": 0.25,      # Research heat 25%
+            "uniqueness": 0.25,         # Uniqueness 25%
+            "research_depth": 0.20,     # Research depth 20%
+            "collaboration": 0.15,      # Collaboration network 15%
+            "trend": 0.15               # Time trend 15%
         }
     
     def _score_research_heat(self, data: Dict) -> float:
         """
-        评分: 研究热度 (0-25分)
-        基于近年文献数量和引用量
+        Score: Research heat (0-25 points)
+        Based on recent literature count and citations
         """
         total = data.get("total_count", 0)
         recent = data.get("recent_count", 0)
         
-        # 文献数量评分 (0-15分)
+        # Literature quantity score (0-15 points)
         if total < 500:
-            quantity_score = 12 + (total / 500) * 3  # 稀缺: 高分
+            quantity_score = 12 + (total / 500) * 3  # Scarce: high score
         elif total < 5000:
             quantity_score = 8 + (5000 - total) / 4500 * 4
         elif total < 20000:
@@ -104,7 +104,7 @@ class NoveltyScorer:
         else:
             quantity_score = max(0, 4 - (total - 20000) / 50000)
         
-        # 近期活跃度评分 (0-10分)
+        # Recent activity score (0-10 points)
         recent_ratio = recent / total if total > 0 else 0
         recency_score = min(10, recent_ratio * 20)
         
@@ -112,19 +112,19 @@ class NoveltyScorer:
     
     def _score_uniqueness(self, data: Dict, target: str) -> float:
         """
-        评分: 独特性 (0-25分)
-        与已知热门靶点的区分度
+        Score: Uniqueness (0-25 points)
+        Distinctiveness from known hot targets
         """
         total = data.get("total_count", 0)
         
-        # 热门靶点列表 (示例)
+        # Hot target list (examples)
         hot_targets = ["p53", "KRAS", "EGFR", "HER2", "PD-L1", "PD-1", "VEGF"]
         
-        # 如果本身就是热门靶点，独特性较低
+        # If itself is a hot target, uniqueness is lower
         if target.upper() in [t.upper() for t in hot_targets]:
             base_score = 5
         else:
-            # 基于文献数量的独特性
+            # Uniqueness based on literature count
             if total < 1000:
                 base_score = 20 + min(5, (1000 - total) / 200)
             elif total < 5000:
@@ -138,15 +138,15 @@ class NoveltyScorer:
     
     def _score_research_depth(self, data: Dict) -> float:
         """
-        评分: 研究深度 (0-20分)
-        临床前/临床研究的进展程度
+        Score: Research depth (0-20 points)
+        Progress level of preclinical/clinical research
         """
         clinical_trials = data.get("clinical_trials", 0)
         total = data.get("total_count", 0)
         
-        # 临床试验数量评分
+        # Clinical trial count score
         if clinical_trials == 0:
-            clinical_score = 8  # 早期靶点，潜力未知
+            clinical_score = 8  # Early target, unknown potential
         elif clinical_trials < 10:
             clinical_score = 12 + clinical_trials * 0.5
         elif clinical_trials < 50:
@@ -154,7 +154,7 @@ class NoveltyScorer:
         else:
             clinical_score = max(10, 20 - (clinical_trials - 50) * 0.05)
         
-        # 基础研究深度 (基于总文献数)
+        # Basic research depth (based on total literature count)
         if total < 1000:
             basic_score = 2
         elif total < 5000:
@@ -166,12 +166,12 @@ class NoveltyScorer:
     
     def _score_collaboration(self, data: Dict) -> float:
         """
-        评分: 合作网络 (0-15分)
-        研究机构/团队的分布多样性
+        Score: Collaboration network (0-15 points)
+        Diversity of research institutions/teams distribution
         """
         total = data.get("total_count", 0)
         
-        # 基于文献数量的合作多样性估计
+        # Estimated collaboration diversity based on literature count
         if total < 100:
             diversity_score = 5
         elif total < 1000:
@@ -185,20 +185,20 @@ class NoveltyScorer:
     
     def _score_trend(self, data: Dict) -> float:
         """
-        评分: 时间趋势 (0-15分)
-        近年研究增长趋势
+        Score: Time trend (0-15 points)
+        Recent research growth trend
         """
         year_dist = data.get("year_distribution", {})
         
         if not year_dist or len(year_dist) < 2:
-            return 7.5  # 中性评分
+            return 7.5  # Neutral score
         
-        # 计算增长趋势
+        # Calculate growth trend
         years = sorted(year_dist.keys())
         values = [year_dist[y] for y in years]
         
         if len(values) >= 2:
-            # 简单线性趋势
+            # Simple linear trend
             early_avg = np.mean(values[:len(values)//2])
             recent_avg = np.mean(values[len(values)//2:])
             
@@ -207,8 +207,8 @@ class NoveltyScorer:
             else:
                 growth_rate = 0
             
-            # 转换为0-15分
-            if growth_rate > 1.0:  # 增长超过100%
+            # Convert to 0-15 points
+            if growth_rate > 1.0:  # Growth over 100%
                 trend_score = 15
             elif growth_rate > 0.5:
                 trend_score = 12 + (growth_rate - 0.5) * 6
@@ -226,10 +226,10 @@ class NoveltyScorer:
         return min(15, max(0, trend_score))
     
     def calculate_confidence(self, data: Dict) -> float:
-        """计算置信度 (0-1)"""
+        """Calculate confidence (0-1)"""
         total = data.get("total_count", 0)
         
-        # 文献越多，置信度越高
+        # More literature, higher confidence
         if total < 50:
             return 0.4
         elif total < 200:
@@ -242,45 +242,45 @@ class NoveltyScorer:
             return 0.90
     
     def generate_interpretation(self, score: float, data: Dict) -> str:
-        """生成评分解读"""
+        """Generate score interpretation"""
         total = data.get("total_count", 0)
         clinical = data.get("clinical_trials", 0)
         
         if score >= 80:
-            level = "极高新颖度"
-            desc = "该靶点研究较少但具有独特价值，是极具潜力的创新方向。"
+            level = "Extremely High Novelty"
+            desc = "This target has limited research but unique value, representing a highly promising innovative direction."
         elif score >= 65:
-            level = "高新颖度"
-            desc = "该靶点具有一定研究基础但仍有较大探索空间，建议重点关注。"
+            level = "High Novelty"
+            desc = "This target has some research foundation but still has significant exploration space, recommended for focused attention."
         elif score >= 50:
-            level = "中等新颖度"
-            desc = "该靶点研究热度适中，需要进一步评估其差异化优势。"
+            level = "Medium Novelty"
+            desc = "This target has moderate research heat, requiring further evaluation of its differentiation advantages."
         elif score >= 35:
-            level = "较低新颖度"
-            desc = "该靶点已有较多研究，竞争激烈，需要寻找细分领域突破口。"
+            level = "Low Novelty"
+            desc = "This target already has substantial research, with intense competition, requiring breakthroughs in specific niche areas."
         else:
-            level = "低新颖度"
-            desc = "该靶点是成熟研究方向，创新空间有限，需谨慎评估投入产出比。"
+            level = "Very Low Novelty"
+            desc = "This target is a mature research direction with limited innovation space, requiring careful evaluation of input-output ratio."
         
-        details = f"文献总量: {total}, 临床试验: {clinical}项。"
+        details = f"Total literature: {total}, Clinical trials: {clinical}."
         
-        return f"【{level}】{desc} {details}"
+        return f"[{level}] {desc} {details}"
     
     def score(self, target: str, years: int = 5) -> NoveltyScore:
         """
-        计算靶点新颖度评分
+        Calculate target novelty score
         
         Args:
-            target: 靶点名称或基因符号
-            years: 分析年份范围
+            target: Target name or gene symbol
+            years: Analysis year range
             
         Returns:
-            NoveltyScore对象
+            NoveltyScore object
         """
-        # 检索文献数据
+        # Search literature data
         search_result = self.searcher.search(target, years)
         
-        # 计算各维度得分
+        # Calculate scores for each dimension
         breakdown = {
             "research_heat": self._score_research_heat(search_result),
             "uniqueness": self._score_uniqueness(search_result, target),
@@ -289,19 +289,19 @@ class NoveltyScorer:
             "trend": self._score_trend(search_result)
         }
         
-        # 计算总分 (加权平均)
+        # Calculate total score (weighted average)
         total_score = sum(
             breakdown[key] * self.weights[key] 
             for key in breakdown
         )
         
-        # 归一化到0-100
+        # Normalize to 0-100
         novelty_score = round(total_score * 100 / 25, 1)
         
-        # 计算置信度
+        # Calculate confidence
         confidence = self.calculate_confidence(search_result)
         
-        # 构建元数据
+        # Build metadata
         metadata = {
             "total_papers": search_result["total_count"],
             "recent_papers": search_result["recent_count"],
@@ -310,7 +310,7 @@ class NoveltyScorer:
             "years_analyzed": years
         }
         
-        # 生成解读
+        # Generate interpretation
         interpretation = self.generate_interpretation(novelty_score, search_result)
         
         return NoveltyScore(
@@ -324,29 +324,29 @@ class NoveltyScorer:
 
 
 def format_text_output(result: NoveltyScore) -> str:
-    """格式化文本输出"""
+    """Format text output"""
     lines = [
         "=" * 60,
-        f"🎯 靶点新颖度评分报告: {result.target}",
+        f"Target Novelty Score Report: {result.target}",
         "=" * 60,
         "",
-        f"📊 综合评分: {result.novelty_score}/100",
-        f"🔒 置信度: {result.confidence * 100:.0f}%",
+        f"Overall Score: {result.novelty_score}/100",
+        f"Confidence: {result.confidence * 100:.0f}%",
         "",
-        "📈 维度得分:",
-        f"  • 研究热度:   {result.breakdown['research_heat']:.1f}/100",
-        f"  • 独特性:     {result.breakdown['uniqueness']:.1f}/100",
-        f"  • 研究深度:   {result.breakdown['research_depth']:.1f}/100",
-        f"  • 合作网络:   {result.breakdown['collaboration']:.1f}/100",
-        f"  • 时间趋势:   {result.breakdown['trend']:.1f}/100",
+        "Dimension Scores:",
+        f"  - Research Heat:   {result.breakdown['research_heat']:.1f}/100",
+        f"  - Uniqueness:     {result.breakdown['uniqueness']:.1f}/100",
+        f"  - Research Depth:   {result.breakdown['research_depth']:.1f}/100",
+        f"  - Collaboration Network:   {result.breakdown['collaboration']:.1f}/100",
+        f"  - Time Trend:   {result.breakdown['trend']:.1f}/100",
         "",
-        "📋 统计信息:",
-        f"  • 文献总量: {result.metadata['total_papers']:,}",
-        f"  • 近年文献: {result.metadata['recent_papers']:,}",
-        f"  • 临床试验: {result.metadata['clinical_trials']}项",
-        f"  • 分析日期: {result.metadata['analysis_date']}",
+        "Statistics:",
+        f"  - Total Literature: {result.metadata['total_papers']:,}",
+        f"  - Recent Literature: {result.metadata['recent_papers']:,}",
+        f"  - Clinical Trials: {result.metadata['clinical_trials']}",
+        f"  - Analysis Date: {result.metadata['analysis_date']}",
         "",
-        f"💡 解读: {result.interpretation}",
+        f"Interpretation: {result.interpretation}",
         "",
         "=" * 60
     ]
@@ -354,7 +354,7 @@ def format_text_output(result: NoveltyScore) -> str:
 
 
 def format_csv_output(result: NoveltyScore) -> str:
-    """格式化CSV输出"""
+    """Format CSV output"""
     headers = [
         "target", "novelty_score", "confidence",
         "research_heat", "uniqueness", "research_depth",
@@ -381,9 +381,9 @@ def format_csv_output(result: NoveltyScore) -> str:
 
 
 def main():
-    """主函数"""
+    """Main function"""
     parser = argparse.ArgumentParser(
-        description="靶点新颖度评分工具 - 基于文献挖掘",
+        description="Target Novelty Scoring Tool - Based on Literature Mining",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -396,44 +396,44 @@ Examples:
     parser.add_argument(
         "--target", "-t",
         required=True,
-        help="目标靶点名称或基因符号 (如: PD-L1, BRCA1)"
+        help="Target name or gene symbol (e.g.: PD-L1, BRCA1)"
     )
     parser.add_argument(
         "--db", "-d",
         choices=["pubmed", "pmc", "all"],
         default="pubmed",
-        help="数据源 (默认: pubmed)"
+        help="Data source (default: pubmed)"
     )
     parser.add_argument(
         "--years", "-y",
         type=int,
         default=5,
-        help="分析年份范围 (默认: 5)"
+        help="Analysis year range (default: 5)"
     )
     parser.add_argument(
         "--output", "-o",
-        help="输出文件路径 (默认: stdout)"
+        help="Output file path (default: stdout)"
     )
     parser.add_argument(
         "--format", "-f",
         choices=["text", "json", "csv"],
         default="text",
-        help="输出格式 (默认: text)"
+        help="Output format (default: text)"
     )
     parser.add_argument(
         "--verbose", "-v",
         action="store_true",
-        help="详细输出模式"
+        help="Verbose output mode"
     )
     
     args = parser.parse_args()
     
-    # 执行评分
+    # Execute scoring
     try:
         scorer = NoveltyScorer()
         result = scorer.score(args.target, args.years)
         
-        # 格式化输出
+        # Format output
         if args.format == "json":
             output = json.dumps(asdict(result), ensure_ascii=False, indent=2)
         elif args.format == "csv":
@@ -441,22 +441,22 @@ Examples:
         else:
             output = format_text_output(result)
         
-        # 输出结果
+        # Output results
         if args.output:
             with open(args.output, "w", encoding="utf-8") as f:
                 f.write(output)
-            print(f"✅ 报告已保存至: {args.output}")
+            print(f"Report saved to: {args.output}")
         else:
             print(output)
         
-        # 详细模式
+        # Verbose mode
         if args.verbose and args.format == "text":
-            print(f"\n📊 原始数据: {json.dumps(result.metadata, ensure_ascii=False)}")
+            print(f"\nRaw Data: {json.dumps(result.metadata, ensure_ascii=False)}")
         
         return 0
         
     except Exception as e:
-        print(f"❌ 错误: {e}", file=sys.stderr)
+        print(f"Error: {e}", file=sys.stderr)
         return 1
 
 
