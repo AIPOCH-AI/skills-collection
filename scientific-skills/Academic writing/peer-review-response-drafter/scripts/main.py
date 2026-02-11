@@ -454,6 +454,9 @@ def main():
         responses, args.title, args.journal, args.authors
     )
     
+    # Apply tone adjustment
+    letter = drafter.adjust_tone(letter, tone_map[args.tone])
+    
     # Output
     if args.output:
         with open(args.output, 'w') as f:

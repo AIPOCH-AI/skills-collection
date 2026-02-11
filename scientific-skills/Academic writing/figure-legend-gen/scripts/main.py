@@ -261,15 +261,58 @@ def main():
     # Generate legend
     generator = LegendGenerator(chart_type, args.language)
     
-    # Default parameters (can be extended with config files or CLI args)
-    legend = generator.generate(
-        figure_number=args.figure_number,
-        metric="measured values",
-        groups="experimental conditions",
-        sample_description="the tested samples",
-        n=3,
-        test="one-way ANOVA with Tukey's post-hoc test"
-    )
+    # Base parameters for all chart types
+    base_params = {
+        "figure_number": args.figure_number,
+        "metric": "measured values",
+        "groups": "experimental conditions",
+        "sample_description": "the tested samples",
+        "n": 3,
+        "test": "one-way ANOVA with Tukey's post-hoc test"
+    }
+    
+    # Add type-specific default parameters
+    type_specific_params = {
+        ChartType.SCATTER: {
+            "x_var": "independent variable",
+            "y_var": "dependent variable",
+            "r_value": "0.75",
+            "p_value": "<0.001",
+            "sample_unit": "sample"
+        },
+        ChartType.WESTERN: {
+            "protein": "target protein",
+            "loading_control": "β-actin"
+        },
+        ChartType.FLOW: {
+            "marker": "CD marker",
+            "cell_type": "cell population",
+            "percent_positive": "45"
+        },
+        ChartType.HEATMAP: {
+            "dimensions": "samples and features",
+            "value_range": "normalized expression values",
+            "normalization_method": "z-score",
+            "clustering_method": "Ward's method"
+        },
+        ChartType.LINE: {
+            "condition": "experimental condition",
+            "time_range": "24 hours"
+        },
+        ChartType.MICROSCOPY: {
+            "staining": "immunofluorescence",
+            "sample_type": "cell culture",
+            "stains": "DAPI and phalloidin",
+            "scale_bar": "50 μm",
+            "microscope_type": "confocal microscope"
+        }
+    }
+    
+    # Merge parameters
+    if chart_type in type_specific_params:
+        base_params.update(type_specific_params[chart_type])
+    
+    legend = generator.generate(**base_params)
     
     # Output
     if args.output:

@@ -18,13 +18,11 @@ INSTITUTION_KEYWORDS = [
     r'Department', r'Dept\.?', r'Department', r'Center', r'Center', r'Centre'
 ]
 
-# Acknowledgment-related titles
+# Acknowledgment-related titles (supports markdown headers like ## Acknowledgments)
 ACKNOWLEDGMENT_TITLES = [
-    r'(?i)^\s*acknowledgments?\s*$',
-    r'(?i)^\s*Acknowledgments\s*$',
-    r'(?i)^\s*acknowledgements?\s*$',
-    r'(?i)^\s*funding\s*$',
-    r'(?i)^\s*Funding\s*$',
+    r'(?i)^\s*#*\s*acknowledgments?\s*$',
+    r'(?i)^\s*#*\s*acknowledgements?\s*$',
+    r'(?i)^\s*#*\s*funding\s*$',
 ]
 
 # Self-citation detection patterns
@@ -55,16 +53,19 @@ class BlindReviewSanitizer:
         self.keep_acknowledgments = keep_acknowledgments
         self.highlight_self_cites = highlight_self_cites
         self.removed_items = []
+        self._in_acknowledgment = False
         
-    def sanitize_text(self, text: str) -> str:
+    def sanitize_text(self, text: str, *, in_acknowledgment: bool = False) -> str:
         """Anonymize plain text"""
         result = text
+        self._in_acknowledgment = in_acknowledgment
         
         # 1. Remove author names
         result = self._remove_author_names(result)
         
-        # 2. Remove institution information
-        result = self._remove_institutions(result)
+        # 2. Remove institution information (skip if in acknowledgment and keep_acknowledgments is True)
+        if not (self.keep_acknowledgments and self._in_acknowledgment):
+            result = self._remove_institutions(result)
         
         # 3. Remove contact information
         result = self._remove_contact_info(result)
@@ -131,9 +132,23 @@ class BlindReviewSanitizer:
         """Handle self-citations"""
         result = text
         
+        # Track positions that have been modified to avoid nested replacements
+        modified_ranges = []
+        
         for pattern in SELF_CITATION_PATTERNS:
             if self.highlight_self_cites:
-                result = re.sub(pattern, r'[SELF-CITE: \g<0>]', result, flags=re.IGNORECASE)
+                # Find all matches first
+                matches = list(re.finditer(pattern, result, flags=re.IGNORECASE))
+                # Process from end to start to avoid position shifts
+                for match in reversed(matches):
+                    start, end = match.span()
+                    # Check if this range overlaps with any already modified range
+                    if not any(start < m_end and end > m_start for m_start, m_end in modified_ranges):
+                        # Replace this match
+                        replacement = f'[SELF-CITE: {match.group()}]'
+                        result = result[:start] + replacement + result[end:]
+                        # Mark this range as modified
+                        modified_ranges.append((start, start + len(replacement)))
             else:
                 def replace_func(match):
                     self.removed_items.append(f"Self-citation: {match.group()}")
@@ -220,13 +235,32 @@ class TxtProcessor:
         with open(input_path, 'r', encoding='utf-8') as f:
             lines = f.readlines()
         
-        # Remove acknowledgments
-        lines = self.sanitizer.remove_acknowledgments(lines)
-        
-        # Process each line
+        # Track acknowledgment section state
+        in_acknowledgment = False
         result_lines = []
+        
         for line in lines:
-            processed = self.sanitizer.sanitize_text(line)
+            # Check if this is an acknowledgment title
+            if any(re.match(pattern, line.strip()) for pattern in ACKNOWLEDGMENT_TITLES):
+                in_acknowledgment = True
+                if not self.sanitizer.keep_acknowledgments:
+                    self.sanitizer.removed_items.append(f"Acknowledgment section removed")
+                    result_lines.append('[ACKNOWLEDGMENTS REMOVED]\n')
+                    continue
+                # If keeping acknowledgments, process the title line
+                processed = self.sanitizer.sanitize_text(line, in_acknowledgment=in_acknowledgment)
+                result_lines.append(processed)
+                continue
+            
+            # Check if acknowledgment section ends
+            if in_acknowledgment:
+                if re.match(r'^[#\d\s]', line.strip()) or line.strip().isupper():
+                    in_acknowledgment = False
+                elif not self.sanitizer.keep_acknowledgments:
+                    continue
+            
+            # Process line with acknowledgment context
+            processed = self.sanitizer.sanitize_text(line, in_acknowledgment=in_acknowledgment)
             result_lines.append(processed)
         
         with open(output_path, 'w', encoding='utf-8') as f:

@@ -76,8 +76,13 @@ def detect_format(citation: str) -> str:
     if re.match(r'^\d+\.\s', citation) or re.search(r'\d{4};\d+\(\d+\):\d', citation):
         return 'vancouver'
     
-    # MLA - typically has "Print" or database name at end
-    if 'Print.' in citation or re.search(r'\w+\s+\d+,\s+\d{4}\.\s+\w+\.', citation):
+    # MLA - has quotes around title, or vol./no. with year and pp.
+    if '"' in citation:
+        return 'mla'
+    # Also detect MLA without quotes (vol. X, no. Y, Year, pp. Z pattern)
+    if re.search(r'vol\.?\s*\d+', citation, re.IGNORECASE) and \
+       re.search(r'no\.?\s*\d+', citation, re.IGNORECASE) and \
+       re.search(r'pp?\.?\s*\d', citation, re.IGNORECASE):
         return 'mla'
     
     # APA - year in parentheses
@@ -153,44 +158,87 @@ def parse_apa(citation: str) -> Dict[str, Any]:
 
 
 def parse_mla(citation: str) -> Dict[str, Any]:
-    """Parse MLA format citation."""
+    """Parse MLA format citation.
+    
+    MLA 9th Edition format:
+    Author. "Title of Source." Title of Container, vol. #, no. #, Year, pp. ##-##.
+    Or without quotes: Author. Title. Journal, vol. #, no. #, Year, pp. ##-##.
+    """
     result = {'type': 'journal', 'authors': [], 'title': '', 'journal': '', 
               'year': '', 'volume': '', 'issue': '', 'pages': '', 'doi': ''}
     
-    # MLA: Author. "Title." Journal, vol. X, no. Y, Year, pp. Z.
+    # Step 1: Try to extract title in quotes
+    title_match = re.search(r'"([^"]+)"', citation)
     
-    # Authors (before quoted title)
-    quote_match = citation.find('"')
-    if quote_match > 0:
-        authors_str = citation[:quote_match].strip().rstrip('.')
-        for author in authors_str.split(' and '):
+    if title_match:
+        # Standard MLA with quotes
+        result['title'] = title_match.group(1).rstrip('.')
+        # Authors are everything before the opening quote
+        author_section = citation[:title_match.start()].strip()
+        after_title = citation[title_match.end():].strip()
+    else:
+        # MLA without quotes - need to identify title differently
+        # Look for pattern: Author. Title. Journal, vol.
+        # Title is between first period and journal/vol pattern
+        mla_pattern = r'^([^.]+)\.\s*([^.]+)\.\s*(.+?)(?=,\s*vol\.)'
+        mla_match = re.search(mla_pattern, citation, re.IGNORECASE)
+        if mla_match:
+            author_section = mla_match.group(1).strip()
+            result['title'] = mla_match.group(2).strip()
+            # Journal name is captured in group 3
+            result['journal'] = mla_match.group(3).strip()
+            after_title = citation[mla_match.end():].strip()
+        else:
+            # Fallback: assume first sentence is author, second is title
+            parts = citation.split('.')
+            if len(parts) >= 2:
+                author_section = parts[0].strip()
+                result['title'] = parts[1].strip()
+                after_title = '.'.join(parts[2:]).strip()
+            else:
+                author_section = citation
+                after_title = ''
+    
+    # Parse authors
+    if author_section:
+        author_section = author_section.rstrip('.')
+        for author in author_section.split(' and '):
             if author.strip():
                 result['authors'].append(parse_name(author.strip()))
     
-    # Title (in quotes)
-    title_match = re.search(r'"([^"]+)"', citation)
-    if title_match:
-        result['title'] = title_match.group(1).rstrip('.')
-    
-    # Year, volume, issue, pages
-    year_match = re.search(r'(\d{4})[.,]?\s*(?:pp?\.?\s*)?([\d\-–]+)', citation)
-    if year_match:
-        result['year'] = year_match.group(1)
-        result['pages'] = year_match.group(2)
-    
-    # Volume/issue
-    vol_match = re.search(r'vol\.?\s*(\d+)', citation, re.IGNORECASE)
-    if vol_match:
-        result['volume'] = vol_match.group(1)
-    
-    issue_match = re.search(r'no\.?\s*(\d+)', citation, re.IGNORECASE)
-    if issue_match:
-        result['issue'] = issue_match.group(1)
-    
-    # Journal name (after title quotes, before vol/year)
-    journal_match = re.search(r'"[^"]+"\.?\s*([^,\d]+)', citation)
-    if journal_match:
-        result['journal'] = journal_match.group(1).strip().rstrip('.')
+    # Step 2: Parse container info (everything after title)
+    if after_title:
+        # Remove leading period/comma if present
+        after_title = after_title.lstrip('., ')
+        
+        # Extract year (4 digits)
+        year_match = re.search(r'\b(\d{4})\b', after_title)
+        if year_match:
+            result['year'] = year_match.group(1)
+        
+        # Extract pages (pp. XX-XX or just numbers)
+        pages_match = re.search(r'pp?\.?\s*([\d\-–]+)', after_title, re.IGNORECASE)
+        if pages_match:
+            result['pages'] = pages_match.group(1)
+        
+        # Extract volume (vol. X)
+        vol_match = re.search(r'vol\.?\s*(\d+)', after_title, re.IGNORECASE)
+        if vol_match:
+            result['volume'] = vol_match.group(1)
+        
+        # Extract issue (no. X)
+        issue_match = re.search(r'no\.?\s*(\d+)', after_title, re.IGNORECASE)
+        if issue_match:
+            result['issue'] = issue_match.group(1)
+        
+        # Extract journal name (only if not already set for MLA without quotes)
+        if title_match:
+            # With quotes: journal is right after quote
+            journal_pattern = r'^([^,]+?)(?=,\s*(?:vol\.|no\.|\d{4}|$))'
+            journal_match = re.search(journal_pattern, after_title, re.IGNORECASE)
+            if journal_match:
+                result['journal'] = journal_match.group(1).strip().rstrip('.')
+        # If no title_match (MLA without quotes), journal was already set from mla_match.group(3)
     
     return result
 
