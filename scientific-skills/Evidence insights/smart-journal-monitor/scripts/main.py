@@ -83,8 +83,26 @@ def main():
             print()
         
         print(f"{'='*60}\n")
+    elif args.articles:
+        # Load articles from JSON file
+        with open(args.articles, 'r') as f:
+            articles = json.load(f)
+        
+        breakthroughs = monitor.identify_breakthroughs(articles, args.threshold)
+        
+        print(f"\n{'='*60}")
+        print("BREAKTHROUGH ARTICLES DETECTED")
+        print(f"{'='*60}\n")
+        
+        for article in breakthroughs:
+            print(f"Score: {article['breakthrough_score']}")
+            print(f"Title: {article['title']}")
+            print(f"Journal: {article['journal']}")
+            print()
+        
+        print(f"{'='*60}\n")
     else:
-        print("Use --demo to see example output")
+        print("Use --demo to see example output or provide --articles file")
 
 
 if __name__ == "__main__":
