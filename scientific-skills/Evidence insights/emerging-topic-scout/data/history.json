@@ -1,0 +1,106 @@
+[
+  {
+    "date": "2026-02-12T09:10:55.863423",
+    "topics": [
+      {
+        "topic": "Datasets Systematically Underrepresent",
+        "keywords": [
+          "datasets systematically underrepresent"
+        ],
+        "trending_score": 0.628,
+        "velocity": "moderate",
+        "preprint_count": 1,
+        "cross_platform_mentions": 3,
+        "related_papers": [
+          {
+            "title": "Reply To: Global Gridded Population Datasets Systematically Underrepresent Rural Population by Josias L\\'ang-Ritter et al",
+            "authors": [
+              "Till Koebe",
+              "Emmanuel Letouz\\'e",
+              "Tuba Bircan",
+              "\\'Edith Darin",
+              "Douglas R. Leasure",
+              "Valentina Rotondi"
+            ],
+            "doi": "unknown--4626750808156190276",
+            "source": "arxiv",
+            "published": "2026-02-11",
+            "abstract": "arXiv:2602.09248v1 Announce Type: new \nAbstract: The paper titled ''Global gridded population datasets systematically underrepresent rural population'' by Josias L\\'ang-Ritter et al. provides a valuable contribution to the discourse on the accuracy of global population datasets, particularly in rural areas. We recognize the efforts put into this research and appreciate its contribution to the field. However, we feel that key claims in the study are overly bold, not properly backed by evidence...",
+            "url": "https://arxiv.org/abs/2602.09248",
+            "categories": [
+              "q-bio.PE",
+              "cs.CY"
+            ]
+          }
+        ],
+        "emerging_since": "2026-02-12"
+      },
+      {
+        "topic": "Systematically Underrepresent Rural",
+        "keywords": [
+          "systematically underrepresent rural"
+        ],
+        "trending_score": 0.628,
+        "velocity": "moderate",
+        "preprint_count": 1,
+        "cross_platform_mentions": 3,
+        "related_papers": [
+          {
+            "title": "Reply To: Global Gridded Population Datasets Systematically Underrepresent Rural Population by Josias L\\'ang-Ritter et al",
+            "authors": [
+              "Till Koebe",
+              "Emmanuel Letouz\\'e",
+              "Tuba Bircan",
+              "\\'Edith Darin",
+              "Douglas R. Leasure",
+              "Valentina Rotondi"
+            ],
+            "doi": "unknown--4626750808156190276",
+            "source": "arxiv",
+            "published": "2026-02-11",
+            "abstract": "arXiv:2602.09248v1 Announce Type: new \nAbstract: The paper titled ''Global gridded population datasets systematically underrepresent rural population'' by Josias L\\'ang-Ritter et al. provides a valuable contribution to the discourse on the accuracy of global population datasets, particularly in rural areas. We recognize the efforts put into this research and appreciate its contribution to the field. However, we feel that key claims in the study are overly bold, not properly backed by evidence...",
+            "url": "https://arxiv.org/abs/2602.09248",
+            "categories": [
+              "q-bio.PE",
+              "cs.CY"
+            ]
+          }
+        ],
+        "emerging_since": "2026-02-12"
+      },
+      {
+        "topic": "Population Datasets Systematically",
+        "keywords": [
+          "population datasets systematically"
+        ],
+        "trending_score": 0.628,
+        "velocity": "moderate",
+        "preprint_count": 1,
+        "cross_platform_mentions": 3,
+        "related_papers": [
+          {
+            "title": "Reply To: Global Gridded Population Datasets Systematically Underrepresent Rural Population by Josias L\\'ang-Ritter et al",
+            "authors": [
+              "Till Koebe",
+              "Emmanuel Letouz\\'e",
+              "Tuba Bircan",
+              "\\'Edith Darin",
+              "Douglas R. Leasure",
+              "Valentina Rotondi"
+            ],
+            "doi": "unknown--4626750808156190276",
+            "source": "arxiv",
+            "published": "2026-02-11",
+            "abstract": "arXiv:2602.09248v1 Announce Type: new \nAbstract: The paper titled ''Global gridded population datasets systematically underrepresent rural population'' by Josias L\\'ang-Ritter et al. provides a valuable contribution to the discourse on the accuracy of global population datasets, particularly in rural areas. We recognize the efforts put into this research and appreciate its contribution to the field. However, we feel that key claims in the study are overly bold, not properly backed by evidence...",
+            "url": "https://arxiv.org/abs/2602.09248",
+            "categories": [
+              "q-bio.PE",
+              "cs.CY"
+            ]
+          }
+        ],
+        "emerging_since": "2026-02-12"
+      }
+    ]
+  }
+]

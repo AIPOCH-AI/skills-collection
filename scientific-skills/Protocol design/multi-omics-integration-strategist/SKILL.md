@@ -132,16 +132,20 @@ Supported databases:
 - Needs verification: Lipid metabolism pathway data quality
 ```
 
-### 2. Visualization Suggestions
+### 2. External Visualization Tools (Not Included)
 
-| Chart Type | Purpose | Recommended Tool |
+This tool generates analysis results that can be visualized using external tools. Users may export results to:
+
+| Chart Type | Purpose | External Tool Required |
 |---------|------|---------|
-|  Circos Plot | Cross-omics relationship panorama | matplotlib/circlize |
-|  Pathway Heatmap | Pathway-level changes | seaborn/complexheatmap |
-|  Sankey Diagram | Data flow mapping | plotly |
-|  Network Graph | Molecular interaction network | networkx/cytoscape |
-|  Correlation Matrix | Cross-omics correlation | seaborn |
-|  Bubble Plot | Integrated enrichment analysis | ggplot2/plotly |
+|  Circos Plot | Cross-omics relationship panorama | matplotlib/circlize (user-installed) |
+|  Pathway Heatmap | Pathway-level changes | seaborn/complexheatmap (user-installed) |
+|  Sankey Diagram | Data flow mapping | plotly (user-installed) |
+|  Network Graph | Molecular interaction network | networkx/cytoscape (networkx is included) |
+|  Correlation Matrix | Cross-omics correlation | seaborn (user-installed) |
+|  Bubble Plot | Integrated enrichment analysis | ggplot2/plotly (user-installed) |
+
+**Note:** This skill focuses on data integration and analysis. Visualization requires separate installation of plotting libraries by the user.
 
 ### 3. Output Files
 
@@ -276,3 +280,15 @@ pip install -r requirements.txt
 - **Planned Improvements**: 
   - Performance optimization
   - Additional feature support
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--rna` | str | Required |  |
+| `--pro` | str | Required |  |
+| `--met` | str | Required |  |
+| `--output` | str | './results' |  |
+| `--databases` | str | 'KEGG' |  |
+| `--create-sample` | str | Required | Create sample data for testing |
+| `--format` | str | 'md |  |

@@ -24,9 +24,12 @@ Professional limitation statement generator.
 - Peer review responses
 
 ## Parameters
-- `limitations`: List of design constraints
-- `severity`: Impact level (minor/major)
-- `mitigation`: Steps taken to address
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limitations` | list[str] | Yes | - | List of study design constraints |
+| `severity` | str | No | "minor" | Impact level: "minor" or "major" |
+| `mitigation` | list[str] | No | - | Steps taken to address each limitation |
 
 ## Returns
 - Professionally worded limitation paragraphs

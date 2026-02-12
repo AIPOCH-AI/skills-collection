@@ -24,9 +24,12 @@ last_updated: '2026-02-06'
 - Point-by-point rebuttals
 
 ## Parameters
-- `criticism`: Reviewer comment text
-- `response_type`: Accept/Partial/Reject
-- `evidence`: Supporting data
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `criticism` | str | Yes | - | Reviewer comment text to respond to |
+| `response_type` | str | No | "Partial" | Response type: "Accept", "Partial", or "Reject" |
+| `evidence` | str | No | - | Supporting data for the response |
 
 ## Returns
 - Professionally toned response

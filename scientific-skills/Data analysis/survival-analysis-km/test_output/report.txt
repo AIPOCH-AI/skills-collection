@@ -1,0 +1,57 @@
+============================================================
+SURVIVAL ANALYSIS REPORT
+Kaplan-Meier Method with Cox Proportional Hazards
+============================================================
+
+DATASET SUMMARY
+----------------------------------------
+Total observations: 10
+Total events: 5
+Total censored: 5
+Censoring rate: 50.0%
+
+Grouping variable: group
+  Control: n=5, events=3
+  Treatment: n=5, events=2
+
+SURVIVAL STATISTICS
+----------------------------------------
+
+Group: Control
+  Sample size: 5
+  Events: 3
+  Censored: 2
+  Median survival: 30.00
+
+Group: Treatment
+  Sample size: 5
+  Events: 2
+  Censored: 3
+  Median survival: inf
+
+LOG-RANK TEST RESULTS
+----------------------------------------
+Test statistic: 0.3474
+P-value: 0.555566
+Significant at α=0.05: No
+
+COX PROPORTIONAL HAZARDS MODEL
+----------------------------------------
+Concordance index: 0.5556
+Log-likelihood: -8.42
+AIC: 18.84
+
+Hazard Ratios (reference: first group):
+
+  group_Treatment:
+    HR: 0.586 (95% CI: 0.097-3.531)
+    P-value: 0.5601
+
+INTERPRETATION NOTES
+----------------------------------------
+* Hazard Ratio < 1: Reduced risk compared to reference
+* Hazard Ratio > 1: Increased risk compared to reference
+* HR = 0.5 means half the risk of reference group
+* Log-rank p < 0.05 indicates significantly different survival curves
+
+============================================================

@@ -1,0 +1,13 @@
+Variable,Type,P-value,category,group_Drug,group_Placebo
+  38,Categorical,Chi-square p=0.287,38,0 (0.0%),1 (50.0%)
+  41,Categorical,,41,0 (0.0%),1 (50.0%)
+  45,Categorical,,45,1 (33.3%),0 (0.0%)
+  52,Categorical,,52,1 (33.3%),0 (0.0%)
+  55,Categorical,,55,1 (33.3%),0 (0.0%)
+  F,Categorical,Chi-square p=1.000,F,1 (33.3%),1 (50.0%)
+  M,Categorical,,M,2 (66.7%),1 (50.0%)
+  24.1,Categorical,Chi-square p=0.287,24.1,0 (0.0%),1 (50.0%)
+  27.3,Categorical,,27.3,0 (0.0%),1 (50.0%)
+  28.5,Categorical,,28.5,1 (33.3%),0 (0.0%)
+  29.8,Categorical,,29.8,1 (33.3%),0 (0.0%)
+  31.2,Categorical,,31.2,1 (33.3%),0 (0.0%)

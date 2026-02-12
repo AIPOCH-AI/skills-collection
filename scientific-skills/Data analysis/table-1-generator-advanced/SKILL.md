@@ -26,10 +26,12 @@ python scripts/main.py --data patients.csv --group treatment --output table1.csv
 
 ## Parameters
 
-- `--data`: Patient data CSV file
-- `--group`: Grouping variable (e.g., treatment/control)
-- `--vars`: Variables to include
-- `--output`: Output file
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `--data` | str | Yes | - | Patient data CSV file path |
+| `--group` | str | No | - | Grouping variable (e.g., treatment/control) |
+| `--vars` | list[str] | No | - | Variables to include in the table |
+| `--output` | str | Yes | - | Output file path for Table 1 |
 
 ## Features
 

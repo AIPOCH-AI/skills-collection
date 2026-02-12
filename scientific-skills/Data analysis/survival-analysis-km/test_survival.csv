@@ -1,0 +1,11 @@
+time,event,group
+10,1,Control
+15,0,Control
+20,1,Control
+25,0,Control
+30,1,Control
+12,1,Treatment
+18,0,Treatment
+24,1,Treatment
+28,0,Treatment
+35,0,Treatment

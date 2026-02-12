@@ -1,0 +1,8 @@
+gene,log2FoldChange,padj
+TP53,2.5,0.001
+BRCA1,-1.8,0.01
+EGFR,0.5,0.1
+MYC,3.2,0.0001
+KRAS,-2.1,0.005
+PTEN,1.2,0.05
+BCL2,0.3,0.3

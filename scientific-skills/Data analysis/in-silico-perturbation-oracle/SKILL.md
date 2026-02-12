@@ -22,6 +22,8 @@ last_updated: '2026-02-06'
 **Status**: ✅ Production Ready  
 **Version**: 1.0.0
 
+**⚠️ Note: This tool provides a framework for in silico perturbation analysis. Actual predictions require integration with biological foundation models (Geneformer, scGPT, etc.) and wet lab validation data.**
+
 ---
 
 ## Overview

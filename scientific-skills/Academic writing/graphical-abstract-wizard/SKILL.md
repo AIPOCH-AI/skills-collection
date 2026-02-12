@@ -5,7 +5,6 @@ version: 1.0.0
 category: Visual
 tags:
 - academic
-- visualization
 - ai-art
 - research
 author: AIPOCH

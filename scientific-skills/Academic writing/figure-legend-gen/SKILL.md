@@ -2,8 +2,8 @@
 name: figure-legend-gen
 description: Generate standardized figure legends for scientific charts and graphs.
   Trigger when user uploads/requesting legend for research figures, academic papers,
-  or data visualizations. Supports bar charts, line graphs, scatter plots, box plots,
-  heatmaps, and microscopy images.
+  or data charts. Supports bar charts, line graphs, scatter plots, box plots,
+  heatmaps, and microscopy images. This tool generates text legends only, not visualizations.
 version: 1.0.0
 category: Research
 tags: []
@@ -29,7 +29,7 @@ Generate publication-quality figure legends for scientific research charts and i
 | Line Graph | Show trends over time or continuous data |
 | Scatter Plot | Display relationships between variables |
 | Box Plot | Show distribution and outliers |
-| Heatmap | Visualize matrix data intensity |
+| Heatmap | Display matrix data intensity |
 | Microscopy | Fluorescence/confocal images |
 | Flow Cytometry | FACS plots and histograms |
 | Western Blot | Protein expression bands |

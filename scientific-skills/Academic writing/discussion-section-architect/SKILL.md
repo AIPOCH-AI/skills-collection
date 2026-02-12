@@ -24,10 +24,13 @@ Structured framework for writing Discussion sections.
 - Organizing complex findings
 
 ## Parameters
-- `findings`: Key results to discuss
-- `literature_context`: Relevant prior work
-- `limitations`: Study limitations
-- `implications`: Clinical/research implications
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `findings` | list[str] | Yes | - | Key results to discuss |
+| `literature_context` | str | No | - | Relevant prior work summary |
+| `limitations` | list[str] | No | - | Study limitations to address |
+| `implications` | list[str] | No | - | Clinical or research implications |
 
 ## Returns
 - Structured discussion outline

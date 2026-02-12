@@ -9,13 +9,14 @@ metadata:
 
 # Citation Chasing & Mapping
 
-Explore and visualize citation networks to discover related research, identify foundational papers, and trace the evolution of scientific fields. Supports both backward citation chasing (finding cited works/ancestors) and forward citation chasing (finding citing works/descendants) for comprehensive literature reviews.
+Explore and map citation networks to discover related research, identify foundational papers, and trace the evolution of scientific fields. Supports both backward citation chasing (finding cited works/ancestors) and forward citation chasing (finding citing works/descendants) for comprehensive literature reviews.
+
+**Note:** This tool exports citation network data in JSON format for use with external visualization tools (e.g., Cytoscape, Gephi). It does not generate visualizations directly.
 
 **Key Capabilities:**
 - **Bidirectional Citation Tracing**: Find both papers cited by a work and papers that cite it
 - **Multi-Hop Network Analysis**: Explore citation networks up to 3 degrees of separation
 - **Foundational Paper Identification**: Discover highly-cited works that shaped the field
-- **Network Visualization Export**: Generate JSON network data for visualization tools
 - **Field Evolution Mapping**: Track how research topics developed over time
 
 ---
@@ -318,9 +319,9 @@ for depth in [1, 2, 3]:
 - Symptom: Distant papers lose connection to original topic
 - Solution: Apply topic filters; manually curate distant papers
 
-### 5. Network Visualization Export
+### 5. Network Data Export
 
-Export citation networks in JSON format for visualization in tools like Cytoscape, Gephi, or D3.js.
+Export citation network data for external analysis and visualization tools.
 
 ```python
 from scripts.main import CitationNetwork
@@ -335,7 +336,6 @@ network.add_paper("Paper_C", "Related Theory", 2009, ["Paper_D"])
 network.add_paper("Paper_D", "Foundational Work", 2005, [])
 network.add_paper("Paper_E", "Follow-up Study", 2012, ["Paper_A"])
 
-# Export to JSON for visualization
 output_file = "citation_network.json"
 network.export_network(output_file)
 
@@ -353,14 +353,14 @@ print(json.dumps(data['nodes'][0], indent=2))
 print("\nEdge example:")
 print(json.dumps(data['edges'][0], indent=2))
 
-# Visualization instructions
+# External visualization tools
 print("\n" + "="*60)
-print("VISUALIZATION OPTIONS:")
+print("RECOMMENDED EXTERNAL TOOLS FOR VISUALIZATION:")
 print("="*60)
 print("1. Cytoscape: Import JSON, use 'yFiles Circular Layout'")
 print("2. Gephi: Import JSON, use 'Force Atlas 2' layout")
 print("3. D3.js: Use force-directed graph example")
-print("4. Python: networkx + matplotlib")
+print("4. Python: networkx + matplotlib (separate installation required)")
 ```
 
 **Network Format Specification:**
@@ -384,30 +384,7 @@ print("4. Python: networkx + matplotlib")
 }
 ```
 
-**Visualization Tools:**
-
-| Tool | Best For | Complexity |
-|------|----------|------------|
-| **Cytoscape** | Large networks, analysis | Medium |
-| **Gephi** | Visual exploration, layouts | Medium |
-| **D3.js** | Web visualization, interactivity | High |
-| **NetworkX** | Python analysis, scripting | Low |
-
-**Best Practices:**
-- ✅ **Size nodes by citation count** - importance visualization
-- ✅ **Color by year** - temporal evolution
-- ✅ **Use force-directed layout** - natural clustering
-- ✅ **Add tooltips** - paper details on hover
-
-**Common Issues and Solutions:**
-
-**Issue: Network too large to visualize**
-- Symptom: >100 nodes becomes cluttered
-- Solution: Filter by importance; use hierarchical layouts; create sub-networks
-
-**Issue: Layout doesn't show structure**
-- Symptom: Nodes randomly scattered
-- Solution: Try different algorithms (force-directed, hierarchical, circular)
+**Note:** This tool exports network data in standard JSON format for use with external visualization tools. It does not generate visualizations directly.
 
 ### 6. Field Evolution Mapping
 
@@ -633,7 +610,6 @@ results = conduct_comprehensive_review(
 
 ```
 literature_review/
-├── citation_network.json      # Network data for visualization
 ├── foundational_papers.txt    # List of key historical papers
 ├── recent_papers.txt          # List of recent developments
 └── review_summary.json        # Analysis statistics
@@ -848,7 +824,6 @@ Bridge papers (cited by both fields):
 - [ ] Verify no key papers overlooked
 - [ ] Organize by themes or chronological development
 - [ ] Create prioritized reading list
-- [ ] Export network for visualization
 
 **Validation:**
 - [ ] **CRITICAL**: Cross-check with domain expert or existing reviews
@@ -1002,10 +977,7 @@ Located in `scripts/` directory:
 
 - `main.py` - Citation network analysis and mapping engine
 
----
-
-## Citation Network Visualization
-
+--
 **Node Attributes:**
 - **Size**: Proportional to citation count
 - **Color**: Publication year (blue=old, red=recent)
@@ -1020,10 +992,24 @@ Located in `scripts/` directory:
 - **Cytoscape**: Large networks, advanced analysis
 - **Gephi**: Visual exploration, force layouts
 - **VOSviewer**: Bibliometric maps, clustering
-- **D3.js**: Web-based interactive visualizations
 
 ---
 
 **Last Updated**: 2026-02-09  
 **Skill ID**: 187  
 **Version**: 2.0 (K-Dense Standard)
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--doi` | str | Required | Paper DOI to query |
+| `--title` | str | Required | Paper title to search |
+| `--pmid` | str | Required | PubMed ID to query |
+| `--network-file` | str | Required |  |
+| `--demo` | str | Required | Run demo with example data |
+| `--depth` | int | 2 |  |
+| `--max-per-level` | int | 20 |  |
+| `--delay` | float | 0.5 |  |
+| `--output` | str | "citation_network.json" |  |
+| `--format` | str | "json" |  |

@@ -114,6 +114,18 @@ Provide complete, copy-paste ready PubMed search string with:
 (risk[MeSH Terms] OR (risk factors[MeSH Terms]) OR (risk[Title/Abstract] AND factor*[Title/Abstract]))
 ```
 
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--population` | str | Required | Population/Problem |
+| `--intervention` | str | Required | Intervention |
+| `--comparison` | str | Required | Comparison |
+| `--outcome` | str | Required | Outcome |
+| `--study-type` | str | Required | Clinical query category |
+| `--format` | str | 'lines' | Output format |
+
 ## Example: Complete Search Strategy
 
 **Research Question**: Does aspirin reduce stroke risk in diabetic patients?

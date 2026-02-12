@@ -1,0 +1,22 @@
+{
+  "domain": "DM",
+  "timestamp": "2026-02-11T17:45:15.545555",
+  "parameters": {
+    "missing_strategy": "median",
+    "outlier_method": "iqr",
+    "outlier_action": "flag"
+  },
+  "actions": [
+    {
+      "action": "impute_median",
+      "column": "AGE",
+      "value": 45.0,
+      "timestamp": "2026-02-11T17:45:15.541852"
+    },
+    {
+      "action": "standardize_date",
+      "column": "RFSTDTC",
+      "timestamp": "2026-02-11T17:45:15.544804"
+    }
+  ]
+}

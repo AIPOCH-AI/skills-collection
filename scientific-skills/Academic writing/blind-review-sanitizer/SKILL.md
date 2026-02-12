@@ -18,6 +18,16 @@ Automatically anonymize academic manuscripts for double-blind peer review by rem
 - **Multi-Format Document Support**: Process DOCX, Markdown, and plain text files with format-aware sanitization strategies
 - **Audit Trail Generation**: Create detailed logs of all redactions made for verification and transparency
 
+## Parameters
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `--input` | str | Yes | - | Path to input manuscript file (DOCX, MD, or TXT) |
+| `--output` | str | Yes | - | Path for sanitized output file |
+| `--authors` | list[str] | No | - | List of author names to redact |
+| `--keep-acknowledgments` | bool | No | false | Whether to preserve acknowledgment sections |
+| `--highlight-self-cites` | bool | No | false | Only highlight self-citations without replacement |
+
 ---
 
 ## When to Use

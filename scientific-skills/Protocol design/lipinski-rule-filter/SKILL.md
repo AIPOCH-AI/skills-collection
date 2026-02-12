@@ -27,10 +27,12 @@ python scripts/main.py --smiles "CC(=O)Oc1ccccc1C(=O)O" --check
 
 ## Parameters
 
-- `--input`: Input SMILES/SDF file
-- `--smiles`: Single SMILES string to check
-- `--output`: Output file for passing compounds
-- `--violations`: Max allowed violations (default: 1)
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `--input` | str | No | - | Input SMILES/SDF file path |
+| `--smiles` | str | No | - | Single SMILES string to check |
+| `--output` | str | No | - | Output file path for passing compounds |
+| `--violations` | int | No | 1 | Maximum allowed Lipinski rule violations |
 
 ## Lipinski's Rules
 

@@ -25,9 +25,12 @@ Legal full-text discovery tool.
 - Developing country researchers
 
 ## Parameters
-- `doi`: Paper identifier
-- `title`: Article title
-- `authors`: Author list
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `doi` | str | No | - | Paper DOI identifier |
+| `title` | str | No | - | Article title for search |
+| `authors` | list[str] | No | - | Author list for verification |
 
 ## Returns
 - Unpaywall links

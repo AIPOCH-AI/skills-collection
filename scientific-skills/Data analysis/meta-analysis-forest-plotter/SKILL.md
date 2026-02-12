@@ -24,9 +24,12 @@ Create publication-quality forest plots for meta-analyses.
 - Evidence synthesis reporting
 
 ## Parameters
-- `studies`: Study data with OR/RR and CI
-- `effect_measure`: OR, RR, or MD
-- `subgroup`: Subgroup analysis variable (optional)
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `studies` | str | Yes | - | Path to study data file with OR/RR and CI |
+| `effect_measure` | str | No | "OR" | Effect measure: "OR", "RR", or "MD" |
+| `subgroup` | str | No | - | Subgroup analysis variable (optional) |
 
 ## Returns
 - Forest plot code (R meta package)

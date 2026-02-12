@@ -1,0 +1,44 @@
+============================================================
+GO/KEGG ENRICHMENT ANALYSIS REPORT
+============================================================
+
+Analysis Date: 2026-02-11 17:44:35
+Analysis Method: Local gseapy
+Organism: Homo sapiens
+Gene ID Type: symbol
+Analysis Type: kegg
+P-value Cutoff: 0.05
+Q-value Cutoff: 0.2
+
+------------------------------------------------------------
+ENRICHMENT RESULTS SUMMARY
+------------------------------------------------------------
+
+KEGG: No significant results
+
+------------------------------------------------------------
+OUTPUT FILES
+------------------------------------------------------------
+
+  visualization/
+  go_enrichment/
+  kegg_enrichment/
+
+------------------------------------------------------------
+INTERPRETATION GUIDE
+------------------------------------------------------------
+
+1. GO Enrichment Results:
+   - BP: Biological Process - what biological processes are affected
+   - MF: Molecular Function - what molecular functions are involved
+   - CC: Cellular Component - where in the cell the genes act
+
+2. KEGG Pathway Results:
+   - Shows affected metabolic and signaling pathways
+
+3. Key Statistics:
+   - GeneRatio: Proportion of input genes in the term
+   - P-value: Statistical significance
+   - Adjusted P-value: Benjamini-Hochberg corrected p-value
+
+============================================================

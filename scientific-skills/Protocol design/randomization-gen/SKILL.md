@@ -25,9 +25,13 @@ RCT randomization table generator.
 - Stratified allocation
 
 ## Parameters
-- `n_subjects`: Total sample size
-- `n_groups`: Number of arms
-- `block_size`: Block size (multiple of n_groups)
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `n_subjects` | int | Yes | Total sample size |
+| `n_groups` | int | Yes | Number of arms/groups |
+| `block_size` | int | Yes | Block size (must be multiple of n_groups) |
+| `--output` | string | No | Output file path (default: randomization.txt) |
 
 ## Returns
 - Randomization sequence

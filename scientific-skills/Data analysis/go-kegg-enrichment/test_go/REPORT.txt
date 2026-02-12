@@ -1,0 +1,48 @@
+============================================================
+GO/KEGG ENRICHMENT ANALYSIS REPORT
+============================================================
+
+Analysis Date: 2026-02-12 09:49:05
+Analysis Method: Enrichr API
+Organism: Homo sapiens
+Gene ID Type: symbol
+Analysis Type: go
+P-value Cutoff: 0.05
+Q-value Cutoff: 0.2
+
+------------------------------------------------------------
+ENRICHMENT RESULTS SUMMARY
+------------------------------------------------------------
+
+GO_BP:
+  - Significant terms: 643
+  - Top terms: positive regulation of gene expression (GO:0010628), positive regulation of nucleic acid-templated transcription (GO:1903508), response to UV (GO:0009411), regulation of cell population proliferation (GO:0042127), positive regulation of macromolecule metabolic process (GO:0010604)
+
+------------------------------------------------------------
+OUTPUT FILES
+------------------------------------------------------------
+
+  visualization/
+  go_enrichment/
+    BP_barplot.png
+    GO_BP_results.csv
+  kegg_enrichment/
+
+------------------------------------------------------------
+INTERPRETATION GUIDE
+------------------------------------------------------------
+
+1. GO Enrichment Results:
+   - BP: Biological Process - what biological processes are affected
+   - MF: Molecular Function - what molecular functions are involved
+   - CC: Cellular Component - where in the cell the genes act
+
+2. KEGG Pathway Results:
+   - Shows affected metabolic and signaling pathways
+
+3. Key Statistics:
+   - GeneRatio: Proportion of input genes in the term
+   - P-value: Statistical significance
+   - Adjusted P-value: Benjamini-Hochberg corrected p-value
+
+============================================================

@@ -68,7 +68,24 @@ python scripts/main.py --input A.png B.png C.png D.png E.png F.png --output figu
 | `--bg-color` | No | `white` | Background color (white/black/hex) |
 | `--label-color` | No | `black` | Label text color (black/white/hex) |
 
-### Examples
+#
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--input` | str | Required |  |
+| `--output` | str | Required | Output file path |
+| `--layout` | str | "2x3" |  |
+| `--dpi` | int | 300 |  |
+| `--label-font` | str | "Arial" |  |
+| `--label-size` | int | 24 |  |
+| `--label-position` | str | "topleft" |  |
+| `--padding` | int | 10 |  |
+| `--border` | int | 2 |  |
+| `--bg-color` | str | "white" |  |
+| `--label-color` | str | "black" |  |
+
+## Examples
 
 **Basic usage:**
 ```bash

@@ -24,9 +24,12 @@ Identify and manage statistical outliers.
 - Regulatory compliance (FDA data integrity)
 
 ## Parameters
-- `data`: Dataset to analyze
-- `method`: 3-sigma, IQR, or Grubbs test
-- `action`: Flag, remove, or winsorize
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `data` | str | Yes | - | Path to dataset file (CSV/Excel) |
+| `method` | str | No | "3-sigma" | Detection method: "3-sigma", "IQR", or "Grubbs" |
+| `action` | str | No | "flag" | Handling action: "flag", "remove", or "winsorize" |
 
 ## Returns
 - Outlier flagging with method details

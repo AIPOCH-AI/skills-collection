@@ -111,7 +111,7 @@ result = calc.calculate(
 - **Multiple Comparisons**: Bonferroni, FDR corrections
 - **Dropout Adjustment**: Account for expected attrition
 - **Justification Text**: Auto-generate sample size rationale
-- **Power Curves**: Visualize power vs. sample size
+- **Power Curves**: Generate power calculations for various sample sizes
 
 ### 3. Compliance Validator
 
@@ -428,3 +428,41 @@ Located in `scripts/` directory:
 ---
 
 **🐾 Remember: The 3Rs (Replacement, Reduction, Refinement) are ethical imperatives. This tool supports Reduction (optimal sample sizes) and Refinement (better experimental design), but consider Replacement alternatives (in vitro, in silico) whenever possible.**
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--interactive` | flag | - | **Interactive mode**: Run wizard with guided prompts (uses `input()` for user interaction). Recommended for first-time users or complex study designs. |
+| `--input` | str | Required | Input JSON file path (batch/automation mode) |
+| `--output` | str | "protocol.md" | Output file path |
+| `--validate` | str | Required | Validate existing protocol file |
+| `--checklist` | str | Required | Generate ARRIVE 2.0 checklist |
+| `--format` | str | "markdown" | Output format: markdown, pdf, or docx |
+
+**Usage Modes:**
+- **Automation Mode (Recommended for CI/CD)**: Use `--input` with JSON configuration file
+- **Interactive Mode**: Use `--interactive` for guided setup via prompts
+
+**Example - Automation Mode:**
+```bash
+# Create JSON config
+cat > study_config.json << 'EOF'
+{
+  "title": "Diabetes Drug Study",
+  "species": "Mus musculus",
+  "strain": "db/db",
+  "groups": 4,
+  "animals_per_group": 15
+}
+EOF
+
+# Generate protocol
+python scripts/main.py --input study_config.json --output protocol.md
+```
+
+**Example - Interactive Mode:**
+```bash
+# Launch interactive wizard
+python scripts/main.py --interactive
+```

@@ -25,9 +25,12 @@ Personalized research digest from top journals.
 - Competitive intelligence
 
 ## Parameters
-- `keywords`: Research topics to monitor
-- `journals`: Target journals (default: Nature, Science, Cell, NEJM, Lancet)
-- `alert_frequency`: Daily or weekly digest
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `keywords` | list[str] | Yes | - | Research topics to monitor |
+| `journals` | list[str] | No | ["Nature", "Science", "Cell", "NEJM", "Lancet"] | Target journals to monitor |
+| `alert_frequency` | str | No | "daily" | Digest frequency: "daily" or "weekly" |
 
 ## Returns
 - Curated article list with impact scores

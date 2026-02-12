@@ -16,6 +16,8 @@ last_updated: '2026-02-06'
 
 # Grant Funding Scout
 
+**⚠️ Note: This is a demonstration/illustrative version using mock data for educational purposes. For production use, integration with real funding databases (NIH RePORTER, NSF Award Search, etc.) is required.**
+
 Analyze funding patterns to guide research strategy.
 
 ## Use Cases
@@ -24,17 +26,33 @@ Analyze funding patterns to guide research strategy.
 - Strategic grant positioning
 
 ## Parameters
-- `research_area`: Field of interest
-- `years`: Analysis window (default 3 years)
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `--research-area` | str | Yes | - | Research field to analyze (e.g., "cancer immunotherapy") |
+| `--years` | int | No | 3 | Analysis time window in years |
+| `--output` | str | No | stdout | Output file path for results |
+| `--format` | str | No | json | Output format: json, csv, or text |
+| `--top-n` | int | No | 10 | Number of top results to display |
 
 ## Returns
-- Funding trend visualization
 - Top-funded institutions and PIs
 - Emerging topic identification
+- Funding trend analysis
 
 ## Example
 Input: "cancer immunotherapy", years=3
 Output: Funding increased 40% YoY; CAR-T and checkpoint inhibitors dominate
+
+## Data Sources
+**Current Version:** Uses mock funding data for demonstration purposes.
+
+**For Production Use:**
+- NIH RePORTER API
+- NSF Award Search API
+- CORDIS (EU research)
+- Federal RePORTER
+- Private foundation databases
 
 ## Risk Assessment
 

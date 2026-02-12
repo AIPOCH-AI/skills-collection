@@ -283,3 +283,24 @@ pip install -r requirements.txt
 - **Planned Improvements**: 
   - Performance optimization
   - Additional feature support
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--indication` | str | Required | Therapeutic indication |
+| `--phase` | str | Required |  |
+| `--population` | str | "adults" | Target population |
+| `--duration` | str | "" | Study duration |
+| `--output` | str | Required | Output file path |
+| `--age-min` | int | 18 | Minimum age |
+| `--age-max` | int | 75 | Maximum age |
+| `--input` | str | Required | Input criteria JSON file |
+| `--enrollment-target` | int | Required | Target enrollment |
+| `--current-enrollment` | int | Required | Current enrollment |
+| `--output` | str | Required | Output file path |
+| `--input` | str | Required | Input criteria JSON file |
+| `--output` | str | Required | Output file path |
+| `--input` | str | Required | Input criteria JSON file |
+| `--condition` | str | Required | Medical condition |
+| `--output` | str | Required | Output file path |

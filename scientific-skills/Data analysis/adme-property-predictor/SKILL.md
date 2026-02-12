@@ -22,7 +22,6 @@ Comprehensive pharmacokinetic prediction tool that assesses drug-likeness and AD
 - **Batch Processing**: Analyze compound libraries efficiently
 - **Structure-Based Insights**: Identify liability hotspots and optimization opportunities
 - **Comparative Analysis**: Rank candidates by predicted PK profile
-- **Property Visualization**: Generate ADME profiles and radar charts
 
 ## When to Use
 
@@ -262,7 +261,6 @@ mpo_score = predictor.mpo_score(
 |--------|-------------|-------|------------|
 | **QED** | Quantitative Estimation of Drug-likeness | 0-1 | >0.6 |
 | **Muegge** | Bioavailability score | 0-6 | >4 |
-| **Golden Triangle** | MW vs LogP plot | N/A | Within triangle |
 | **MPO** | Multi-Parameter Optimization | 0-10 | >6 |
 
 **Best Practices:**
@@ -305,7 +303,7 @@ ranked = results.rank(by="mpo_score", ascending=False)
 - ✅ Process in batches of 1000-10000 for memory efficiency
 - ✅ Save intermediate results (crash recovery)
 - ✅ Apply filters sequentially (Lipinski first, then detailed ADME)
-- ✅ Visualize property distributions to identify outliers
+- ✅ Check property distributions to identify outliers
 
 **Common Issues and Solutions:**
 
@@ -343,12 +341,6 @@ python scripts/main.py \
   --top-n 100 \
   --output top_candidates.csv
 
-# Step 4: Generate visualization
-python scripts/main.py \
-  --input top_candidates.csv \
-  --visualize \
-  --plot-type radar \
-  --output adme_profiles.png
 ```
 
 **Python API Usage:**
@@ -356,12 +348,10 @@ python scripts/main.py \
 ```python
 from scripts.adme_predictor import ADMEPredictor
 from scripts.batch_processor import BatchProcessor
-from scripts.visualizer import ADMEVisualizer
 
 # Initialize
 predictor = ADMEPredictor()
 batch = BatchProcessor()
-viz = ADMEVisualizer()
 
 # Single compound analysis
 aspirin = predictor.predict_all("CC(=O)Oc1ccccc1C(=O)O")
@@ -383,11 +373,6 @@ good_candidates = results[
     (results.bbb < 0.3) &
     (results.t12.between(2, 8))
 ]
-
-# Visualize
-viz.plot_property_distributions(results)
-viz.plot_adme_radar(good_candidates.iloc[0])
-viz.save("adme_analysis.png")
 ```
 
 **Expected Output Files:**
@@ -396,8 +381,6 @@ output/
 ├── aspirin_adme.json           # Single compound detailed results
 ├── library_adme.csv            # Batch screening results
 ├── top_candidates.csv          # Filtered and ranked candidates
-├── adme_profiles.png           # Visualization of ADME profiles
-└── property_distributions.png  # Statistical analysis plots
 ```
 
 ## Quality Checklist
@@ -529,14 +512,6 @@ output/
   - Check file encoding (UTF-8 vs Latin-1)
   - Verify structure validity with external tools
 
-**Problem: Visualization fails or looks incorrect**
-- Symptoms: "Radar chart not displaying" or "scales wrong"
-- Causes: Missing dependencies; data format issues
-- Solutions:
-  - Install matplotlib, seaborn for plotting
-  - Ensure numerical values (not strings) in data
-  - Check for NaN or infinity values
-
 ## References
 
 Available in `references/` directory:
@@ -560,7 +535,6 @@ Located in `scripts/` directory:
 - `excretion.py` - Excretion and clearance models
 - `druglikeness.py` - QED, MPO, and other scoring functions
 - `batch_processor.py` - Library screening and parallel processing
-- `visualizer.py` - ADME profile visualization and plotting
 - `validator.py` - Input validation and applicability domain checking
 
 ## Performance and Resources
@@ -614,3 +588,13 @@ Located in `scripts/` directory:
 ---
 
 **⚠️ CRITICAL DISCLAIMER: These predictions are computational estimates for prioritization and guidance only. They do NOT replace experimental ADME studies required for regulatory submissions or clinical decision-making. Always validate predictions with appropriate in vitro and in vivo assays before advancing compounds.**
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--smiles` | str | Required | SMILES string of the molecule |
+| `--properties` | str | ["all"] | Specific properties to calculate |
+| `--format` | str | "json" | Output format |
+| `--input` | str | Required | Input CSV file with SMILES column |
+| `--output` | str | Required | Output file for results |

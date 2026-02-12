@@ -159,9 +159,18 @@ Journal: Nature Communications
 
 ## Parameters
 
-- `tone`: Response tone preference (diplomatic | formal | assertive)
-- `format`: Output format (markdown | plain_text | latex)
-- `include_diff`: Whether to summarize changes (true | false)
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `--interactive` | flag | No | - | **Interactive mode**: Guided wizard with prompts (uses `input()`). Recommended for first-time users or complex responses |
+| `--input-file` | str | No | - | Path to reviewer comments file (automation mode) |
+| `--output` | str | No | - | Output file path for response letter |
+| `--tone` | str | No | "diplomatic" | Response tone: "diplomatic", "formal", or "assertive" |
+| `--format` | str | No | "markdown" | Output format: "markdown", "plain_text", or "latex" |
+| `--include-diff` | bool | No | true | Whether to summarize changes made |
+
+**Usage Modes:**
+- **Interactive Mode**: Use `--interactive` for guided setup with prompts (recommended for first-time users)
+- **File Mode (Recommended for automation)**: Use `--input-file` with pre-prepared reviewer comments
 
 ## Technical Notes
 

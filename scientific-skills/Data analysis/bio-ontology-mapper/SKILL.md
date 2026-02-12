@@ -338,3 +338,16 @@ Located in `scripts/` directory:
 ---
 
 **⚠️ Critical: Ontology mapping is for research and data integration, not clinical decision-making. Always validate mappings with domain experts before use in patient care contexts. Never process PHI without appropriate de-identification and compliance measures.**
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--term` | str | Required | Single term to map |
+| `--input` | str | Required | Input file path |
+| `--output` | str | Required | Output file path |
+| `--ontology` | str | 'both' |  |
+| `--threshold` | float | 0.7 |  |
+| `--format` | str | 'json' |  |
+| `--use-api` | str | Required | Use UMLS/MeSH APIs |
+| `--api-key` | str | Required |  |

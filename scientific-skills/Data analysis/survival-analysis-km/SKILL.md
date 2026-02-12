@@ -114,6 +114,21 @@ See `references/` folder for:
 - Sample datasets for testing
 - Clinical reporting guidelines (ATN, CONSORT)
 
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--input` | str | Required | Input CSV file path |
+| `--time` | str | Required | Column name for survival time |
+| `--event` | str | Required |  |
+| `--group` | str | Required |  |
+| `--output` | str | Required | Output directory for results |
+| `--conf-level` | float | 0.95 |  |
+| `--risk-table` | str | Required | Include risk table in plot |
+| `--figsize` | str | '10 |  |
+| `--dpi` | int | 300 |  |
+
 ## Example
 
 ```bash

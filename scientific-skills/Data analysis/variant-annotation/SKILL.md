@@ -279,3 +279,14 @@ pip install -r requirements.txt
 - **Planned Improvements**: 
   - Performance optimization
   - Additional feature support
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--variant` | str | Required |  |
+| `--file` | str | Required |  |
+| `--output` | str | Required |  |
+| `--format` | str | "json" |  |
+| `--api-key` | str | Required | NCBI API key for increased rate limits |
+| `--delay` | float | 0.34 |  |

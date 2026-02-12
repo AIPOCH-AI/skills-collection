@@ -886,3 +886,16 @@ Author/Organization. Page Title. Website Name. URL. Published Date. Accessed Dat
 **Last Updated**: 2026-02-09  
 **Skill ID**: 188  
 **Version**: 2.0 (K-Dense Standard)
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--input` | str | Required | Input file containing citations |
+| `--output` | str | Required | Output file for formatted citations |
+| `--format` | str | 'auto' | Input format type |
+| `--interactive` | flag | - | **Interactive mode**: Single citation formatting via prompts (uses `input()`). Use for quick one-off conversions |
+
+**Usage Modes:**
+- **Batch Mode (Recommended for automation)**: Use `--input` and `--output` for file processing
+- **Interactive Mode**: Use `--interactive` for quick single citation conversion via prompts

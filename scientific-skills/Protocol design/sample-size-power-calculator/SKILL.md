@@ -37,11 +37,13 @@ python scripts/main.py --test survival --hazard-ratio 0.7 --alpha 0.05
 
 ## Parameters
 
-- `--test`: Statistical test type
-- `--effect`: Effect size (Cohen's d, hazard ratio, etc.)
-- `--alpha`: Significance level
-- `--power`: Desired power
-- `--allocation`: Group allocation ratio
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `--test` | string | Yes | Statistical test type (ttest, chi2, survival, anova, regression) |
+| `--effect` | float | Yes | Effect size (Cohen's d, hazard ratio, etc.) |
+| `--alpha` | float | No | Significance level (default: 0.05) |
+| `--power` | float | No | Desired power (default: 0.8) |
+| `--allocation` | string | No | Group allocation ratio (default: 1:1) |
 
 ## Output
 

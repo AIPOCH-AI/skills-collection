@@ -25,8 +25,11 @@ NGS QC report translation tool.
 - Pipeline optimization
 
 ## Parameters
-- `fastqc_data`: QC report content
-- `library_type`: DNA/RNA/single-cell
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `fastqc_data` | str | Yes | - | FastQC report file path or content |
+| `library_type` | str | No | "DNA" | Library type: "DNA", "RNA", or "single-cell" |
 
 ## Returns
 - Plain language explanations

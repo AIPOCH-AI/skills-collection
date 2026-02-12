@@ -421,3 +421,13 @@ Located in `scripts/` directory:
 ---
 
 **📝 Note: This tool generates draft abstracts for efficiency, but all summaries require human review before submission. Always verify that numbers, statistics, and conclusions accurately reflect the original paper.**
+
+## Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `--input` | str | Required |  |
+| `--text` | str | Required | Direct text input |
+| `--url` | str | Required | URL to fetch paper from |
+| `--output` | str | Required | Output file path |
+| `--format` | str | 'structured' | Output format |
